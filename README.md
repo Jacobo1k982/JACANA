@@ -2,7 +2,7 @@
 Tienda Virtual JACANA Styles Store
 
  <p align="center"><img 
- src="https://user-images.githubusercontent.com/54613714/207860612-4ee1cb26-84b3-4d5e-9d75-53cf383e09e6.PNG" width="45%"/></p>
+ src="https://github.com/Jacobo1k982/JACANA_img/blob/main/inicio_pantalla.png" width="65%"/></p>
  
 
 
