@@ -57,6 +57,16 @@ const Item = ({
               </h1>
             </div>
           </div>
+          {/* Mostrar la talla */}
+          {size && (
+            <div className="my-1 flex items-center gap-2">
+              <span className="text-sm font-medium text-slate-100">Talla:</span>
+              <span className="bg-gradient-to-r from-black-500 to-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-lg shadow-lg">
+                {size}
+              </span>
+            </div>
+          )}
+
           <div className="flex items-center gap-3">
             <button
               type="button"
@@ -82,8 +92,8 @@ const Item = ({
             src={img}
             alt={`img/item-img/${id}`}
             className={`transitions-theme hover:-rotate-12 ${ifExists
-                ? "h-auto w-64 lg:w-56 md:w-48 -rotate-[35deg]"
-                : "h-36 w-64 "
+              ? "h-auto w-64 lg:w-56 md:w-48 -rotate-[35deg]"
+              : "h-36 w-64 "
               }`}
           />
         </div>

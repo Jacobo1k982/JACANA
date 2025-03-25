@@ -25,6 +25,7 @@ import product9 from "../assets/product9.png";
 import product10 from "../assets/product10.png";
 import product11 from "../assets/product11.png";
 import product12 from "../assets/product12.png";
+import nike1 from "../assets/nike/nike1.jpg";
 
 
 
@@ -77,10 +78,10 @@ const popularsales = {
       title: "Nike Air Max Black Supreme",
       text: "WOMEN Running Shoes",
       rating: "4.9",
+      size: "36 - 37",
       btn: "Comprar",
       img: psale4,
-      price: "75",
-      size: "36 EU",
+      price: "80",
       color: "from-blue-600 to-blue-500",
       shadow: "shadow-lg shadow-blue-500",
     },
@@ -91,9 +92,10 @@ const popularsales = {
       rating: "4.5",
       btn: "Buy Now",
       img: psale1,
-      price: "200",
+      price: "--",
       color: "from-red-500 to-rose-500",
       shadow: "shadow-lg shadow-rose-500",
+      size: "--",
     },
     {
       id: "0p0x3",
@@ -102,9 +104,10 @@ const popularsales = {
       rating: "5+",
       btn: "Buy Now",
       img: psale3,
-      price: "200",
+      price: "--",
       color: "from-violet-500 to-indigo-500",
       shadow: "shadow-lg shadow-violet-500",
+      size: "--",
     },
     {
       id: "0p0x3",
@@ -112,10 +115,11 @@ const popularsales = {
       text: "MEN Running Shoes",
       rating: "5+",
       btn: "Buy Now",
-      img: psale3,
-      price: "200",
-      color: "from-violet-500 to-indigo-500",
+      img: psale2,
+      price: "--",
+      color: "from-yellow-500 to-orange-500 to-indigo-500",
       shadow: "shadow-lg shadow-violet-500",
+      size: "--",
     },
   ],
 };
@@ -149,11 +153,11 @@ const topratedsales = {
       text: "MEN Running Shoes",
       rating: "5+",
       btn: "Buy Now",
-      img: product7,
+      img: product1,
       price: "150",
-      size: "40 EU",
       color: "from-sky-600 to-indigo-600",
       shadow: "shadow-lg shadow-blue-500",
+      size: "8",
     },
     {
       id: "0M0x2",
