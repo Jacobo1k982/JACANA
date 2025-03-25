@@ -6,4 +6,4 @@ Tienda Virtual JACANA Styles Store
  
 
 
- [Link JACANA STYLES STORE](https://e-commerce-shop-shoes.netlify.app/)  🡸🡸😎
+ [Link JACANA STYLES STORE](https://jacana.netlify.app/)  🡸🡸😎
