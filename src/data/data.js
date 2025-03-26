@@ -25,7 +25,10 @@ import product9 from "../assets/product9.png";
 import product10 from "../assets/product10.png";
 import product11 from "../assets/product11.png";
 import product12 from "../assets/product12.png";
-import nike1 from "../assets/nike/nike1.jpg";
+
+import modaniño from "../assets/modaniño.jpg";
+import modamujer from "../assets/modamujer.webp";
+import modahombre from "../assets/modahombre.webp";
 
 
 
@@ -40,7 +43,7 @@ import { size } from "lodash";
 
 const heroapi = {
   title: "JACANA Styles Store",
-  subtitle: "Play With Electric Nike",
+  subtitle: "Tienda virtual para su comodidad y estilo",
   img: heroimg,
   btntext: "Explore Product",
   videos: [
@@ -58,18 +61,6 @@ const heroapi = {
   ],
 };
 
-const ropaapi = {
-  title: "JACANA Styles Store",
-  subtitle: "Play With Electric Nike",
-  
-  btntext: "Explore Product",
-  videos: [
-    { imgsrc: vcover1, clip: clip },
-    { imgsrc: vcover2, clip: clip },
-    { imgsrc: vcover3, clip: clip },
-  ],
-};
-
 const popularsales = {
   title: "Ventas populares",
   items: [
@@ -78,7 +69,7 @@ const popularsales = {
       title: "Nike Air Max Black Supreme",
       text: "WOMEN Running Shoes",
       rating: "4.9",
-      size: "36 - 37",
+      size: "36-37",
       btn: "Comprar",
       img: psale4,
       price: "80",
@@ -110,7 +101,7 @@ const popularsales = {
       size: "--",
     },
     {
-      id: "0p0x3",
+      id: "0p0x4",
       title: "Nike Smart Shoe 2.0",
       text: "MEN Running Shoes",
       rating: "5+",
@@ -121,6 +112,7 @@ const popularsales = {
       shadow: "shadow-lg shadow-violet-500",
       size: "--",
     },
+    
   ],
 };
 
@@ -285,100 +277,51 @@ const topratedsales = {
 
 
 const story = {
-  title: "Top Stories",
+  title: "VISITE NUESTRA CATEGORÍAS",
   news: [
     {
-      title: "Jayson Tatum Debuts",
-      text: "Jordan Brands signature model for the past few years, Jayson Tatum will be dawning the Air Jordan 37 this season before attaining potentially his first signature sneaker with Jumpman, which he rumored to be in the works recently via his Twitter.",
-      img: "https://sneakernews.com/wp-content/uploads/2022/09/air-jordan-37-low.jpg?w=540&h=380&crop=1",
-      url: "https://sneakernews.com/2022/09/14/air-jordan-37-low/",
-      like: "3/5",
+      title: "DAMA",
+      text: "La moda femenina es mucho más que apariencia; es una herramienta poderosa para la autoexpresión y el empoderamiento. Permite a las mujeres reflejar su identidad única, aumentar su confianza y sentirse cómodas en su propia piel. Además, la moda actúa como un lenguaje no verbal, comunicando mensajes sobre quiénes somos y conectándonos con otros. A lo largo de la historia, ha sido un motor de cambio social, desafiando estereotipos y promoviendo la diversidad. En esencia, la moda permite a las mujeres sentirse bien consigo mismas, expresar su individualidad y navegar por el mundo con seguridad y estilo.",
+      img: modamujer,
+      url: "#",
+      like: "5/5",
       time: "11 Mins",
-      by: "Jared Ebanks",
-      btn: "Read More"
+      by: "moda",
+      btn: "Explorar más"
     },
     {
-      title: "Bro’s Nike Zoom Freak 4",
-      text: "Arriving right time for the Fall, this upcoming take on the Zoom Freak 4 seemingly draws inspiration from Thanksgiving. Orange and brown, two staples of the holiday, are used throughout the upper, dressing the parts not bathed in shades of grey.",
-      img: "https://sneakernews.com/wp-content/uploads/2022/09/nike-zoom-freak-4-ironstone-orange-trance-cobblestone-sail-dj6149-003-2.jpg?w=540&h=380&crop=1",
+      title: "NIÑO",
+      text: "La moda infantil, más allá de ser un reflejo de tendencias adultas en miniatura, se ha convertido en un poderoso vehículo de expresión y desarrollo para los niños. Al permitirles elegir y experimentar con su ropa, se fomenta su individualidad y creatividad, construyendo una base sólida para su autoestima y confianza. Además, la moda infantil sostenible emerge como una fuerza transformadora, impulsando la conciencia ambiental desde temprana edad y promoviendo un consumo responsable que moldea el futuro de la industria.",
+      img: modaniño,
       time: "41 Mins",
       like: "5/5",
-      url: "https://sneakernews.com/2022/09/14/nike-zoom-freak-4-ironstone-orange-trance-cobblestone-sail-dj6149-003/",
-      by: "Michael Le",
-      btn: "Read More"
+      url: "#",
+      by: "moda",
+      btn: "Explorar más"
     },
     {
-      title: "Nike Air Max Plus",
-      text: "The Nike Air Max Plus has enjoyed the reveal of several colorways these last few of months. And as we officially embark on the Fall season, an additional set have been added to the calendar, including this newly-revealed grey and orange colorway.",
-      img: "https://sneakernews.com/wp-content/uploads/2022/09/Nike-Air-Max-Plus-FB3358-001-2.jpg?w=540&h=380&crop=1",
+      title: "CABALLERO",
+      text: "La moda masculina ha experimentado una transformación radical, impulsada por una creciente conciencia de estilo y la ruptura de estereotipos. Los hombres de hoy se aventuran más allá de los básicos, experimentando con colores vibrantes, texturas innovadoras y siluetas que desafían las normas tradicionales. Esta evolución no solo redefine la masculinidad, sino que también empodera a los hombres a expresar su individualidad a través de la ropa, marcando un hito en la historia de la moda.",
+      img: modahombre,
       time: "2 Hours",
-      url: "https://sneakernews.com/2022/09/14/nike-air-max-plus-grey-orange-black-fb3358-001/",
+      url: "#",
       like: "5/5",
-      by: "Michael Le",
-      btn: "Read More"
-    },
-    {
-      title: "Air Jordan Retro High OG",
-      text: "Air Jordan Retro High OG popular series of AJ1s with the popular color-blocking with the original Yellow Toe flavor. The colorway was revealed back PE by musician Zach Myers, nearly four years later, Jordan fanatics will finally get their shot a GR release.",
-      img: "https://sneakernews.com/wp-content/uploads/2022/03/yellow-toe-jordan-1-release-date-2.jpg",
-      time: "7 Months",
-      url: "https://sneakernews.com/2022/03/09/air-jordan-1-retro-high-og-yellow-toe-555088-711/",
-      like: "5/5",
-      by: "Sneaker News",
-      btn: "Read More"
-    },
-    {
-      title: "Nike Air Zoom GT Cut 2",
-      text: "The Bred coloryway of Zoom GT Cut 2 will be first to release this Friday, For Nike Members Nation World Wide while Sabrina Ionescus colorway is set for an October 13th release date. In the meantime, enjoy official images of both colorways below.",
-      img: "https://sneakernews.com/wp-content/uploads/2022/09/nike-zoom-gt-cut-2-release-date.jpg?w=540&h=380&crop=1",
-      time: "1 Months",
-      url: "https://sneakernews.com/2022/09/13/nike-zoom-gt-cut-2-officially-unveiled/",
-      like: "3/5",
-      by: "Jared Ebanks",
-      btn: "Read More"
-    },
-    {
-      title: "Puma Announces Breanna",
-      text: "For the first time in over a decade, a signature basketball silhouette is being made for one of the WNBA’s best and brightest stars, Olympic Gold Medalist and Seattle Storm superstar Breanna Stewart. Puma Stewie 1 Quiet Fire will be available this Friday.",
-      img: "https://sneakernews.com/wp-content/uploads/2022/09/puma-stewie-1-quiet-fire-breanna-stewart-release-date-lead.jpg?w=540&h=380&crop=1",
-      time: "25 Days",
-      url: "https://sneakernews.com/2022/09/13/nike-zoom-gt-cut-2-officially-unveiled/",
-      like: "3/5",
-      by: "Jared Ebanks",
-      btn: "Read More"
-    },
-    {
-      title: "Nike Air Force Orange Color",
-      text: "From lace toggles to city-inspired makeovers, the Nike Air Force 1 has delivered a number of unique modifications. Here though, the brand is taking things down quite a few notches, opting for a simple colorway helmed primarily by black and Laser Orange.",
-      img: "https://sneakernews.com/wp-content/uploads/2022/09/Nike-Air-Force-1-Black-Yellow-FB7162-081-8.jpg?w=540&h=380&crop=1",
-      url: "https://sneakernews.com/2022/09/09/nike-air-force-1-black-laser-orange-fb7162-081/",
-      time: "6 Days",
-      like: "4/5",
-      by: "Micael Le",
-      btn: "Read More"
-    },
-    {
-      title: "Hello Kitty and Adidas",
-      text: "The world of Sanrio is vast and replete with many an iconic character. Few among the family, though, rival the immense influence of Hello Kitty, who’s played mascot for everything from Pringles merchandise to sneaker collaborations.",
-      img: "https://sneakernews.com/wp-content/uploads/2022/09/hello-kitty-adidas-superstar-GW7168-2.jpg?w=540&h=380&crop=1",
-      url: "https://sneakernews.com/2022/09/08/hello-kitty-adidas-originals-gw7166-gw7167-gw7168/",
-      time: "5 Days",
-      like: "4/5",
-      by: "Micael Le",
-      btn: "Read More"
-    },
-    {
-      title: "Air Force 1 Low Expands",
-      text: "The nighttime aesthetic seen here is applied to the tumbled black leather panels of the upper and perforated mesh construction of the tongue while Royal trim and forefoot Swooshes provide additional intrigue to the darkened palette.",
-      img: "https://sneakernews.com/wp-content/uploads/2022/09/nike-air-force-1-low-worldwide-black-royal-fb1840-001-lead.jpg?w=540&h=380&crop=1",
-      url: "https://sneakernews.com/2022/09/08/nike-air-force-1-low-worldwide-black-royal-fb1840-001/",
-      time: "5 Days",
-      like: "4/5",
-      by: "Micael Le",
-      btn: "Read More"
+      by: "moda",
+      btn: "Explorar más"
     },
   ],
 };
+
+const categoria = {
+  title: "Categorías",
+  new: [
+    {
+      title: "CategoríaHombre",
+      text: "#"
+    }
+  ]
+  
+}
 
 
 const footerAPI = {
@@ -412,4 +355,4 @@ const footerAPI = {
 };
 
 
-export { heroapi, ropaapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales };
+export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, categoria };

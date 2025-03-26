@@ -32,9 +32,10 @@ const Item = ({
 
   return (
     <>
+
       <div
         className={`w-full relative bg-gradient-to-b ${color} ${shadow} grid items-center ${ifExists ? "justify-items-start" : "justify-items-center"
-          } rounded-xl py-4 px-5 transition-all duration-700 ease-in-out hover:scale-105`}
+          } rounded-xl py-9 px-8 transition-all duration-500 ease-in-out hover:scale-105`}
       >
         <div
           className={`grid items-center ${ifExists ? "justify-items-start" : "justify-items-center"
@@ -46,27 +47,23 @@ const Item = ({
           <p className="text-slate-200 text-base md:text-sm font-normal filter drop-shadow">
             {text}
           </p>
-          <div className="flex items-center justify-between w-28 my-2">
-            <div className="flex items-center blur-effect-theme bg-white/80 px-1 rounded">
+
+          {/* Mostrar el precio */}
+          <div className="flex items-center justify-between w-40 my-2">
+            <div className="flex items-center blur-effect-theme bg-white/80 px-3 rounded">
               <h1 className="text-black text-sm font-medium">${price}</h1>
             </div>
-            <div className="flex items-center gap-1">
-              <StarIcon className="icon-style w-5 h-5 md:w-4 md:h-4" />
-              <h1 className="md:text-sm font-normal text-slate-100">
-                {rating}
-              </h1>
-            </div>
+            {/* Mostrar la talla */}
+            {size && (
+              <div className="my-1 flex items-center gap-2">
+                <span className="text-sm font-medium text-slate-100">Talla:</span>
+                <span className="bg-gradient-to-r from-black-500 to-blue-600 text-white text-sm font-semibold px-2 py-0 rounded-lg shadow-lg">
+                  {size}
+                </span>
+              </div>
+            )}
           </div>
-          {/* Mostrar la talla */}
-          {size && (
-            <div className="my-1 flex items-center gap-2">
-              <span className="text-sm font-medium text-slate-100">Talla:</span>
-              <span className="bg-gradient-to-r from-black-500 to-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-lg shadow-lg">
-                {size}
-              </span>
-            </div>
-          )}
-
+          {/* Boton de agregar al carrito */}
           <div className="flex items-center gap-3">
             <button
               type="button"
@@ -82,6 +79,7 @@ const Item = ({
             >
               {btn}
             </button>
+
           </div>
         </div>
         <div

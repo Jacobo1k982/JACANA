@@ -1,6 +1,6 @@
 import React from 'react';
-import { Navbar, Hero, Sales, FlexContent, Stories, Footer, Cart, Ropa } from './components';
-import { heroapi, ropaapi, popularsales, topratedsales, highlight, sneaker, story, footerAPI } from './data/data.js';
+import { Navbar, Hero, Sales, FlexContent, Stories, Footer, Cart } from './components';
+import { heroapi, popularsales, topratedsales, highlight, sneaker, story, footerAPI } from './data/data.js';
 
 function App() {
 
@@ -10,7 +10,6 @@ function App() {
         <Navbar />
         <Cart />
         <Hero heroapi={heroapi} />
-        <Ropa ropaapi={ropaapi} />
         <Sales endpoint={popularsales} ifExists />
         <FlexContent endpoint={highlight} ifExists />
         <Sales endpoint={topratedsales} />

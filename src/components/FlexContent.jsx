@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FlexContent = ({ ifExists, endpoint: { title, heading, text, img, btn, url, size } }) => {
+const FlexContent = ({ ifExists, endpoint: { title, heading, text, img, btn, url } }) => {
   return (
     <>
       <div className={`flex items-center justify-between lg:flex-col lg:justify-center nike-container ${ifExists ? 'flex-row-reverse' : 'flex-row'} `}>
