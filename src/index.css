@@ -14,7 +14,10 @@
 
   /* container */
   .nike-container {
-    @apply w-11/12 m-auto;
+    @apply mb-11;
+  }
+  .nike-container.stories-container-padding { /* Especificidad para no afectar otros nike-container */
+    @apply pt-20; /* Ajusta este valor según sea necesario */
   }
   
   /* Scroll */
