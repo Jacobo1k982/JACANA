@@ -56,7 +56,7 @@
 
   /* Icon Stles */
   .icon-style {
-    @apply h-6 w-6 sm:h-5 sm:w-5 text-slate-100 cursor-pointer transition-all duration-100 active:scale-110 leading-tight;
+    @apply h-6 w-6 sm:h-5 sm:w-8 text-slate-100 cursor-pointer transition-all duration-100 active:scale-110 leading-tight;
   }
 
   /* text-gradient */
@@ -74,9 +74,22 @@
     @apply px-7 py-1 rounded active:scale-90 transition-all duration-100 ease-in-out shadow-md sm:text-sm;
   }
 
-  /* tranistions-theme */
+  /* transitions-theme */
   .transitions-theme {
     @apply transition-all duration-700 ease-in-out cursor-pointer;
+  }
+
+  .hero-image-container {
+    @apply w-full flex justify-center; /* Centra la imagen en el contenedor */
+  }
+  
+  .hero-image {
+    @apply w-auto h-[30vh] lg:h-[35vh] md:h-[31vh] sm:h-[21vh] xsm:h-[19vh];
+    max-width: 80%; /* Reduce el tamaño de la imagen al 80% del contenedor */
+  }
+
+  .text-container {
+    @apply text-center; /* Centra el texto dentro del contenedor */
   }
 
 }

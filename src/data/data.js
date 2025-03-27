@@ -45,7 +45,7 @@ import { size } from "lodash";
 
 const heroapi = {
   title: "JACANA Styles Store",
-  subtitle: "Tienda virtual para su comodidad y estilo",
+  subtitle: "Tú moda a un clic",
   img: heroimg,
   btntext: "Explore Product",
   videos: [
