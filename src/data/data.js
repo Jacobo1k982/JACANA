@@ -27,8 +27,10 @@ import product11 from "../assets/product11.png";
 import product12 from "../assets/product12.png";
 
 import modaniño from "../assets/modaniño.jpg";
-import modamujer from "../assets/modamujer.webp";
-import modahombre from "../assets/modahombre.webp";
+import modamujer from "../assets/modamujer.jpg";
+import modahombre from "../assets/modahombre.jpg";
+import modaniña from "../assets/modaniña.jpg";
+import modajuvenil from "../assets/modajuvenil.avif";
 
 
 
@@ -280,7 +282,7 @@ const story = {
   title: "VISITE NUESTRA CATEGORÍAS",
   news: [
     {
-      title: "DAMA",
+      title: "MUJER",
       text: "La moda femenina es mucho más que apariencia; es una herramienta poderosa para la autoexpresión y el empoderamiento. Permite a las mujeres reflejar su identidad única, aumentar su confianza y sentirse cómodas en su propia piel. Además, la moda actúa como un lenguaje no verbal, comunicando mensajes sobre quiénes somos y conectándonos con otros. A lo largo de la historia, ha sido un motor de cambio social, desafiando estereotipos y promoviendo la diversidad. En esencia, la moda permite a las mujeres sentirse bien consigo mismas, expresar su individualidad y navegar por el mundo con seguridad y estilo.",
       img: modamujer,
       url: "#",
@@ -300,7 +302,27 @@ const story = {
       btn: "Explorar más"
     },
     {
-      title: "CABALLERO",
+      title: "NIÑA",
+      text: "La moda infantil femenina es un caleidoscopio de creatividad y funcionalidad, donde la comodidad se fusiona con las últimas tendencias. Desde vestidos con estampados vibrantes y faldas con vuelo hasta conjuntos deportivos chic y accesorios llamativos, la moda de niña celebra la individualidad y el espíritu juguetón. Los diseñadores se inspiran en la imaginación infantil, creando prendas que permiten a las niñas expresarse mientras exploran el mundo con confianza y estilo.",
+      img: modaniña,
+      time: "2 Hours",
+      url: "#",
+      like: "5/5",
+      by: "moda",
+      btn: "Explorar más"
+    },
+    {
+      title: "JUVENIL",
+      text: "La moda juvenil es un caleidoscopio en constante evolución, donde la individualidad se fusiona con las tendencias globales. Desde la explosión del streetwear con sus siluetas oversized y zapatillas llamativas, hasta la nostalgia de los 90 y 2000 que resurge con tops diminutos y pantalones de tiro bajo, la moda juvenil es un reflejo de la autoexpresión y la búsqueda de identidad. Las redes sociales y los influencers juegan un papel crucial, dictando tendencias que se viralizan en segundos, mientras que la sostenibilidad y la moda genderless ganan terreno, desafiando las normas y abrazando la diversidad.",
+      img: modajuvenil,
+      time: "2 Hours",
+      url: "#",
+      like: "5/5",
+      by: "moda",
+      btn: "Explorar más"
+    },
+    {
+      title: "HOMBRE",
       text: "La moda masculina ha experimentado una transformación radical, impulsada por una creciente conciencia de estilo y la ruptura de estereotipos. Los hombres de hoy se aventuran más allá de los básicos, experimentando con colores vibrantes, texturas innovadoras y siluetas que desafían las normas tradicionales. Esta evolución no solo redefine la masculinidad, sino que también empodera a los hombres a expresar su individualidad a través de la ropa, marcando un hito en la historia de la moda.",
       img: modahombre,
       time: "2 Hours",

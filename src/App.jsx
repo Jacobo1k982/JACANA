@@ -10,11 +10,11 @@ function App() {
         <Navbar />
         <Cart />
         <Hero heroapi={heroapi} />
+        <Stories story={story} />
         <Sales endpoint={popularsales} ifExists />
         <FlexContent endpoint={highlight} ifExists />
         <Sales endpoint={topratedsales} />
         <FlexContent endpoint={sneaker} />
-        <Stories story={story} />
         <Footer footerAPI={footerAPI} />
       </main>
     </>

@@ -41,18 +41,6 @@ const Stories = ({ story: { title, news } }) => {
                     />
                   </div>
                   <div className="flex items-center justify-between w-full px-4">
-                    <div className="flex items-center gap-0.5">
-                      <HeartIcon className="icon-style text-red-500 w-5 h-5" />
-                      <span className="text-sx font-bold">{val.like}</span>
-                    </div>
-                    <div className="flex items-center gap-0.5">
-                      <ClockIcon className="icon-style w-4 h-4 text-black" />
-                      <span className="text-xs font-bold">{val.time}</span>
-                    </div>
-                    <div className="flex items-center gap-0.5">
-                      <HashtagIcon className="icon-style text-blue-600" />
-                      <span className="text-xs font-bold text-blue-600">{val.by}</span>
-                    </div>
                   </div>
                   <div className="grid items-center justify-items-center px-4">
                     <h1 className="text-3xl font-bold text-center">{val.title}</h1>
