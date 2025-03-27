@@ -55,7 +55,7 @@ const CartSlice = createSlice({
         state.cartItems[itemIndex].cartQuantity += 1;
 
         toast.success(`Item QTY Increased`);
-      } 
+      }
       localStorage.setItem("cart", JSON.stringify(state.cartItems));
     },
     setDecreaseItemQTY: (state, action) => {
@@ -67,11 +67,11 @@ const CartSlice = createSlice({
         state.cartItems[itemIndex].cartQuantity -= 1;
 
         toast.success(`Item QTY Decreased`);
-      } 
+      }
       localStorage.setItem("cart", JSON.stringify(state.cartItems));
     },
     setClearCartItems: (state, action) => {
-      state.cartItems= [];
+      state.cartItems = [];
       toast.success(`Cart Cleared`);
       localStorage.setItem("cart", JSON.stringify(state.cartItems));
     },
