@@ -14,7 +14,9 @@
 
   /* container */
   .nike-container {
+    @apply container mx-auto px-4;
     @apply mb-11;
+    @apply w-11/12 m-auto;
   }
   .nike-container.stories-container-padding { /* Especificidad para no afectar otros nike-container */
     @apply pt-20; /* Ajusta este valor según sea necesario */
@@ -89,6 +91,9 @@
   .hero-image {
     @apply w-auto h-[30vh] lg:h-[35vh] md:h-[31vh] sm:h-[21vh] xsm:h-[19vh];
     max-width: 80%; /* Reduce el tamaño de la imagen al 80% del contenedor */
+  }
+  .hero-image:hover {
+    @apply scale-105; /* Aumenta el tamaño de la imagen al 105% */
   }
 
   .text-container {
