@@ -98,19 +98,33 @@
   }
 
   .hero-image {
-    @apply w-auto h-[30vh] lg:h-[35vh] md:h-[31vh] sm:h-[21vh] xsm:h-[19vh];
-    max-width: 80%;
+    @apply w-auto h-[40vh] lg:h-[45vh] md:h-[41vh] sm:h-[31vh] xsm:h-[29vh];
+    max-width:90%;
     /* Reduce el tamaño de la imagen al 80% del contenedor */
   }
 
   .hero-image:hover {
-    @apply scale-105;
+    @apply scale-100;
     /* Aumenta el tamaño de la imagen al 105% */
   }
 
   .text-container {
     @apply text-center;
     /* Centra el texto dentro del contenedor */
+  }
+
+  @media (forced-colors: active) {
+    body {
+      background-color: Canvas; /* Color de fondo del usuario */
+      color: CanvasText; /* Color de texto del usuario */
+    }
+    a {
+      color: LinkText; /* Color de enlace del usuario */
+    }
+    a:visited {
+      color: VisitedText; /* Color de enlace visitado del usuario */
+    }
+    /* ... otros estilos utilizando palabras clave de color del sistema ... */
   }
 
 }
