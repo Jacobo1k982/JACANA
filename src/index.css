@@ -18,33 +18,41 @@
     @apply mb-11;
     @apply w-11/12 m-auto;
   }
-  .nike-container.stories-container-padding { /* Especificidad para no afectar otros nike-container */
-    @apply pt-20; /* Ajusta este valor según sea necesario */
+
+  .nike-container.stories-container-padding {
+    /* Especificidad para no afectar otros nike-container */
+    @apply pt-20;
+    /* Ajusta este valor según sea necesario */
   }
-  
+
   /* Scroll */
-  .scroll-hidden::-webkit-scrollbar{
+  .scroll-hidden::-webkit-scrollbar {
     display: none;
   }
-  .scroll-style::-webkit-scrollbar{
+
+  .scroll-style::-webkit-scrollbar {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: rgb(66, 245, 141) rgb(66, 245, 141); 
+    scrollbar-color: rgb(66, 245, 141) rgb(66, 245, 141);
   }
-  .scroll-style::-webkit-scrollbar{
+
+  .scroll-style::-webkit-scrollbar {
     @apply w-2;
   }
+
   .scroll-style::-webkit-scrollbar-track {
     @apply bg-slate-700;
   }
+
   .scroll-style::-webkit-scrollbar-thumb {
     @apply rounded-full bg-gradient-to-tr from-blue-500 to-green-500 via-teal-500;
   }
-   
+
   /* Theme-Colors */
   .bg-theme {
-    background-image: linear-gradient( 0.2deg,  rgba(40, 173, 222,1) 4.8%, rgb(27, 76, 224) 85.5% );
+    background-image: linear-gradient(0.2deg, rgba(40, 173, 222, 1) 4.8%, rgb(27, 76, 224) 85.5%);
   }
+
   .bg-theme-cart {
     @apply bg-gradient-to-b from-slate-900 to-gray-900 shadow-sm shadow-gray-900;
   }
@@ -52,8 +60,8 @@
   /* Clip-path */
   .clip-path {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
-  }  
-  
+  }
+
   /* Blur-Effect */
   .blur-effect-theme {
     @apply bg-white/50 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-50 opacity-100 z-[100] shadow-sm shadow-slate-100 transition-all duration-300;
@@ -69,7 +77,7 @@
     @apply text-transparent bg-clip-text bg-gradient-to-tr from-blue-500 to-sky-500;
   }
 
-  /* border */ 
+  /* border */
   .rounded-theme {
     border-radius: 5% 100% 10% 5%;
   }
@@ -85,19 +93,24 @@
   }
 
   .hero-image-container {
-    @apply w-full flex justify-center; /* Centra la imagen en el contenedor */
+    @apply w-full flex justify-center;
+    /* Centra la imagen en el contenedor */
   }
-  
+
   .hero-image {
     @apply w-auto h-[30vh] lg:h-[35vh] md:h-[31vh] sm:h-[21vh] xsm:h-[19vh];
-    max-width: 80%; /* Reduce el tamaño de la imagen al 80% del contenedor */
+    max-width: 80%;
+    /* Reduce el tamaño de la imagen al 80% del contenedor */
   }
+
   .hero-image:hover {
-    @apply scale-105; /* Aumenta el tamaño de la imagen al 105% */
+    @apply scale-105;
+    /* Aumenta el tamaño de la imagen al 105% */
   }
 
   .text-container {
-    @apply text-center; /* Centra el texto dentro del contenedor */
+    @apply text-center;
+    /* Centra el texto dentro del contenedor */
   }
 
 }

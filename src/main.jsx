@@ -6,16 +6,12 @@ import { Provider } from "react-redux";
 import Store from './app/Store';
 import { Toaster } from "react-hot-toast";
 
-import { BrowserRouter } from 'react-router-dom';
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-
+    
     <Provider store={Store}>
-        <BrowserRouter>
-            <Toaster position='top-center' reverseOrder={false} />
-        </BrowserRouter>
+        <Toaster position='top-center' reverseOrder={false} />
         <App />
     </Provider>
 

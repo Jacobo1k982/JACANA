@@ -1,3 +1,7 @@
+import React from "react";
+import Hombre from '../pages/Hombre.jsx'
+import { BrowserRouter } from "react-router-dom";
+
 import heroimg from "../assets/hero.png";
 
 import hightlightimg from "../assets/hightlightimg.png";
@@ -320,7 +324,7 @@ const story = {
         text: "La moda masculina ha experimentado una transformación radical, impulsada por una creciente conciencia de estilo y la ruptura de estereotipos. Los hombres de hoy se aventuran más allá de los básicos, experimentando con colores vibrantes, texturas innovadoras y siluetas que desafían las normas tradicionales. Esta evolución no solo redefine la masculinidad, sino que también empodera a los hombres a expresar su individualidad a través de la ropa, marcando un hito en la historia de la moda.",
         img: modahombre,
         time: "2 Hours",
-        url: "../src/routes",
+        url: Hombre,
         like: "5/5",
         by: "moda",
         btn: "Explorar más"

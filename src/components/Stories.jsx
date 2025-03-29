@@ -6,7 +6,7 @@ import Title from "./utils/Title";
 import "@splidejs/react-splide/css";
 import { truncate } from "lodash";
 
-const Stories = ({ story: { title, news } }) => {
+const Stories = ({ story: { title, news} }) => {
   const splideOptions = {
     perPage: 4,
     perMove: 1,
