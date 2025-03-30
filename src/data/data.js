@@ -1,6 +1,4 @@
-import React from "react";
-import Hombre from '../pages/Hombre.jsx'
-import { BrowserRouter } from "react-router-dom";
+
 
 import heroimg from "../assets/hero.png";
 

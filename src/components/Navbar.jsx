@@ -39,7 +39,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="logo/img"
-              className={`w-20 h-auto ${navState && "filter brightness-0"}`} />
+              className={`w-12 h-auto ${navState && "filter brightness-0"}`} />
           </div>
           <ul className='flex items-center justify-center gap-2'>
             <li className='grid items-center'>

@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   * {
     margin: 0;
@@ -14,7 +13,7 @@
 
   /* container */
   .nike-container {
-    @apply container mx-auto px-4;
+    @apply container mx-auto px-3;
     @apply mb-11;
     @apply w-11/12 m-auto;
   }
@@ -50,7 +49,7 @@
 
   /* Theme-Colors */
   .bg-theme {
-    background-image: linear-gradient(0.2deg, rgba(40, 173, 222, 1) 4.8%, rgb(27, 76, 224) 85.5%);
+    background-image: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
   }
 
   .bg-theme-cart {
@@ -98,33 +97,18 @@
   }
 
   .hero-image {
-    @apply w-auto h-[35] lg:h-[40vh] md:h-[31vh] sm:h-[21vh] xsm:h-[19vh];
-    max-width:80%;
-    /* Reduce el tamaño de la imagen al 80% del contenedor */
+    @apply w-auto h-[35vh] lg:h-[45vh] md:h-[35vh] sm:h-[18vh] xsm:h-[25vh];
+    max-width: 83%;
+    /* Aumenta el tamaño de la imagen al 90% del contenedor */
   }
 
   .hero-image:hover {
-    @apply scale-105;
-    /* Aumenta el tamaño de la imagen al 105% */
+    @apply scale-110;
+    /* Aumenta el tamaño de la imagen al 110% */
   }
 
   .text-container {
     @apply text-center;
     /* Centra el texto dentro del contenedor */
   }
-
-  @media (forced-colors: active) {
-    body {
-      background-color: Canvas; /* Color de fondo del usuario */
-      color: CanvasText; /* Color de texto del usuario */
-    }
-    a {
-      color: LinkText; /* Color de enlace del usuario */
-    }
-    a:visited {
-      color: VisitedText; /* Color de enlace visitado del usuario */
-    }
-    /* ... otros estilos utilizando palabras clave de color del sistema ... */
-  }
-
 }
