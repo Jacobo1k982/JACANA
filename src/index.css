@@ -98,13 +98,13 @@
   }
 
   .hero-image {
-    @apply w-auto h-[40vh] lg:h-[45vh] md:h-[41vh] sm:h-[31vh] xsm:h-[29vh];
-    max-width:90%;
+    @apply w-auto h-[35] lg:h-[40vh] md:h-[31vh] sm:h-[21vh] xsm:h-[19vh];
+    max-width:80%;
     /* Reduce el tamaño de la imagen al 80% del contenedor */
   }
 
   .hero-image:hover {
-    @apply scale-100;
+    @apply scale-105;
     /* Aumenta el tamaño de la imagen al 105% */
   }
 
