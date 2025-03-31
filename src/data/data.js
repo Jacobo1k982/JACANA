@@ -33,6 +33,7 @@ import modamujer from "../assets/modamujer.jpg";
 import modahombre from "../assets/modahombre.jpg";
 import modaniña from "../assets/modaniña.jpg";
 import modajuvenil from "../assets/modajuvenil.avif";
+import pijama1 from "../assets/Mujer/Pijamas/pijama1.jpg";
 
 
 import facebook from "../assets/facebook.svg";
@@ -42,6 +43,7 @@ import youtube from "../assets/youtube.svg";
 import messenger from "../assets/messenger.svg";
 import whatsapp from "../assets/whatsapp.svg";
 import { size } from "lodash";
+
 
 const heroapi = {
   title: "JACANA Styles Costa Rica",
@@ -275,60 +277,80 @@ const topratedsales = {
 };
 
 const story = {
-    title: "VISITE NUESTRA CATEGORÍAS",
-    news: [
-      {
-        title: "MUJER",
-        text: "La moda femenina es mucho más que apariencia; es una herramienta poderosa para la autoexpresión y el empoderamiento. Permite a las mujeres reflejar su identidad única, aumentar su confianza y sentirse cómodas en su propia piel. Además, la moda actúa como un lenguaje no verbal, comunicando mensajes sobre quiénes somos y conectándonos con otros. A lo largo de la historia, ha sido un motor de cambio social, desafiando estereotipos y promoviendo la diversidad. En esencia, la moda permite a las mujeres sentirse bien consigo mismas, expresar su individualidad y navegar por el mundo con seguridad y estilo.",
-        img: modamujer,
-        url: "#",
-        like: "5/5",
-        time: "11 Mins",
-        by: "moda",
-        btn: "Explorar más"
-      },
-      {
-        title: "NIÑO",
-        text: "La moda infantil, más allá de ser un reflejo de tendencias adultas en miniatura, se ha convertido en un poderoso vehículo de expresión y desarrollo para los niños. Al permitirles elegir y experimentar con su ropa, se fomenta su individualidad y creatividad, construyendo una base sólida para su autoestima y confianza. Además, la moda infantil sostenible emerge como una fuerza transformadora, impulsando la conciencia ambiental desde temprana edad y promoviendo un consumo responsable que moldea el futuro de la industria.",
-        img: modaniño,
-        time: "41 Mins",
-        like: "5/5",
-        url: "#",
-        by: "moda",
-        btn: "Explorar más"
-      },
-      {
-        title: "NIÑA",
-        text: "La moda infantil femenina es un caleidoscopio de creatividad y funcionalidad, donde la comodidad se fusiona con las últimas tendencias. Desde vestidos con estampados vibrantes y faldas con vuelo hasta conjuntos deportivos chic y accesorios llamativos, la moda de niña celebra la individualidad y el espíritu juguetón. Los diseñadores se inspiran en la imaginación infantil, creando prendas que permiten a las niñas expresarse mientras exploran el mundo con confianza y estilo.",
-        img: modaniña,
-        time: "2 Hours",
-        url: "#",
-        like: "5/5",
-        by: "moda",
-        btn: "Explorar más"
-      },
-      {
-        title: "JUVENIL",
-        text: "La moda juvenil es un caleidoscopio en constante evolución, donde la individualidad se fusiona con las tendencias globales. Desde la explosión del streetwear con sus siluetas oversized y zapatillas llamativas, hasta la nostalgia de los 90 y 2000 que resurge con tops diminutos y pantalones de tiro bajo, la moda juvenil es un reflejo de la autoexpresión y la búsqueda de identidad. Las redes sociales y los influencers juegan un papel crucial, dictando tendencias que se viralizan en segundos, mientras que la sostenibilidad y la moda genderless ganan terreno, desafiando las normas y abrazando la diversidad.",
-        img: modajuvenil,
-        time: "2 Hours",
-        url: "#",
-        like: "5/5",
-        by: "moda",
-        btn: "Explorar más"
-      },
-      {
-        title: "HOMBRE",
-        text: "La moda masculina ha experimentado una transformación radical, impulsada por una creciente conciencia de estilo y la ruptura de estereotipos. Los hombres de hoy se aventuran más allá de los básicos, experimentando con colores vibrantes, texturas innovadoras y siluetas que desafían las normas tradicionales. Esta evolución no solo redefine la masculinidad, sino que también empodera a los hombres a expresar su individualidad a través de la ropa, marcando un hito en la historia de la moda.",
-        img: modahombre,
-        time: "2 Hours",
-        url: "../pages/Hombre.jsx",
-        like: "5/5",
-        by: "moda",
-        btn: "Explorar más"
-      },
-    ],
-  };
+  title: "VISITE NUESTRA CATEGORÍAS",
+  news: [
+    {
+      title: "MUJER",
+      text: "La moda femenina es mucho más que apariencia; es una herramienta poderosa para la autoexpresión y el empoderamiento. Permite a las mujeres reflejar su identidad única, aumentar su confianza y sentirse cómodas en su propia piel. Además, la moda actúa como un lenguaje no verbal, comunicando mensajes sobre quiénes somos y conectándonos con otros. A lo largo de la historia, ha sido un motor de cambio social, desafiando estereotipos y promoviendo la diversidad. En esencia, la moda permite a las mujeres sentirse bien consigo mismas, expresar su individualidad y navegar por el mundo con seguridad y estilo.",
+      img: modamujer,
+      url: "/mujer",
+      like: "5/5",
+      time: "11 Mins",
+      by: "moda",
+      btn: "Explorar más"
+    },
+    {
+      title: "NIÑO",
+      text: "La moda infantil, más allá de ser un reflejo de tendencias adultas en miniatura, se ha convertido en un poderoso vehículo de expresión y desarrollo para los niños. Al permitirles elegir y experimentar con su ropa, se fomenta su individualidad y creatividad, construyendo una base sólida para su autoestima y confianza. Además, la moda infantil sostenible emerge como una fuerza transformadora, impulsando la conciencia ambiental desde temprana edad y promoviendo un consumo responsable que moldea el futuro de la industria.",
+      img: modaniño,
+      time: "41 Mins",
+      like: "5/5",
+      url: "/niño",
+      by: "moda",
+      btn: "Explorar más"
+    },
+    {
+      title: "NIÑA",
+      text: "La moda infantil femenina es un caleidoscopio de creatividad y funcionalidad, donde la comodidad se fusiona con las últimas tendencias. Desde vestidos con estampados vibrantes y faldas con vuelo hasta conjuntos deportivos chic y accesorios llamativos, la moda de niña celebra la individualidad y el espíritu juguetón. Los diseñadores se inspiran en la imaginación infantil, creando prendas que permiten a las niñas expresarse mientras exploran el mundo con confianza y estilo.",
+      img: modaniña,
+      time: "2 Hours",
+      url: "/niña",
+      like: "5/5",
+      by: "moda",
+      btn: "Explorar más"
+    },
+    {
+      title: "JUVENIL",
+      text: "La moda juvenil es un caleidoscopio en constante evolución, donde la individualidad se fusiona con las tendencias globales. Desde la explosión del streetwear con sus siluetas oversized y zapatillas llamativas, hasta la nostalgia de los 90 y 2000 que resurge con tops diminutos y pantalones de tiro bajo, la moda juvenil es un reflejo de la autoexpresión y la búsqueda de identidad. Las redes sociales y los influencers juegan un papel crucial, dictando tendencias que se viralizan en segundos, mientras que la sostenibilidad y la moda genderless ganan terreno, desafiando las normas y abrazando la diversidad.",
+      img: modajuvenil,
+      time: "2 Hours",
+      url: "/juvenil",
+      like: "5/5",
+      by: "moda",
+      btn: "Explorar más"
+    },
+    {
+      title: "HOMBRE",
+      text: "La moda masculina ha experimentado una transformación radical, impulsada por una creciente conciencia de estilo y la ruptura de estereotipos. Los hombres de hoy se aventuran más allá de los básicos, experimentando con colores vibrantes, texturas innovadoras y siluetas que desafían las normas tradicionales. Esta evolución no solo redefine la masculinidad, sino que también empodera a los hombres a expresar su individualidad a través de la ropa, marcando un hito en la historia de la moda.",
+      img: modahombre,
+      time: "2 Hours",
+      url: "/hombre",
+      like: "5/5",
+      by: "moda",
+      btn: "Explorar más"
+    },
+  ]
+};
+
+const dama = {
+  title: "MODA FEMENINA",
+  news: [
+    {
+      title: "PIJAMAS",
+      text: "La moda femenina es un universo de creatividad y expresiónn",
+      img: "pijama1",
+      url: "",
+      btn: "Explorar más"
+    },
+    {
+      title: "ZAPATOS",
+      text: "La moda femenina es un universo de creatividad y expresiónn",
+      img: "",
+      url: "",
+      btn: "Explorar más"
+    },
+  ]
+};
 
 const footerAPI = {
   titles: [{ title: "JACANA" }, { title: "Get Help" }, { title: "Company" }],
@@ -361,4 +383,4 @@ const footerAPI = {
 };
 
 
-export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales };
+export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama };
