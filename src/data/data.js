@@ -1,5 +1,5 @@
 import heroimg from "../assets/hero.png";
-import mujer from "../assets/Mujer/portadas/mujer.png"
+import mujer from "../assets/Mujer/portadas/mujer.png";
 
 import hightlightimg from "../assets/hightlightimg.png";
 import sneakershoe from "../assets/sneaker.png";
@@ -52,12 +52,19 @@ import modamujer from "../assets/modamujer.jpg";
 import modahombre from "../assets/modahombre.jpg";
 import modaniña from "../assets/modaniña.jpg";
 import modajuvenil from "../assets/modajuvenil.avif";
-import womanshose from "../assets/Mujer/portadas/womanshose.webp"
-import portada from "../assets/Mujer/zapatos/portada.jpg";
-import closet from "../assets/Mujer/portadas/closet.jpg"
+import womanshose from "../assets/Mujer/portadas/womanshose.webp";
+import gent from "../assets/Hombre/Portada/gent.png";
+import closet from "../assets/Mujer/portadas/closet.jpg";
 import pijama from "../assets/Mujer/portadas/pijama.jpg";
 import deportivo from "../assets/Mujer/portadas/deportivo.webp";
 import jeans from "../assets/Mujer/portadas/jeans.webp";
+import sport from "../assets/Hombre/Portada/sport.avif";
+import closeth from "../assets/Hombre/Portada/closeth.jpg";
+import faja from "../assets/Hombre/Portada/faja.avif";
+import gap from "../assets/Hombre/Portada/gap.jpg";
+import sandalia from "../assets/Hombre/Portada/sandalia.jpg";
+import reloj from "../assets/Hombre/Portada/reloj.jpg";
+
 
 import facebook from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
@@ -544,7 +551,57 @@ const cdeportivo = {
       btn: "Explorar más"
     },
   ]
-}
+};
+
+const caballero = {
+  title: "JACANA Styles Costa Rica",
+  subtitle: "Moda para los caballeros",
+  image: gent,
+  news: [
+    {
+      title: "ZAPATOS",
+      text: "",
+      img: sport,
+      url: "",
+      btn: "Explorar más"
+    },
+    {
+      title: "ROPA",
+      text: "",
+      img: closeth,
+      url: "",
+      btn: "Explorar más"
+    },
+    {
+      title: "FAJAS",
+      text: "",
+      img: faja,
+      url: "",
+      btn: "Explorar más"
+    },
+    {
+      title: "GORRA",
+      text: "",
+      img: gap,
+      url: "",
+      btn: "Explorar más"
+    },
+    {
+      title: "SANDALIAS",
+      text: "",
+      img: sandalia,
+      url: "",
+      btn: "Explorar más"
+    },
+    {
+      title: "RELOJ",
+      text: "",
+      img: reloj,
+      url: "",
+      btn: "Explorar más"
+    },
+  ]
+};
 
 const footerAPI = {
   titles: [{ title: "JACANA" }, { title: "Get Help" }, { title: "Company" }],
@@ -577,4 +634,4 @@ const footerAPI = {
 };
 
 
-export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api };
+export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api, caballero };
