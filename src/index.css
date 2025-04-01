@@ -98,7 +98,7 @@
 
   .hero-image {
     @apply w-auto h-[35vh] lg:h-[45vh] md:h-[35vh] sm:h-[18vh] xsm:h-[25vh];
-    max-width: 83%;
+    max-width: 85%;
     /* Aumenta el tamaño de la imagen al 90% del contenedor */
   }
 
