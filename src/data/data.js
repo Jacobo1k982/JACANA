@@ -1,4 +1,5 @@
 import heroimg from "../assets/hero.png";
+import mujer from "../assets/Mujer/portadas/mujer.png"
 
 import hightlightimg from "../assets/hightlightimg.png";
 import sneakershoe from "../assets/sneaker.png";
@@ -51,9 +52,9 @@ import modamujer from "../assets/modamujer.jpg";
 import modahombre from "../assets/modahombre.jpg";
 import modaniña from "../assets/modaniña.jpg";
 import modajuvenil from "../assets/modajuvenil.avif";
-import pijama1 from "../assets/Mujer/Pijamas/pijama1.jpg";
+import womanshose from "../assets/Mujer/portadas/womanshose.webp"
 import portada from "../assets/Mujer/zapatos/portada.jpg";
-import closet from "../assets/Mujer/closet.webp"
+import closet from "../assets/Mujer/portadas/closet.jpg"
 import pijama from "../assets/Mujer/portadas/pijama.jpg";
 import deportivo from "../assets/Mujer/portadas/deportivo.webp";
 import jeans from "../assets/Mujer/portadas/jeans.webp";
@@ -86,6 +87,11 @@ const heroapi = {
     { icon: whatsapp },
   ],
 };
+
+const hero2api = {
+  title: "JACANA Styles Costa Rica",
+  subtitle: "Tú moda a un clic",
+}
 
 const popularsales = {
   title: "Ventas populares",
@@ -355,7 +361,9 @@ const story = {
 };
 
 const dama = {
-  title: "MODA FEMENINA",
+  title: "JACANA Styles Costa Rica",
+  subtitle: "Moda para las damas",
+  image: mujer,
   news: [
     {
       title: "ROPA",
@@ -367,7 +375,7 @@ const dama = {
     {
       title: "ZAPATOS",
       text: "La moda, la calidad y el confort en los zapatos para damas son fundamentales, ya que no solo reflejan el estilo y la personalidad de quien los usa, sino que también influyen en su bienestar y confianza. Un calzado de calidad garantiza durabilidad y resistencia, evitando el desgaste prematuro y ofreciendo una mejor inversión a largo plazo. Por otro lado, el confort es clave para la salud, ya que un buen diseño ergonómico previene dolores, fatiga y problemas en los pies, permitiendo a las mujeres enfrentar su día con comodidad y seguridad. En conjunto, estos tres elementos crean una experiencia única que combina elegancia, funcionalidad y bienestar en cada paso.",
-      img: portada,
+      img: womanshose,
       url: "",
       btn: "Explorar más"
     },
@@ -569,4 +577,4 @@ const footerAPI = {
 };
 
 
-export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo };
+export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api };

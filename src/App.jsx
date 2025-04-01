@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { Navbar, Hero, Sales, FlexContent, Stories, Footer, Cart, Mujer, Ropa, Mañanitas, CDeportivo } from './components';
-import { heroapi, popularsales, topratedsales, highlight, sneaker, story, footerAPI, dama, ropa, mañanitas, cdeportivo } from './data/data.js';
+import { heroapi, popularsales, topratedsales, highlight, sneaker, story, footerAPI, dama, ropa, mañanitas } from './data/data.js';
 
-import Hombre from "./pages/Hombre.jsx";
-import Juvenil from "./pages/Juvenil.jsx";
-import Niña from "./pages/Niña.jsx";
-import Niño from "./pages/Niño.jsx";
+import Hombre from "./components/Hombre.jsx";
+import Juvenil from "./components/Juvenil.jsx";
+import Niña from "./components/Niña.jsx";
+import Niño from "./components/Niño.jsx";
 
 
 function App() {
@@ -33,10 +33,10 @@ function App() {
           <Route path="/juvenil" element={<Juvenil />} />
           <Route path="/niña" element={<Niña />} />
           <Route path="/niño" element={<Niño />} />
-          <Route path="/mujer" element={<Mujer dama={dama} />} /> 
+          <Route path="/mujer" element={<Mujer dama={dama} />} />
           <Route path="/ropa" element={<Ropa ropa={ropa} />} />
           <Route path="/mañanitas" element={<Mañanitas mañanitas={mañanitas} />} />
-          <Route path='/cdeportivo' element={<CDeportivo cdeportivo={cdeportivo} />} />
+          <Route path='/cdeportivo' element={<CDeportivo cdeportivo={CDeportivo} />} />
         </Routes>
         <Footer footerAPI={footerAPI} />
       </Router>
