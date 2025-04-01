@@ -6,3 +6,6 @@ export {default as FlexContent} from './FlexContent';
 export {default as Stories} from './Stories';
 export {default as Footer} from './Footer';
 export {default as Mujer} from './Mujer.jsx';
+export {default as Ropa} from './Ropa.jsx';
+export {default as Mañanitas} from './Mañanitas.jsx';
+export {default as CDeportivo} from './CDeportivo.jsx';

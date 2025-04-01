@@ -1,5 +1,3 @@
-
-
 import heroimg from "../assets/hero.png";
 
 import hightlightimg from "../assets/hightlightimg.png";
@@ -28,13 +26,37 @@ import product10 from "../assets/product10.png";
 import product11 from "../assets/product11.png";
 import product12 from "../assets/product12.png";
 
+import WA0004 from "../assets/Mujer/Pijamas/mañanitas/WA0004.jpg";
+import WA0005 from "../assets/Mujer/Pijamas/mañanitas/WA0005.jpg";
+import WA0006 from "../assets/Mujer/Pijamas/mañanitas/WA0006.jpg";
+import WA0007 from "../assets/Mujer/Pijamas/mañanitas/WA0007.jpg";
+import WA0008 from "../assets/Mujer/Pijamas/mañanitas/WA0008.jpg";
+import WA0009 from "../assets/Mujer/Pijamas/mañanitas/WA0009.jpg";
+import WA0010 from "../assets/Mujer/Pijamas/mañanitas/WA0010.jpg";
+import WA0011 from "../assets/Mujer/Pijamas/mañanitas/WA0011.jpg";
+import WA0012 from "../assets/Mujer/Pijamas/mañanitas/WA0012.jpg";
+import WA0013 from "../assets/Mujer/Pijamas/mañanitas/WA0013.jpg";
+import WA0014 from "../assets/Mujer/Pijamas/mañanitas/WA0014.jpg";
+import WA0015 from "../assets/Mujer/Pijamas/mañanitas/WA0015.jpg";
+import WA0016 from "../assets/Mujer/Pijamas/mañanitas/WA0016.jpg";
+import WA0017 from "../assets/Mujer/Pijamas/mañanitas/WA0017.jpg";
+import WA0018 from "../assets/Mujer/Pijamas/mañanitas/WA0018.jpg";
+import WA0019 from "../assets/Mujer/Pijamas/mañanitas/WA0019.jpg";
+import WA0020 from "../assets/Mujer/Pijamas/mañanitas/WA0020.jpg";
+import WA0021 from "../assets/Mujer/Pijamas/mañanitas/WA0021.jpg";
+import WA0022 from "../assets/Mujer/Pijamas/mañanitas/WA0022.jpg";
+
 import modaniño from "../assets/modaniño.jpg";
 import modamujer from "../assets/modamujer.jpg";
 import modahombre from "../assets/modahombre.jpg";
 import modaniña from "../assets/modaniña.jpg";
 import modajuvenil from "../assets/modajuvenil.avif";
 import pijama1 from "../assets/Mujer/Pijamas/pijama1.jpg";
-
+import portada from "../assets/Mujer/zapatos/portada.jpg";
+import closet from "../assets/Mujer/closet.webp"
+import pijama from "../assets/Mujer/portadas/pijama.jpg";
+import deportivo from "../assets/Mujer/portadas/deportivo.webp";
+import jeans from "../assets/Mujer/portadas/jeans.webp";
 
 import facebook from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
@@ -336,21 +358,185 @@ const dama = {
   title: "MODA FEMENINA",
   news: [
     {
-      title: "PIJAMAS",
-      text: "La moda femenina es un universo de creatividad y expresiónn",
-      img: "pijama1",
-      url: "",
+      title: "ROPA",
+      text: "Para las damas, la moda en la ropa es importante como una forma de expresión personal y para sentirse actualizadas y seguras de sí mismas, mientras que la calidad asegura la durabilidad de las prendas, un mejor ajuste y una sensación más agradable al tacto, y el confort es fundamental para poder llevar la ropa durante todo el día con facilidad y sin restricciones, permitiendo así que las mujeres se sientan bien tanto por dentro como por fuera al vestir.",
+      img: closet,
+      url: "/ropa",
       btn: "Explorar más"
     },
     {
       title: "ZAPATOS",
-      text: "La moda femenina es un universo de creatividad y expresiónn",
-      img: "",
+      text: "La moda, la calidad y el confort en los zapatos para damas son fundamentales, ya que no solo reflejan el estilo y la personalidad de quien los usa, sino que también influyen en su bienestar y confianza. Un calzado de calidad garantiza durabilidad y resistencia, evitando el desgaste prematuro y ofreciendo una mejor inversión a largo plazo. Por otro lado, el confort es clave para la salud, ya que un buen diseño ergonómico previene dolores, fatiga y problemas en los pies, permitiendo a las mujeres enfrentar su día con comodidad y seguridad. En conjunto, estos tres elementos crean una experiencia única que combina elegancia, funcionalidad y bienestar en cada paso.",
+      img: portada,
       url: "",
       btn: "Explorar más"
     },
   ]
 };
+
+const ropa = {
+  title: "CLOSET",
+  news: [
+    {
+      title: "CONJUNTO MAÑANITAS",
+      text: "El uso de una pijama mañanita de mujer ofrece una combinación ideal de confort y practicidad, facilitando una transición suave entre el descanso y las actividades del día. La bata proporciona una capa adicional de calidez y cobertura, lo que resulta especialmente útil en las mañanas frescas o al realizar tareas ligeras en el hogar antes de vestirse por completo, contribuyendo así a una sensación de comodidad y bienestar personal.",
+      img: pijama,
+      url: "/mañanitas",
+      btn: "Explorar más"
+    },
+    {
+      title: "CONJUNTO DEPORTIVO",
+      text: "Usar un conjunto deportivo de mujer es importante porque está diseñado para brindar comodidad y soporte durante la actividad física, permitiendo un rango completo de movimiento y ayudando a regular la temperatura corporal. Además de su funcionalidad, estos conjuntos pueden aumentar la motivación y la confianza al hacer ejercicio, y también ofrecen una opción estilizada y coordinada para quienes buscan verse bien mientras se mantienen activas.",
+      img: deportivo,
+      url: "/cdeportivo",
+      btn: "Explorar más"
+    },
+    {
+      title: "PANTALONES",
+      text: "Los pantalones jeans de mujer son una prenda fundamental en cualquier guardarropa por su increíble versatilidad, adaptándose a una amplia gama de estilos y ocasiones, desde looks casuales hasta combinaciones más arregladas. Su durabilidad los convierte en una inversión a largo plazo, capaces de resistir el uso diario, mientras que la variedad de cortes y tejidos disponibles aseguran comodidad para diferentes tipos de cuerpo y preferencias, manteniéndose además como un icono de la moda a lo largo del tiempo.",
+      img: jeans,
+      url: "",
+      btn: "Explorar más"
+    },
+  ]
+};
+
+const mañanitas = {
+  title: "CONJUNTO MAÑANITA",
+  news: [
+    {
+      title: "CONJUNTO MAÑANITA",
+      text: "",
+      img: WA0004,
+      size: 's,m,l',
+    },
+    {
+      title: "CONJUNTO MAÑANITA",
+      text: "",
+      img: WA0005,
+      url: "",
+      btn: ""
+    },
+    {
+      title: "CONJUNTO MAÑANITA",
+      text: "",
+      img: WA0006,
+      url: "",
+      btn: ""
+    },
+    {
+      title: "CONJUNTO MAÑANITA",
+      text: "",
+      img: WA0007,
+      url: "",
+      btn: ""
+    },
+    {
+      title: "CONJUNTO MAÑANITA",
+      text: "",
+      img: WA0008,
+      url: "",
+      btn: ""
+    },
+    {
+      title: "CONJUNTO MAÑANITA",
+      text: "",
+      img: WA0009,
+      url: "",
+      btn: ""
+    },
+    {
+      title: "CONJUNTO MAÑANITA",
+      text: "",
+      img: WA0010,
+      url: "",
+      btn: ""
+    },
+    {
+      title: "CONJUNTO MAÑANITA",
+      text: "",
+      img: WA0011,
+      url: "",
+      btn: ""
+    },
+    {
+      title: "CONJUNTO MAÑANITA",
+      text: "",
+      img: WA0012,
+      url: "",
+      btn: ""
+    },
+    {
+      title: "CONJUNTO MAÑANITA",
+      text: "",
+      img: WA0013,
+      url: "",
+      btn: ""
+    },
+    {
+      title: "CONJUNTO MAÑANITA",
+      text: "",
+      img: WA0014,
+      url: "",
+      btn: ""
+    },
+    {
+      title: "CONJUNTO MAÑANITA",
+      text: "",
+      img: WA0015,
+      url: "",
+      btn: ""
+    },
+  ]
+};
+
+const cdeportivo = {
+  title: "CONJUNTO DEPORTIVO",
+  news: [
+    {
+      title: "CONJUNTO DEPORTIVO",
+      text: "La camisa es un elemento fundamental en cualquier conjunto de ropa, y para",
+      img: WA0021,
+      url: "",
+      btn: "Explorar más"
+    },
+    {
+      title: "CONJUNTO DEPORTIVO",
+      text: "La camisa es un elemento fundamental en cualquier conjunto de ropa, y para",
+      img: WA0017,
+      url: "",
+      btn: "Explorar más"
+    },
+    {
+      title: "CONJUNTO DEPORTIVO",
+      text: "La camisa es un elemento fundamental en cualquier conjunto de ropa, y para",
+      img: WA0018,
+      url: "",
+      btn: "Explorar más"
+    },
+    {
+      title: "CONJUNTO DEPORTIVO",
+      text: "La camisa es un elemento fundamental en cualquier conjunto de ropa, y para",
+      img: WA0019,
+      url: "",
+      btn: "Explorar más"
+    },
+    {
+      title: "CONJUNTO DEPORTIVO",
+      text: "La camisa es un elemento fundamental en cualquier conjunto de ropa, y para",
+      img: WA0020,
+      url: "",
+      btn: "Explorar más"
+    },
+    {
+      title: "CONJUNTO DEPORTIVO",
+      text: "La camisa es un elemento fundamental en cualquier conjunto de ropa, y para",
+      img: WA0022,
+      url: "",
+      btn: "Explorar más"
+    },
+  ]
+}
 
 const footerAPI = {
   titles: [{ title: "JACANA" }, { title: "Get Help" }, { title: "Company" }],
@@ -383,4 +569,4 @@ const footerAPI = {
 };
 
 
-export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama };
+export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo };
