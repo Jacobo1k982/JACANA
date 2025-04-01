@@ -58,12 +58,8 @@ import closet from "../assets/Mujer/portadas/closet.jpg";
 import pijama from "../assets/Mujer/portadas/pijama.jpg";
 import deportivo from "../assets/Mujer/portadas/deportivo.webp";
 import jeans from "../assets/Mujer/portadas/jeans.webp";
-import sport from "../assets/Hombre/Portada/sport.avif";
-import closeth from "../assets/Hombre/Portada/closeth.jpg";
-import faja from "../assets/Hombre/Portada/faja.avif";
-import gap from "../assets/Hombre/Portada/gap.jpg";
-import sandalia from "../assets/Hombre/Portada/sandalia.jpg";
-import reloj from "../assets/Hombre/Portada/reloj.jpg";
+import zapatos from "../assets/Hombre/Portada/zapatos.jpg";
+
 
 
 import facebook from "../assets/facebook.svg";
@@ -160,7 +156,7 @@ const highlight = {
   title: "NIKE AIR WITH LIMITLESS CHOICES",
   text: "Nuestro propósito es impulsar el mundo. Actuamos construyendo comunidad, protegiendo nuestro planeta y ampliando el acceso al deporte.",
   btn: "Explorar Más",
-  url: "https://www.nike.com/launch/t/nocta-hot-step-black-gold",
+  url: "",
   img: hightlightimg,
 };
 
@@ -171,6 +167,23 @@ const sneaker = {
   btn: "Explorar Más",
   url: "https://sneakernews.com/2022/03/21/nike-lebron-2-retro-white-midnight-navy-varsity-crimson-dr0826-100/",
   img: sneakershoe,
+};
+
+const deportivoapi = {
+  heading: "DEPORTIVOS",
+  title: "ZAPATOS DEPORTIVOS",
+  subtitle: "Moda deportiva",
+  text: "Nuestro propósito es impulsar el mundo. Actuamos construy",
+  img: sneakershoe,
+  url:"",
+  sociallinks: [
+    { icon: facebook },
+    { icon: messenger },
+    { icon: instagram },
+    { icon: twitter },
+    { icon: youtube },
+    { icon: whatsapp },
+  ],
 };
 
 const topratedsales = {
@@ -557,46 +570,54 @@ const caballero = {
   title: "JACANA Styles Costa Rica",
   subtitle: "Moda para los caballeros",
   image: gent,
+  sociallinks: [
+    { icon: facebook },
+    { icon: messenger },
+    { icon: instagram },
+    { icon: twitter },
+    { icon: youtube },
+    { icon: whatsapp },
+  ],
   news: [
     {
-      title: "ZAPATOS",
-      text: "",
-      img: sport,
-      url: "",
+      title: "ZAPATOS DEPORTIVOS",
+      text: "Los zapatos deportivos para hombres son fundamentales no solo para actividades físicas, sino también para la comodidad y el soporte diario. Ofrecen la amortiguación y estabilidad necesarias para proteger los pies y las articulaciones durante el ejercicio, previniendo lesiones. Además, su diseño versátil los ha convertido en una opción popular para el uso casual, combinando funcionalidad y estilo para el hombre moderno.",
+      img: zapatos,
+      url: "/deportivo",
       btn: "Explorar más"
     },
     {
       title: "ROPA",
-      text: "",
-      img: closeth,
+      text: "MUY PRONTO",
+      img: "",
       url: "",
       btn: "Explorar más"
     },
     {
       title: "FAJAS",
-      text: "",
-      img: faja,
+      text: "MUY PRONTO",
+      img: "",
       url: "",
       btn: "Explorar más"
     },
     {
       title: "GORRA",
-      text: "",
-      img: gap,
+      text: "MUY PRONTO",
+      img: "",
       url: "",
       btn: "Explorar más"
     },
     {
       title: "SANDALIAS",
-      text: "",
-      img: sandalia,
+      text: "MUY PRONTO",
+      img: "",
       url: "",
       btn: "Explorar más"
     },
     {
       title: "RELOJ",
-      text: "",
-      img: reloj,
+      text: "MUY PRONTO",
+      img: "",
       url: "",
       btn: "Explorar más"
     },
@@ -634,4 +655,4 @@ const footerAPI = {
 };
 
 
-export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api, caballero };
+export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api, caballero, deportivoapi };

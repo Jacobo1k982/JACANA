@@ -41,7 +41,7 @@ const Mujer = ({ dama: { title, news, subtitle, image } }) => {
             <img
               src={image}
               alt="imagen-decorativa"
-              className="imagen-decorativa mt-5 w-[300px] max-w-full h-auto object-cover rounded-lg shadow-ms"
+              className="imagen-decorativa mt-5 w-[285px] max-w-full h-auto object-cover rounded-lg shadow-ms"
             />
           </div>
         </div>

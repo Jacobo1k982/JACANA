@@ -9,7 +9,7 @@ const Hero = ({ heroapi: { title, subtitle, btntext, img, sociallinks, videos } 
       <div className='relative opacity-100 z-20 grid items-center justify-items-center nike-container'>
         <div className='grid items-center justify-items-center mt-28 md:mt-24'>
           <div className='text-container w-full flex flex-col items-center'> {/* Contenedor adicional */}
-          <h1 className='text-6xl lg:text-4xl md:text-3xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200 text-center'>{title}</h1>
+            <h1 className='text-6xl lg:text-4xl md:text-3xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200 text-center'>{title}</h1>
             <h1 className='text-4xl lg:text-3xl md:text-2xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200'>{subtitle}</h1>
           </div>
           <button type='button' className='button-theme bg-slate-200 shadow-slate-200 rounded-xl my-5'>{btntext}</button>
@@ -18,11 +18,13 @@ const Hero = ({ heroapi: { title, subtitle, btntext, img, sociallinks, videos } 
               <Clips key={i} imgsrc={val.imgsrc} clip={val.clip} />
             ))}
           </div>
+
           <div className='grid items-center absolute top-[33vh] lg:top-[37vh] right-0 gap-3'>
             {sociallinks?.map((val, i) => (
               <SocialLink key={i} icon={val.icon} />
             ))}
           </div>
+
         </div>
         <div className='flex items-center justify-center hero-image-container'> {/* Nueva clase aquí */}
           <img

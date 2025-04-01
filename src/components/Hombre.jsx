@@ -4,8 +4,9 @@ import Title from "./utils/Title";
 import "@splidejs/react-splide/css";
 import { truncate } from "lodash";
 import { Link } from "react-router-dom";
+import { SocialLink } from './utils/SocialLink';
 
-const Hombre = ({ caballero: { title, news, subtitle, image } }) => {
+const Hombre = ({ caballero: { title, news, subtitle, image, sociallinks = [] } }) => {
     const splideOptions = {
         perPage: 4,
         perMove: 1,
@@ -41,9 +42,18 @@ const Hombre = ({ caballero: { title, news, subtitle, image } }) => {
                         <img
                             src={image}
                             alt="imagen-decorativa"
-                            className="imagen-decorativa mt-5 w-[200px] max-w-full h-auto object-cover rounded-lg shadow-ms"
+                            className="imagen-decorativa mt-5 w-[125px] max-w-full h-auto object-cover rounded-lg shadow-ms"
                         />
                     </div>
+
+                    {/* Íconos sociales */}
+                    {sociallinks.length > 0 && (
+                        <div className='grid items-center absolute top-[33vh] lg:top-[37vh] right-0 gap-3'>
+                            {sociallinks.map((val, i) => (
+                                <SocialLink key={i} icon={val.icon} />
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
 
