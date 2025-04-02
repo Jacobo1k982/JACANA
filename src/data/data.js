@@ -325,30 +325,9 @@ const topratedsales = {
 };
 
 const topratedsales2 = {
-  title: "CATÁLOGO",
+  title: "LINEA DEPORTIVA",
+  Subtitle: "Linea Nike Air",
   items: [
-    {
-      id: "0M0x1",
-      title: "Nike Air Low Premium",
-      text: "MEN Running Shoes",
-      btn: "Coamprar",
-      img: nike1,
-      price: "--",
-      color: "from-blue-500 to-blue-500",
-      shadow: "shadow-lg shadow-blue-500",
-      size: "--",
-    },
-    {
-      id: "0M0x2",
-      title: "Nike Air Force Green",
-      text: "MEN Running Shoes",
-      btn: "Coamprar",
-      img: product2,
-      price: "--",
-      color: "from-green-500 to-emerald-500",
-      shadow: "shadow-lg shadow-green-500",
-      size: "--"
-    },
   ]
 };
 

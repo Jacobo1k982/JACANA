@@ -1,12 +1,13 @@
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Title from "./utils/Title";
+import Subtitle from "./utils/Subtitle";
 import "@splidejs/react-splide/css";
 import { truncate } from "lodash";
 import { Link } from "react-router-dom";
 
 
-const Stories = ({ story: { title, news } }) => {
+const Stories = ({ story: { title, subtitle,  news } }) => {
   const splideOptions = {
     perPage: 4,
     perMove: 1,
@@ -28,6 +29,7 @@ const Stories = ({ story: { title, news } }) => {
     <>
       <div className="nike-container stories-container-padding mb-11">
         <Title title={title} />
+        <Subtitle subtitle={subtitle} />
         <div className="mt-7">
           <Splide options={splideOptions}>
             {news.map((val, i) => (
