@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { Navbar, Hero, Sales, FlexContent, Stories, Footer, Cart, Mujer, Ropa, Mañanitas, CDeportivo, Hombre, Deportivo } from './components';
-import { heroapi, popularsales, topratedsales, highlight, sneaker, story, footerAPI, dama, ropa, mañanitas, caballero, deportivoapi } from './data/data.js';
+import { heroapi, popularsales, topratedsales, topratedsales2, highlight, sneaker, story, footerAPI, dama, ropa, mañanitas, caballero, deportivoapi } from './data/data.js';
 
 import Juvenil from "./components/Juvenil.jsx";
 import Niña from "./components/Niña.jsx";
@@ -29,6 +29,7 @@ function App() {
         <Route path="/deportivo" element={
           <main className='flex flex-col gap-16 relative'>
             <Deportivo deportivoapi={deportivoapi} />
+            <Sales endpoint={topratedsales2} />
           </main>
         } />
         <Route path="/juvenil" element={<Juvenil />} />

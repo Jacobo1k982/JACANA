@@ -26,7 +26,7 @@ import product9 from "../assets/product9.png";
 import product10 from "../assets/product10.png";
 import product11 from "../assets/product11.png";
 import product12 from "../assets/product12.png";
-
+/*{img mañanitas}*/
 import WA0004 from "../assets/Mujer/Pijamas/mañanitas/WA0004.jpg";
 import WA0005 from "../assets/Mujer/Pijamas/mañanitas/WA0005.jpg";
 import WA0006 from "../assets/Mujer/Pijamas/mañanitas/WA0006.jpg";
@@ -46,6 +46,8 @@ import WA0019 from "../assets/Mujer/Pijamas/mañanitas/WA0019.jpg";
 import WA0020 from "../assets/Mujer/Pijamas/mañanitas/WA0020.jpg";
 import WA0021 from "../assets/Mujer/Pijamas/mañanitas/WA0021.jpg";
 import WA0022 from "../assets/Mujer/Pijamas/mañanitas/WA0022.jpg";
+/*{Nike}*/
+import nike1 from "../assets/nike/2 Nike/nike1.jpg"
 
 import modaniño from "../assets/modaniño.jpg";
 import modamujer from "../assets/modamujer.jpg";
@@ -61,7 +63,7 @@ import jeans from "../assets/Mujer/portadas/jeans.webp";
 import zapatos from "../assets/Hombre/Portada/zapatos.jpg";
 
 
-
+/*{icon}*/
 import facebook from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
 import twitter from "../assets/twitter.svg";
@@ -171,11 +173,9 @@ const sneaker = {
 
 const deportivoapi = {
   heading: "DEPORTIVOS",
-  title: "ZAPATOS DEPORTIVOS",
+  title: "JACANA Styles Costa Rica",
   subtitle: "Moda deportiva",
-  text: "Nuestro propósito es impulsar el mundo. Actuamos construy",
-  img: sneakershoe,
-  url:"",
+  img: hightlightimg ,
   sociallinks: [
     { icon: facebook },
     { icon: messenger },
@@ -322,6 +322,34 @@ const topratedsales = {
       size: "--"
     },
   ],
+};
+
+const topratedsales2 = {
+  title: "CATÁLOGO",
+  items: [
+    {
+      id: "0M0x1",
+      title: "Nike Air Low Premium",
+      text: "MEN Running Shoes",
+      btn: "Coamprar",
+      img: nike1,
+      price: "--",
+      color: "from-blue-500 to-blue-500",
+      shadow: "shadow-lg shadow-blue-500",
+      size: "--",
+    },
+    {
+      id: "0M0x2",
+      title: "Nike Air Force Green",
+      text: "MEN Running Shoes",
+      btn: "Coamprar",
+      img: product2,
+      price: "--",
+      color: "from-green-500 to-emerald-500",
+      shadow: "shadow-lg shadow-green-500",
+      size: "--"
+    },
+  ]
 };
 
 const story = {
@@ -655,4 +683,4 @@ const footerAPI = {
 };
 
 
-export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api, caballero, deportivoapi };
+export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api, caballero, deportivoapi, topratedsales2 };

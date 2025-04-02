@@ -3,7 +3,7 @@ import { SocialLink } from './utils/SocialLink';
 
 const Deportivo = ({ deportivoapi = {} }) => {
     // Extraer valores con fallback para evitar errores
-    const { title = "", subtitle = "", sociallinks = [] } = deportivoapi;
+    const { title = "", subtitle = "", sociallinks, img = [] } = deportivoapi;
 
     return (
         <div className="relative h-auto w-auto flex flex-col">
@@ -20,6 +20,12 @@ const Deportivo = ({ deportivoapi = {} }) => {
                         <h1 className="text-4xl lg:text-3xl md:text-2xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200">
                             {subtitle}
                         </h1>
+                        {/* Imagen debajo del subtítulo */}
+                        <img
+                            src={img}
+                            alt="imagen-decorativa"
+                            className="imagen-decorativa mt-5 w-[680px] max-w-full h-auto object-cover rounded-lg shadow-ms"
+                        />
                     </div>
 
                     {/* Íconos sociales */}
