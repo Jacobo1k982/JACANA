@@ -46,8 +46,6 @@ import WA0019 from "../assets/Mujer/Pijamas/mañanitas/WA0019.jpg";
 import WA0020 from "../assets/Mujer/Pijamas/mañanitas/WA0020.jpg";
 import WA0021 from "../assets/Mujer/Pijamas/mañanitas/WA0021.jpg";
 import WA0022 from "../assets/Mujer/Pijamas/mañanitas/WA0022.jpg";
-/*{Nike}*/
-import nike1 from "../assets/nike/2 Nike/nike1.jpg"
 
 import modaniño from "../assets/modaniño.jpg";
 import modamujer from "../assets/modamujer.jpg";
