@@ -1,4 +1,4 @@
-# JACANA STYLES STORE
+# JACANA STYLES Costa Rica
 Tienda Virtual JACANA Styles Costa Rica
 
  <p align="center"><img 
