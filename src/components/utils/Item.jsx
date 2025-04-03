@@ -9,6 +9,7 @@ const Item = ({
   color,
   shadow,
   title,
+  subtitle,
   text,
   img,
   btn,
@@ -19,7 +20,7 @@ const Item = ({
   const dispatch = useDispatch();
 
   const onAddToCart = () => {
-    const item = { id, color, shadow, title, text, img, rating, price, size };
+    const item = { id, color, shadow, title, text, subtitle, img, rating, price, size };
     dispatch(setAddItemToCart(item));
   };
 

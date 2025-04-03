@@ -68,7 +68,7 @@ import twitter from "../assets/twitter.svg";
 import youtube from "../assets/youtube.svg";
 import messenger from "../assets/messenger.svg";
 import whatsapp from "../assets/whatsapp.svg";
-import { size } from "lodash";
+import size from "lodash";
 
 
 const heroapi = {
@@ -173,7 +173,7 @@ const deportivoapi = {
   heading: "DEPORTIVOS",
   title: "JACANA Styles Costa Rica",
   subtitle: "Moda deportiva",
-  img: hightlightimg ,
+  img: hightlightimg,
   sociallinks: [
     { icon: facebook },
     { icon: messenger },

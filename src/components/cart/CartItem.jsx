@@ -4,20 +4,20 @@ import { useDispatch } from "react-redux";
 import { setDecreaseItemQTY, setIncreaseItemQTY, setRemoveItemFromCart } from "../../app/CartSlice.js";
 
 const CartItem = ({
-  item: { id, title, text, img, color, shadow, price, size, cartQuantity },
+  item: { id, title, subtitle, text, img, color, shadow, price, size, cartQuantity },
 }) => {
 
   const dispatch = useDispatch();
 
   const onRemoveItem = () => {
-    dispatch(setRemoveItemFromCart({ id, title, text, img, color, shadow, price, size, cartQuantity }));
+    dispatch(setRemoveItemFromCart({ id, title, subtitle, text, img, color, shadow, price, size, cartQuantity }));
   };
 
   const onIncreaseItemQTY = () => {
-    dispatch(setIncreaseItemQTY({ id, title, text, img, color, shadow, price, size, cartQuantity }));
+    dispatch(setIncreaseItemQTY({ id, title, subtitle, text, img, color, shadow, price, size, cartQuantity }));
   };
   const onDecreaseItemQTY = () => {
-    dispatch(setDecreaseItemQTY({ id, title, text, img, color, shadow, price, size, cartQuantity }));
+    dispatch(setDecreaseItemQTY({ id, title, subtitle, text, img, color, shadow, price, size, cartQuantity }));
   } ;
 
   return (
