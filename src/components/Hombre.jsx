@@ -47,13 +47,18 @@ const Hombre = ({ caballero: { title, news, subtitle, image, sociallinks = [] } 
                     </div>
 
                     {/* Íconos sociales */}
-                    {sociallinks.length > 0 && (
-                        <div className='grid items-center absolute top-[33vh] lg:top-[37vh] right-0 gap-3'>
-                            {sociallinks.map((val, i) => (
-                                <SocialLink key={i} icon={val.icon} />
-                            ))}
-                        </div>
-                    )}
+                    <div className='grid items-center absolute top-[33vh] lg:top-[37vh] sm:top-[5vh] xsm:top-[25vh] right-0 gap-2'>
+                        {sociallinks?.map((val, i) => (
+                            <a
+                                key={i}
+                                href={val.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <SocialLink icon={val.icon} />
+                            </a>
+                        ))}
+                    </div>
                 </div>
             </div>
 

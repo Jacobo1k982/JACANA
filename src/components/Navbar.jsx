@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <>
       <header className={
-        !navState ? 'absolute top-7 left-0 right-0 opacity-100 z-50' : 'fixed top-0 left-0 right-0 h-[15vh] flex items-center justify-center opacity-100 z-[200] blur-effect-theme'
+        !navState ? 'absolute top-5 left-0 right-0 opacity-100 z-50' : 'fixed top-0 left-0 right-0 h-[15vh] flex items-center justify-center opacity-100 z-[200] blur-effect-theme'
       }>
         <nav className='flex items-center justify-between nike-container'>
           <div className='flex items-center'>
@@ -41,7 +41,7 @@ const Navbar = () => {
               alt="logo/img"
               className={`w-12 h-auto ${navState && "filter brightness-0"}`} />
           </div>
-          <ul className='flex items-center justify-center gap-2'>
+          <ul className='flex items-center justify-center gap-2 sm:ml-4'> {/* Aqui se agrega sm:ml-4 */}
             <li className='grid items-center'>
               <MagnifyingGlassIcon className={`icon-style ${navState && "text-slate-900 transition-all duration-300"}`} />
             </li>
@@ -61,4 +61,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

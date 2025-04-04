@@ -16,4 +16,5 @@ export {default as niña} from './Niña.jsx';
 export {default as Hombre} from './Hombre.jsx';
 export {default as Deportivo} from './Deportivo.jsx';
 export {default as Nike} from '../pages/Hombre/Zapatos/Nike.jsx';
-
+export {default as NKmujer} from "../pages/Mujer/Zapatos/NKmujer.jsx";
+export {default as Sportmujer} from './Sportmujer.jsx';

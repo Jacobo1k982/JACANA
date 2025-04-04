@@ -82,12 +82,15 @@ const heroapi = {
     { imgsrc: vcover3, clip: clip },
   ],
   sociallinks: [
-    { icon: facebook },
-    { icon: messenger },
-    { icon: instagram },
-    { icon: twitter },
-    { icon: youtube },
-    { icon: whatsapp },
+    { icon: facebook, url: "https://facebook.com/tuperfil" },
+    { icon: messenger, url: "https://m.me/tuperfil" },
+    { icon: instagram, url: "https://instagram.com/tuperfil" },
+    { icon: twitter, url: "https://twitter.com/tuperfil" },
+    { icon: youtube, url: "https://youtube.com/tucanal" },
+    {
+      icon: whatsapp,
+      url: "https://wa.me/50687905876?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n",
+    },
   ],
 };
 
@@ -105,7 +108,7 @@ const popularsales = {
       text: "WOMEN Running Shoes",
       rating: "4.9",
       size: "36-37",
-      btn: "Comprar",
+      btn: "COmprar",
       img: psale4,
       price: "80",
       color: "from-blue-600 to-blue-500",
@@ -172,15 +175,36 @@ const sneaker = {
 const deportivoapi = {
   heading: "DEPORTIVOS",
   title: "JACANA Styles Costa Rica",
-  subtitle: "Moda deportiva",
+  subtitle: "Zapatos deportivos",
   img: hightlightimg,
   sociallinks: [
-    { icon: facebook },
-    { icon: messenger },
-    { icon: instagram },
-    { icon: twitter },
-    { icon: youtube },
-    { icon: whatsapp },
+    { icon: facebook, url: "https://facebook.com/tuperfil" },
+    { icon: messenger, url: "https://m.me/tuperfil" },
+    { icon: instagram, url: "https://instagram.com/tuperfil" },
+    { icon: twitter, url: "https://twitter.com/tuperfil" },
+    { icon: youtube, url: "https://youtube.com/tucanal" },
+    {
+      icon: whatsapp,
+      url: "https://wa.me/50687905876?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n",
+    },
+  ],
+};
+
+const deportivo2api = {
+  heading: "DEPORTIVOS",
+  title: "JACANA Styles Costa Rica",
+  subtitle: "Zapatos deportivos",
+  img: hightlightimg,
+  sociallinks: [
+    { icon: facebook, url: "https://facebook.com/tuperfil" },
+    { icon: messenger, url: "https://m.me/tuperfil" },
+    { icon: instagram, url: "https://instagram.com/tuperfil" },
+    { icon: twitter, url: "https://twitter.com/tuperfil" },
+    { icon: youtube, url: "https://youtube.com/tucanal" },
+    {
+      icon: whatsapp,
+      url: "https://wa.me/50687905876?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n",
+    },
   ],
 };
 
@@ -328,6 +352,13 @@ const topratedsales2 = {
   items: [
   ]
 };
+const topratedsales3 = {
+  title: "LINEA DEPORTIVA",
+  Subtitle: "Linea Nike Air",
+  items: [
+  ]
+};
+
 
 const story = {
   title: "VISITE NUESTRA CATEGORÍAS",
@@ -401,7 +432,7 @@ const dama = {
       title: "ZAPATOS",
       text: "La moda, la calidad y el confort en los zapatos para damas son fundamentales, ya que no solo reflejan el estilo y la personalidad de quien los usa, sino que también influyen en su bienestar y confianza. Un calzado de calidad garantiza durabilidad y resistencia, evitando el desgaste prematuro y ofreciendo una mejor inversión a largo plazo. Por otro lado, el confort es clave para la salud, ya que un buen diseño ergonómico previene dolores, fatiga y problemas en los pies, permitiendo a las mujeres enfrentar su día con comodidad y seguridad. En conjunto, estos tres elementos crean una experiencia única que combina elegancia, funcionalidad y bienestar en cada paso.",
       img: womanshose,
-      url: "",
+      url: "/NKmujer",
       btn: "Explorar más"
     },
   ]
@@ -576,12 +607,15 @@ const caballero = {
   subtitle: "Moda para los caballeros",
   image: gent,
   sociallinks: [
-    { icon: facebook },
-    { icon: messenger },
-    { icon: instagram },
-    { icon: twitter },
-    { icon: youtube },
-    { icon: whatsapp },
+    { icon: facebook, url: "https://facebook.com/tuperfil" },
+    { icon: messenger, url: "https://m.me/tuperfil" },
+    { icon: instagram, url: "https://instagram.com/tuperfil" },
+    { icon: twitter, url: "https://twitter.com/tuperfil" },
+    { icon: youtube, url: "https://youtube.com/tucanal" },
+    {
+      icon: whatsapp,
+      url: "https://wa.me/50687905876?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n",
+    },
   ],
   news: [
     {
@@ -660,4 +694,7 @@ const footerAPI = {
 };
 
 
-export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api, caballero, deportivoapi, topratedsales2 };
+export { 
+  heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api, 
+  caballero, deportivoapi, topratedsales2, deportivo2api,topratedsales3,
+ };
