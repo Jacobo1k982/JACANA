@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function NKmujer() {
+function Nkmujer() {
     const products = [
         { img: "/NKM/NKM1.jpg", title: "Nike", model: "Modelo Exclusivo", price: "¢ 34.500" },
         { img: "/NKM/NKM2.jpg", title: "Nike", model: "Modelo Exclusivo", price: "¢ 34.500" },
@@ -72,4 +72,4 @@ function NKmujer() {
     );
 };
 
-export default NKmujer;
+export default Nkmujer;

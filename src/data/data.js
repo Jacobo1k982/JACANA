@@ -26,6 +26,9 @@ import product9 from "../assets/product9.png";
 import product10 from "../assets/product10.png";
 import product11 from "../assets/product11.png";
 import product12 from "../assets/product12.png";
+
+import sportwoman from "/NKM/NK_portada.png";
+
 /*{img mañanitas}*/
 import WA0004 from "../assets/Mujer/Pijamas/mañanitas/WA0004.jpg";
 import WA0005 from "../assets/Mujer/Pijamas/mañanitas/WA0005.jpg";
@@ -208,6 +211,24 @@ const deportivo2api = {
   ],
 };
 
+const deportivo3api = {
+  heading: "DEPORTIVOS",
+  title: "JACANA Styles Costa Rica",
+  subtitle: "Zapatos deportivos",
+  img: sportwoman,
+  sociallinks: [
+    { icon: facebook, url: "https://facebook.com/tuperfil" },
+    { icon: messenger, url: "https://m.me/tuperfil" },
+    { icon: instagram, url: "https://instagram.com/tuperfil" },
+    { icon: twitter, url: "https://twitter.com/tuperfil" },
+    { icon: youtube, url: "https://youtube.com/tucanal" },
+    {
+      icon: whatsapp,
+      url: "https://wa.me/50687905876?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n",
+    },
+  ],
+};
+
 const topratedsales = {
   title: "Ventas mejor valoradas",
   items: [
@@ -348,17 +369,15 @@ const topratedsales = {
 
 const topratedsales2 = {
   title: "LINEA DEPORTIVA",
-  Subtitle: "Linea Nike Air",
-  items: [
-  ]
-};
-const topratedsales3 = {
-  title: "LINEA DEPORTIVA",
-  Subtitle: "Linea Nike Air",
   items: [
   ]
 };
 
+const topratedsales3 = {
+  title: "LINEA DEPORTIVA",
+  items: [
+  ]
+};
 
 const story = {
   title: "VISITE NUESTRA CATEGORÍAS",
@@ -432,7 +451,7 @@ const dama = {
       title: "ZAPATOS",
       text: "La moda, la calidad y el confort en los zapatos para damas son fundamentales, ya que no solo reflejan el estilo y la personalidad de quien los usa, sino que también influyen en su bienestar y confianza. Un calzado de calidad garantiza durabilidad y resistencia, evitando el desgaste prematuro y ofreciendo una mejor inversión a largo plazo. Por otro lado, el confort es clave para la salud, ya que un buen diseño ergonómico previene dolores, fatiga y problemas en los pies, permitiendo a las mujeres enfrentar su día con comodidad y seguridad. En conjunto, estos tres elementos crean una experiencia única que combina elegancia, funcionalidad y bienestar en cada paso.",
       img: womanshose,
-      url: "/NKmujer",
+      url: "/Sportmujer",
       btn: "Explorar más"
     },
   ]
@@ -696,5 +715,5 @@ const footerAPI = {
 
 export { 
   heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api, 
-  caballero, deportivoapi, topratedsales2, deportivo2api,topratedsales3,
+  caballero, deportivoapi, topratedsales2, deportivo2api, topratedsales3, deportivo3api
  };

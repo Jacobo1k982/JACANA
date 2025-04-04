@@ -7,7 +7,7 @@ import { truncate } from "lodash";
 import { Link } from "react-router-dom";
 
 
-const Stories = ({ story: { title, subtitle,  news } }) => {
+const Stories = ({ story: { title, subtitle, news } }) => {
   const splideOptions = {
     perPage: 4,
     perMove: 1,
@@ -27,10 +27,10 @@ const Stories = ({ story: { title, subtitle,  news } }) => {
   };
   return (
     <>
-      <div className="nike-container stories-container-padding mb-11">
+      <div className="nike-container stories-container-padding mb-11 pt-20">
         <Title title={title} />
         <Subtitle subtitle={subtitle} />
-        <div className="mt-7">
+        <div className="mt-10 lg:mt-30 mb-20">
           <Splide options={splideOptions}>
             {news.map((val, i) => (
               <SplideSlide key={i} className="mb-0.5">
@@ -42,9 +42,8 @@ const Stories = ({ story: { title, subtitle,  news } }) => {
                       alt={`img/story/${i}`}
                     />
                   </div>
-                  <div className="flex items-center justify-between w-full px-4">
-                  </div>
-                  <div className="grid items-center justify-items-center px-4">
+                  <div className="flex items-center justify-between w-full px-4"></div>
+                  <div className="grid items-center justify-items-center px-10 pt-15">
                     <h1 className="text-3xl font-bold text-center">{val.title}</h1>
                     <p className="text-sm text-justify lg:text-xs">{truncate(val.text, { length: 185 })}</p>
                   </div>

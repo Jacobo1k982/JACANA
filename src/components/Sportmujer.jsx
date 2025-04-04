@@ -1,15 +1,17 @@
 import React from "react";
 import { SocialLink } from './utils/SocialLink';
 
-const Sportmujer = ({ deportivoapi = {} }) => {
+const Sportmujer = ({ deportivo3api = {} }) => {
     // Extraer valores con fallback para evitar errores
-    const { title = "", subtitle = "", sociallinks, img = [] } = deportivoapi;
+    const { title = "", subtitle = "", sociallinks, img = [] } = deportivo3api;
 
     return (
         <div className="relative h-auto w-auto flex flex-col">
             {/* Fondo */}
-            <div className='bg-theme clip-path h-[90vh] lg:h-[85vh] md:h-[80vh] sm:h-[70vh] w-auto absolute top-0 left-0 right-0 opacity-100 z-10'></div>
-
+            <div
+  className='clip-path h-[90vh] lg:h-[85vh] md:h-[80vh] sm:h-[70vh] w-auto absolute top-0 left-0 right-0 opacity-100 z-10'
+  style={{ backgroundImage: 'linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%)' }}
+></div>
             {/* Contenido */}
             <div className="relative opacity-100 z-20 grid items-center justify-items-center nike-container">
                 <div className="grid items-center justify-items-center mt-28 md:mt-24">
@@ -24,7 +26,7 @@ const Sportmujer = ({ deportivoapi = {} }) => {
                         <img
                             src={img}
                             alt="imagen-decorativa"
-                            className="imagen-decorativa mt-5 w-[680px] max-w-full h-auto object-cover rounded-lg shadow-ms"
+                            className="imagen-decorativa mt-3 w-[40%] xsm:w-[40%] md:w-[560px] max-w-full h-auto object-cover rounded-lg shadow-ms"
                         />
                     </div>
 
