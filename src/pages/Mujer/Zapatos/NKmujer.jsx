@@ -46,34 +46,34 @@ function Nkmujer() {
         { img: "/NKM/NKM41.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 34.500" },
         { img: "/NKM/NKM42.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 34.500" },
         { img: "/NKM/NKM43.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 34.500" }
-      ];
-      
+    ];
+
 
     return (
         <div className="p-6 bg-white">
-      <h2 className="text-2xl font-bold mb-6 text-center">Colección Nike</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.map((product, index) => (
-          <div
-            key={index}
-            className="border rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-          >
-            <img
-              src={product.img}
-              alt={product.title}
-              className="w-full h-64 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold">{product.title}</h3>
-              <p className="text-gray-600">{product.model}</p>
-              <p className="text-sm text-gray-500">{product.size}</p>
-              <p className="text-red-600 font-bold">{product.price}</p>
+            <h2 className="text-2xl font-bold mb-6 text-center">Colección Nike</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {products.map((product, index) => (
+                    <div
+                        key={index}
+                        className="border rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                    >
+                        <img
+                            src={product.img}
+                            alt={product.title}
+                            className="w-full h-64 object-cover"
+                        />
+                        <div className="p-4">
+                            <h3 className="text-lg font-semibold">{product.title}</h3>
+                            <p className="text-gray-600">{product.model}</p>
+                            <p className="text-sm text-gray-500">{product.size}</p>
+                            <p className="text-red-600 font-bold">{product.price}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+        </div>
+    );
 };
 
 export default Nkmujer;
