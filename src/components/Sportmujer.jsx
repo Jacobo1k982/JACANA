@@ -26,7 +26,7 @@ const Sportmujer = ({ deportivo3api = {} }) => {
                         <img
                             src={img}
                             alt="imagen-decorativa"
-                            className="imagen-decorativa mt-3 w-[40%] xsm:w-[40%] md:w-[560px] max-w-full h-auto object-cover rounded-lg shadow-ms"
+                            className="imagen-decorativa mt-3 w-[28%] xsm:w-[40%] md:w-[560px] max-w-full h-auto object-cover rounded-lg shadow-ms"
                         />
                     </div>
 
