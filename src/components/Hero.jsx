@@ -17,8 +17,6 @@ const Hero = ({ heroapi: { title, subtitle, btntext, img, sociallinks, videos } 
     fade: true,
   };
 
-
-
   return (
     <div className='relative h-auto w-auto flex flex-col'>
       {/* Carrusel de video como fondo */}

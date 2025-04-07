@@ -26,12 +26,13 @@ const Hombre = ({ caballero: { title, news, subtitle, image, sociallinks = [] } 
     };
 
     return (
-        <div className="flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden">
+        <div className="relative flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
             {/* Encabezado */}
             <div className="bg-theme clip-path h-[90vh] lg:h-[85vh] md:h-[80vh] sm:h-[70vh] w-auto absolute top-0 left-0 right-0 opacity-100 z-10"></div>
-            <div className="relative opacity-100 z-20 grid items-center justify-items-center nike-container">
-                <div className="grid items-center justify-items-center mt-28 md:mt-24">
-                    <div className="text-container w-full flex flex-col items-center">
+
+            <div className="nike-container text-white relative opacity-100 z-20 grid items-center justify-items-center">
+                <div className=" grid items-center justify-items-center mt-28 md:mt-24 sm:mt-20 xsm:mt-16">
+                    <div className=" text-container w-full flex flex-col items-center gap-2">
                         <h1 className="text-6xl lg:text-4xl md:text-3xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200 text-center">
                             {title}
                         </h1>
@@ -42,7 +43,7 @@ const Hombre = ({ caballero: { title, news, subtitle, image, sociallinks = [] } 
                         <img
                             src={image}
                             alt="imagen-decorativa"
-                            className="imagen-decorativa mt-5 w-[125px] max-w-full h-auto object-cover rounded-lg shadow-ms"
+                            className="imagen-decorativa mt-5 w-[100px] max-w-full h-auto object-cover rounded-lg shadow-ms"
                         />
                     </div>
 
@@ -63,18 +64,18 @@ const Hombre = ({ caballero: { title, news, subtitle, image, sociallinks = [] } 
             </div>
 
             {/* Carrusel debajo */}
-            <div className="flex flex-col gap-10 relative bg-slate-100 white:bg-slate-900 min-h-screen overflow-hidden">
-                <Title title="Colección Caballero" />
-                <div className="mt-7 ">
+            <div className="container mx-auto px-4 lg:px-0 mb-20 mt-80 ms-5 lg:ms-0 lg:mt-0">
+                <Title title="Colección" />
+                <div className="mt-5 lg:mt-30 mb-20">
                     <Splide options={splideOptions}>
                         {news.map((val, i) => (
                             <SplideSlide key={i} className="mb-0.5">
-                                <div className="relative grid items-center gap-4 pb-2 rounded-lg shadow shadow-slate-200 overflow-hidden">
-                                    <div className="flex items-center justify-center">
+                                <div className="flex flex-col items-center justify-center w-full h-auto bg-white shadow-md shadow-slate-200 rounded-lg overflow-hidden">
+                                    <div className="w-full h-40 lg:h-52 overflow-hidden rounded-t-lg shadow-md shadow-slate-200 mb-2 flex items-center justify-center">
                                         <img
                                             className="w-full h-auto object-cover shadow-md shadow-slate-200 rounded-tl-lg rounded-tr-lg"
                                             src={val.img}
-                                            alt={val.title || `Imagen ${i + 1}`}
+                                            alt={val.title || `Img/caballero ${i}`}
                                         />
                                     </div>
                                     <div className="grid items-center justify-items-center px-4">

@@ -2,9 +2,11 @@ import React from "react";
 
 export default function Juvenil() {
   return (
-    <div className="flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden">
-      <h1 className="text-4xl font-bold text-center mt-10 mb-4 text-slate-200 filter drop-shadow-sm">Juvenil Page</h1>
-      <p className="mt-4 text-lg">Esta es la página de Juvenil.</p>
+    <div className="flex justify-center items-center h-screen">
+      <p className="text-4xl font-bold">Juvenil.</p>
+      <div className="w-1/2 h-1/2 bg-gray-200 rounded-lg shadow-lg flex items-center justify-center">
+        <p className="text-center text-lg">¡Hola! Pronto tendremos productos para esta categoría.</p>
+      </div>
     </div>
   );
 }

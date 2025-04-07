@@ -196,7 +196,7 @@ const deportivoapi = {
 const deportivo2api = {
   heading: "DEPORTIVOS",
   title: "JACANA Styles Costa Rica",
-  subtitle: "Zapatos deportivos",
+  subtitle: "Zapatos ",
   img: hightlightimg,
   sociallinks: [
     { icon: facebook, url: "https://facebook.com/tuperfil" },
@@ -214,7 +214,7 @@ const deportivo2api = {
 const deportivo3api = {
   heading: "DEPORTIVOS",
   title: "JACANA Styles Costa Rica",
-  subtitle: "Zapatos deportivos",
+  subtitle: "Zapatos ",
   img: sportwoman,
   sociallinks: [
     { icon: facebook, url: "https://facebook.com/tuperfil" },

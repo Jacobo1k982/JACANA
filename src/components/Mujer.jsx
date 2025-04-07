@@ -34,28 +34,28 @@ const Mujer = ({ dama: { title, news, subtitle, image } }) => {
             <h1 className="text-6xl lg:text-4xl md:text-3xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200 text-center">
               {title}
             </h1>
-            <h2 className="text-4xl lg:text-3xl md:text-2xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200">
+            <h2 className="text-4xl lg:text-3xl md:text-2xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200 text-center mt-2">
               {subtitle}
             </h2>
             {/* Imagen debajo del subtítulo */}
             <img
               src={image}
               alt="imagen-decorativa"
-              className="imagen-decorativa mt-5 w-[285px] max-w-full h-auto object-cover rounded-lg shadow-ms"
+              className="imagen-decorativa mt-5 w-[270px] max-w-full h-auto object-cover rounded-lg shadow-ms"
             />
           </div>
         </div>
       </div>
 
       {/* Carrusel debajo */}
-      <div className="relative z-10 nike-container mt-10">
-        <Title title="Colección Mujer" />
-        <div className="mt-7">
+      <div className="container mx-auto px-4 lg:px-0 mb-10 mt-80 ms-5 lg:ms-0 lg:mt-0">
+        <Title title="Colección" />
+        <div className="mt-5 lg:mt-30 mb-20">
           <Splide options={splideOptions}>
             {news.map((val, i) => (
               <SplideSlide key={i} className="mb-0.5">
-                <div className="relative grid items-center gap-4 pb-2 rounded-lg shadow shadow-slate-200 overflow-hidden">
-                  <div className="flex items-center justify-center">
+                <div className="flex flex-col items-center justify-center w-full h-auto bg-white shadow-md shadow-slate-200 rounded-lg overflow-hidden">
+                  <div className="w-full h-40 lg:h-52 overflow-hidden rounded-t-lg shadow-md shadow-slate-200 mb-2 flex items-center justify-center">
                     <img
                       className="w-full h-auto object-cover shadow-md shadow-slate-200 rounded-tl-lg rounded-tr-lg"
                       src={val.img}

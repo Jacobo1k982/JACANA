@@ -47,6 +47,23 @@ function Nkmujer() {
         { img: "/NKM/NKM42.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 33.000" },
         { img: "/NKM/NKM43.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-37", price: "¢ 24.000" },
         { img: "/NKM/NKM44.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 33.000" },
+        { img: "/NKM/NKM45.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-39", price: "¢ 33.000" },
+        { img: "/NKM/NKM46.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 33.000" },
+        { img: "/NKM/NKM47.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-39", price: "¢ 33.000" },
+        { img: "/NKM/NKM48.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 33.000" },
+        { img: "/NKM/NKM49.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-38", price: "¢ 24.000" },
+        { img: "/NKM/NKM50.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 30.000" },
+        { img: "/NKM/NKM51.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 24.000" },
+        { img: "/NKM/NKM52.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-37", price: "¢ 24.000" },
+        { img: "/NKM/NKM53.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 33.000" },
+        { img: "/NKM/NKM54.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 33.000" },
+        { img: "/NKM/NKM55.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 33.000" },
+        { img: "/NKM/NKM56.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 33.000" },
+        { img: "/NKM/NKM57.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-38", price: "¢ 24.000" },
+        { img: "/NKM/NKM58.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-39", price: "¢ 33.000" },
+        { img: "/NKM/NKM59.jpg", title: "Nike", model: "Modelo Exclusivo", size: "Talla: 36-39", price: "¢ 33.000" },
+        
+
     ];
 
 

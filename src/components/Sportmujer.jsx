@@ -9,8 +9,8 @@ const Sportmujer = ({ deportivo3api = {} }) => {
         <div className="relative h-auto w-auto flex flex-col">
             {/* Fondo */}
             <div
-  className='clip-path h-[90vh] lg:h-[85vh] md:h-[80vh] sm:h-[70vh] w-auto absolute top-0 left-0 right-0 opacity-100 z-10'
-  style={{ backgroundImage: 'linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%)' }}
+  className='clip-path h-[85vh] lg:h-[85vh] md:h-[80vh] sm:h-[70vh] w-auto absolute top-0 left-0 right-0 opacity-100 z-10'
+  style={{ backgroundImage: 'linear-gradient(-175deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%)' }}
 ></div>
             {/* Contenido */}
             <div className="relative opacity-100 z-20 grid items-center justify-items-center nike-container">
