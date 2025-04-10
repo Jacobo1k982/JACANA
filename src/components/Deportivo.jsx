@@ -8,7 +8,6 @@ const Deportivo = ({ deportivoapi = {} }) => {
     return (
         <div className="relative h-auto w-auto flex flex-col">
             {/* Fondo */}
-            <div className='bg-theme clip-path h-[90vh] lg:h-[85vh] md:h-[80vh] sm:h-[70vh] w-auto absolute top-0 left-0 right-0 opacity-100 z-10'></div>
 
             {/* Contenido */}
             <div className="relative opacity-100 z-20 grid items-center justify-items-center nike-container">
@@ -20,12 +19,7 @@ const Deportivo = ({ deportivoapi = {} }) => {
                         <h1 className="text-4xl lg:text-3xl md:text-2xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200">
                             {subtitle}
                         </h1>
-                        {/* Imagen debajo del subtítulo */}
-                        <img
-                            src={img}
-                            alt="imagen-decorativa"
-                            className="imagen-decorativa mt-5 w-[680px] max-w-full h-auto object-cover rounded-lg shadow-ms"
-                        />
+
                     </div>
 
                     <div className='grid items-center absolute top-[33vh] lg:top-[37vh] sm:top-[5vh] xsm:top-[25vh] right-0 gap-2'>

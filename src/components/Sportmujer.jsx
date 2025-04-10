@@ -9,9 +9,9 @@ const Sportmujer = ({ deportivo3api = {} }) => {
         <div className="relative h-auto w-auto flex flex-col">
             {/* Fondo */}
             <div
-  className='clip-path h-[85vh] lg:h-[85vh] md:h-[80vh] sm:h-[70vh] w-auto absolute top-0 left-0 right-0 opacity-100 z-10'
-  style={{ backgroundImage: 'linear-gradient(-175deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%)' }}
-></div>
+                className='clip-path h-[85vh] lg:h-[85vh] md:h-[80vh] sm:h-[70vh] w-auto absolute top-0 left-0 right-0 opacity-100 z-10'
+                style={{ backgroundImage: 'linear-gradient(-175deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%)' }}
+            ></div>
             {/* Contenido */}
             <div className="relative opacity-100 z-20 grid items-center justify-items-center nike-container">
                 <div className="grid items-center justify-items-center mt-28 md:mt-24">
@@ -25,7 +25,7 @@ const Sportmujer = ({ deportivo3api = {} }) => {
                         {/* Imagen debajo del subtítulo */}
                         <img
                             src={img}
-                            alt="imagen-decorativa"
+                            alt="imagen-deportiva"
                             className="imagen-decorativa mt-3 w-[28%] xsm:w-[40%] md:w-[560px] max-w-full h-auto object-cover rounded-lg shadow-ms"
                         />
                     </div>

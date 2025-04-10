@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import {
     heroapi, popularsales, topratedsales, highlight, sneaker, story,
     dama, ropa, mañanitas, caballero, deportivoapi, deportivo2api, topratedsales2,
-    topratedsales3, cdeportivo, deportivo3api
+    topratedsales3, cdeportivo, deportivo3api, marcaszapatosapi
 } from './data/data';
 
 // Lazy load components
@@ -24,62 +24,67 @@ const Niña = lazy(() => import('./components/Niña'));
 const Niño = lazy(() => import('./components/Niño'));
 const Nike = lazy(() => import('./pages/Hombre/Zapatos/Nike'));
 const Nkmujer = lazy(() => import('./pages/Mujer/Zapatos/Nkmujer'));
+const Shoebrands = lazy(() => import('./components/Shoebrands'));
+const ScrollToTop = lazy(() => import('./components/ScrollToTop'));
 
 export default function AppRoutes() {
     return (
-        <Routes>
-            {/* Página principal */}
-            <Route path="/" element={
-                <main className="flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden">
-                    <Hero heroapi={heroapi} />
-                    <Stories story={story} />
-                    <Sales endpoint={popularsales} ifExists />
-                    <FlexContent endpoint={highlight} ifExists />
-                    <Sales endpoint={topratedsales} />
-                    <FlexContent endpoint={sneaker} />
-                </main>
-            } />
+        <>
+            <ScrollToTop />
+            <Routes>
+                {/* Página principal */}
+                <Route path="/" element={
+                    <main className="flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden">
+                        <Hero heroapi={heroapi} />
+                        <Stories story={story} />
+                        <Sales endpoint={popularsales} ifExists />
+                        <FlexContent endpoint={highlight} ifExists />
+                        <Sales endpoint={topratedsales} />
+                        <FlexContent endpoint={sneaker} />
+                    </main>
+                } />
 
-            {/* Secciones */}
-            <Route path="/hombre" element={<Hombre caballero={caballero} />} />
-            <Route path="/juvenil" element={<Juvenil />} />
-            <Route path="/niña" element={<Niña />} />
-            <Route path="/niño" element={<Niño />} />
-            <Route path="/mujer" element={<Mujer dama={dama} />} />
-            <Route path="/ropa" element={<Ropa ropa={ropa} />} />
-            <Route path="/mañanitas" element={<Mañanitas mañanitas={mañanitas} />} />
-            <Route path="/cdeportivo" element={<CDeportivo cdeportivo={cdeportivo} />} />
+                {/* Secciones */}
+                <Route path="/hombre" element={<Hombre caballero={caballero} />} />
+                <Route path="/juvenil" element={<Juvenil />} />
+                <Route path="/niña" element={<Niña />} />
+                <Route path="/niño" element={<Niño />} />
+                <Route path="/mujer" element={<Mujer dama={dama} />} />
+                <Route path="/ropa" element={<Ropa ropa={ropa} />} />
+                <Route path="/mañanitas" element={<Mañanitas mañanitas={mañanitas} />} />
+                <Route path="/cdeportivo" element={<CDeportivo cdeportivo={cdeportivo} />} />
+                <Route path="/marcaszapatos" element={<Shoebrands marcaszapatosapi={marcaszapatosapi} />} />
 
-            {/* Deportivo */}
-            <Route path="/deportivo" element={
-                <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden'>
-                    <Deportivo deportivoapi={deportivoapi} />
-                    <Sales endpoint={topratedsales2} />
-                    <div className='Nikeappman'>
-                        <h2 className='text-6xl lg:text-4xl md:text-3xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200 text-center'></h2>
-                        <div className='fila'>
-                            <div className='col'>
-                                <Nike />
+                {/* Deportivo */}
+                <Route path="/deportivo" element={
+                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden'>
+                        <Deportivo deportivoapi={deportivoapi} />
+                        <Sales endpoint={topratedsales2} />
+                        <div className='Nikeappman'>
+                            <div className='fila'>
+                                <div className='col'>
+                                    <Nike />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </main>
-            } />
+                    </main>
+                } />
 
-            {/* Sport Mujer */}
-            <Route path="/sportmujer" element={
-                <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden'>
-                    <Sportmujer deportivo3api={deportivo3api} />
-                    <div className='Nikeappman'>
-                        <h2 className='text-6xl lg:text-4xl md:text-3xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200 text-center'></h2>
-                        <div className='fila'>
-                            <div className='col'>
-                                <Nkmujer />
+                {/* Sport Mujer */}
+                <Route path="/sportmujer" element={
+                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden'>
+                        <Sportmujer deportivo3api={deportivo3api} />
+                        <div className='Nikeappwoman'>
+                            <h2 className='text-6xl lg:text-4xl md:text-3xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200 text-center'></h2>
+                            <div className='fila'>
+                                <div className='col'>
+                                    <Nkmujer />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </main>
-            } />
-        </Routes>
+                    </main>
+                } />
+            </Routes>
+        </>
     );
 }

@@ -4,76 +4,84 @@ import Title from "./utils/Title";
 import "@splidejs/react-splide/css";
 import { truncate } from "lodash";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import darkBackground from "../assets/darkabstract.jpg";
 
 const Mujer = ({ dama: { title, news, subtitle, image } }) => {
   const splideOptions = {
     perPage: 4,
     perMove: 1,
-    type: "loop",
+    type: 'loop',
     rewind: true,
-    keyboard: "global",
-    gap: "1rem",
+    keyboard: 'global',
+    drag: true,
+    swipe: true,
+    flickPower: 600,         // Sensibilidad de swipe
+    easing: 'cubic-bezier(0.25, 1, 0.5, 1)', // Transición suave tipo "snap"
+    speed: 600,             // Velocidad de cambio entre slides
+    gap: '1.5rem',
     pagination: false,
-    padding: "2rem",
+    padding: '2rem',
     breakpoints: {
       1200: { perPage: 3 },
       991: { perPage: 2.3 },
       768: { perPage: 2 },
-      500: { perPage: 1.3 },
-      425: { perPage: 1 },
+      500: { perPage: 1.3, gap: '1rem' },
+      425: { perPage: 1, gap: '0.8rem' },
+      375: { perPage: 1, gap: '0.6rem', padding: '1rem' },
+      320: { perPage: 1, gap: '0.4rem', padding: '0.5rem' },
     },
   };
 
   return (
-    <div className="relative h-auto w-auto flex flex-col mb-11">
-      {/* Encabezado */}
-      <div className="bg-theme clip-path h-[90vh] lg:h-[85vh] md:h-[80vh] sm:h-[70vh] w-auto absolute top-0 left-0 right-0 opacity-100 z-10"></div>
-      <div className="relative opacity-100 z-20 grid items-center justify-items-center nike-container">
-        <div className="grid items-center justify-items-center mt-28 md:mt-24">
-          <div className="text-container w-full flex flex-col items-center">
-            <h1 className="text-6xl lg:text-4xl md:text-3xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200 text-center">
-              {title}
-            </h1>
-            <h2 className="text-4xl lg:text-3xl md:text-2xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200 text-center mt-2">
-              {subtitle}
-            </h2>
-            {/* Imagen debajo del subtítulo */}
-            <img
-              src={image}
-              alt="imagen-decorativa"
-              className="imagen-decorativa mt-5 w-[270px] max-w-full h-auto object-cover rounded-lg shadow-ms"
-            />
-          </div>
-        </div>
-      </div>
+    <section
+      className="min-h-screen flex items-center justify-center px-4 xs:px-2"
+      style={{
+        backgroundImage: `url(${darkBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-10 xs:gap-6 py-10">
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-4xl sm:text-3xl xs:text-2xl font-extrabold text-white drop-shadow-md" // Texto en blanco para contraste
+        >
+          Eleva tu Estilo
+        </motion.h2>
 
-      {/* Carrusel debajo */}
-      <div className="container mx-auto px-4 lg:px-0 mb-10 mt-80 ms-5 lg:ms-0 lg:mt-0">
-        <Title title="Colección" />
-        <div className="mt-5 lg:mt-30 mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          className="w-full"
+        >
           <Splide options={splideOptions}>
             {news.map((val, i) => (
-              <SplideSlide key={i} className="mb-0.5">
-                <div className="flex flex-col items-center justify-center w-full h-auto bg-white shadow-md shadow-slate-200 rounded-lg overflow-hidden">
-                  <div className="w-full h-40 lg:h-52 overflow-hidden rounded-t-lg shadow-md shadow-slate-200 mb-2 flex items-center justify-center">
+              <SplideSlide key={i}>
+                <div className="group flex flex-col items-center justify-between w-full h-full bg-gray-800 bg-opacity-75 border border-gray-700 shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.015]"> {/* Fondo oscuro y borde sutil */}
+                  <div className="w-full h-48 lg:h-60 sm:h-40 xs:h-36 overflow-hidden relative">
                     <img
-                      className="w-full h-auto object-cover shadow-md shadow-slate-200 rounded-tl-lg rounded-tr-lg"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       src={val.img}
-                      alt={val.title || `Imagen ${i + 1}`}
+                      alt={`img/marcaszapatosapi/${i}`}
                     />
                   </div>
-                  <div className="grid items-center justify-items-center px-4">
-                    <h1 className="text-3xl font-bold text-center">
+                  <div className="p-5 sm:p-4 xs:p-3 flex-1 flex flex-col justify-between gap-3">
+                    <h1 className="text-2xl sm:text-xl xs:text-lg font-semibold text-white text-center"> {/* Texto en blanco */}
                       {val.title}
                     </h1>
-                    <p className="text-sm text-justify lg:text-xs">
-                      {truncate(val.text, { length: 185 })}
+                    <p className="text-sm xs:text-xs text-gray-300 text-justify"> {/* Texto gris claro */}
+                      {truncate(val.text, { length: 140 })}
                     </p>
                   </div>
-                  <div className="flex items-center justify-center px-4 w-full">
+                  <div className="w-full">
                     <Link
                       to={val.url}
-                      className="w-full bg-gradient-to-b from-slate-900 to-black shadow-md shadow-black text-center text-slate-100 py-1.5 button-theme"
+                      className="block w-full text-center py-2 xs:py-1.5 text-white text-sm xs:text-xs font-medium bg-gradient-to-r from-slate-900 to-black hover:from-black hover:to-slate-900 transition-colors duration-300"
                     >
                       {val.btn}
                     </Link>
@@ -82,9 +90,9 @@ const Mujer = ({ dama: { title, news, subtitle, image } }) => {
               </SplideSlide>
             ))}
           </Splide>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

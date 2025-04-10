@@ -18,3 +18,4 @@ export {default as Deportivo} from './Deportivo.jsx';
 export {default as Nike} from '../pages/Hombre/Zapatos/Nike.jsx';
 export {default as Nkmujer} from "../pages/Mujer/Zapatos/Nkmujer.jsx";
 export {default as Sportmujer} from './Sportmujer.jsx';
+export {default as Shoebrands} from './Shoebrands.jsx';

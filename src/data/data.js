@@ -26,8 +26,25 @@ import product9 from "../assets/product9.png";
 import product10 from "../assets/product10.png";
 import product11 from "../assets/product11.png";
 import product12 from "../assets/product12.png";
+/*Logos de marcas*/
+import logonike from "/Logo_de_marcas/nike.png";
+import logoadidas from "/Logo_de_marcas/adidas.png";
+import logotommy from "/Logo_de_marcas/tommy.png";
+import logopuma from "/Logo_de_marcas/puma.png";
+import logonewbalance from "/Logo_de_marcas/newbalance.png";
+import logoconverse from "/Logo_de_marcas/converse.png";
+import logocrocs from "/Logo_de_marcas/crocs.png";
+import logovans from "/Logo_de_marcas/vans.png";
 
-import sportwoman from "/NKM/NK_portada.png";
+/*Portadas seccion Hombre*/
+import portadazaphombre from "/Logo_de_marcas/portada.jpg";
+import portadarelojH from "/Logo_de_marcas/portadareloj.jpg";
+import portadagorraH from "/Logo_de_marcas/portadagorra.jpg";
+import sandalias from "/Logo_de_marcas/portadasandalia.avif";
+import ropaH from "/Logo_de_marcas/portadaropaH.jpg";
+import fajaH from "/Logo_de_marcas/portadafajas.avif";
+
+
 
 /*{img mañanitas}*/
 import WA0004 from "../assets/Mujer/Pijamas/mañanitas/WA0004.jpg";
@@ -72,6 +89,7 @@ import youtube from "../assets/youtube.svg";
 import messenger from "../assets/messenger.svg";
 import whatsapp from "../assets/whatsapp.svg";
 import size from "lodash";
+import { Import } from "lucide-react";
 
 
 const heroapi = {
@@ -176,10 +194,9 @@ const sneaker = {
 };
 
 const deportivoapi = {
-  heading: "DEPORTIVOS",
+  heading: "General",
   title: "JACANA Styles Costa Rica",
-  subtitle: "Zapatos deportivos",
-  img: hightlightimg,
+  subtitle: "Colección Nike Sport",
   sociallinks: [
     { icon: facebook, url: "https://facebook.com/tuperfil" },
     { icon: messenger, url: "https://m.me/tuperfil" },
@@ -214,8 +231,7 @@ const deportivo2api = {
 const deportivo3api = {
   heading: "DEPORTIVOS",
   title: "JACANA Styles Costa Rica",
-  subtitle: "Zapatos ",
-  img: sportwoman,
+  subtitle: "Zapatos deportivos",
   sociallinks: [
     { icon: facebook, url: "https://facebook.com/tuperfil" },
     { icon: messenger, url: "https://m.me/tuperfil" },
@@ -640,47 +656,123 @@ const caballero = {
     {
       title: "ZAPATOS DEPORTIVOS",
       text: "Los zapatos deportivos para hombres son fundamentales no solo para actividades físicas, sino también para la comodidad y el soporte diario. Ofrecen la amortiguación y estabilidad necesarias para proteger los pies y las articulaciones durante el ejercicio, previniendo lesiones. Además, su diseño versátil los ha convertido en una opción popular para el uso casual, combinando funcionalidad y estilo para el hombre moderno.",
-      img: zapatos,
-      url: "/deportivo",
+      img: portadazaphombre,
+      url: "/marcaszapatos",
       btn: "Explorar más"
     },
     {
       title: "ROPA",
       text: "MUY PRONTO",
-      img: "",
+      img: ropaH,
       url: "",
       btn: "Explorar más"
     },
     {
       title: "FAJAS",
       text: "MUY PRONTO",
-      img: "",
+      img: fajaH,
       url: "",
       btn: "Explorar más"
     },
     {
       title: "GORRA",
       text: "MUY PRONTO",
-      img: "",
+      img: portadagorraH,
       url: "",
       btn: "Explorar más"
     },
     {
       title: "SANDALIAS",
       text: "MUY PRONTO",
-      img: "",
+      img: sandalias,
       url: "",
       btn: "Explorar más"
     },
     {
       title: "RELOJ",
       text: "MUY PRONTO",
-      img: "",
+      img: portadarelojH,
       url: "",
       btn: "Explorar más"
     },
   ]
 };
+
+const marcaszapatosapi = {
+  heading: "Carrusel marcas de zapatos",
+  title: "JACANA Styles Costa Rica",
+  subtitle: "Lineas deportivas",
+  sociallinks: [
+    { icon: facebook, url: "https://facebook.com/tuperfil" },
+    { icon: messenger, url: "https://m.me/tuperfil" },
+    { icon: instagram, url: "https://instagram.com/tuperfil" },
+    { icon: twitter, url: "https://twitter.com/tuperfil" },
+    { icon: youtube, url: "https://youtube.com/tucanal" },
+    {
+      icon: whatsapp,
+      url: "https://wa.me/50687905876?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n",
+    },
+  ],
+  news: [
+    { 
+      title:"NIKE",
+      text: "",
+      img: logonike,
+      url: "/deportivo",
+      btn: "Explorar más"
+    },
+    { 
+      title:"ADIDAS",
+      text: "",
+      img: logoadidas,
+      url: "",
+      btn: "Explorar más"
+    },
+    { 
+      title:"TOMMY HILFIGER",
+      text: "",
+      img: logotommy,
+      url: "",
+      btn: "Explorar más"
+    },
+    { 
+      title:"PUMA",
+      text: "",
+      img: logopuma,
+      url: "",
+      btn: "Explorar más"
+    },
+    { 
+      title:"NEW BALANCE",
+      text: "",
+      img: logonewbalance,
+      url: "",
+      btn: "Explorar más"
+    },
+    { 
+      title:"CONVERSE",
+      text: "",
+      img: logoconverse,
+      url: "",
+      btn: "Explorar más"
+    },
+    { 
+      title:"CROCS",
+      text: "",
+      img: logocrocs,
+      url: "",
+      btn: "Explorar más"
+    },
+    { 
+      title:"VANS",
+      text: "",
+      img: logovans,
+      url: "",
+      btn: "Explorar más"
+    },
+  ]
+
+}
 
 const footerAPI = {
   titles: [{ title: "JACANA" }, { title: "Get Help" }, { title: "Company" }],
@@ -715,5 +807,5 @@ const footerAPI = {
 
 export { 
   heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api, 
-  caballero, deportivoapi, topratedsales2, deportivo2api, topratedsales3, deportivo3api
+  caballero, deportivoapi, topratedsales2, deportivo2api, topratedsales3, deportivo3api, marcaszapatosapi,
  };
