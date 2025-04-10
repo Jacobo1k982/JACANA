@@ -4,6 +4,7 @@ import "@splidejs/react-splide/css";
 import { truncate } from "lodash";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import darkBackground from "../assets/darkabstract.jpg";
 
 
 const Stories = ({ story: { title, subtitle, news } }) => {
@@ -34,14 +35,14 @@ const Stories = ({ story: { title, subtitle, news } }) => {
 
 
     return (
-        <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 via-white to-slate-200 px-4 xs:px-2">
+        <section className="min-h-screen flex items-center justify-center bg-gray-900 via-white to-slate-200 px-4 xs:px-2">
             <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-10 xs:gap-6 py-10">
 
                 <motion.h2
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-4xl sm:text-3xl xs:text-2xl font-extrabold text-slate-200 drop-shadow-sm"
+                    className="text-4xl sm:text-2xl xs:text-2xl font-extrabold text-white drop-shadow-md" // Texto en blanco para contraste
                 >
                     Explora las Mejores Marcas
                 </motion.h2>
@@ -55,7 +56,7 @@ const Stories = ({ story: { title, subtitle, news } }) => {
                     <Splide options={splideOptions}>
                         {news.map((val, i) => (
                             <SplideSlide key={i}>
-                                <div className="group flex flex-col items-center justify-between w-full h-full bg-white border border-slate-200 shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.015]">
+                                <div className="group flex flex-col items-center justify-between w-full h-full bg-gray-800 bg-opacity-75 border border-gray-700 shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.015]"> {/* Fondo oscuro y borde sutil */}
                                     <div className="w-full h-48 lg:h-60 sm:h-40 xs:h-36 overflow-hidden relative">
                                         <img
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -64,10 +65,10 @@ const Stories = ({ story: { title, subtitle, news } }) => {
                                         />
                                     </div>
                                     <div className="p-5 sm:p-4 xs:p-3 flex-1 flex flex-col justify-between gap-3">
-                                        <h1 className="text-2xl sm:text-xl xs:text-lg font-semibold text-slate-800 text-center">
+                                        <h1 className="text-2xl sm:text-xl xs:text-lg font-semibold text-white text-center"> {/* Texto en blanco */}
                                             {val.title}
                                         </h1>
-                                        <p className="text-sm xs:text-xs text-slate-600 text-justify">
+                                        <p className="text-sm xs:text-xs text-gray-300 text-justify"> {/* Texto gris claro */}
                                             {truncate(val.text, { length: 140 })}
                                         </p>
                                     </div>

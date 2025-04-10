@@ -19,29 +19,6 @@ const Hero = ({ heroapi: { title, subtitle, btntext, img, sociallinks, videos } 
 
   return (
     <div className='relative h-auto w-auto flex flex-col'>
-      {/* Carrusel de video como fondo */}
-      <div className='absolute top-0 left-0 right-0 h-[90vh] lg:h-[85vh] md:h-[80vh] sm:h-[70vh] xsm:h-[60vh] w-full z-0'>
-        <Slider {...settings}>
-          {videos?.map((val, i) => {
-            const videoRef = useRef(null);
-
-            useEffect(() => {
-              if (videoRef.current) {
-                videoRef.current.playbackRate = 0.5; // Ralentiza el video
-              }
-            }, []);
-
-            return (
-              <div key={i} className='w-full h-full'>
-                <video ref={videoRef} autoPlay loop muted className='w-full h-full object-cover'>
-                  <source src={val.clip} type='video/mp4' />
-                </video>
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
-
       <div className='relative z-10 grid items-center justify-items-center nike-container text-white'>
         <div className='grid items-center justify-items-center mt-28 md:mt-24 sm:mt-20 xsm:mt-16'>
           <div className='text-container w-full flex flex-col items-center text-center'>
@@ -49,7 +26,7 @@ const Hero = ({ heroapi: { title, subtitle, btntext, img, sociallinks, videos } 
             <h2 className='text-5xl lg:text-2xl md:text-2xl sm:text-2xl xsm:text-base font-extrabold drop-shadow-sm'>{subtitle}</h2>
           </div>
 
-          <div className='grid items-center absolute top-[33vh] lg:top-[37vh] sm:top-[5vh] xsm:top-[25vh] right-0 gap-2'>
+          <div className='flex mt-8 items-center lg:top-[37vh] sm:top-[5vh] xsm:top-[25vh] right-0 gap-5'>
             {sociallinks?.map((val, i) => (
               <a
                 key={i}

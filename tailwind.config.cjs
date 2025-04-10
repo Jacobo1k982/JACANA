@@ -15,6 +15,7 @@ module.exports = {
       fontFamily: {
         'sans': ['Poppins', 'sans-serif'],
         'serif': ['Merriweather', 'serif'],
+        'poppins': ['Poppins', 'sans-serif'],
       },
       spacing: {
         '18': '4.5rem',

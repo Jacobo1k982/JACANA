@@ -1,64 +1,90 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from "react-redux";
-import { HeartIcon, MagnifyingGlassIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { HeartIcon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../assets/logo.png';
 import { selectTotalQTY, setOpenCart } from '../app/CartSlice';
 
 const Navbar = () => {
   const [navState, setNavState] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const dispatch = useDispatch();
   const totalQTY = useSelector(selectTotalQTY);
 
-  const onCartToggle = () => {
-    dispatch(setOpenCart({
-      cartState: true
-    }))
-  };
-  const onNavScroll = () => {
-    if (window.scrollY > 30) {
-      setNavState(true);
-    } else {
-      setNavState(false)
-    }
-  };
+  const toggleDrawer = () => setDrawerOpen(!drawerOpen);
+
+  const onNavScroll = () => setNavState(window.scrollY > 30);
+
   useEffect(() => {
     window.addEventListener('scroll', onNavScroll);
-
-    return () => {
-      window.removeEventListener('scroll', onNavScroll)
-    }
-  }, [])
+    return () => window.removeEventListener('scroll', onNavScroll);
+  }, []);
 
   return (
     <>
-      <header className={
-        !navState ? 'absolute top-5 left-0 right-0 opacity-100 z-50' : 'fixed top-0 left-0 right-0 h-[15vh] flex items-center justify-center opacity-100 z-[200] blur-effect-theme'
-      }>
-        <nav className='flex items-center justify-between nike-container h-full w-65/12'>
-          <div className='flex items-center'>
-            <img
-              src={logo}
-              alt="logo/img"
-              className={`w-12 h-auto ${navState && "filter brightness-0"}`} />
+      {/* NAVBAR */}
+      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 font-poppins ${navState ? 'bg-white/80 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'}`}>
+        <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <img src={logo} alt="logo" className={`w-12 h-auto transition-all duration-300 ${navState ? 'brightness-0' : ''}`} />
           </div>
-          <ul className='flex items-center justify-center gap-2 sm:ml-4'> {/* Aqui se agrega sm:ml-4 */}
-            <li className='grid items-center'>
-              <MagnifyingGlassIcon className={`icon-style ${navState && "text-slate-900 transition-all duration-300"}`} />
+
+          <ul className="flex items-center space-x-6">
+            <li className="group relative">
+              <MagnifyingGlassIcon className={`w-6 h-6 cursor-pointer transition-all duration-300 group-hover:text-indigo-600 ${navState ? 'text-gray-800' : 'text-white'}`} />
             </li>
-            <li className='grid items-center'>
-              <HeartIcon className={`icon-style ${navState && "text-slate-900 transition-all duration-300"}`} />
+            <li className="group relative">
+              <HeartIcon className={`w-6 h-6 cursor-pointer transition-all duration-300 group-hover:text-pink-500 ${navState ? 'text-gray-800' : 'text-white'}`} />
             </li>
-            <li className='grid items-center'>
-              <button type='button' onClick={onCartToggle} className='border-none outline-none active:scale-110 transition-all duration-300 relative'>
-                <ShoppingBagIcon className={`icon-style ${navState && "text-slate-900 transition-all duration-300"}`} />
-                <div className={`absolute top-4 right-0 shadow w-4 h-4 text-[0.65rem] leading-tight font-medium rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 ${navState ? 'bg-slate-900 text-slate-100 shadow-slate-900' : 'bg-slate-100 text-slate-900 shadow-slate-100'}`}>{totalQTY}</div>
+            <li className="relative">
+              <button onClick={toggleDrawer} className="relative focus:outline-none">
+                <ShoppingBagIcon className={`w-6 h-6 transition-all duration-300 hover:scale-110 ${navState ? 'text-gray-800' : 'text-white'}`} />
+                {totalQTY > 0 && (
+                  <span className="absolute -top-2 -right-2 text-[0.65rem] w-5 h-5 bg-red-500 text-white rounded-full flex items-center justify-center font-semibold shadow-md">
+                    {totalQTY}
+                  </span>
+                )}
               </button>
             </li>
           </ul>
         </nav>
       </header>
+
+      {/* DRAWER - CARRITO */}
+      <AnimatePresence>
+        {drawerOpen && (
+          <>
+            {/* Overlay */}
+            <motion.div
+              className="fixed inset-0 bg-black/30 z-[99]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={toggleDrawer}
+            />
+
+            {/* Drawer */}
+            <motion.aside
+              className="fixed top-0 right-0 w-80 h-full bg-white shadow-lg z-[100] p-5"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'tween', duration: 0.3 }}
+            >
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-lg font-semibold">Tu carrito</h2>
+                <button onClick={toggleDrawer}>
+                  <XMarkIcon className="w-6 h-6 text-gray-600 hover:text-red-500 transition" />
+                </button>
+              </div>
+              {/* Aquí puedes renderizar los productos del carrito */}
+              <p className="text-sm text-gray-500">Tu carrito está vacío.</p>
+            </motion.aside>
+          </>
+        )}
+      </AnimatePresence>
     </>
-  )
-}
+  );
+};
 
 export default Navbar;
