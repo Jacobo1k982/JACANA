@@ -68,13 +68,14 @@ function Nkmujer() {
 
 
     return (
-        <div className="min-h-screen bg-gray-50 p-6 flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-            <h2 className="text-black text-2xl font-bold mb-6 text-center">Colección Nike</h2>
+        <div className="">
+            {/* Encabezado visual con imagen de fondo */}
+            
             <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {products.map((product, index) => (
                     <div
                         key={index}
-                        className="border rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform duration-300 hover:scale-105"
+                        className="bg-white shadow-lg border rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform duration-300 hover:scale-105"
                     >
                         <img
                             src={product.img}

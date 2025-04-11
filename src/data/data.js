@@ -196,7 +196,7 @@ const sneaker = {
 const deportivoapi = {
   heading: "General",
   title: "JACANA Styles Costa Rica",
-  subtitle: "Colección Nike Sport",
+  subtitle: "Zapatos deportivos",
   sociallinks: [
     { icon: facebook, url: "https://facebook.com/tuperfil" },
     { icon: messenger, url: "https://m.me/tuperfil" },

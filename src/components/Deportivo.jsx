@@ -7,8 +7,6 @@ const Deportivo = ({ deportivoapi = {} }) => {
 
     return (
         <div className="relative h-auto w-auto flex flex-col">
-            {/* Fondo */}
-
             {/* Contenido */}
             <div className="relative opacity-100 z-20 grid items-center justify-items-center nike-container">
                 <div className="grid items-center justify-items-center mt-28 md:mt-24">
@@ -19,10 +17,8 @@ const Deportivo = ({ deportivoapi = {} }) => {
                         <h1 className="text-4xl lg:text-3xl md:text-2xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200">
                             {subtitle}
                         </h1>
-
                     </div>
-
-                    <div className='grid items-center absolute top-[33vh] lg:top-[37vh] sm:top-[5vh] xsm:top-[25vh] right-0 gap-2'>
+                    <div className='flex mt-8 items-center lg:top-[37vh] sm:top-[5vh] xsm:top-[25vh] right-0 gap-5'>
                         {sociallinks?.map((val, i) => (
                             <a
                                 key={i}

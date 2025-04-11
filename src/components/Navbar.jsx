@@ -65,20 +65,14 @@ const Navbar = () => {
 
             {/* Drawer */}
             <motion.aside
-              className="fixed top-0 right-0 w-80 h-full bg-white shadow-lg z-[100] p-5"
-              initial={{ x: '100%' }}
+              initial={{ x: 500 }}
               animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'tween', duration: 0.3 }}
+              exit={{ x: 500 }}
+              transition={{ type: "spring", stiffness: 100 }}
+              className="fixed right-0 top-0 w-[300px] md:w-[400px] h-screen bg-white shadow-lg z-[999] px-4 py-6 flex flex-col"
             >
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg font-semibold">Tu carrito</h2>
-                <button onClick={toggleDrawer}>
-                  <XMarkIcon className="w-6 h-6 text-gray-600 hover:text-red-500 transition" />
-                </button>
-              </div>
-              {/* Aquí puedes renderizar los productos del carrito */}
-              <p className="text-sm text-gray-500">Tu carrito está vacío.</p>
+              <h2 className="text-xl font-bold mb-4">Carrito</h2>
+              
             </motion.aside>
           </>
         )}

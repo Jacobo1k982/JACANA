@@ -120,13 +120,7 @@ function Nike() {
 
     return (
         <div className="">
-            {/* Encabezado visual con imagen de fondo */}
-            <header
-                className="w-full h-64 bg-cover bg-center flex items-center justify-center text-white"
-                style={{ backgroundImage: `url('/Logo_de_marcas/logonike.jpg')` }}
-            >
-              
-            </header>
+            
             <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {products.map((product, index) => (
                     <div
