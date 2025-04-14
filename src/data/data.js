@@ -89,7 +89,6 @@ import youtube from "../assets/youtube.svg";
 import messenger from "../assets/messenger.svg";
 import whatsapp from "../assets/whatsapp.svg";
 import size from "lodash";
-import { Import } from "lucide-react";
 
 
 const heroapi = {
@@ -115,6 +114,8 @@ const heroapi = {
     '/HERO/slide3.webp',
     '/HERO/slide4.webp',
     '/HERO/slide5.webp',
+    '/HERO/slide6.jpg',
+    '/HERO/slide7.webp',
   ],
 };
 

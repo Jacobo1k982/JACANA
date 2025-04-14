@@ -4,7 +4,8 @@ import { SocialLink } from './utils/SocialLink';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImages } }) => {
+const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImages }, storiesRef }) => {
+
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -46,7 +47,8 @@ const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImag
           </h2>
 
           {btntext && (
-            <button className="mt-6 px-6 py-3 bg-white text-gray-900 font-bold rounded-full shadow-lg hover:bg-gray-200 transition duration-300">
+            <button
+              className="mt-6 px-6 py-3 bg-white text-gray-900 font-bold rounded-full shadow-lg hover:bg-gray-200 transition duration-300">
               {btntext}
             </button>
           )}
