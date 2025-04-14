@@ -34,3 +34,7 @@ export {default as Gorra} from '../pages/Hombre/Gorra.jsx';
 export {default as PortadaGorra} from './PortadaGorra.jsx';
 export {default as Bolso} from '../pages/Mujer/Bolso.jsx';
 export {default as PortadaBolso} from './PortadaBolso.jsx';
+export {default as Puma2} from '../pages/Mujer/Zapatos/Puma2.jsx';
+export {default as PortadaPumaM} from './PortadaPumaM.jsx';
+export {default as Puma} from '../pages/Hombre/Zapatos/Puma.jsx';
+export {default as PortadaPumaH} from './PortadaPumaH.jsx';

@@ -125,7 +125,7 @@ function Nike() {
                         <img
                             src={product.img}
                             alt={product.title}
-                            className="w-full h-64 object-cover"
+                            className="w-full h-[450px] object-cover"
                         />
                         <div className="p-4">
                             <h3 className="text-lg font-semibold">{product.title}</h3>

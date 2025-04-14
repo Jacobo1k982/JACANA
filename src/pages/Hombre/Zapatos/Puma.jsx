@@ -1,14 +1,12 @@
 import React from "react";
 
-function Tommy2() {
+function Puma() {
     const products = [
-        { img: "/TOMMY/TM/TM1.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 40-44", price: "¢ 30.000" },
-        { img: "/TOMMY/TM/TM2.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 36-39", price: "¢ 30.000" },
-        { img: "/TOMMY/TM/TM3.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 40-44", price: "¢ 30.000" },
-        { img: "/TOMMY/TM/TM4.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 40-44", price: "¢ 30.000" },
-        { img: "/TOMMY/TM/TM5.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 40-44", price: "¢ 30.000" },
-        { img: "/TOMMY/TM/TM6.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 40-44", price: "¢ 30.000" },
+        { img: "/PUMA/PMH/PMH1.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 41-43", price: "¢ 37.500" },
+        { img: "/PUMA/PMH/PMH2.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 40-43", price: "¢ 24.000" },
+
     ];
+
     return (
         <div className="">
             <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -35,4 +33,4 @@ function Tommy2() {
     );
 };
 
-export default Tommy2;
+export default Puma;

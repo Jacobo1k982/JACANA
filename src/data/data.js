@@ -44,7 +44,7 @@ const portadagorraH = "/Logo_de_marcas/portadagorra.jpg";
 const sandalias = "/Logo_de_marcas/portadasandalia.avif";
 const ropaH = "/Logo_de_marcas/portadaropaH.jpg";
 const fajaH = "/Logo_de_marcas/portadafajas.avif";
-const portadabolso = "/BOLSOS/portadabolso.avif";
+const portadabolso = "/BOLSOS/portadabolso.jpg";
 
 
 /*{img mañanitas}*/
@@ -96,12 +96,8 @@ const heroapi = {
   title: "JACANA Styles Costa Rica",
   subtitle: "Tú moda a un clic",
   img: heroimg,
-  btntext: "Explore Product",
-  videos: [
-    { imgsrc: vcover1, clip: clip },
-    { imgsrc: vcover2, clip: clip },
-    { imgsrc: vcover3, clip: clip },
-  ],
+  btntext: "Ver colección",
+  
   sociallinks: [
     { icon: facebook, url: "https://facebook.com/tuperfil" },
     { icon: messenger, url: "https://m.me/tuperfil" },
@@ -112,6 +108,13 @@ const heroapi = {
       icon: whatsapp,
       url: "https://wa.me/50687905876?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n",
     },
+  ],
+  backgroundImages: [
+    '/HERO/slide1.webp',
+    '/HERO/slide2.webp',
+    '/HERO/slide3.webp',
+    '/HERO/slide4.webp',
+    '/HERO/slide5.webp',
   ],
 };
 
@@ -680,64 +683,64 @@ const marcaszapatos2api = {
     },
   ],
   news: [
-    { 
-      title:"NIKE",
+    {
+      title: "NIKE",
       text: "",
       img: logonike,
       url: "/Sportmujer",
       btn: "Explorar más"
     },
-    { 
-      title:"ADIDAS",
+    {
+      title: "ADIDAS",
       text: "",
       img: logoadidas,
       url: "/adidas2",
       btn: "Explorar más"
     },
-    { 
-      title:"TOMMY HILFIGER",
+    {
+      title: "TOMMY HILFIGER",
       text: "",
       img: logotommy,
       url: "/tommy2",
       btn: "Explorar más"
     },
-    { 
-      title:"PUMA",
+    {
+      title: "PUMA",
       text: "",
       img: logopuma,
-      url: "",
+      url: "/puma2",
       btn: "Explorar más"
     },
-    { 
-      title:"NEW BALANCE",
+    {
+      title: "NEW BALANCE",
       text: "",
       img: logonewbalance,
       url: "",
       btn: "Explorar más"
     },
-    { 
-      title:"CONVERSE",
+    {
+      title: "CONVERSE",
       text: "",
       img: logoconverse,
       url: "",
       btn: "Explorar más"
     },
-    { 
-      title:"CROCS",
+    {
+      title: "CROCS",
       text: "",
       img: logocrocs,
       url: "",
       btn: "Explorar más"
     },
-    { 
-      title:"VANS",
+    {
+      title: "VANS",
       text: "",
       img: logovans,
       url: "",
       btn: "Explorar más"
     },
-    { 
-      title:"FILA",
+    {
+      title: "FILA",
       text: "",
       img: logofila,
       url: "/fila2",
@@ -763,57 +766,57 @@ const marcaszapatosapi = {
     },
   ],
   news: [
-    { 
-      title:"NIKE",
+    {
+      title: "NIKE",
       text: "",
       img: logonike,
       url: "/deportivo",
       btn: "Explorar más"
     },
-    { 
-      title:"ADIDAS",
+    {
+      title: "ADIDAS",
       text: "",
       img: logoadidas,
       url: "/adidas",
       btn: "Explorar más"
     },
-    { 
-      title:"TOMMY HILFIGER",
+    {
+      title: "TOMMY HILFIGER",
       text: "",
       img: logotommy,
       url: "/tommy",
       btn: "Explorar más"
     },
-    { 
-      title:"PUMA",
+    {
+      title: "PUMA",
       text: "",
       img: logopuma,
-      url: "",
+      url: "/puma",
       btn: "Explorar más"
     },
-    { 
-      title:"NEW BALANCE",
+    {
+      title: "NEW BALANCE",
       text: "",
       img: logonewbalance,
       url: "",
       btn: "Explorar más"
     },
-    { 
-      title:"CONVERSE",
+    {
+      title: "CONVERSE",
       text: "",
       img: logoconverse,
       url: "",
       btn: "Explorar más"
     },
-    { 
-      title:"CROCS",
+    {
+      title: "CROCS",
       text: "",
       img: logocrocs,
       url: "",
       btn: "Explorar más"
     },
-    { 
-      title:"VANS",
+    {
+      title: "VANS",
       text: "",
       img: logovans,
       url: "",
@@ -854,7 +857,7 @@ const footerAPI = {
 };
 
 
-export { 
-  heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api, 
+export {
+  heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api,
   caballero, deportivoapi, topratedsales3, marcaszapatosapi, marcaszapatos2api
- };
+};

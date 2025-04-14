@@ -1,44 +1,69 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
-import { Clips } from './utils/Clips';
 import { SocialLink } from './utils/SocialLink';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const Hero = ({ heroapi: { title, subtitle, btntext, img, sociallinks, videos } }) => {
-  const settings = {
+const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImages } }) => {
+  const sliderSettings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 6000,
     fade: true,
+    arrows: false,
+    pauseOnHover: false,
   };
 
   return (
-    <div className='relative h-auto w-auto flex flex-col bg-gray-900'>
-      <div className='relative z-10 grid items-center justify-items-center nike-container text-white'>
-        <div className='grid items-center justify-items-center mt-28 md:mt-24 sm:mt-20 xsm:mt-16'>
-          <div className='text-container w-full flex flex-col items-center text-center'>
-            <h1 className='text-primary focus:text-secundary-100 text-6xl lg:text-4xl md:text-2xl sm:text-1xl xsm:text-lg font-extrabold drop-shadow-sm'>{title}</h1>
-            <h2 className='text-secundary text-5xl lg:text-2xl md:text-2xl sm:text-2xl xsm:text-base font-extrabold drop-shadow-sm'>{subtitle}</h2>
+    <div className="relative w-full h-screen overflow-hidden">
+      {/* Fondo Slider */}
+      <Slider {...sliderSettings}>
+        {backgroundImages?.map((img, index) => (
+          <div key={index}>
+            <div
+              className="w-full h-screen bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${img})`,
+                filter: 'brightness(0.4)',
+              }}
+            ></div>
           </div>
+        ))}
+      </Slider>
 
-          <div className='flex mt-8 items-center lg:top-[37vh] sm:top-[5vh] xsm:top-[25vh] right-0 gap-5'>
+      {/* Capa oscura con contenido */}
+      <div className="absolute inset-0 bg-black/40 z-10 flex items-center justify-center px-4">
+        <div className="max-w-5xl text-center space-y-8 text-white">
+          <h1 className="text-6xl sm:text-5xl xsm:text-3xl font-extrabold bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent drop-shadow-xl animate-fade-in">
+            {title}
+          </h1>
+          <h2 className="text-3xl sm:text-2xl xsm:text-xl text-gray-200 font-medium animate-fade-in-slow">
+            {subtitle}
+          </h2>
+
+          {btntext && (
+            <button className="mt-6 px-6 py-3 bg-white text-gray-900 font-bold rounded-full shadow-lg hover:bg-gray-200 transition duration-300">
+              {btntext}
+            </button>
+          )}
+
+          <div className="flex gap-6 justify-center mt-6">
             {sociallinks?.map((val, i) => (
               <a
                 key={i}
                 href={val.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="hover:scale-110 transition-transform duration-300"
               >
                 <SocialLink icon={val.icon} />
               </a>
             ))}
           </div>
-
         </div>
       </div>
     </div>
