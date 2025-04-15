@@ -30,11 +30,11 @@ import product12 from "../assets/product12.png";
 const logonike = "/Logo_de_marcas/nike.png";
 const logoadidas = "/Logo_de_marcas/adidas.png";
 const logotommy = "/Logo_de_marcas/tommy.png";
-const logopuma = "/Logo_de_marcas/puma.gif";
+const logopuma = "/Logo_de_marcas/puma.png";
 const logonewbalance = "/Logo_de_marcas/newbalance.png";
-const logoconverse = "/Logo_de_marcas/converse.svg";
+const logoconverse = "/Logo_de_marcas/converse.png";
 const logocrocs = "/Logo_de_marcas/crocs.png";
-const logovans = "/Logo_de_marcas/vans.gif";
+const logovans = "/Logo_de_marcas/vans.png";
 const logofila = "/Logo_de_marcas/fila.png";
 
 /*Portadas seccion Hombre*/
@@ -653,9 +653,9 @@ const caballero = {
     },
     {
       title: "SANDALIAS",
-      text: "MUY PRONTO",
+      text: "Las sandalias masculinas brindan comodidad y frescura esencial en climas cálidos, permitiendo que los pies respiren y ofreciendo una opción práctica y versátil para diversas ocasiones informales.",
       img: sandalias,
-      url: "",
+      url: "/sandalias",
       btn: "Explorar más"
     },
     {

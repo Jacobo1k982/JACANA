@@ -38,3 +38,5 @@ export {default as Puma2} from '../pages/Mujer/Zapatos/Puma2.jsx';
 export {default as PortadaPumaM} from './PortadaPumaM.jsx';
 export {default as Puma} from '../pages/Hombre/Zapatos/Puma.jsx';
 export {default as PortadaPumaH} from './PortadaPumaH.jsx';
+export {default as sandalias} from '../pages/Hombre/Zapatos/Sandalias.jsx';
+export {default as PortadaSandalias} from './PortadaSandalias.jsx';
