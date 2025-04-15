@@ -30,11 +30,11 @@ import product12 from "../assets/product12.png";
 const logonike = "/Logo_de_marcas/nike.png";
 const logoadidas = "/Logo_de_marcas/adidas.png";
 const logotommy = "/Logo_de_marcas/tommy.png";
-const logopuma = "/Logo_de_marcas/puma.png";
+const logopuma = "/Logo_de_marcas/puma.gif";
 const logonewbalance = "/Logo_de_marcas/newbalance.png";
-const logoconverse = "/Logo_de_marcas/converse.png";
+const logoconverse = "/Logo_de_marcas/converse.svg";
 const logocrocs = "/Logo_de_marcas/crocs.png";
-const logovans = "/Logo_de_marcas/vans.png";
+const logovans = "/Logo_de_marcas/vans.gif";
 const logofila = "/Logo_de_marcas/fila.png";
 
 /*Portadas seccion Hombre*/
@@ -73,10 +73,10 @@ import modamujer from "../assets/modamujer.jpg";
 import modahombre from "../assets/modahombre.jpg";
 import modaniña from "../assets/modaniña.jpg";
 import modajuvenil from "../assets/modajuvenil.avif";
-import womanshose from "../assets/Mujer/portadas/womanshose.webp";
+import womanshose from "../assets/Mujer/portadas/8082.jpg";
 import gent from "../assets/Hombre/Portada/gent.png";
-import closet from "../assets/Mujer/portadas/closet.jpg";
-import pijama from "../assets/Mujer/portadas/pijama.jpg";
+import closet from "../assets/Mujer/portadas/ropadama.jpg";
+import pijama from "../assets/Mujer/portadas/mañanitas.webp";
 import deportivo from "../assets/Mujer/portadas/deportivo.webp";
 import jeans from "../assets/Mujer/portadas/jeans.webp";
 

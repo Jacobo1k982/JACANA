@@ -5,7 +5,7 @@ import { truncate } from "lodash";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Stories = ({ story: { title, subtitle, news } }) => {
+const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
     const splideOptions = {
         perPage: 4,
         perMove: 1,
@@ -33,7 +33,7 @@ const Stories = ({ story: { title, subtitle, news } }) => {
 
 
     return (
-        <section className="min-h-screen flex items-center justify-center bg-gray-900 via-white to-slate-200 px-4 xs:px-2">
+        <section ref={storiesRef} className="min-h-screen flex items-center justify-center bg-gray-900 via-white to-slate-200 px-4 xs:px-2">
             <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-10 xs:gap-6 py-10">
 
                 <motion.h2

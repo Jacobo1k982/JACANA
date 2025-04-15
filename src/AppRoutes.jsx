@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React, { lazy, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import {
@@ -7,6 +7,7 @@ import {
 } from './data/data';
 
 // Lazy load components
+
 const Hero = lazy(() => import('./components/Hero'));
 const Stories = lazy(() => import('./components/Stories'));
 const Sales = lazy(() => import('./components/Sales'));
@@ -52,6 +53,8 @@ const PortadaPumaH = lazy(() => import('./components/PortadaPumaH'));
 
 
 export default function AppRoutes() {
+    const storiesRef = useRef(null);
+
     return (
         <>
             <ScrollToTop />
@@ -59,8 +62,9 @@ export default function AppRoutes() {
                 {/* Página principal */}
                 <Route path="/" element={
                     <main className="flex flex-col relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden">
-                        <Hero heroapi={heroapi} />
-                        <Stories story={story} />
+                        <Hero heroapi={heroapi} storiesRef={storiesRef} />
+                        <Stories story={story} storiesRef= {storiesRef} />
+                        <FlexContent endpoint={topratedsales3} />
                         <Sales endpoint={popularsales} ifExists />
                         <FlexContent endpoint={highlight} ifExists />
                         <Sales endpoint={topratedsales} />
