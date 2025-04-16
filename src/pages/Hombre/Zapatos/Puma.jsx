@@ -2,8 +2,8 @@ import React from "react";
 
 function Puma() {
     const products = [
-        { img: "/PUMA/PMH/PMH1.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 41-43", price: "¢ 37.500" },
-        { img: "/PUMA/PMH/PMH2.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 40-43", price: "¢ 24.000" },
+        { img: "/PUMA/PMH/PMH1.jpg", title: "Puma", model: "Modelo Exclusivo", size: "Talla: 41-43", price: "¢ 37.500" },
+        { img: "/PUMA/PMH/PMH2.jpg", title: "Puma", model: "Modelo Exclusivo", size: "Talla: 40-43", price: "¢ 24.000" },
 
     ];
 

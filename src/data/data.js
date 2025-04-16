@@ -716,14 +716,14 @@ const marcaszapatos2api = {
       title: "NEW BALANCE",
       text: "",
       img: logonewbalance,
-      url: "",
+      url: "/newb2",
       btn: "Explorar más"
     },
     {
       title: "CONVERSE",
       text: "",
       img: logoconverse,
-      url: "",
+      url: "/converse2",
       btn: "Explorar más"
     },
     {
@@ -799,14 +799,14 @@ const marcaszapatosapi = {
       title: "NEW BALANCE",
       text: "",
       img: logonewbalance,
-      url: "",
+      url: "/newb",
       btn: "Explorar más"
     },
     {
       title: "CONVERSE",
       text: "",
       img: logoconverse,
-      url: "",
+      url: "/converse",
       btn: "Explorar más"
     },
     {

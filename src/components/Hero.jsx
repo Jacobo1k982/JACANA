@@ -50,7 +50,7 @@ const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImag
             <button
               onClick={() => storiesRef?.current?.scrollIntoView({ behavior: 'smooth' })}
               className="mt-6 px-6 py-3 bg-white text-gray-900 font-bold rounded-full shadow-lg hover:bg-gray-200 transition duration-300">
-          {btntext}    
+              {btntext}
             </button>
           )}
 

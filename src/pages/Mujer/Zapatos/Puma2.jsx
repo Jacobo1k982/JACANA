@@ -2,17 +2,17 @@ import React from "react";
 
 function Puma2() {
     const products = [
-        { img: "/PUMA/PMM/PMM1.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 36", price: "¢ 24.000" },
-        { img: "/PUMA/PMM/PMM2.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 36", price: "¢ 24.000" },
-        { img: "/PUMA/PMM/PMM3.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 36", price: "¢ 24.000" },
-        { img: "/PUMA/PMM/PMM4.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 36", price: "¢ 24.000" },
-        { img: "/PUMA/PMM/PMM5.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 36/39", price: "¢ 24.000" },
-        { img: "/PUMA/PMM/PMM6.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 36/37", price: "¢ 24.000" },
-        { img: "/PUMA/PMM/PMM7.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 36/37", price: "¢ 24.000" },
-        { img: "/PUMA/PMM/PMM8.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 36/37/38/40", price: "¢ 24.000" },
-        { img: "/PUMA/PMM/PMM9.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 19.500" },
-        { img: "/PUMA/PMM/PMM10.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 36/40", price: "¢ 19.500" },
-        { img: "/PUMA/PMM/PMM11.jpg", title: "Fila", model: "Modelo Exclusivo", size: "Talla: 36/40", price: "¢ 37.500" },
+        { img: "/PUMA/PMM/PMM1.jpg", title: "Puma", model: "Modelo Exclusivo", size: "Talla: 36", price: "¢ 24.000" },
+        { img: "/PUMA/PMM/PMM2.jpg", title: "Puma", model: "Modelo Exclusivo", size: "Talla: 36", price: "¢ 24.000" },
+        { img: "/PUMA/PMM/PMM3.jpg", title: "Puma", model: "Modelo Exclusivo", size: "Talla: 36", price: "¢ 24.000" },
+        { img: "/PUMA/PMM/PMM4.jpg", title: "Puma", model: "Modelo Exclusivo", size: "Talla: 36", price: "¢ 24.000" },
+        { img: "/PUMA/PMM/PMM5.jpg", title: "Puma", model: "Modelo Exclusivo", size: "Talla: 36/39", price: "¢ 24.000" },
+        { img: "/PUMA/PMM/PMM6.jpg", title: "Puma", model: "Modelo Exclusivo", size: "Talla: 36/37", price: "¢ 24.000" },
+        { img: "/PUMA/PMM/PMM7.jpg", title: "Puma", model: "Modelo Exclusivo", size: "Talla: 36/37", price: "¢ 24.000" },
+        { img: "/PUMA/PMM/PMM8.jpg", title: "Puma", model: "Modelo Exclusivo", size: "Talla: 36/37/38/40", price: "¢ 24.000" },
+        { img: "/PUMA/PMM/PMM9.jpg", title: "Puma", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "¢ 19.500" },
+        { img: "/PUMA/PMM/PMM10.jpg", title: "Puma", model: "Modelo Exclusivo", size: "Talla: 36/40", price: "¢ 19.500" },
+        { img: "/PUMA/PMM/PMM11.jpg", title: "Puma", model: "Modelo Exclusivo", size: "Talla: 36/40", price: "¢ 37.500" },
 
     ];
 

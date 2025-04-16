@@ -1,12 +1,13 @@
 import React, { lazy, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import SearchPage from './pages/SearchPage';
 
 import {
     heroapi, popularsales, topratedsales, highlight, sneaker, story, dama, ropa, mañanitas, caballero, deportivoapi,
     topratedsales3, cdeportivo, marcaszapatosapi, marcaszapatos2api
 } from './data/data';
 
-// Lazy load components
+/*Lazy load components*/
 
 const Hero = lazy(() => import('./components/Hero'));
 const Stories = lazy(() => import('./components/Stories'));
@@ -47,10 +48,14 @@ const Puma = lazy(() => import('./pages/Hombre/Zapatos/Puma'));
 const PortadaPumaH = lazy(() => import('./components/PortadaPumaH'));
 const Sandalias = lazy(() => import('./pages/Hombre/Zapatos/Sandalias'));
 const PortadaSandalias = lazy(() => import('./components/PortadaSandalias'));
-
-
-
-
+const Converse = lazy(() => import('./pages/Hombre/Zapatos/Converse'));
+const PortadaConverse = lazy(() => import('./components/PortadaConverse'));
+const Converse2 = lazy(() => import('./pages/Mujer/Zapatos/Converse2'));
+const PortadaConverse2 = lazy(() => import('./components/PortadaConverse2'));
+const NewB = lazy(() => import('./pages/Hombre/Zapatos/NewB'));
+const PortadaNB = lazy(() => import('./components/PortadaNB'));
+const NewB2 = lazy(() => import('./pages/Mujer/Zapatos/NewB2'));
+const PortadaNB2 = lazy(() => import('./components/PortadaNB2'));
 
 
 
@@ -67,7 +72,7 @@ export default function AppRoutes() {
                 <Route path="/" element={
                     <main className="flex flex-col relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden">
                         <Hero heroapi={heroapi} storiesRef={storiesRef} />
-                        <Stories story={story} storiesRef= {storiesRef} />
+                        <Stories story={story} storiesRef={storiesRef} />
                         <FlexContent endpoint={topratedsales3} />
                         <Sales endpoint={popularsales} ifExists />
                         <FlexContent endpoint={highlight} ifExists />
@@ -87,10 +92,58 @@ export default function AppRoutes() {
                 <Route path="/cdeportivo" element={<CDeportivo cdeportivo={cdeportivo} />} />
                 <Route path="/marcaszapatos" element={<Shoebrands marcaszapatosapi={marcaszapatosapi} />} />
                 <Route path="/marcaszapatos2" element={<Shoebrands2 marcaszapatos2api={marcaszapatos2api} />} />
+                <Route path="/newb2" element={
+                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden'>
+                        <PortadaNB2 deportivoapi={deportivoapi} />
+                        <div className='NewB2appwoman'>
+                            <div className='fila'>
+                                <div className='col'>
+                                    <NewB2 />
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                } />
+                <Route path="/newb" element={
+                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden'>
+                        <PortadaNB deportivoapi={deportivoapi} />
+                        <div className='NewBappwoman'>
+                            <div className='fila'>
+                                <div className='col'>
+                                    <NewB />
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                } />
+                <Route path="/converse2" element={
+                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden'>
+                        <PortadaConverse2 deportivoapi={deportivoapi} />
+                        <div className='Converse2appwoman'>
+                            <div className='fila'>
+                                <div className='col'>
+                                    <Converse2 />
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                } />
+                <Route path="/converse" element={
+                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden'>
+                        <PortadaConverse deportivoapi={deportivoapi} />
+                        <div className='Converseappwoman'>
+                            <div className='fila'>
+                                <div className='col'>
+                                    <Converse />
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                } />
                 <Route path="/sandalias" element={
                     <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden'>
                         <PortadaSandalias deportivoapi={deportivoapi} />
-                        <div className='Bolsoappwoman'>
+                        <div className='Sandaliasappwoman'>
                             <div className='fila'>
                                 <div className='col'>
                                     <Sandalias />
@@ -102,7 +155,7 @@ export default function AppRoutes() {
                 <Route path="/puma" element={
                     <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden'>
                         <PortadaPumaH deportivoapi={deportivoapi} />
-                        <div className='Bolsoappwoman'>
+                        <div className='Pumaappwoman'>
                             <div className='fila'>
                                 <div className='col'>
                                     <Puma />
@@ -114,7 +167,7 @@ export default function AppRoutes() {
                 <Route path="/puma2" element={
                     <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden'>
                         <PortadaPumaM deportivoapi={deportivoapi} />
-                        <div className='Bolsoappwoman'>
+                        <div className='Puma2appwoman'>
                             <div className='fila'>
                                 <div className='col'>
                                     <Puma2 />
@@ -237,6 +290,7 @@ export default function AppRoutes() {
                         </div>
                     </main>
                 } />
+                <Route path="/search" element={<SearchPage />} />
             </Routes>
         </>
     );

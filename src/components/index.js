@@ -40,3 +40,11 @@ export {default as Puma} from '../pages/Hombre/Zapatos/Puma.jsx';
 export {default as PortadaPumaH} from './PortadaPumaH.jsx';
 export {default as sandalias} from '../pages/Hombre/Zapatos/Sandalias.jsx';
 export {default as PortadaSandalias} from './PortadaSandalias.jsx';
+export {default as Converse} from '../pages/Hombre/Zapatos/Converse.jsx';
+export {default as PortadaConverse}from './PortadaConverse.jsx';
+export {default as Converse2} from '../pages/Mujer/Zapatos/Converse2.jsx';
+export {default as PortadaConverse2} from './PortadaConverse2.jsx';
+export {default as NewB} from '../pages/Hombre/Zapatos/NewB.jsx';
+export {default as PortadaNeNB} from './PortadaNB.jsx'
+export {default as PortadaNeNB2} from './PortadaNB2.jsx'
+export {default as NewB2} from '../pages/Mujer/Zapatos/NewB2.jsx';
