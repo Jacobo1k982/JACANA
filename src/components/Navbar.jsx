@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { HeartIcon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../assets/logo.png';
-import { selectTotalQTY, setOpenCart } from '../app/CartSlice';
-import { Link, useNavigate  } from 'react-router-dom';
-
+import { selectCartItems, selectTotalQTY, setOpenCart } from '../app/CartSlice';
+import { Link, useNavigate } from 'react-router-dom';
+import CartItem from '../components/cart/CartItem'; // Asegúrate de tener este componente
 
 const Navbar = () => {
   const [navState, setNavState] = useState(false);
@@ -16,6 +16,7 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
   const totalQTY = useSelector(selectTotalQTY);
+  const cartItems = useSelector(selectCartItems); // Obtén los items del carrito
 
   const toggleDrawer = () => setDrawerOpen(!drawerOpen);
 
@@ -35,7 +36,6 @@ const Navbar = () => {
       setShowSearch(false);
     }
   };
-  
 
   useEffect(() => {
     window.addEventListener('scroll', onNavScroll);
@@ -130,8 +130,43 @@ const Navbar = () => {
               transition={{ type: "spring", stiffness: 100 }}
               className="fixed right-0 top-0 w-[300px] md:w-[400px] h-screen bg-white shadow-lg z-[999] px-4 py-6 flex flex-col"
             >
-              <h2 className="text-xl font-bold mb-4">Carrito</h2>
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-bold">Carrito</h2>
+                <button onClick={toggleDrawer} className="focus:outline-none">
+                  <XMarkIcon className="w-6 h-6 text-gray-600 hover:text-gray-800" />
+                </button>
+              </div>
 
+              {cartItems.length === 0 ? (
+                <p>Tu carrito está vacío.</p>
+              ) : (
+                <div className="flex-grow overflow-y-auto">
+                  {cartItems.map((item) => (
+                    <CartItem key={item.id} item={item} />
+                  ))}
+                </div>
+              )}
+
+              {cartItems.length > 0 && (
+                <div className="mt-6 border-t pt-4">
+                  {/* Aquí podrías mostrar el subtotal, botones de "Ver Carrito" y "Checkout" */}
+                  {/* Ejemplo: */}
+                  {/* <div className="flex justify-between text-lg font-semibold mb-2">
+                    <span>Subtotal:</span>
+                    <span>${cartTotal.toFixed(2)}</span>
+                  </div>
+                  <Link to="/cart" onClick={toggleDrawer} className="block w-full bg-indigo-600 text-white py-2 rounded-md text-center hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    Ver Carrito
+                  </Link>
+                  <button className="block w-full mt-2 bg-green-500 text-white py-2 rounded-md text-center hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    Checkout
+                  </button> */}
+                  <p>Aquí irán los detalles del subtotal y los botones de Checkout.</p>
+                  <Link to="/cart" onClick={toggleDrawer} className="block w-full bg-indigo-600 text-white py-2 rounded-md text-center hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    Ver Carrito
+                  </Link>
+                </div>
+              )}
             </motion.aside>
           </>
         )}

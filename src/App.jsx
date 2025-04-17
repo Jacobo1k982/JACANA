@@ -8,7 +8,6 @@ import AppRoutes from './AppRoutes';
 import { Suspense } from 'react';
 
 
-
 function App() {
   return (
     <Router>

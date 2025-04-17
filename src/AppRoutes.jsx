@@ -1,6 +1,6 @@
 import React, { lazy, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import SearchPage from './pages/SearchPage';
+import SearchResults from './pages/SearchResults';
 
 import {
     heroapi, popularsales, topratedsales, highlight, sneaker, story, dama, ropa, mañanitas, caballero, deportivoapi,
@@ -80,7 +80,7 @@ export default function AppRoutes() {
                         <FlexContent endpoint={sneaker} />
                     </main>
                 } />
-
+                <Route path="/search" element={<SearchResults />} />
                 {/* Secciones */}
                 <Route path="/hombre" element={<Hombre caballero={caballero} />} />
                 <Route path="/juvenil" element={<Juvenil />} />
@@ -290,7 +290,6 @@ export default function AppRoutes() {
                         </div>
                     </main>
                 } />
-                <Route path="/search" element={<SearchPage />} />
             </Routes>
         </>
     );
