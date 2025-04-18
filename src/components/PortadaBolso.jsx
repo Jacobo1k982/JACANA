@@ -6,7 +6,7 @@ const PortadaBolso = ({ deportivoapi = {} }) => {
     const { title = "", subtitle = "", sociallinks, img = [] } = deportivoapi;
 
     return (
-        <div className="relative h-auto w-auto flex flex-col">
+        <div className="relative h-auto w-auto flex flex-col bg-gray-900 text-white py-6">
             {/* Contenido */}
             <div className="relative opacity-100 z-20 grid items-center justify-items-center nike-container">
                 <div className="grid items-center justify-items-center mt-28 md:mt-24">

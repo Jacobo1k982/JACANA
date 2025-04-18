@@ -200,7 +200,7 @@ const sneaker = {
 const deportivoapi = {
   heading: "General",
   title: "JACANA Styles Costa Rica",
-  subtitle: "Zapatos deportivos",
+  subtitle: "Tú moda a un clic",
   sociallinks: [
     { icon: facebook, url: "https://facebook.com/tuperfil" },
     { icon: messenger, url: "https://m.me/tuperfil" },
@@ -350,12 +350,6 @@ const topratedsales = {
       size: "--"
     },
   ],
-};
-
-const topratedsales3 = {
-  title: "LINEA DEPORTIVA",
-  items: [
-  ]
 };
 
 const story = {
@@ -860,5 +854,5 @@ const footerAPI = {
 
 export {
   heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api,
-  caballero, deportivoapi, topratedsales3, marcaszapatosapi, marcaszapatos2api
+  caballero, deportivoapi, marcaszapatosapi, marcaszapatos2api
 };
