@@ -21,4 +21,4 @@ const Sales = ({ ifExists, endpoint: { title, items, subtitle } }) => {
   )
 }
 
-export default Sales
+export default Sales;
