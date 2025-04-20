@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react';
+// Navbar.jsx
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { HeartIcon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { HeartIcon, MagnifyingGlassIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../assets/logo.png';
-import { selectCartItems, selectTotalQTY, setOpenCart } from '../app/CartSlice';
+import { selectCartItems, selectTotalQTY } from '../app/CartSlice';
 import { Link, useNavigate } from 'react-router-dom';
-import CartItem from '../components/cart/CartItem'; // Asegúrate de tener este componente
+
+const CartDrawer = lazy(() => import('./CartDrawer'));
+const SearchBar = lazy(() => import('./SearchBar'));
 
 const Navbar = () => {
   const [navState, setNavState] = useState(false);
@@ -16,7 +19,7 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
   const totalQTY = useSelector(selectTotalQTY);
-  const cartItems = useSelector(selectCartItems); // Obtén los items del carrito
+  const cartItems = useSelector(selectCartItems);
 
   const toggleDrawer = () => setDrawerOpen(!drawerOpen);
 
@@ -24,9 +27,7 @@ const Navbar = () => {
 
   const toggleSearch = () => setShowSearch(!showSearch);
 
-  const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
-  };
+  const handleSearchChange = (e) => setSearchQuery(e.target.value);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -47,15 +48,13 @@ const Navbar = () => {
       {/* NAVBAR */}
       <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 font-poppins ${navState ? 'bg-white/80 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'}`}>
         <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Link to="/" className="flex items-center space-x-2">
-              <img
-                src={logo}
-                alt="logo"
-                className={`w-12 h-auto transition-all duration-300 ${navState ? 'brightness-0' : ''}`}
-              />
-            </Link>
-          </div>
+          <Link to="/" className="flex items-center space-x-2">
+            <img
+              src={logo}
+              alt="logo"
+              className={`w-12 h-auto transition-all duration-300 ${navState ? 'brightness-0' : ''}`}
+            />
+          </Link>
 
           <ul className="flex items-center space-x-6">
             <li className="group relative">
@@ -69,6 +68,7 @@ const Navbar = () => {
             <li className="group relative">
               <HeartIcon className={`w-6 h-6 cursor-pointer transition-all duration-300 group-hover:text-pink-500 ${navState ? 'text-gray-800' : 'text-white'}`} />
             </li>
+
             <li className="relative">
               <button onClick={toggleDrawer} className="relative focus:outline-none">
                 <ShoppingBagIcon className={`w-6 h-6 transition-all duration-300 hover:scale-110 ${navState ? 'text-gray-800' : 'text-white'}`} />
@@ -81,94 +81,28 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
+
+        {/* SearchBar */}
         <AnimatePresence>
           {showSearch && (
-            <motion.form
-              onSubmit={handleSearchSubmit}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-lg px-4"
-            >
-              <div className="relative">
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={handleSearchChange}
-                  placeholder="Buscar productos..."
-                  className="w-full py-2 pl-4 pr-10 rounded-lg shadow-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-                <XMarkIcon
-                  onClick={() => setShowSearch(false)}
-                  className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer hover:text-red-500"
-                />
-              </div>
-            </motion.form>
+            <Suspense fallback={<div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50">Cargando búsqueda...</div>}>
+              <SearchBar
+                value={searchQuery}
+                onChange={handleSearchChange}
+                onClose={() => setShowSearch(false)}
+                onSubmit={handleSearchSubmit}
+              />
+            </Suspense>
           )}
         </AnimatePresence>
-
       </header>
 
-      {/* DRAWER - CARRITO */}
+      {/* Drawer */}
       <AnimatePresence>
         {drawerOpen && (
-          <>
-            {/* Overlay */}
-            <motion.div
-              className="fixed inset-0 bg-black/30 z-[99]"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={toggleDrawer}
-            />
-
-            {/* Drawer */}
-            <motion.aside
-              initial={{ x: 500 }}
-              animate={{ x: 0 }}
-              exit={{ x: 500 }}
-              transition={{ type: "spring", stiffness: 100 }}
-              className="fixed right-0 top-0 w-[300px] md:w-[400px] h-screen bg-white shadow-lg z-[999] px-4 py-6 flex flex-col"
-            >
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold">Carrito</h2>
-                <button onClick={toggleDrawer} className="focus:outline-none">
-                  <XMarkIcon className="w-6 h-6 text-gray-600 hover:text-gray-800" />
-                </button>
-              </div>
-
-              {cartItems.length === 0 ? (
-                <p>Tu carrito está vacío.</p>
-              ) : (
-                <div className="flex-grow overflow-y-auto">
-                  {cartItems.map((item) => (
-                    <CartItem key={item.id} item={item} />
-                  ))}
-                </div>
-              )}
-
-              {cartItems.length > 0 && (
-                <div className="mt-6 border-t pt-4">
-                  {/* Aquí podrías mostrar el subtotal, botones de "Ver Carrito" y "Checkout" */}
-                  {/* Ejemplo: */}
-                  {/* <div className="flex justify-between text-lg font-semibold mb-2">
-                    <span>Subtotal:</span>
-                    <span>${cartTotal.toFixed(2)}</span>
-                  </div>
-                  <Link to="/cart" onClick={toggleDrawer} className="block w-full bg-indigo-600 text-white py-2 rounded-md text-center hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    Ver Carrito
-                  </Link>
-                  <button className="block w-full mt-2 bg-green-500 text-white py-2 rounded-md text-center hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
-                    Checkout
-                  </button> */}
-                  <p>Aquí irán los detalles del subtotal y los botones de Checkout.</p>
-                  <Link to="/cart" onClick={toggleDrawer} className="block w-full bg-indigo-600 text-white py-2 rounded-md text-center hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    Ver Carrito
-                  </Link>
-                </div>
-              )}
-            </motion.aside>
-          </>
+          <Suspense fallback={<div className="fixed right-0 top-0 w-[300px] md:w-[400px] h-screen bg-white shadow-lg z-[999] flex items-center justify-center">Cargando...</div>}>
+            <CartDrawer onClose={toggleDrawer} items={cartItems} />
+          </Suspense>
         )}
       </AnimatePresence>
     </>

@@ -521,7 +521,7 @@ chokidar@^3.5.3:
   optionalDependencies:
     fsevents "~2.3.2"
 
-classnames@^2.2.5:
+classnames@^2.2.5, classnames@^2.5.1:
   version "2.5.1"
   resolved "https://registry.npmjs.org/classnames/-/classnames-2.5.1.tgz"
   integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==
@@ -735,13 +735,13 @@ fraction.js@^4.2.0:
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-4.2.0.tgz"
   integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
 
-framer-motion@^12.6.5:
-  version "12.6.5"
-  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-12.6.5.tgz"
-  integrity sha512-MKvnWov0paNjvRJuIy6x418w23tFqRfS6CXHhZrCiSEpXVlo/F+usr8v4/3G6O0u7CpsaO1qop+v4Ip7PRCBqQ==
+framer-motion@^12.7.4:
+  version "12.7.4"
+  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-12.7.4.tgz"
+  integrity sha512-jX0bPsTmU0oPZTYz/dVyD0dmOyEOEJvdn0TaZBE5I8g2GvVnnQnW9f65cJnoVfUkY3WZWNXGXnPbVA9YnaIfVA==
   dependencies:
-    motion-dom "^12.6.5"
-    motion-utils "^12.6.5"
+    motion-dom "^12.7.4"
+    motion-utils "^12.7.2"
     tslib "^2.4.0"
 
 function-bind@^1.1.1, function-bind@^1.1.2:
@@ -979,17 +979,17 @@ minimist@^1.2.6:
   resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz"
   integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
 
-motion-dom@^12.6.5:
-  version "12.6.5"
-  resolved "https://registry.npmjs.org/motion-dom/-/motion-dom-12.6.5.tgz"
-  integrity sha512-jpM9TQLXzYMWMJ7Ec7sAj0iis8oIuu6WvjI3yNKJLdrZyrsI/b2cRInDVL8dCl683zQQq19DpL9cSMP+k8T1NA==
+motion-dom@^12.7.4:
+  version "12.7.4"
+  resolved "https://registry.npmjs.org/motion-dom/-/motion-dom-12.7.4.tgz"
+  integrity sha512-1ZUHAoSUMMxP6jPqyxlk9XUfb6NxMsnWPnH2YGhrOhTURLcXWbETi6eemoKb60Pe32NVJYduL4B62VQSO5Jq8Q==
   dependencies:
-    motion-utils "^12.6.5"
+    motion-utils "^12.7.2"
 
-motion-utils@^12.6.5:
-  version "12.6.5"
-  resolved "https://registry.npmjs.org/motion-utils/-/motion-utils-12.6.5.tgz"
-  integrity sha512-IsOeKsOF+FWBhxQEDFBO6ZYC8/jlidmVbbLpe9/lXSA9j9kzGIMUuIBx2SZY+0reAS0DjZZ1i7dJp4NHrjocPw==
+motion-utils@^12.7.2:
+  version "12.7.2"
+  resolved "https://registry.npmjs.org/motion-utils/-/motion-utils-12.7.2.tgz"
+  integrity sha512-XhZwqctxyJs89oX00zn3OGCuIIpVevbTa+u82usWBC6pSHUd2AoNWiYa7Du8tJxJy9TFbZ82pcn5t7NOm1PHAw==
 
 ms@2.1.2:
   version "2.1.2"

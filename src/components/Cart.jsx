@@ -4,6 +4,8 @@ import { selectCartItems, selectCartState, selectTotalAmount, selectTotalQTY, se
 import CartCount from './cart/CartCount'
 import CartEmpty from './cart/CartEmpty'
 import CartItem from './cart/CartItem'
+import { useNavigate } from 'react-router-dom';
+
 
 const Cart = () => {
 
@@ -12,15 +14,13 @@ const Cart = () => {
   const cartItems = useSelector(selectCartItems);
   const totalAmount = useSelector(selectTotalAmount);
   const totalQTY = useSelector(selectTotalQTY);
-
   const [showSummary, setShowSummary] = React.useState(false);
+  const navigate = useNavigate();
 
-  // console.log(cartItems);
 
   useEffect(() => {
     dispatch(setGetTotals())
   }, [cartItems, dispatch])
-
 
   const onCartToggle = () => {
     dispatch(setCloseCart({
@@ -32,6 +32,13 @@ const Cart = () => {
     dispatch(setClearCartItems())
   };
 
+  const formatCurrency = (amount) => {
+    return new Intl.NumberFormat('es-CR', {
+      style: 'currency',
+      currency: 'CRC',
+      minimumFractionDigits: 0,
+    }).format(amount);
+  };
 
   return (
     <>
@@ -55,16 +62,22 @@ const Cart = () => {
                 <button
                   type='button'
                   className='button-theme bg-theme-cart text-white'
-                  onClick={() => setShowSummary(true)}
+                  onClick={() => {
+                    if (cartItems.length === 0) {
+                      alert("El carrito está vacío.");
+                      return;
+                    }
+                    setShowSummary(true);
+                  }}
                 >
                   Verificar
                 </button>
-
               </div>
             </div>
           </div>}
         </div>
       </div>
+      {/* Modal */}
       {showSummary && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-[300]">
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
@@ -76,13 +89,13 @@ const Cart = () => {
                   <p className="text-sm text-gray-600">Modelo: {item.model || item.text}</p>
                   <p className="text-sm text-gray-600">Talla: {item.size}</p>
                   <p className="text-sm text-gray-600">Cantidad: {item.cartQuantity}</p>
-                  <p className="text-sm text-gray-600">Subtotal: ₡{item.price * item.cartQuantity}</p>
+                  <p className="text-sm text-gray-600">Subtotal: {formatCurrency(item.price * item.cartQuantity)}</p>
                 </li>
               ))}
             </ul>
             <div className="flex justify-between items-center mb-4">
               <span className="text-lg font-semibold">Total:</span>
-              <span className="text-lg font-bold">₡{totalAmount}</span>
+              <span className="text-lg font-bold">{formatCurrency(totalAmount)}</span>
             </div>
             <div className="flex justify-end gap-2">
               <button
@@ -97,6 +110,7 @@ const Cart = () => {
                   dispatch(setClearCartItems());
                   setShowSummary(false);
                   dispatch(setCloseCart({ cartState: false }));
+                  navigate('/gracias'); // redirige a la página de agradecimiento
                 }}
                 className="px-4 py-2 bg-theme-cart text-white rounded hover:bg-orange-600"
               >
@@ -107,7 +121,6 @@ const Cart = () => {
           </div>
         </div>
       )}
-
     </>
   )
 }

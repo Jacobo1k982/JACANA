@@ -1,6 +1,7 @@
 import React, { lazy, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import SearchResults from './pages/SearchResults';
+import ThankYou from './pages/ThankYou';
 
 import {
     heroapi, popularsales, topratedsales, highlight, sneaker, story, dama, ropa, mañanitas, caballero, deportivoapi,
@@ -289,6 +290,7 @@ export default function AppRoutes() {
                         </div>
                     </main>
                 } />
+                <Route path="/gracias" element={<ThankYou />} />
             </Routes>
         </>
     );

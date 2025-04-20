@@ -1,62 +1,81 @@
 import React from "react";
 import { MinusIcon, PlusIcon, TrashIcon } from "@heroicons/react/24/outline";
 import { useDispatch } from "react-redux";
-import { setDecreaseItemQTY, setIncreaseItemQTY, setRemoveItemFromCart } from "../../app/CartSlice.js";
+import {
+  setDecreaseItemQTY,
+  setIncreaseItemQTY,
+  setRemoveItemFromCart,
+} from "../../app/CartSlice.js";
 
 const CartItem = ({
   item: { id, title, subtitle, text, img, color, shadow, price, size, cartQuantity },
 }) => {
-
   const dispatch = useDispatch();
 
-  const onRemoveItem = () => {
-    dispatch(setRemoveItemFromCart({ id, title, subtitle, text, img, color, shadow, price, size, cartQuantity }));
-  };
-
-  const onIncreaseItemQTY = () => {
-    dispatch(setIncreaseItemQTY({ id, title, subtitle, text, img, color, shadow, price, size, cartQuantity }));
-  };
-  const onDecreaseItemQTY = () => {
-    dispatch(setDecreaseItemQTY({ id, title, subtitle, text, img, color, shadow, price, size, cartQuantity }));
+  const handleAction = (action) => {
+    dispatch(action({ id, title, subtitle, text, img, color, shadow, price, size, cartQuantity }));
   };
 
   return (
-    <>
-      <div className="flex items-center justify-between w-full px-5">
-        <div className="flex items-center gap-5">
-          <div className={`bg-gradient-to-b ${color} ${shadow} relative rounded p-3 hover:scale-105 transition-all duration-75 ease-out grid items-center`}>
-            <img src={img} alt={`img/cart-item/${id}`} className="w-36 h-auto object-fill lg:w-28" />
-            <div className="absolute right-1 top-1 blue-theme-effect bg-white/80 text-black text-sx px-1 rounded">₡{price}</div>
-          </div>
-          <div className="grid items-center gap-4">
-            <div className="grid items-center leading-none">
-              <h1 className="font-medium text-lg text-slate-900 lg:text-sm">{title}</h1>
-              <p className="text-sm text-slate-800 lg:text-xs">{text}</p>
-              <p className="text-sm text-gray-500 lg:text-xs">{size}</p>
-            </div>
-            <div className="flex items-center justify-around w-full">
-              <button type="button" onClick={onDecreaseItemQTY} className="bg-theme-cart rounded w-6 h-6 lg:w-5 lg:h-5 flex items-center justify-center active:scale-90">
-                <MinusIcon className="w-5 h-5 lg:w-4 lg:h-4 text-white storke-[2]" />
-              </button>
-              <div className="bg-theme-cart rounded text-white font-medium lg:text-xs w-7 h-6 lg:h-5 lg:w-5 flex items-center justify-center">{cartQuantity}</div>
-              <button type="button" onClick={onIncreaseItemQTY} className="bg-theme-cart rounded w-6 h-6 lg:w-5 lg:h-5 flex items-center justify-center active:scale-90">
-                <PlusIcon className="w-5 h-5 lg:w-4 lg:h-4 text-white storke-[2]" />
-              </button>
-            </div>
+    <div className="flex items-center justify-between w-full px-5 py-4 rounded-xl shadow-sm border border-gray-200 mb-4 bg-white hover:shadow-md transition-all">
+      <div className="flex items-center gap-5">
+        <div
+          className={`bg-gradient-to-b ${color} ${shadow} relative rounded-xl p-3 hover:scale-105 transition-transform duration-200 ease-out grid items-center`}
+        >
+          <img
+            src={img}
+            alt={`img/cart-item/${id}`}
+            className="w-32 h-auto object-contain lg:w-24"
+          />
+          <div className="absolute right-1 top-1 bg-white/90 text-black text-xs px-2 py-0.5 rounded-md shadow-sm">
+            ₡{price}
           </div>
         </div>
-        <div className="grid items-center gap-5">
-          <div className="grid items-center justify-center">
-            <h1 className="text-lg lg:text-base text-slate-900 font-medium">₡{price * cartQuantity}</h1>
+
+        <div className="grid gap-2">
+          <div>
+            <h1 className="font-semibold text-slate-900 text-base lg:text-sm">{title}</h1>
+            <p className="text-sm text-slate-700 lg:text-xs">{text}</p>
+            <span className="text-xs text-gray-500">Talla: {size}</span>
           </div>
-          <div className="grid items-center justify-center">
-            <button type="button" className="bg-theme-cart rounded p-1 lg:p-0.5 grid items-center justify-items-center active:scale-90 cursor-poninter" onClick={onRemoveItem}>
-              <TrashIcon className="w-5 h-5 text-white" />
+
+          <div className="flex items-center space-x-3">
+            <button
+              type="button"
+              onClick={() => handleAction(setDecreaseItemQTY)}
+              className="bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full p-1 w-7 h-7 flex items-center justify-center"
+            >
+              <MinusIcon className="w-4 h-4" />
+            </button>
+            <span className="text-sm font-medium text-slate-800 w-6 text-center">
+              {cartQuantity}
+            </span>
+            <button
+              type="button"
+              onClick={() => handleAction(setIncreaseItemQTY)}
+              className="bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full p-1 w-7 h-7 flex items-center justify-center"
+            >
+              <PlusIcon className="w-4 h-4" />
             </button>
           </div>
         </div>
       </div>
-    </>
+
+      <div className="flex flex-col items-end justify-between h-full gap-3">
+        <div>
+          <span className="text-lg font-semibold text-indigo-600">
+            ₡{price * cartQuantity}
+          </span>
+        </div>
+        <button
+          type="button"
+          onClick={() => handleAction(setRemoveItemFromCart)}
+          className="bg-red-500 hover:bg-red-600 text-white rounded-full p-2 shadow-md transition-transform active:scale-95"
+        >
+          <TrashIcon className="w-5 h-5" />
+        </button>
+      </div>
+    </div>
   );
 };
 
