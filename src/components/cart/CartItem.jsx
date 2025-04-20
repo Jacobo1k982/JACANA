@@ -18,7 +18,7 @@ const CartItem = ({
   };
   const onDecreaseItemQTY = () => {
     dispatch(setDecreaseItemQTY({ id, title, subtitle, text, img, color, shadow, price, size, cartQuantity }));
-  } ;
+  };
 
   return (
     <>
@@ -32,6 +32,7 @@ const CartItem = ({
             <div className="grid items-center leading-none">
               <h1 className="font-medium text-lg text-slate-900 lg:text-sm">{title}</h1>
               <p className="text-sm text-slate-800 lg:text-xs">{text}</p>
+              <p className="text-sm text-gray-500 lg:text-xs">{size}</p>
             </div>
             <div className="flex items-center justify-around w-full">
               <button type="button" onClick={onDecreaseItemQTY} className="bg-theme-cart rounded w-6 h-6 lg:w-5 lg:h-5 flex items-center justify-center active:scale-90">

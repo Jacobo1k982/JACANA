@@ -5,30 +5,40 @@ import { FaCheckCircle } from "react-icons/fa";
 import toast from "react-hot-toast";
 
 function Tommy() {
-
     const dispatch = useDispatch();
     const [clickedProductId, setClickedProductId] = useState(null);
+    const [selectedSizes, setSelectedSizes] = useState({});
 
     const products = [
-        { id: "tom-1", img: "/TOMMY/TH/TH1.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 41-44", price: "30000", Currency: "₡" },
-        { id: "tom-2", img: "/TOMMY/TH/TH2.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 43-44", price: "30000", Currency: "₡" },
-        { id: "tom-3", img: "/TOMMY/TH/TH3.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 41-44", price: "30000", Currency: "₡" },
-        { id: "tom-4", img: "/TOMMY/TH/TH4.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 40-44", price: "30000", Currency: "₡" },
-        { id: "tom-5", img: "/TOMMY/TH/TH5.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 40-44", price: "30000", Currency: "₡" },
-        { id: "tom-6", img: "/TOMMY/TH/TH6.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 40-44", price: "30000", Currency: "₡" },
-        { id: "tom-7", img: "/TOMMY/TH/TH7.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 44-44", price: "30000", Currency: "₡" },
-        { id: "tom-8", img: "/TOMMY/TH/TH8.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 40-44", price: "30000", Currency: "₡" },
-        { id: "tom-9", img: "/TOMMY/TH/TH9.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 40-44", price: "30000", Currency: "₡" },
-        { id: "tom-10", img: "/TOMMY/TH/TH10.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 40-44", price: "30000", Currency: "₡" },
-        { id: "tom-11", img: "/TOMMY/TH/TH11.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", size: "Talla: 41-43", price: "30000", Currency: "₡" },
+        { id: "tom-1", img: "/TOMMY/TH/TH1.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [41, 42, 43, 44], price: "30000", Currency: "₡" },
+        { id: "tom-2", img: "/TOMMY/TH/TH2.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [43, 44], price: "30000", Currency: "₡" },
+        { id: "tom-3", img: "/TOMMY/TH/TH3.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [41, 42, 43, 44], price: "30000", Currency: "₡" },
+        { id: "tom-4", img: "/TOMMY/TH/TH4.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "30000", Currency: "₡" },
+        { id: "tom-5", img: "/TOMMY/TH/TH5.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "30000", Currency: "₡" },
+        { id: "tom-6", img: "/TOMMY/TH/TH6.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "30000", Currency: "₡" },
+        { id: "tom-7", img: "/TOMMY/TH/TH7.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [44], price: "30000", Currency: "₡" },
+        { id: "tom-8", img: "/TOMMY/TH/TH8.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "30000", Currency: "₡" },
+        { id: "tom-9", img: "/TOMMY/TH/TH9.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "30000", Currency: "₡" },
+        { id: "tom-10", img: "/TOMMY/TH/TH10.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "30000", Currency: "₡" },
+        { id: "tom-11", img: "/TOMMY/TH/TH11.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [41, 42, 43], price: "30000", Currency: "₡" },
     ];
 
+    const handleSizeChange = (productId, size) => {
+        setSelectedSizes((prev) => ({ ...prev, [productId]: size }));
+    };
+
     const handleBuy = (product) => {
+        const selectedSize = selectedSizes[product.id];
+        if (!selectedSize) {
+            toast.error("Por favor selecciona una talla antes de comprar");
+            return;
+        }
+
         const item = {
             id: product.id,
             title: product.title,
             model: product.model,
-            size: product.size,
+            size: `Talla: ${selectedSize}`,
             img: product.img,
             price: Number(product.price),
         };
@@ -38,8 +48,6 @@ function Tommy() {
         toast.success(`${product.title} agregado al carrito`);
 
         setClickedProductId(product.id);
-
-        // Reinicia el estado después de 2 segundos
         setTimeout(() => {
             setClickedProductId(null);
         }, 2000);
@@ -63,18 +71,33 @@ function Tommy() {
                             <div className="p-4 space-y-2">
                                 <h3 className="text-lg font-semibold">{product.title}</h3>
                                 <p className="text-gray-400">{product.model}</p>
-                                <p className="text-sm text-gray-500">{product.size}</p>
-                                <p className="text-orange-500 font-bold">{product.Currency} {product.price}</p>
+
+                                <select
+                                    value={selectedSizes[product.id] || ""}
+                                    onChange={(e) => handleSizeChange(product.id, e.target.value)}
+                                    className="bg-gray-700 text-white p-2 rounded w-full text-sm"
+                                >
+                                    <option value="">Selecciona tu talla</option>
+                                    {product.sizes.map((size) => (
+                                        <option key={size} value={size}>
+                                            Talla {size}
+                                        </option>
+                                    ))}
+                                </select>
+
+                                <p className="text-orange-500 font-bold">
+                                    {product.Currency} {product.price}
+                                </p>
 
                                 <button
                                     onClick={() => handleBuy(product)}
-                                    disabled={clickedProductId === product.id}
-                                    className={`w-full flex items-center justify-center gap-2 text-sm font-medium rounded-lg px-4 py-2 transition-all duration-300 ${clickedProductId === product.id
+                                    disabled={isClicked}
+                                    className={`w-full flex items-center justify-center gap-2 text-sm font-medium rounded-lg px-4 py-2 transition-all duration-300 ${isClicked
                                         ? "bg-green-600 cursor-not-allowed"
                                         : "bg-orange-500 hover:bg-orange-600"
                                         }`}
                                 >
-                                    {clickedProductId === product.id ? (
+                                    {isClicked ? (
                                         <>
                                             <FaCheckCircle className="animate-ping-once" /> Agregado
                                         </>
@@ -89,6 +112,6 @@ function Tommy() {
             </div>
         </div>
     );
-};
+}
 
 export default Tommy;

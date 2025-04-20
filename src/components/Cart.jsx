@@ -13,6 +13,7 @@ const Cart = () => {
   const totalAmount = useSelector(selectTotalAmount);
   const totalQTY = useSelector(selectTotalQTY);
 
+  const [showSummary, setShowSummary] = React.useState(false);
 
   // console.log(cartItems);
 
@@ -30,6 +31,7 @@ const Cart = () => {
   const onClearCartItems = () => {
     dispatch(setClearCartItems())
   };
+
 
   return (
     <>
@@ -50,14 +52,62 @@ const Cart = () => {
               </div>
               <div className='grid items-center gap-2'>
                 <p className='text-sm font-medium text-center'>Los impuestos y el envío se calcularán al momento del envío.</p>
-                <button type='button' className='button-theme bg-theme-cart text-white'>Verificar</button>
+                <button
+                  type='button'
+                  className='button-theme bg-theme-cart text-white'
+                  onClick={() => setShowSummary(true)}
+                >
+                  Verificar
+                </button>
+
               </div>
             </div>
-
-
           </div>}
         </div>
       </div>
+      {showSummary && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-[300]">
+          <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
+            <h2 className="text-xl font-bold mb-4">Resumen de compra</h2>
+            <ul className="divide-y divide-gray-200 max-h-64 overflow-y-auto mb-4">
+              {cartItems.map((item, index) => (
+                <li key={index} className="py-2">
+                  <p className="text-base font-medium">{item.title}</p>
+                  <p className="text-sm text-gray-600">Modelo: {item.model || item.text}</p>
+                  <p className="text-sm text-gray-600">Talla: {item.size}</p>
+                  <p className="text-sm text-gray-600">Cantidad: {item.cartQuantity}</p>
+                  <p className="text-sm text-gray-600">Subtotal: ₡{item.price * item.cartQuantity}</p>
+                </li>
+              ))}
+            </ul>
+            <div className="flex justify-between items-center mb-4">
+              <span className="text-lg font-semibold">Total:</span>
+              <span className="text-lg font-bold">₡{totalAmount}</span>
+            </div>
+            <div className="flex justify-end gap-2">
+              <button
+                onClick={() => setShowSummary(false)}
+                className="px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400"
+              >
+                Cancelar
+              </button>
+              <button
+                onClick={() => {
+                  alert("Compra realizada con éxito 🎉");
+                  dispatch(setClearCartItems());
+                  setShowSummary(false);
+                  dispatch(setCloseCart({ cartState: false }));
+                }}
+                className="px-4 py-2 bg-theme-cart text-white rounded hover:bg-orange-600"
+              >
+                Confirmar
+              </button>
+
+            </div>
+          </div>
+        </div>
+      )}
+
     </>
   )
 }
