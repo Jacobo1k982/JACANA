@@ -36,7 +36,7 @@ const CartItem = ({
           <div>
             <h1 className="font-semibold text-slate-900 text-base lg:text-sm">{title}</h1>
             <p className="text-sm text-slate-700 lg:text-xs">{text}</p>
-            <span className="text-xs text-gray-500">Talla: {size}</span>
+            <span className="text-xs text-gray-500">{size}</span>
           </div>
 
           <div className="flex items-center space-x-3">

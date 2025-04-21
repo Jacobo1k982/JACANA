@@ -86,8 +86,8 @@ function Nkmujer() {
     };
 
     return (
-        <div className="bg-gray-900 text-white py-6">
-            <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="p-6 bg-gray-900 text-white min-h-screen">
+            <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {products.map((product) => {
                     const isClicked = clickedProductId === product.id;
                     return (
@@ -98,7 +98,7 @@ function Nkmujer() {
                             <img
                                 src={product.img}
                                 alt={product.title}
-                                className="w-full max-w-xs h-[380px] object-cover rounded-xl mx-auto mt-4"
+                                className="w-full max-w-xs h-[300px] object-cover rounded-xl mx-auto mt-4"
                             />
                             <div className="p-4 space-y-2">
                                 <h3 className="text-lg font-semibold">{product.title}</h3>
