@@ -3,7 +3,6 @@ import Loader from './components/Loader'; // Componente de carga
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
-import { footerAPI } from './data/data';
 import AppRoutes from './AppRoutes';
 import { Suspense } from 'react';
 
@@ -16,7 +15,7 @@ function App() {
       <Suspense fallback={<Loader />}>
         <AppRoutes />
       </Suspense>
-      <Footer footerAPI={footerAPI} />
+      <Footer />
     </Router>
   );
 }
