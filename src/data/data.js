@@ -36,6 +36,10 @@ const logoconverse = "/Logo_de_marcas/converse.png";
 const logocrocs = "/Logo_de_marcas/crocs.png";
 const logovans = "/Logo_de_marcas/vans.png";
 const logofila = "/Logo_de_marcas/fila.png";
+const logoHCO = "/Cartera/Mujer/H&CO.png"
+const logoNineWest = "/Cartera/Mujer/nine-west.svg"
+const logoCalvinKlein = "/Cartera/Mujer/calvin-klein.svg"
+
 
 /*Portadas seccion Hombre*/
 const portadazaphombre = "/Logo_de_marcas/portada.jpg";
@@ -44,7 +48,9 @@ const portadagorraH = "/Logo_de_marcas/portadagorra.jpg";
 const sandalias = "/Logo_de_marcas/portadasandalia.avif";
 const ropaH = "/Logo_de_marcas/portadaropaH.jpg";
 const fajaH = "/Logo_de_marcas/portadafajas.avif";
-const portadabolso = "/BOLSOS/portadabolso.jpg";
+
+/*Portadas seccion Mujer*/
+import portadacartera from "../../public/Cartera/Mujer/portada_de_cartera.jpg";
 
 
 /*{img mañanitas}*/
@@ -89,6 +95,7 @@ import youtube from "../assets/youtube.svg";
 import messenger from "../assets/messenger.svg";
 import whatsapp from "../assets/whatsapp.svg";
 import size from "lodash";
+import { image } from "framer-motion/client";
 
 
 const heroapi = {
@@ -96,7 +103,7 @@ const heroapi = {
   subtitle: "Tú moda a un clic",
   img: heroimg,
   btntext: "Ver colección",
-  
+
   sociallinks: [
     { icon: facebook, url: "https://facebook.com/tuperfil" },
     { icon: messenger, url: "https://m.me/tuperfil" },
@@ -428,10 +435,10 @@ const dama = {
       btn: "Explorar más"
     },
     {
-      title: "BOLSO",
-      text: "El bolso femenino trasciende su función práctica de transportar objetos personales; se erige como un accesorio esencial que complementa y define el estilo individual de cada mujer. Más allá de la moda, ofrece organización y seguridad para llevar consigo lo necesario en el día a día, desde elementos básicos hasta aquellos que brindan confort y confianza en diversas situaciones.",
-      img: portadabolso,
-      url: "/Bolso",
+      title: "Carteras",
+      text: "Las carteras femeninas son accesorios esenciales que han evolucionado de simples bolsas funcionales para llevar pertenencias a importantes símbolos de moda y estatus, con una amplia variedad de estilos, materiales y diseños adaptados a las necesidades y gustos de cada mujer.",
+      img: portadacartera,
+      url: "/carteramujer",
       btn: "Explorar más"
     },
   ]
@@ -701,9 +708,9 @@ const marcaszapatos2api = {
     },
     {
       title: "PUMA",
-      text: "",
+      text: "Mercadería en camino",
       img: logopuma,
-      url: "/puma2",
+      url: "",
       btn: "Explorar más"
     },
     {
@@ -722,23 +729,23 @@ const marcaszapatos2api = {
     },
     {
       title: "CROCS",
-      text: "",
+      text: "Mercadería en camino",
       img: logocrocs,
       url: "",
       btn: "Explorar más"
     },
     {
       title: "VANS",
-      text: "",
+      text: "Mercadería en camino",
       img: logovans,
       url: "",
       btn: "Explorar más"
     },
     {
       title: "FILA",
-      text: "",
+      text: "Mercadería en camino",
       img: logofila,
-      url: "/fila2",
+      url: "",
       btn: "Explorar más"
     },
   ]
@@ -851,8 +858,50 @@ const footerAPI = {
   ]
 };
 
+/*Mujer*/
+const marcacarteraapi = {
+  heading: "Carrusel marcas de carteras",
+  title: "JACANA Styles Costa Rica",
+  subtitle: "Carteras",
+  sociallinks: [
+    { icon: facebook, url: "https://facebook.com/tuperfil" },
+    { icon: messenger, url: "https://m.me/tuperfil" },
+    { icon: instagram, url: "https://instagram.com/tuperfil" },
+    { icon: twitter, url: "https://twitter.com/tuperfil" },
+    { icon: youtube, url: "https://youtube.com/tucanal" },
+    {
+      icon: whatsapp,
+      url: "https://wa.me/50687905876?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n",
+      },
+  ],
+  news: [
+    {
+      title: "H&Co.",
+      text: "",
+      img: logoHCO,
+      url: "",
+      btn: "Explorar más"
+    },
+    {
+      title: "NineWest.",
+      text: "",
+      img: logoNineWest,
+      url: "",
+      btn: "Explorar más"
+    },
+    {
+      title: "CalvinKlein.",
+      text: "",
+      img: logoCalvinKlein,
+      url: "",
+      btn: "Explorar más"
+    },
+  ]
+}
+
+
 
 export {
   heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api,
-  caballero, deportivoapi, marcaszapatosapi, marcaszapatos2api
+  caballero, deportivoapi, marcaszapatosapi, marcaszapatos2api, marcacarteraapi
 };

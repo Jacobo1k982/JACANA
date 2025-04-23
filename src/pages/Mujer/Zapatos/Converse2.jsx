@@ -8,33 +8,41 @@ function Converse2() {
 
     const dispatch = useDispatch();
     const [clickedProductId, setClickedProductId] = useState(null);
+    const [selectedSizes, setSelectedSizes] = useState({});
 
     const products = [
-        { id: "con-1", img: "/CONVERSE/CONVM/CONVM1.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 35-39", price: "33000", Currency: "₡" },
-        { id: "con-2", img: "/CONVERSE/CONVM/CONVM2.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 36/37/40", price: "24000", Currency: "₡" },
-        { id: "con-3", img: "/CONVERSE/CONVM/CONVM3.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "24000", Currency: "₡" },
-        { id: "con-4", img: "/CONVERSE/CONVM/CONVM4.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 35-40", price: "30000", Currency: "₡" },
-        { id: "con-5", img: "/CONVERSE/CONVM/CONVM5.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 35-40", price: "30000", Currency: "₡" },
-        { id: "con-6", img: "/CONVERSE/CONVM/CONVM6.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 38/39", price: "24000", Currency: "₡" },
-        { id: "con-7", img: "/CONVERSE/CONVM/CONVM7.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 36-39", price: "24000", Currency: "₡" },
-        { id: "con-7", img: "/CONVERSE/CONVM/CONVM8.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "24000", Currency: "₡" },
-        { id: "con-8", img: "/CONVERSE/CONVM/CONVM9.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "24000", Currency: "₡" },
-        { id: "con-9", img: "/CONVERSE/CONVM/CONVM10.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "24000", Currency: "₡" },
-        { id: "con-10", img: "/CONVERSE/CONVM/CONVM11.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 37", price: "33000", Currency: "₡" },
-        { id: "con-11", img: "/CONVERSE/CONVM/CONVM12.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "33000", Currency: "₡" },
-        { id: "con-12", img: "/CONVERSE/CONVM/CONVM13.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 35", price: "33000", Currency: "₡" },
-        { id: "con-13", img: "/CONVERSE/CONVM/CONVM14.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 35-38", price: "33000", Currency: "₡" },
-        { id: "con-14", img: "/CONVERSE/CONVM/CONVM15.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 36-40", price: "33000", Currency: "₡" },
-        { id: "con-15", img: "/CONVERSE/CONVM/CONVM16.jpg", title: "Converse", model: "Modelo Exclusivo", size: "Talla: 35-39", price: "33000", Currency: "₡" },
+        { id: "con-1", img: "/CONVERSE/CONVM/CVM1.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "33000", Currency: "₡" },
+        { id: "con-2", img: "/CONVERSE/CONVM/CVM2.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [35, 36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
+        { id: "con-3", img: "/CONVERSE/CONVM/CVM3.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [35, 36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
+        { id: "con-4", img: "/CONVERSE/CONVM/CVM4.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "24000", Currency: "₡" },
+        { id: "con-5", img: "/CONVERSE/CONVM/CVM5.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "24000", Currency: "₡" },
+        { id: "con-6", img: "/CONVERSE/CONVM/CVM6.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [36, 37], price: "24000", Currency: "₡" },
+        { id: "con-7", img: "/CONVERSE/CONVM/CVM7.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "24000", Currency: "₡" },
+        { id: "con-8", img: "/CONVERSE/CONVM/CVM8.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [35, 36, 37, 38], price: "33000", Currency: "₡" },
+        { id: "con-9", img: "/CONVERSE/CONVM/CVM9.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "33000", Currency: "₡" },
+        { id: "con-10", img: "/CONVERSE/CONVM/CVM10.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [35, 36, 37, 38, 39], price: "33000", Currency: "₡" },
+        { id: "con-11", img: "/CONVERSE/CONVM/CVM11.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "24000", Currency: "₡" },
+        { id: "con-12", img: "/CONVERSE/CONVM/CVM12.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [35, 36, 37], price: "33000", Currency: "₡" },
+        { id: "con-13", img: "/CONVERSE/CONVM/CVM13.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [35, 36, 37, 38, 39], price: "33000", Currency: "₡" },
 
     ];
 
+    const handleSizeChange = (productId, size) => {
+        setSelectedSizes((prev) => ({ ...prev, [productId]: size }));
+    };
+
     const handleBuy = (product) => {
+        const selectedSize = selectedSizes[product.id];
+        if (!selectedSize) {
+            toast.error("Por favor selecciona una talla antes de comprar");
+            return;
+        }
+
         const item = {
             id: product.id,
             title: product.title,
             model: product.model,
-            size: product.size,
+            size: `Talla: ${selectedSize}`,
             img: product.img,
             price: Number(product.price),
         };
@@ -44,16 +52,15 @@ function Converse2() {
         toast.success(`${product.title} agregado al carrito`);
 
         setClickedProductId(product.id);
-
-        // Reinicia el estado después de 2 segundos
         setTimeout(() => {
             setClickedProductId(null);
         }, 2000);
     };
 
+
     return (
-        <div className="bg-gray-900 text-white py-6">
-            <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="p-6 bg-gray-900 text-white min-h-screen">
+            <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {products.map((product) => {
                     const isClicked = clickedProductId === product.id;
                     return (
@@ -69,18 +76,33 @@ function Converse2() {
                             <div className="p-4 space-y-2">
                                 <h3 className="text-lg font-semibold">{product.title}</h3>
                                 <p className="text-gray-400">{product.model}</p>
-                                <p className="text-sm text-gray-500">{product.size}</p>
-                                <p className="text-orange-500 font-bold">{product.Currency} {product.price}</p>
+
+                                <select
+                                    value={selectedSizes[product.id] || ""}
+                                    onChange={(e) => handleSizeChange(product.id, e.target.value)}
+                                    className="bg-gray-700 text-white p-2 rounded w-full text-sm"
+                                >
+                                    <option value="">Selecciona tu talla</option>
+                                    {product.sizes.map((size) => (
+                                        <option key={size} value={size}>
+                                            Talla {size}
+                                        </option>
+                                    ))}
+                                </select>
+
+                                <p className="text-orange-500 font-bold">
+                                    {product.Currency} {product.price}
+                                </p>
 
                                 <button
                                     onClick={() => handleBuy(product)}
-                                    disabled={clickedProductId === product.id}
-                                    className={`w-full flex items-center justify-center gap-2 text-sm font-medium rounded-lg px-4 py-2 transition-all duration-300 ${clickedProductId === product.id
+                                    disabled={isClicked}
+                                    className={`w-full flex items-center justify-center gap-2 text-sm font-medium rounded-lg px-4 py-2 transition-all duration-300 ${isClicked
                                         ? "bg-green-600 cursor-not-allowed"
                                         : "bg-orange-500 hover:bg-orange-600"
                                         }`}
                                 >
-                                    {clickedProductId === product.id ? (
+                                    {isClicked ? (
                                         <>
                                             <FaCheckCircle className="animate-ping-once" /> Agregado
                                         </>

@@ -5,7 +5,7 @@ import ThankYou from './pages/ThankYou';
 
 import {
     heroapi, popularsales, topratedsales, highlight, sneaker, story, dama, ropa, mañanitas, caballero, deportivoapi,
-    cdeportivo, marcaszapatosapi, marcaszapatos2api
+    cdeportivo, marcaszapatosapi, marcaszapatos2api, marcacarteraapi
 } from './data/data';
 
 /*Lazy load components*/
@@ -41,8 +41,6 @@ const Fila2 = lazy(() => import('./pages/Mujer/Zapatos/Fila2'));
 const PortadaFilaM = lazy(() => import('./components/PortadaFilaM'));
 const Gorra = lazy(() => import('./pages/Hombre/Gorra'));
 const PortadaGorra = lazy(() => import('./components/PortadaGorra'));
-const Bolso = lazy(() => import('./pages/Mujer/Bolso'));
-const PortadaBolso = lazy(() => import('./components/PortadaBolso'));
 const Puma2 = lazy(() => import('./pages/Mujer/Zapatos/Puma2'));
 const PortadaPumaM = lazy(() => import('./components/PortadaPumaM'));
 const Puma = lazy(() => import('./pages/Hombre/Zapatos/Puma'));
@@ -57,6 +55,7 @@ const NewB = lazy(() => import('./pages/Hombre/Zapatos/NewB'));
 const PortadaNB = lazy(() => import('./components/PortadaNB'));
 const NewB2 = lazy(() => import('./pages/Mujer/Zapatos/NewB2'));
 const PortadaNB2 = lazy(() => import('./components/PortadaNB2'));
+const CarteraMujer = lazy(() => import('./components/CarteraMujer'));
 
 
 
@@ -92,6 +91,8 @@ export default function AppRoutes() {
                 <Route path="/cdeportivo" element={<CDeportivo cdeportivo={cdeportivo} />} />
                 <Route path="/marcaszapatos" element={<Shoebrands marcaszapatosapi={marcaszapatosapi} />} />
                 <Route path="/marcaszapatos2" element={<Shoebrands2 marcaszapatos2api={marcaszapatos2api} />} />
+                <Route path="/carteramujer" element={<CarteraMujer marcacarteraapi={marcacarteraapi} />} />
+
                 <Route path="/newb2" element={
                     <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaNB2 deportivoapi={deportivoapi} />
@@ -171,18 +172,6 @@ export default function AppRoutes() {
                             <div className='fila'>
                                 <div className='col'>
                                     <Puma2 />
-                                </div>
-                            </div>
-                        </div>
-                    </main>
-                } />
-                <Route path="/bolso" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaBolso deportivoapi={deportivoapi} />
-                        <div className='Bolsoappwoman'>
-                            <div className='fila'>
-                                <div className='col'>
-                                    <Bolso />
                                 </div>
                             </div>
                         </div>

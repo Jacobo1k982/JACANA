@@ -32,7 +32,6 @@ export {default as PortadaFilaM} from './PortadaFilaM.jsx';
 export {default as Fila2} from '../pages/Mujer/Zapatos/Fila2.jsx';
 export {default as Gorra} from '../pages/Hombre/Gorra.jsx';
 export {default as PortadaGorra} from './PortadaGorra.jsx';
-export {default as Bolso} from '../pages/Mujer/Bolso.jsx';
 export {default as PortadaBolso} from './PortadaBolso.jsx';
 export {default as Puma2} from '../pages/Mujer/Zapatos/Puma2.jsx';
 export {default as PortadaPumaM} from './PortadaPumaM.jsx';
@@ -48,3 +47,4 @@ export {default as NewB} from '../pages/Hombre/Zapatos/NewB.jsx';
 export {default as PortadaNeNB} from './PortadaNB.jsx'
 export {default as PortadaNeNB2} from './PortadaNB2.jsx'
 export {default as NewB2} from '../pages/Mujer/Zapatos/NewB2.jsx';
+export {default as CarteraMujer} from './CarteraMujer.jsx';

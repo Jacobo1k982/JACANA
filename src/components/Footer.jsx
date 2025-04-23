@@ -13,7 +13,7 @@ const Footer = () => {
       <footer className="bg-zinc-900 text-zinc-300 py-10">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-10">
           <div>
-            <h1 className="text-2xl font-bold text-white tracking-wide mb-3">JACANA Styles Costa Rica</h1>
+            <h1 className="text-2xl font-bold text-white tracking-wide mb-3">JACANA Styles</h1>
             <p className="text-sm text-zinc-400">
               Moda y estilo que se adapta a ti. Vive la experiencia JACANA, donde cada paso es único.
             </p>
@@ -82,7 +82,7 @@ const Footer = () => {
         href="https://wa.me/50664541700"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg animate-pulse hover:scale-110 transition-transform md:hidden"
+        className="fixed bottom-5 right-5 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg animate-pulse hover:scale-110 transition-transform"
         aria-label="WhatsApp flotante"
       >
         <FaWhatsapp size={24} />
