@@ -1,12 +1,20 @@
 import React, { lazy, useRef } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SearchResults from './pages/SearchResults';
 import ThankYou from './pages/ThankYou';
 
 import {
     heroapi, popularsales, topratedsales, highlight, sneaker, story, dama, ropa, mañanitas, caballero, deportivoapi,
-    cdeportivo, marcaszapatosapi, marcaszapatos2api, marcacarteraapi
+    cdeportivo, marcaszapatosapi, marcaszapatos2api
 } from './data/data';
+
+import { dataCarteras, marcacarteraapi } from './data/dataCarteras';
+
+import DetalleCartera from "./components/DetalleCartera";
+import CatalogoCarteras from "./components/CatalogoCarteras";
+import CaracteristicasCartera from "./components/CaracteristicasCartera";
+import CarteraMujer from "./components/CarteraMujer";
+
 
 /*Lazy load components*/
 
@@ -55,7 +63,7 @@ const NewB = lazy(() => import('./pages/Hombre/Zapatos/NewB'));
 const PortadaNB = lazy(() => import('./components/PortadaNB'));
 const NewB2 = lazy(() => import('./pages/Mujer/Zapatos/NewB2'));
 const PortadaNB2 = lazy(() => import('./components/PortadaNB2'));
-const CarteraMujer = lazy(() => import('./components/CarteraMujer'));
+const TiendaCarteras = lazy(() => import('./components/TiendaCarteras'));
 
 
 
@@ -91,8 +99,6 @@ export default function AppRoutes() {
                 <Route path="/cdeportivo" element={<CDeportivo cdeportivo={cdeportivo} />} />
                 <Route path="/marcaszapatos" element={<Shoebrands marcaszapatosapi={marcaszapatosapi} />} />
                 <Route path="/marcaszapatos2" element={<Shoebrands2 marcaszapatos2api={marcaszapatos2api} />} />
-                <Route path="/carteramujer" element={<CarteraMujer marcacarteraapi={marcacarteraapi} />} />
-
                 <Route path="/newb2" element={
                     <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaNB2 deportivoapi={deportivoapi} />
@@ -280,6 +286,19 @@ export default function AppRoutes() {
                     </main>
                 } />
                 <Route path="/gracias" element={<ThankYou />} />
+                <Route
+                    path="/carteramujer"
+                    element={
+                        <CarteraMujer
+                            marcacarteraapi={{ news: marcacarteraapi }}
+                            dataCarteras={{ news: dataCarteras }}
+                        />
+                    }
+                />
+                <Route path="/cartera/:id" element={<DetalleCartera />} />
+                <Route path="/catalogo" element={<CatalogoCarteras dataCarteras={{ news: dataCarteras }} />} />
+                <Route path="/caracteristicas/:id" element={<CaracteristicasCartera />} />
+                <Route path="/carteras" element={<TiendaCarteras />} />
             </Routes>
         </>
     );

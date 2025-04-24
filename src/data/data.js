@@ -28,7 +28,7 @@ import product11 from "../assets/product11.png";
 import product12 from "../assets/product12.png";
 /*Logos de marcas*/
 const logonike = "/Logo_de_marcas/nike.png";
-const logoadidas = "/Logo_de_marcas/adidas.png";
+const logoadidas = "/Logo_de_marcas/adidas.png  ";
 const logotommy = "/Logo_de_marcas/tommy.png";
 const logopuma = "/Logo_de_marcas/puma.png";
 const logonewbalance = "/Logo_de_marcas/newbalance.png";
@@ -36,9 +36,7 @@ const logoconverse = "/Logo_de_marcas/converse.png";
 const logocrocs = "/Logo_de_marcas/crocs.png";
 const logovans = "/Logo_de_marcas/vans.png";
 const logofila = "/Logo_de_marcas/fila.png";
-const logoHCO = "/Cartera/Mujer/H&CO.png"
-const logoNineWest = "/Cartera/Mujer/nine-west.svg"
-const logoCalvinKlein = "/Cartera/Mujer/calvin-klein.svg"
+
 
 
 /*Portadas seccion Hombre*/
@@ -859,49 +857,9 @@ const footerAPI = {
 };
 
 /*Mujer*/
-const marcacarteraapi = {
-  heading: "Carrusel marcas de carteras",
-  title: "JACANA Styles Costa Rica",
-  subtitle: "Carteras",
-  sociallinks: [
-    { icon: facebook, url: "https://facebook.com/tuperfil" },
-    { icon: messenger, url: "https://m.me/tuperfil" },
-    { icon: instagram, url: "https://instagram.com/tuperfil" },
-    { icon: twitter, url: "https://twitter.com/tuperfil" },
-    { icon: youtube, url: "https://youtube.com/tucanal" },
-    {
-      icon: whatsapp,
-      url: "https://wa.me/50687905876?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n",
-      },
-  ],
-  news: [
-    {
-      title: "H&Co.",
-      text: "",
-      img: logoHCO,
-      url: "",
-      btn: "Explorar más"
-    },
-    {
-      title: "NineWest.",
-      text: "",
-      img: logoNineWest,
-      url: "",
-      btn: "Explorar más"
-    },
-    {
-      title: "CalvinKlein.",
-      text: "",
-      img: logoCalvinKlein,
-      url: "",
-      btn: "Explorar más"
-    },
-  ]
-}
-
 
 
 export {
   heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, dama, ropa, mañanitas, cdeportivo, hero2api,
-  caballero, deportivoapi, marcaszapatosapi, marcaszapatos2api, marcacarteraapi
+  caballero, deportivoapi, marcaszapatosapi, marcaszapatos2api
 };

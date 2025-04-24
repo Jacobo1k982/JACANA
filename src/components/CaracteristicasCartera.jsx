@@ -2,24 +2,17 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
-const CarteraTote = ({ cartera }) => {
+const CaracteristicasCartera = ({ cartera }) => {
     const {
-        nombre="Cartera tote ",
-        descripcion="Cartera tote H&Co color gris para mujer",
-        imagenes=[
-            "/public/Cartera/Mujer/H&Co/cartera1.webp",
-            "/public/Cartera/Mujer/H&Co/cartera2.webp",
-            "/public/Cartera/Mujer/H&Co/cartera3.webp",
-            "/public/Cartera/Mujer/H&Co/cartera4.webp",
-            "/public/Cartera/Mujer/H&Co/cartera5.webp",
-            "/public/Cartera/Mujer/H&Co/cartera6.webp"
-        ],
-        color="Gris",
-        material="100% Vinil",
-        dimensiones="Alto 28.5cm, ancho 41cm, profundidad",
-        precio="37080",
+        nombre,
+        descripcion,
+        imagenes,
+        color,
+        material,
+        dimensiones,
+        precio,
         calificacion,
-        resenas="4",
+        resenas,
     } = cartera;
 
     const [imagenPrincipal, setImagenPrincipal] = useState(imagenes[0]);
@@ -48,8 +41,8 @@ const CarteraTote = ({ cartera }) => {
                                 src={img}
                                 alt={`galería-${idx}`}
                                 className={`w-20 h-20 rounded-lg object-cover border-2 cursor-pointer transition-all duration-300 ${img === imagenPrincipal
-                                        ? "border-cyan-600"
-                                        : "border-transparent"
+                                    ? "border-cyan-600"
+                                    : "border-transparent"
                                     }`}
                                 onClick={() => setImagenPrincipal(img)}
                             />
@@ -98,4 +91,4 @@ const CarteraTote = ({ cartera }) => {
     );
 };
 
-export default CarteraTote;
+export default CaracteristicasCartera;
