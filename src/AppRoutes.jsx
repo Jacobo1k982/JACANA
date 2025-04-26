@@ -1,5 +1,5 @@
 import React, { lazy, useRef } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import SearchResults from './pages/SearchResults';
 import ThankYou from './pages/ThankYou';
 
@@ -15,13 +15,15 @@ import CatalogoCarteras from "./components/CatalogoCarteras";
 import CaracteristicasCartera from "./components/CaracteristicasCartera";
 import CarteraMujer from "./components/CarteraMujer";
 
-
-/*Lazy load components*/
-
+/* Sección: Componentes de la página principal */
 const Hero = lazy(() => import('./components/Hero'));
 const Stories = lazy(() => import('./components/Stories'));
 const Sales = lazy(() => import('./components/Sales'));
 const FlexContent = lazy(() => import('./components/FlexContent'));
+const Shoebrands = lazy(() => import('./components/Shoebrands'));
+const Shoebrands2 = lazy(() => import('./components/Shoebrands2'));
+
+/* Sección: Componentes de secciones generales */
 const Mujer = lazy(() => import('./components/Mujer'));
 const Hombre = lazy(() => import('./components/Hombre'));
 const Ropa = lazy(() => import('./components/Ropa'));
@@ -32,42 +34,44 @@ const Sportmujer = lazy(() => import('./components/Sportmujer'));
 const Juvenil = lazy(() => import('./components/Juvenil'));
 const Niña = lazy(() => import('./components/Niña'));
 const Niño = lazy(() => import('./components/Niño'));
+
+/* Sección: Componentes específicos de marcas para Hombre */
 const Nike = lazy(() => import('./pages/Hombre/Zapatos/Nike'));
-const Nkmujer = lazy(() => import('./pages/Mujer/Zapatos/Nkmujer'));
-const Shoebrands = lazy(() => import('./components/Shoebrands'));
-const Shoebrands2 = lazy(() => import('./components/Shoebrands2'));
-const ScrollToTop = lazy(() => import('./components/ScrollToTop'));
 const Tommy = lazy(() => import('./pages/Hombre/Zapatos/Tommy'));
-const Tommy2 = lazy(() => import('./pages/Mujer/Zapatos/Tommy2'));
-const PortadaTommyMujer = lazy(() => import('./components/PortadaTommyMujer'));
+const Adidas = lazy(() => import('./pages/Hombre/Zapatos/Adidas'));
+const Puma = lazy(() => import('./pages/Hombre/Zapatos/Puma'));
+const Sandalias = lazy(() => import('./pages/Hombre/Zapatos/Sandalias'));
+const Converse = lazy(() => import('./pages/Hombre/Zapatos/Converse'));
+const NewB = lazy(() => import('./pages/Hombre/Zapatos/NewB'));
+const Gorra = lazy(() => import('./pages/Hombre/Gorra'));
 const PortadaTommyHombre = lazy(() => import('./components/PortadaTommyHombre'));
 const PortadaAdidasH = lazy(() => import('./components/PortadaAdidasH'));
-const PortadaAdidasM = lazy(() => import('./components/PortadaAdidasM'));
-const Adidas = lazy(() => import('./pages/Hombre/Zapatos/Adidas'));
+const PortadaPumaH = lazy(() => import('./components/PortadaPumaH'));
+const PortadaSandalias = lazy(() => import('./components/PortadaSandalias'));
+const PortadaConverse = lazy(() => import('./components/PortadaConverse'));
+const PortadaNB = lazy(() => import('./components/PortadaNB'));
+const PortadaGorra = lazy(() => import('./components/PortadaGorra'));
+
+/* Sección: Componentes específicos de marcas para Mujer */
+const Nkmujer = lazy(() => import('./pages/Mujer/Zapatos/Nkmujer'));
+const Tommy2 = lazy(() => import('./pages/Mujer/Zapatos/Tommy2'));
 const Adidas2 = lazy(() => import('./pages/Mujer/Zapatos/Adidas2'));
 const Fila2 = lazy(() => import('./pages/Mujer/Zapatos/Fila2'));
-const PortadaFilaM = lazy(() => import('./components/PortadaFilaM'));
-const Gorra = lazy(() => import('./pages/Hombre/Gorra'));
-const PortadaGorra = lazy(() => import('./components/PortadaGorra'));
 const Puma2 = lazy(() => import('./pages/Mujer/Zapatos/Puma2'));
-const PortadaPumaM = lazy(() => import('./components/PortadaPumaM'));
-const Puma = lazy(() => import('./pages/Hombre/Zapatos/Puma'));
-const PortadaPumaH = lazy(() => import('./components/PortadaPumaH'));
-const Sandalias = lazy(() => import('./pages/Hombre/Zapatos/Sandalias'));
-const PortadaSandalias = lazy(() => import('./components/PortadaSandalias'));
-const Converse = lazy(() => import('./pages/Hombre/Zapatos/Converse'));
-const PortadaConverse = lazy(() => import('./components/PortadaConverse'));
 const Converse2 = lazy(() => import('./pages/Mujer/Zapatos/Converse2'));
-const PortadaConverse2 = lazy(() => import('./components/PortadaConverse2'));
-const NewB = lazy(() => import('./pages/Hombre/Zapatos/NewB'));
-const PortadaNB = lazy(() => import('./components/PortadaNB'));
 const NewB2 = lazy(() => import('./pages/Mujer/Zapatos/NewB2'));
+const PortadaTommyMujer = lazy(() => import('./components/PortadaTommyMujer'));
+const PortadaAdidasM = lazy(() => import('./components/PortadaAdidasM'));
+const PortadaFilaM = lazy(() => import('./components/PortadaFilaM'));
+const PortadaPumaM = lazy(() => import('./components/PortadaPumaM'));
+const PortadaConverse2 = lazy(() => import('./components/PortadaConverse2'));
 const PortadaNB2 = lazy(() => import('./components/PortadaNB2'));
+
+/* Sección: Componentes relacionados con Carteras */
 const TiendaCarteras = lazy(() => import('./components/TiendaCarteras'));
 
-
-
-
+/* Sección: Componentes de utilidades */
+const ScrollToTop = lazy(() => import('./components/ScrollToTop'));
 
 export default function AppRoutes() {
     const storiesRef = useRef(null);
@@ -257,7 +261,6 @@ export default function AppRoutes() {
                     </main>
                 } />
 
-                {/* Deportivo */}
                 <Route path="/deportivo" element={
                     <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <Deportivo deportivoapi={deportivoapi} />
@@ -296,7 +299,7 @@ export default function AppRoutes() {
                     }
                 />
                 <Route path="/cartera/:id" element={<DetalleCartera />} />
-                <Route path="/catalogo" element={<CatalogoCarteras dataCarteras={{ news: dataCarteras }} />} />
+                <Route path="/catalogo/:marca" element={<CatalogoCarteras />} />
                 <Route path="/caracteristicas/:id" element={<CaracteristicasCartera />} />
                 <Route path="/carteras" element={<TiendaCarteras />} />
             </Routes>

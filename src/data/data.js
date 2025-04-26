@@ -433,7 +433,7 @@ const dama = {
       btn: "Explorar más"
     },
     {
-      title: "Carteras",
+      title: "CARTERAS",
       text: "Las carteras femeninas son accesorios esenciales que han evolucionado de simples bolsas funcionales para llevar pertenencias a importantes símbolos de moda y estatus, con una amplia variedad de estilos, materiales y diseños adaptados a las necesidades y gustos de cada mujer.",
       img: portadacartera,
       url: "/carteramujer",
@@ -741,9 +741,9 @@ const marcaszapatos2api = {
     },
     {
       title: "FILA",
-      text: "Mercadería en camino",
+      text: "",
       img: logofila,
-      url: "",
+      url: "/fila2",
       btn: "Explorar más"
     },
   ]

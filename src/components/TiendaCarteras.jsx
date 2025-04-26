@@ -31,7 +31,7 @@ const splideOptions = {
 
 const TiendaCarteras = () => {
     const carteras = dataCarteras ?? [];
-    const marcas = marcacarteraapi?.news ?? [];
+    const marcas = marcacarteraapi ?? [];
 
     return (
         <section
@@ -63,13 +63,27 @@ const TiendaCarteras = () => {
                     <Splide options={splideOptions}>
                         {marcas.map((marca, index) => (
                             <SplideSlide key={index} className="flex justify-center">
-                                <div className="bg-white rounded-2xl shadow-lg p-4 w-[200px] h-[200px] flex items-center justify-center hover:scale-105 transition-transform duration-300">
-                                    <img
-                                        src={marca.img?.[0] || "/placeholder.jpg"}
-                                        alt={marca.title}
-                                        className="object-contain max-h-[120px] w-full"
-                                    />
-                                </div>
+                                {marca.slug === 'hco' ? (
+                                    <Link to="/Catalogocarteras" aria-label={`Ir a ${marca.nombre}`}>
+                                        <div className="bg-white rounded-2xl shadow-lg p-4 w-[200px] h-[200px] flex items-center justify-center hover:scale-105 transition-transform duration-300">
+                                            <img
+                                                src={marca.img?.[0] || "/placeholder.jpg"}
+                                                alt={marca.nombre}
+                                                className="object-contain max-h-[120px] w-full"
+                                            />
+                                        </div>
+                                    </Link>
+                                ) : (
+                                    <Link to={`/catalogo/${marca.slug}`} aria-label={`Ir a ${marca.nombre}`}>
+                                        <div className="bg-white rounded-2xl shadow-lg p-4 w-[200px] h-[200px] flex items-center justify-center hover:scale-105 transition-transform duration-300">
+                                            <img
+                                                src={marca.img?.[0] || "/placeholder.jpg"}
+                                                alt={marca.nombre}
+                                                className="object-contain max-h-[120px] w-full"
+                                            />
+                                        </div>
+                                    </Link>
+                                )}
                             </SplideSlide>
                         ))}
                     </Splide>
@@ -97,10 +111,7 @@ const TiendaCarteras = () => {
                         <Splide options={splideOptions}>
                             {carteras.map((val) => (
                                 <SplideSlide key={val.id} className="flex justify-center">
-                                    <Link
-                                        to={`/cartera/${val.id}`}
-                                        aria-label={`Ver detalles de ${val.nombre}`}
-                                    >
+                                    <Link to={`/catalogo/${val.marca.toLowerCase()}`} aria-label={`Ver catálogo de ${val.nombre}`}>
                                         <motion.div
                                             whileHover={{ scale: 1.03 }}
                                             transition={{ type: "spring", stiffness: 300, damping: 15 }}
@@ -108,8 +119,8 @@ const TiendaCarteras = () => {
                                         >
                                             <img
                                                 src={val.img?.[0] || "/placeholder.jpg"}
-                                                alt={`Imagen de ${val.nombre}`}
-                                                className="absolute inset-0 w-full h-full object-cover"
+                                                alt={val.nombre}
+                                                className="object-cover w-full h-full"
                                             />
                                             <div className="absolute bottom-0 left-0 w-full bg-white/80 px-3 py-2 text-sm text-center">
                                                 <h3 className="font-semibold">{val.nombre}</h3>
@@ -125,6 +136,7 @@ const TiendaCarteras = () => {
                     )}
                 </motion.div>
             </div>
+
         </section>
     );
 };

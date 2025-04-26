@@ -12,6 +12,7 @@ function Fila2() {
 
     const products = [
         { id: "f-1", img: "/FILA/FILAM/FILA1.jpg", title: "Fila", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
+        { id: "f-2", img: "/FILA/FILAM/FILA2.jpg", title: "Fila", model: "Modelo Exclusivo", sizes: [36, 37], price: "30000", Currency: "₡" },
 
     ];
 

@@ -4,12 +4,10 @@ import "@splidejs/react-splide/css";
 import { motion } from "framer-motion";
 import darkBackground from "../assets/darkabstract.jpg";
 import { Link } from "react-router-dom";
-
-// 👇 Asegúrate de que la ruta sea correcta según tu estructura
 import { marcacarteraapi } from "../data/dataCarteras";
 
 const CarteraMujer = () => {
-    const carteras = marcacarteraapi ?? [];
+    const marcas = marcacarteraapi ?? []; // Usamos marcacarteraapi directamente aquí
 
     const splideOptions = {
         perPage: 3,
@@ -51,7 +49,7 @@ const CarteraMujer = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="text-4xl sm:text-3xl xs:text-2xl font-extrabold text-white drop-shadow-md"
                 >
-                    Muy Pronto Estilos Originales
+                    Para Cada Mujer, Una Cartera
                 </motion.h2>
 
                 <motion.div
@@ -60,31 +58,44 @@ const CarteraMujer = () => {
                     transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
                     className="w-full"
                 >
-                    {carteras.length > 0 ? (
+                    {marcas.length > 0 ? ( // Iteramos sobre 'marcas'
                         <Splide options={splideOptions}>
-                            {carteras.map((val) => (
-                                <SplideSlide key={val.id} className="flex justify-center">
-                                    <Link
-                                        to={`/cartera/${val.id}`}
-                                        aria-label={`Ver detalles de ${val.nombre}`}
-                                    >
-                                        <motion.div
-                                            whileHover={{ scale: 1.03 }}
-                                            transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                                            className="relative w-[280px] h-[320px] sm:w-[240px] sm:h-[280px] rounded-2xl overflow-hidden shadow-xl border hover:border-cyan-400 hover:shadow-cyan-500/30 transition-all duration-500"
-                                        >
-                                            <img
-                                                src={val.img?.[0] || "/placeholder.jpg"}
-                                                alt={`Imagen de ${val.nombre}`}
-                                                className="absolute inset-0 w-full h-full object-cover"
-                                            />
-                                        </motion.div>
-                                    </Link>
+                            {marcas.map((marca) => ( // Mapeamos cada marca
+                                <SplideSlide key={marca.id} className="flex justify-center">
+                                    {marca.slug === 'hco' ? (
+                                        <Link to="/catalogo" aria-label={`Ver catálogo de carteras H&Co`}>
+                                            <motion.div
+                                                whileHover={{ scale: 1.03 }}
+                                                transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                                                className="relative w-[280px] h-[320px] sm:w-[240px] sm:h-[280px] rounded-2xl overflow-hidden shadow-xl border hover:border-cyan-400 hover:shadow-cyan-500/30 transition-all duration-500 cursor-pointer"
+                                            >
+                                                <img
+                                                    src={marca.img?.[0] || "/placeholder.jpg"}
+                                                    alt={`Logo ${marca.nombre}`}
+                                                    className="absolute inset-0 w-full h-full object-cover"
+                                                />
+                                            </motion.div>
+                                        </Link>
+                                    ) : (
+                                        <Link to={`/catalogo/${marca.slug}`} aria-label={`Ver catálogo de ${marca.nombre}`}>
+                                            <motion.div
+                                                whileHover={{ scale: 1.03 }}
+                                                transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                                                className="relative w-[280px] h-[320px] sm:w-[240px] sm:h-[280px] rounded-2xl overflow-hidden shadow-xl border hover:border-cyan-400 hover:shadow-cyan-500/30 transition-all duration-500"
+                                            >
+                                                <img
+                                                    src={marca.img?.[0] || "/placeholder.jpg"}
+                                                    alt={`Logo ${marca.nombre}`}
+                                                    className="absolute inset-0 w-full h-full object-cover"
+                                                />
+                                            </motion.div>
+                                        </Link>
+                                    )}
                                 </SplideSlide>
                             ))}
                         </Splide>
                     ) : (
-                        <p className="text-white text-lg font-medium">No hay carteras disponibles por el momento.</p>
+                        <p className="text-white text-lg font-medium">No hay marcas de carteras disponibles por el momento.</p>
                     )}
                 </motion.div>
             </div>

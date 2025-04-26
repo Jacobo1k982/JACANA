@@ -51,3 +51,4 @@ export {default as CatalogoCarteras} from './CatalogoCarteras.jsx';
 export {default as DetalleCartera} from './DetalleCartera.jsx';
 export {default as CaracteristicasCartera} from './CaracteristicasCartera.jsx';
 export {default as TiendaCarteras} from './TiendaCarteras.jsx'
+export {default as MarcasCartera} from './MarcasCartera.jsx';
