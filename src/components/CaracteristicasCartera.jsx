@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from "react";
-import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import React, { useState, useCallback, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Star, X } from "lucide-react";
 
 const CaracteristicasCartera = ({ cartera }) => {
     const {
@@ -18,11 +18,30 @@ const CaracteristicasCartera = ({ cartera }) => {
     } = cartera;
 
     const [imagenPrincipal, setImagenPrincipal] = useState(imagenes[0]);
+    const [expandida, setExpandida] = useState(false);
 
-    // Utilizamos useCallback para memoizar la función de cambio de imagen
     const handleImagenPrincipalChange = useCallback((nuevaImagen) => {
         setImagenPrincipal(nuevaImagen);
-    }, [setImagenPrincipal]);
+    }, []);
+
+    const handleExpandirImagen = () => {
+        setExpandida(true);
+    };
+
+    const handleCerrarExpandida = () => {
+        setExpandida(false);
+    };
+
+    useEffect(() => {
+        if (expandida) {
+            document.body.classList.add("overflow-hidden");
+        } else {
+            document.body.classList.remove("overflow-hidden");
+        }
+        return () => {
+            document.body.classList.remove("overflow-hidden");
+        };
+    }, [expandida]);
 
     return (
         <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-gray-800 px-6 py-12">
@@ -34,11 +53,14 @@ const CaracteristicasCartera = ({ cartera }) => {
             >
                 {/* Imagen principal y galería */}
                 <div className="w-full lg:w-1/2 p-6 flex flex-col gap-4">
-                    <div className="h-[400px] rounded-xl overflow-hidden shadow-md">
+                    <div
+                        className="h-[400px] rounded-xl overflow-hidden shadow-md cursor-pointer"
+                        onClick={handleExpandirImagen}
+                    >
                         <img
                             src={imagenPrincipal}
                             alt={nombre}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                         />
                     </div>
                     <div className="flex gap-3 overflow-x-auto pb-2">
@@ -62,23 +84,15 @@ const CaracteristicasCartera = ({ cartera }) => {
                     <div>
                         <h2 className="text-3xl font-bold text-gray-800">{nombre}</h2>
                         <p className="text-gray-600 mt-2">
-                            {marca && <span className="font-semibold">{marca}. </span>} {/* Mostrar la marca si existe */}
+                            {marca && <span className="font-semibold">{marca}. </span>}
                             {descripcion}
                         </p>
 
                         <ul className="text-sm text-gray-700 mt-4 space-y-2">
-                            <li>
-                                <strong>Color:</strong> {color}
-                            </li>
-                            <li>
-                                <strong>Material:</strong> {material}
-                            </li>
-                            <li>
-                                <strong>Dimensiones:</strong> {dimensiones}
-                            </li>
-                            <li>
-                                <strong>Marca:</strong> {marca}
-                            </li>
+                            <li><strong>Color:</strong> {color}</li>
+                            <li><strong>Material:</strong> {material}</li>
+                            <li><strong>Dimensiones:</strong> {dimensiones}</li>
+                            <li><strong>Marca:</strong> {marca}</li>
                         </ul>
 
                         {/* Calificación */}
@@ -100,15 +114,47 @@ const CaracteristicasCartera = ({ cartera }) => {
                     {/* Precio y botón */}
                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                         <span className="text-2xl font-semibold text-cyan-700">
-                            {moneda}
-                            {precio}
-                        </span> {/* Usamos la moneda aquí */}
+                            {moneda}{precio}
+                        </span>
                         <button className="bg-cyan-700 hover:bg-cyan-800 text-white px-6 py-2.5 rounded-lg shadow transition-all">
                             Comprar ahora
                         </button>
                     </div>
                 </div>
             </motion.div>
+
+            {/* Modal de imagen expandida con zoom */}
+            <AnimatePresence>
+                {expandida && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4"
+                    >
+                        <div className="relative max-w-4xl w-full max-h-full overflow-auto bg-black rounded-xl">
+                            {/* Botón de cerrar */}
+                            <button
+                                onClick={handleCerrarExpandida}
+                                className="absolute top-2 right-2 text-white bg-black bg-opacity-50 rounded-full p-1 hover:bg-opacity-75 transition z-10"
+                            >
+                                <X size={24} />
+                            </button>
+                            {/* Imagen en un contenedor scrollable */}
+                            <div className="w-full h-full flex items-center justify-center p-4">
+                                <motion.img
+                                    src={imagenPrincipal}
+                                    alt="Imagen expandida"
+                                    initial={{ scale: 0.95 }}
+                                    animate={{ scale: 1 }}
+                                    exit={{ scale: 0.95 }}
+                                    className="object-contain max-h-[90vh] transition-transform duration-500 hover:scale-110 cursor-zoom-in"
+                                />
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };

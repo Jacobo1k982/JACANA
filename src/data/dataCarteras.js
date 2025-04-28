@@ -32,6 +32,32 @@ import cros6 from "../../public/Cartera/Mujer/Crossbody/cros6.webp";
 import cros7 from "../../public/Cartera/Mujer/Crossbody/cros7.webp";
 import cros8 from "../../public/Cartera/Mujer/Crossbody/cros8.webp";
 
+import cross1 from "../../public/Cartera/Mujer/Crossbody/crossnegro1.webp";
+import cross2 from "../../public/Cartera/Mujer/Crossbody/crossnegro2.webp";
+import cross3 from "../../public/Cartera/Mujer/Crossbody/crossnegro3.webp";
+import cross4 from "../../public/Cartera/Mujer/Crossbody/crossnegro4.webp";
+import cross5 from "../../public/Cartera/Mujer/Crossbody/crossnegro5.webp";
+import cross6 from "../../public/Cartera/Mujer/Crossbody/crossnegro6.webp";
+import cross7 from "../../public/Cartera/Mujer/Crossbody/crossnegro7.webp";
+import cross8 from "../../public/Cartera/Mujer/Crossbody/crossnegro8.webp";
+
+import ck1 from "../../public/Cartera/Mujer/CKlein/CK1.webp";
+import ck2 from "../../public/Cartera/Mujer/CKlein/CK2.webp";
+import ck3 from "../../public/Cartera/Mujer/CKlein/CK3.webp";
+import ck4 from "../../public/Cartera/Mujer/CKlein/CK4.webp";
+import ckcros1 from "../../public/Cartera/Mujer/CKlein/ckcros1.webp";
+import ckcros2 from "../../public/Cartera/Mujer/CKlein/ckcros2.webp";
+import ckcros3 from "../../public/Cartera/Mujer/CKlein/ckcros3.webp";
+import ckcros4 from "../../public/Cartera/Mujer/CKlein/ckcros4.webp";
+import ckcros5 from "../../public/Cartera/Mujer/CKlein/ckcros5.webp";
+import ckcros6 from "../../public/Cartera/Mujer/CKlein/ckcros6.webp";
+import crossCeleste1 from "../../public/Cartera/Mujer/CKlein/crossceleste1.webp";
+import crossCeleste2 from "../../public/Cartera/Mujer/CKlein/crossceleste2.webp";
+import crossCeleste3 from "../../public/Cartera/Mujer/CKlein/crossceleste3.webp";
+import crossCeleste4 from "../../public/Cartera/Mujer/CKlein/crossceleste4.webp";
+import crossCeleste5 from "../../public/Cartera/Mujer/CKlein/crossceleste5.webp";
+
+
 const logoHCO = "/Cartera/Mujer/hco.png";
 const logoCalvinKlein = "/Cartera/Mujer/calvinklein.webp";
 const logoNineWest = "/Cartera/Mujer/ninewest.png";
@@ -132,6 +158,58 @@ const dataCarteras = [
         precio: "34875",
         moneda: "₡",
         marca: "hco",
+    },
+    {
+        id: "modelo5",
+        slug: "HCO",
+        nombre: "Cartera crossbody H&Co",
+        descripcion: "Cartera crossbody H&Co color negro para mujer",
+        img: [cross1, cross2, cross3, cross4, cross5, cross6, cross7, cross8],
+        color: "Negro",
+        material: "100% Sintético",
+        dimensiones: "Alto: 19cm, ancho: 25cm, profundidad: 6.5cm",
+        precio: "31125",
+        moneda: "₡",
+        marca: "hco",
+    },
+    {
+        id: "modelo6",
+        slug: "calvinklein",
+        nombre: "Cartera satchel Calvin Klein",
+        descripcion: "Cartera satchel Calvin Klein color celeste para mujer",
+        img: [ck1, ck2, ck3, ck4],
+        color: "Celeste",
+        material: "100% Sintético",
+        dimensiones: "Alto: 15 cm -Ancho: 19.5 cm -Profundidad: 5 cm",
+        precio: "37435",
+        moneda: "₡",
+        marca: "CalvinKlein",
+    },
+    {
+        id: "modelo7",
+        slug: "calvinklein",
+        nombre: "Cartera crossbody Calvin Klein",
+        descripcion: "Cartera crossbody Calvin Klein color beige para mujer",
+        img: [ckcros1, ckcros2, ckcros3, ckcros4, ckcros5, ckcros6],
+        color: "Beige",
+        material: "Parte Externa: 100% Poliuretano / Forro: 100% Poliéster",
+        dimensiones: "Alto: 23 cm -Ancho: 33 cm -Profundidad: 4 cm",
+        precio: "31200",
+        moneda: "₡",
+        marca: "CalvinKlein",
+    },
+    {
+        id: "modelo8",
+        slug: "calvinklein",
+        nombre: "Cartera crossbody Calvin Klein ",
+        descripcion: "Cartera crossbody Calvin Klein color celeste para mujer",
+        img: [crossCeleste1, crossCeleste2, crossCeleste3, crossCeleste4, crossCeleste5],
+        color: "Celeste",
+        material: "Parte externa o recubrimiento: 51% poliéster 49% poliuretano / forro: 100% poliéster",
+        dimensiones: "",
+        precio: "585540",
+        moneda: "₡",
+        marca: "CalvinKlein",
     },
 ];
 

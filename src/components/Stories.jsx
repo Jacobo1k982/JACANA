@@ -54,19 +54,19 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                     <Splide options={splideOptions}>
                         {news.map((val, i) => (
                             <SplideSlide key={i}>
-                                <div className="group flex flex-col items-center justify-between w-full h-full bg-gray-800 bg-opacity-75 border border-gray-700 shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.015]"> {/* Fondo oscuro y borde sutil */}
-                                    <div className="w-full h-[400px] lg:h-[400px] sm:h-75 xs:h-36 overflow-hidden relative">
+                                <div className="group flex flex-col items-center justify-between w-full h-full bg-gray-800 bg-opacity-75 border border-gray-700 shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.015]">
+                                    <Link to={val.url} className="w-full h-[400px] lg:h-[400px] sm:h-75 xs:h-36 overflow-hidden relative block">
                                         <img
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             src={val.img}
                                             alt={`img/marcaszapatosapi/${i}`}
                                         />
-                                    </div>
+                                    </Link>
                                     <div className="p-5 sm:p-4 xs:p-3 flex-1 flex flex-col justify-between gap-3">
-                                        <h1 className="text-2xl sm:text-xl xs:text-lg font-semibold text-white text-center"> {/* Texto en blanco */}
+                                        <h1 className="text-2xl sm:text-xl xs:text-lg font-semibold text-white text-center">
                                             {val.title}
                                         </h1>
-                                        <p className="text-sm xs:text-xs text-gray-300 text-justify"> {/* Texto gris claro */}
+                                        <p className="text-sm xs:text-xs text-gray-300 text-justify">
                                             {truncate(val.text, { length: 140 })}
                                         </p>
                                     </div>
@@ -80,6 +80,7 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                                     </div>
                                 </div>
                             </SplideSlide>
+
                         ))}
                     </Splide>
                 </motion.div>
