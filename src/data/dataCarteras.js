@@ -51,11 +51,11 @@ import ckcros3 from "../../public/Cartera/Mujer/CKlein/ckcros3.webp";
 import ckcros4 from "../../public/Cartera/Mujer/CKlein/ckcros4.webp";
 import ckcros5 from "../../public/Cartera/Mujer/CKlein/ckcros5.webp";
 import ckcros6 from "../../public/Cartera/Mujer/CKlein/ckcros6.webp";
-import crossCeleste1 from "../../public/Cartera/Mujer/CKlein/crossceleste1.webp";
-import crossCeleste2 from "../../public/Cartera/Mujer/CKlein/crossceleste2.webp";
-import crossCeleste3 from "../../public/Cartera/Mujer/CKlein/crossceleste3.webp";
-import crossCeleste4 from "../../public/Cartera/Mujer/CKlein/crossceleste4.webp";
-import crossCeleste5 from "../../public/Cartera/Mujer/CKlein/crossceleste5.webp";
+import crossCeleste1 from "../../public/Cartera/Mujer/CKlein/crossCeleste1.webp";
+import crossCeleste2 from "../../public/Cartera/Mujer/CKlein/crossCeleste2.webp";
+import crossCeleste3 from "../../public/Cartera/Mujer/CKlein/crossCeleste3.webp";
+import crossCeleste4 from "../../public/Cartera/Mujer/CKlein/crossCeleste4.webp";
+import crossCeleste5 from "../../public/Cartera/Mujer/CKlein/crossCeleste5.webp";
 
 
 const logoHCO = "/Cartera/Mujer/hco.png";
