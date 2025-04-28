@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setAddItemToCart, setOpenCart } from "../../../app/CartSlice";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaTimes } from "react-icons/fa";
 import toast from "react-hot-toast";
 
 function Puma() {
+    
     const dispatch = useDispatch();
     const [clickedProductId, setClickedProductId] = useState(null);
     const [selectedSizes, setSelectedSizes] = useState({});
+    const [expandedImage, setExpandedImage] = useState(null);
+    const [isImageClicked, setIsImageClicked] = useState(false);
 
     const products = [
-        { id: "puma-1", img: "/PUMA/PMH/PMH3.jpg", title: "Puma", model: "Modelo Exclusivo", sizes: [42, 43], price: "37500", Currency: "₡" },
+        { id: "PUMA-1", img: "/PUMA/PMH/PMH3.jpg", title: "Puma", model: "Modelo Exclusivo", sizes: [42, 43], price: "37500", Currency: "₡" },
     ];
 
     const handleSizeChange = (productId, size) => {
@@ -43,6 +46,16 @@ function Puma() {
         }, 2000);
     };
 
+    const handleImageClick = (imageSrc) => {
+        setExpandedImage(imageSrc);
+        setIsImageClicked(true);
+        setTimeout(() => setIsImageClicked(false), 150); // Simula un breve estado de "clicado"
+    };
+
+    const handleCloseExpandedImage = () => {
+        setExpandedImage(null);
+    };
+
     return (
         <div className="p-6 bg-gray-900 text-white min-h-screen">
             <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -53,11 +66,13 @@ function Puma() {
                             key={product.id}
                             className="bg-gray-800 shadow-md border border-gray-700 rounded-xl p-2 flex flex-col items-center text-center hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
                         >
-                            <img
-                                src={product.img}
-                                alt={product.title}
-                                className="w-full max-w-xs h-[300px] object-cover rounded-xl mx-auto mt-4"
-                            />
+                            <div className="relative w-full max-w-xs h-[300px] rounded-xl overflow-hidden mt-4 cursor-pointer" onClick={() => handleImageClick(product.img)}>
+                                <img
+                                    src={product.img}
+                                    alt={product.title}
+                                    className={`w-full h-full object-cover transition-transform duration-200 ${isImageClicked ? 'scale-95' : 'scale-100'} hover:scale-105`}
+                                />
+                            </div>
                             <div className="p-4 space-y-2">
                                 <h3 className="text-lg font-semibold">{product.title}</h3>
                                 <p className="text-gray-400">{product.model}</p>
@@ -100,8 +115,27 @@ function Puma() {
                     );
                 })}
             </div>
+
+            {expandedImage && (
+                <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center p-4">
+                    <div className="relative animate-fadeIn">
+                        <img
+                            src={expandedImage}
+                            alt="Expanded Product"
+                            className="max-w-[90vw] max-h-[90vh] w-auto h-auto rounded-2xl shadow-2xl object-contain transition-transform duration-200 scale-100"
+                        />
+                        <button
+                            onClick={handleCloseExpandedImage}
+                            className="absolute top-2 right-2 bg-white text-gray-800 hover:bg-gray-200 rounded-full p-2 shadow-lg transition-all"
+                        >
+                            <FaTimes size={20} />
+                        </button>
+                    </div>
+                </div>
+            )}
+
         </div>
     );
-}
+};
 
 export default Puma;

@@ -687,8 +687,8 @@ const marcaszapatos2api = {
       title: "NIKE",
       text: "",
       img: logonike,
-      url: "/Sportmujer",
-      btn: "Explorar más"
+      url: "",
+      btn: "Mercaderia en camino"
     },
     {
       title: "ADIDAS",
