@@ -116,11 +116,14 @@ const heroapi = {
   backgroundImages: [
     '/HERO/slide1.webp',
     '/HERO/slide2.webp',
-    '/HERO/slide3.webp',
+    '/HERO/slide3.jpg',
     '/HERO/slide4.webp',
     '/HERO/slide5.webp',
     '/HERO/slide6.jpg',
     '/HERO/slide7.webp',
+    '/HERO/slide8.jpg',
+    '/HERO/slide9.jpg',
+    '/HERO/slide10.jpg',
   ],
 };
 

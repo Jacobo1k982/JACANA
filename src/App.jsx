@@ -1,6 +1,5 @@
 import { Suspense, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import Loader from './components/Loader';  // Tu loader normal de lazy loading
 import PageLoader from './pages/PageLoader'; // Nuevo loader de transición
 import ProgressBar from './pages/ProgressBar';
 import Navbar from './components/Navbar';
@@ -27,7 +26,7 @@ function App() {
       {isPageLoading && <PageLoader />}
       <Navbar />
       <Cart />
-      <Suspense fallback={<Loader />}>
+      <Suspense>
         <AppRoutes />
       </Suspense>
       <Footer />
