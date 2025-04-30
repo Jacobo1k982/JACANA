@@ -16,8 +16,9 @@ const DetalleMañanitas = () => {
             <p className="mb-2"><strong>Descripción:</strong> {mañanitas.descripcion}</p>
             <p className="mb-2"><strong>Color:</strong> {mañanitas.color}</p>
             <p className="mb-2"><strong>Material:</strong> {mañanitas.material}</p>
-            <p className="mb-2"><strong>Dimensiones:</strong> {mañanitas.dimensiones}</p>
-            <p className="mb-2"><strong>Precio:</strong> ${mañanitas.precio}</p>
+            <p className="mb-2"><strong>Talla:</strong> {mañanitas.talla}</p>
+            <p className="mb-2"><strong>Precio:</strong> ₡{mañanitas.precio}</p>
+            <p className="mb-2"><strong>Marca:</strong> {mañanitas.marca}</p>
         </div>
     );
 };

@@ -4,10 +4,10 @@ import "@splidejs/react-splide/css";
 import { motion } from "framer-motion";
 import darkBackground from "../../assets/darkabstract.jpg";
 import { Link } from "react-router-dom";
-import { marcamañanitasAPI } from "../../data/conjuntoMañanitas"; 
+import { marcamañanitasAPI } from "../../data/conjuntoMañanitas";
 
 const PortadaMarcasMañanitas = () => {
-    const marcasmañanitas = marcamañanitasAPI ?? []; // Usamos marcacarteraapi directamente aquí
+    const marcasmañanitas = marcamañanitasAPI ?? [];
 
     const splideOptions = {
         perPage: 1,
