@@ -4,11 +4,12 @@ import SearchResults from './pages/SearchResults';
 import ThankYou from './pages/ThankYou';
 
 import {
-    heroapi, popularsales, topratedsales, highlight, sneaker, story, dama, ropa, mañanitas, caballero, deportivoapi,
-    cdeportivo, marcaszapatosapi, marcaszapatos2api
+    heroapi, popularsales, topratedsales, highlight, sneaker, story, dama, ropa, caballero, deportivoapi, marcaszapatosapi,
+    marcaszapatos2api
 } from './data/data';
 
 import { dataCarteras, marcacarteraapi } from './data/dataCarteras';
+import { dataMañanitas, marcamañanitasAPI } from './data/conjuntoMañanitas';
 
 import DetalleCartera from "./components/DetalleCartera";
 import CatalogoCarteras from "./components/CatalogoCarteras";
@@ -27,8 +28,6 @@ const Shoebrands2 = lazy(() => import('./components/Shoebrands2'));
 const Mujer = lazy(() => import('./components/Mujer'));
 const Hombre = lazy(() => import('./components/Hombre'));
 const Ropa = lazy(() => import('./components/Ropa'));
-const Mañanitas = lazy(() => import('./components/Mañanitas'));
-const CDeportivo = lazy(() => import('./components/CDeportivo'));
 const Deportivo = lazy(() => import('./components/Deportivo'));
 const Sportmujer = lazy(() => import('./components/Sportmujer'));
 const Juvenil = lazy(() => import('./components/Juvenil'));
@@ -67,6 +66,14 @@ const PortadaPumaM = lazy(() => import('./components/PortadaPumaM'));
 const PortadaConverse2 = lazy(() => import('./components/PortadaConverse2'));
 const PortadaNB2 = lazy(() => import('./components/PortadaNB2'));
 
+/* Sección: Componentes relacionados con Pijamas Mañanitas */
+const TiendaMañanitas = lazy(() => import('./components/Pijamas/TiendaMañanitas'));
+const MarcaMañanitas = lazy(() => import('./components/Pijamas/MarcaMañanitas'));
+const PortadaMarcasMañanitas = lazy(() => import('./components/Pijamas/PortadaMarcasMañanitas'));
+const CatalogoMañanitas = lazy(() => import('./components/Pijamas/CatalogoMañanitas'));
+const DetalleMañanitas = lazy(() => import('./components/Pijamas/DetalleMañanitas'));
+const CaracteristicasMañanitas = lazy(() => import('./components/Pijamas/CaracteristicasMañanitas'));
+
 /* Sección: Componentes relacionados con Carteras */
 const TiendaCarteras = lazy(() => import('./components/TiendaCarteras'));
 
@@ -99,8 +106,6 @@ export default function AppRoutes() {
                 <Route path="/niño" element={<Niño />} />
                 <Route path="/mujer" element={<Mujer dama={dama} />} />
                 <Route path="/ropa" element={<Ropa ropa={ropa} />} />
-                <Route path="/mañanitas" element={<Mañanitas mañanitas={mañanitas} />} />
-                <Route path="/cdeportivo" element={<CDeportivo cdeportivo={cdeportivo} />} />
                 <Route path="/marcaszapatos" element={<Shoebrands marcaszapatosapi={marcaszapatosapi} />} />
                 <Route path="/marcaszapatos2" element={<Shoebrands2 marcaszapatos2api={marcaszapatos2api} />} />
                 <Route path="/newb2" element={
@@ -294,14 +299,18 @@ export default function AppRoutes() {
                     element={
                         <CarteraMujer
                             marcacarteraapi={{ news: marcacarteraapi }}
-                            dataCarteras={{ news: dataCarteras }}
-                        />
-                    }
-                />
+                            dataCarteras={{ news: dataCarteras }} />} />
                 <Route path="/cartera/:id" element={<DetalleCartera />} />
                 <Route path="/catalogo/:marca" element={<CatalogoCarteras />} />
                 <Route path="/caracteristicas/:id" element={<CaracteristicasCartera />} />
                 <Route path="/carteras" element={<TiendaCarteras />} />
+                <Route path="/mañanitas" element={<PortadaMarcasMañanitas marcamañanitasAPI={ { news:marcamañanitasAPI} }
+                    dataMañanitas={ {news:dataMañanitas} } />} />
+                <Route path="/marca-mañanitas" element={<MarcaMañanitas />} />
+                <Route path="/catalogomañanitas/:marca" element={<CatalogoMañanitas />} />
+                <Route path="/mañanitas" element={<TiendaMañanitas />} />
+                <Route path="/mañanitas/:id" element={<DetalleMañanitas />} />
+                <Route path="/caracteristicasmañanitas/:id" element={<CaracteristicasMañanitas />} />
             </Routes>
         </>
     );

@@ -7,8 +7,6 @@ export {default as Stories} from './Stories';
 export {default as Footer} from './Footer';
 export {default as Mujer} from './Mujer.jsx';
 export {default as Ropa} from './Ropa.jsx';
-export {default as Mañanitas} from './Mañanitas.jsx';
-export {default as CDeportivo} from './CDeportivo.jsx';
 export {default as Hero2} from './Hero2.jsx';
 export {default as juvenil} from './Juvenil.jsx';
 export {default as niño} from './Niño.jsx';
@@ -52,3 +50,9 @@ export {default as DetalleCartera} from './DetalleCartera.jsx';
 export {default as CaracteristicasCartera} from './CaracteristicasCartera.jsx';
 export {default as TiendaCarteras} from './TiendaCarteras.jsx'
 export {default as MarcasCartera} from './MarcasCartera.jsx';
+export {default as TiendaMañanitas} from './Pijamas/TiendaMañanitas.jsx';
+export {default as MarcaMañanitas} from './Pijamas/MarcaMañanitas.jsx';
+export {default as PortadaMarcasMañanitas} from './Pijamas/PortadaMarcasMañanitas.jsx';
+export {default as DetalleMañanitas} from './Pijamas/DetalleMañanitas.jsx';
+export {default as CatalogoMañanitas} from './Pijamas/CatalogoMañanitas.jsx';
+export {default as CaracteristicasMañanitas} from './Pijamas/CaracteristicasMañanitas.jsx';
