@@ -553,9 +553,9 @@ const marcaszapatos2api = {
     },
     {
       title: "PUMA",
-      text: "Mercadería en camino",
+      text: "",
       img: logopuma,
-      url: "",
+      url: "/puma2",
       btn: "Explorar más"
     },
     {
@@ -574,14 +574,14 @@ const marcaszapatos2api = {
     },
     {
       title: "CROCS",
-      text: "Mercadería en camino",
+      text: "",
       img: logocrocs,
       url: "",
       btn: "Explorar más"
     },
     {
       title: "VANS",
-      text: "Mercadería en camino",
+      text: "",
       img: logovans,
       url: "",
       btn: "Explorar más"
@@ -702,8 +702,6 @@ const footerAPI = {
     ],
   ]
 };
-
-/*Mujer*/
 
 
 export {

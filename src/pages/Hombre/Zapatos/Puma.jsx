@@ -13,7 +13,10 @@ function Puma() {
     const [isImageClicked, setIsImageClicked] = useState(false);
 
     const products = [
-        { id: "PUMA-1", img: "/PUMA/PMH/PMH3.jpg", title: "Puma", model: "Modelo Exclusivo", sizes: [42, 43], price: "37500", Currency: "₡" },
+        { id: "PUMA-1", img: "/PUMA/PMH/PMH1.jpg", title: "Puma", model: "Forever Faste", sizes: [40, 41, 42, 43, 44], price: "37500", Currency: "₡" },
+        { id: "PUMA-2", img: "/PUMA/PMH/PMH2.jpg", title: "Puma", model: "Forever Faste", sizes: [43], price: "37500", Currency: "₡" },
+        { id: "PUMA-3", img: "/PUMA/PMH/PMH3.jpg", title: "Puma", model: "Forever Faste", sizes: [43], price: "37500", Currency: "₡" },
+        { id: "PUMA-4", img: "/PUMA/PMH/PMH4.jpg", title: "Puma", model: "Forever Faste", sizes: [40, 41, 42, 43, 44], price: "37500", Currency: "₡" },
     ];
 
     const handleSizeChange = (productId, size) => {

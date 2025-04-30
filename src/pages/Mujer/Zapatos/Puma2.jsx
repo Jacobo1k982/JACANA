@@ -14,7 +14,22 @@ function Puma2() {
     const [isImageClicked, setIsImageClicked] = useState(false);
 
     const products = [
-        { id: "PUMA-1", img: "/PUMA/PMM/PM3.jpg", title: "Puma", model: "Modelo Exclusivo", sizes: [42, 43], price: "37500", Currency: "₡" },
+        { id: "PUMA-1", img: "/PUMA/PMM/PMM1.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "37500", Currency: "₡" },
+        { id: "PUMA-2", img: "/PUMA/PMM/PMM2.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "37500", Currency: "₡" },
+        { id: "PUMA-3", img: "/PUMA/PMM/PMM3.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39, 40], price: "37500", Currency: "₡" },
+        { id: "PUMA-4", img: "/PUMA/PMM/PMM4.jpg", title: "Puma", model: "Forever Faste", sizes: [36], price: "24000", Currency: "₡" },
+        { id: "PUMA-5", img: "/PUMA/PMM/PMM5.jpg", title: "Puma", model: "Forever Faste", sizes: [36], price: "24000", Currency: "₡" },
+        { id: "PUMA-6", img: "/PUMA/PMM/PMM6.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "37500", Currency: "₡" },
+        { id: "PUMA-7", img: "/PUMA/PMM/PMM7.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "37500", Currency: "₡" },
+        { id: "PUMA-8", img: "/PUMA/PMM/PMM8.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "37500", Currency: "₡" },
+        { id: "PUMA-9", img: "/PUMA/PMM/PMM9.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 38, 39, 40], price: "19500", Currency: "₡" },
+        { id: "PUMA-10", img: "/PUMA/PMM/PMM10.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39, 40], price: "24000", Currency: "₡" },
+        { id: "PUMA-11", img: "/PUMA/PMM/PMM11.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39, 40], price: "19500", Currency: "₡" },
+        { id: "PUMA-12", img: "/PUMA/PMM/PMM12.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37], price: "24000", Currency: "₡" },
+        { id: "PUMA-13", img: "/PUMA/PMM/PMM13.jpg", title: "Puma", model: "Forever Faste", sizes: [35], price: "19500", Currency: "₡" },
+        { id: "PUMA-14", img: "/PUMA/PMM/PMM14.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "24000", Currency: "₡" },
+        { id: "PUMA-15", img: "/PUMA/PMM/PMM15.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39, 40], price: "24000", Currency: "₡" },
+        { id: "PUMA-16", img: "/PUMA/PMM/PMM16.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "24000", Currency: "₡" },
     ];
 
     const handleSizeChange = (productId, size) => {
