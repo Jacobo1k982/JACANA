@@ -304,8 +304,8 @@ export default function AppRoutes() {
                 <Route path="/catalogo/:marca" element={<CatalogoCarteras />} />
                 <Route path="/caracteristicas/:id" element={<CaracteristicasCartera />} />
                 <Route path="/carteras" element={<TiendaCarteras />} />
-                <Route path="/mañanitas" element={<PortadaMarcasMañanitas marcamañanitasAPI={ { news:marcamañanitasAPI} }
-                    dataMañanitas={ {news:dataMañanitas} } />} />
+                <Route path="/mañanitas" element={<PortadaMarcasMañanitas marcamañanitasAPI={{ news: marcamañanitasAPI }}
+                    dataMañanitas={{ news: dataMañanitas }} />} />
                 <Route path="/marca-mañanitas" element={<MarcaMañanitas />} />
                 <Route path="/catalogomañanitas/:marca" element={<CatalogoMañanitas />} />
                 <Route path="/mañanitas" element={<TiendaMañanitas />} />
