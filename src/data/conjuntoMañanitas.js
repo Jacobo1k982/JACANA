@@ -17,7 +17,7 @@ import ConjMañanitas14 from "../../public/PIJAMAS/ConjuntoMañanitas/CM14.jpg";
 import ConjMañanitas15 from "../../public/PIJAMAS/ConjuntoMañanitas/CM15.jpg";
 import ConjMañanitas16 from "../../public/PIJAMAS/ConjuntoMañanitas/CM16.jpg";
 import ConjMañanitas17 from "../../public/PIJAMAS/ConjuntoMañanitas/CM17.jpg";
-import ConjMañanitas18 from "../../public/PIJAMas/ConjuntoMañanitas/CM18.jpg";
+import ConjMañanitas18 from "../../public/PIJAMAS/ConjuntoMañanitas/CM18.jpg";
 import ConjMañanitas19 from "../../public/PIJAMAS/ConjuntoMañanitas/CM19.jpg";
 import ConjMañanitas20 from "../../public/PIJAMAS/ConjuntoMañanitas/CM20.jpg";
 import ConjMañanitas21 from "../../public/PIJAMAS/ConjuntoMañanitas/CM21.jpg";
