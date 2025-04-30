@@ -14,9 +14,9 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
         keyboard: 'global',
         drag: true,
         swipe: true,
-        flickPower: 600,            // Sensibilidad de swipe
-        easing: 'cubic-bezier(0.25, 1, 0.5, 1)', // Transición suave tipo "snap"
-        speed: 600,                 // Velocidad de cambio entre slides
+        flickPower: 600,
+        easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+        speed: 600,
         gap: '1.5rem',
         pagination: false,
         padding: '2rem',
@@ -31,18 +31,20 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
         },
     };
 
-
     return (
-        <section ref={storiesRef} className="min-h-screen flex items-center justify-center bg-gray-900 via-white to-slate-200 px-4 xs:px-2">
+        <section
+            ref={storiesRef}
+            className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0f0f1a] via-[#1a1a2e] to-[#0c0c1c] px-4 xs:px-2"
+        >
             <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-10 xs:gap-6 py-10">
 
                 <motion.h2
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-4xl sm:text-2xl xs:text-2xl font-extrabold text-white drop-shadow-md" // Texto en blanco para contraste
+                    className="text-4xl sm:text-2xl xs:text-2xl font-extrabold text-cyan-300 tracking-wide drop-shadow-[0_4px_12px_rgba(0,255,255,0.2)]"
                 >
-                    Explora las Mejores Marcas
+                    ⚡ Explora las Mejores Marcas
                 </motion.h2>
 
                 <motion.div
@@ -54,7 +56,7 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                     <Splide options={splideOptions}>
                         {news.map((val, i) => (
                             <SplideSlide key={i}>
-                                <div className="group flex flex-col items-center justify-between w-full h-full bg-gray-800 bg-opacity-75 border border-gray-700 shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.015]">
+                                <div className="group flex flex-col items-center justify-between w-full h-full bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] border border-cyan-400/20 rounded-xl shadow-[0_8px_30px_rgba(0,255,255,0.12)] overflow-hidden ring-1 ring-cyan-500/30 hover:ring-2 hover:ring-cyan-400/60 transition-all duration-500 hover:scale-[1.03] hover:shadow-cyan-500/30 backdrop-blur-md">
                                     <Link to={val.url} className="w-full h-[400px] lg:h-[400px] sm:h-75 xs:h-36 overflow-hidden relative block">
                                         <img
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -63,24 +65,23 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                                         />
                                     </Link>
                                     <div className="p-5 sm:p-4 xs:p-3 flex-1 flex flex-col justify-between gap-3">
-                                        <h1 className="text-2xl sm:text-xl xs:text-lg font-semibold text-white text-center">
+                                        <h1 className="text-2xl sm:text-xl xs:text-lg font-semibold text-cyan-200 text-center tracking-wide">
                                             {val.title}
                                         </h1>
-                                        <p className="text-sm xs:text-xs text-gray-300 text-justify">
+                                        <p className="text-sm xs:text-xs text-cyan-100/90 text-justify">
                                             {truncate(val.text, { length: 140 })}
                                         </p>
                                     </div>
                                     <div className="w-full">
                                         <Link
                                             to={val.url}
-                                            className="block w-full text-center py-2 xs:py-1.5 text-white text-sm xs:text-xs font-medium bg-gradient-to-r from-slate-900 to-black hover:from-black hover:to-slate-900 transition-colors duration-300"
+                                            className="block w-full text-center py-2 xs:py-1.5 text-cyan-300 text-sm xs:text-xs font-semibold tracking-wide bg-black bg-opacity-30 backdrop-blur-sm border-t border-cyan-400/30 hover:bg-cyan-600/10 hover:text-white transition-all duration-300"
                                         >
                                             {val.btn}
                                         </Link>
                                     </div>
                                 </div>
                             </SplideSlide>
-
                         ))}
                     </Splide>
                 </motion.div>
