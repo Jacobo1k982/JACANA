@@ -17,69 +17,67 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
         flickPower: 600,
         easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
         speed: 600,
-        gap: '1.5rem',
+        gap: '2rem',
         pagination: false,
-        padding: '2rem',
+        padding: '3rem',
         breakpoints: {
-            1200: { perPage: 3 },
-            991: { perPage: 2.3 },
-            768: { perPage: 2 },
-            500: { perPage: 1.3, gap: '1rem' },
-            425: { perPage: 1, gap: '0.8rem' },
-            375: { perPage: 1, gap: '0.6rem', padding: '1rem' },
-            320: { perPage: 1, gap: '0.4rem', padding: '0.5rem' },
+            1200: { perPage: 3, gap: '1.5rem', padding: '2rem' },
+            991: { perPage: 2.3, gap: '1.2rem', padding: '1.5rem' },
+            768: { perPage: 2, gap: '1rem', padding: '1rem' },
+            500: { perPage: 1.3, gap: '0.8rem', padding: '0.8rem' },
+            425: { perPage: 1, gap: '0.6rem', padding: '0.6rem' },
+            375: { perPage: 1, gap: '0.5rem', padding: '0.5rem' },
+            320: { perPage: 1, gap: '0.4rem', padding: '0.4rem' },
         },
     };
 
     return (
-        <section
-            ref={storiesRef}
-            className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0f0f1a] via-[#1a1a2e] to-[#0c0c1c] px-4 xs:px-2"
-        >
-            <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-10 xs:gap-6 py-10">
+        <section ref={storiesRef} className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-slate-800 px-6 xs:px-4 py-12">
+            <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-12 xs:gap-8">
 
                 <motion.h2
-                    initial={{ opacity: 0, y: -30 }}
+                    initial={{ opacity: 0, y: -40 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-4xl sm:text-2xl xs:text-2xl font-extrabold text-cyan-300 tracking-wide drop-shadow-[0_4px_12px_rgba(0,255,255,0.2)] font-orbitron"
+                    transition={{ duration: 0.9, ease: "easeOut" }}
+                    className="text-5xl sm:text-3xl xs:text-3xl font-extrabold text-white tracking-tight drop-shadow-lg"
+                    style={{ textShadow: '0 0 10px rgba(0, 180, 216, 0.6)' }} // Neón sutil
                 >
-                    ⚡ Explora las Mejores Marcas
+                    <span className="text-cyan-400">Explora</span> las Mejores Marcas
                 </motion.h2>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                    transition={{ duration: 1.1, ease: "easeOut", delay: 0.2 }}
                     className="w-full"
                 >
                     <Splide options={splideOptions}>
                         {news.map((val, i) => (
                             <SplideSlide key={i}>
-                                <div className="group card-scanner flex flex-col items-center justify-between w-full h-full relative bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] border-2 border-cyan-500 rounded-4xl overflow-hidden shadow-lg hover:shadow-cyan-400/40 transition-all duration-500 hover:scale-[1.035] animate-glow-border before:absolute before:inset-0 before:bg-gradient-to-br before:from-cyan-500/10 before:to-cyan-500/0 before:rounded-4xl before:pointer-events-none">
-                                    <Link to={val.url} className="w-full h-[400px] lg:h-[400px] sm:h-75 xs:h-36 overflow-hidden relative block">
+                                <div className="group flex flex-col items-center justify-between w-full h-full bg-gradient-to-br from-gray-800 to-gray-700 border border-gray-700 shadow-xl rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] transform-gpu">
+                                    <Link to={val.url} className="w-full h-[450px] lg:h-[400px] sm:h-80 xs:h-40 overflow-hidden relative block">
                                         <img
-                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 transform-gpu"
                                             src={val.img}
-                                            alt={`img/marcaszapatosapi/${i}`}
+                                            alt={`imagen de ${val.title}`}
+                                            style={{ filter: 'brightness(90%) contrast(110%)' }} // Ligeramente más vivo
                                         />
                                     </Link>
-                                    <div className="p-5 sm:p-4 xs:p-3 flex-1 flex flex-col justify-between gap-3">
-                                        <h1 className="text-2xl sm:text-xl xs:text-lg font-semibold text-cyan-200 text-center tracking-wide font-orbitron">
+                                    <div className="p-6 sm:p-5 xs:p-4 flex-1 flex flex-col justify-between gap-4">
+                                        <h1 className="text-2xl sm:text-xl xs:text-lg font-semibold text-white text-center tracking-wide">
                                             {val.title}
                                         </h1>
-                                        <p className="text-sm xs:text-xs text-cyan-100/90 text-justify font-orbitron">
-                                            {truncate(val.text, { length: 140 })}
+                                        <p className="text-sm xs:text-xs text-gray-400 text-justify leading-relaxed">
+                                            {truncate(val.text, { length: 130 })}
                                         </p>
                                     </div>
-                                    <div className="w-full">
+                                    <div className="w-full bg-gray-700 bg-opacity-80">
                                         <Link
                                             to={val.url}
-                                            className="block w-full text-center py-2 xs:py-1.5 text-cyan-300 text-sm xs:text-xs font-medium rounded-md bg-black bg-opacity-60 border border-cyan-400 hover:bg-cyan-500 hover:text-black hover:shadow-[0_0_15px_rgba(0,255,255,0.8)] transition-all duration-300 animate-plasma-pulse font-orbitron"
+                                            className="block w-full text-center py-2.5 xs:py-2 text-cyan-300 text-sm xs:text-xs font-semibold hover:bg-cyan-900 hover:text-cyan-200 transition-colors duration-300"
                                         >
-                                            {val.btn}
+                                            {val.btn} <span className="ml-1 text-cyan-400">&#8594;</span>
                                         </Link>
-
                                     </div>
                                 </div>
                             </SplideSlide>
