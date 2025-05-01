@@ -10,7 +10,7 @@ const splideOptions = {
     perPage: 3,
     perMove: 1,
     type: "loop",
-    rewind: true,
+    rewind: true,                           
     keyboard: "global",
     drag: true,
     swipe: true,

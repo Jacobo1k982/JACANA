@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
     const splideOptions = {
-        perPage: 4,
+        perPage: 3,
         perMove: 1,
         type: 'loop',
         rewind: true,
@@ -42,7 +42,7 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-4xl sm:text-2xl xs:text-2xl font-extrabold text-cyan-300 tracking-wide drop-shadow-[0_4px_12px_rgba(0,255,255,0.2)]"
+                    className="text-4xl sm:text-2xl xs:text-2xl font-extrabold text-cyan-300 tracking-wide drop-shadow-[0_4px_12px_rgba(0,255,255,0.2)] font-orbitron"
                 >
                     ⚡ Explora las Mejores Marcas
                 </motion.h2>
@@ -56,7 +56,7 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                     <Splide options={splideOptions}>
                         {news.map((val, i) => (
                             <SplideSlide key={i}>
-                                <div className="group flex flex-col items-center justify-between w-full h-full bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] border border-cyan-400/20 rounded-xl shadow-[0_8px_30px_rgba(0,255,255,0.12)] overflow-hidden ring-1 ring-cyan-500/30 hover:ring-2 hover:ring-cyan-400/60 transition-all duration-500 hover:scale-[1.03] hover:shadow-cyan-500/30 backdrop-blur-md">
+                                <div className="group card-scanner flex flex-col items-center justify-between w-full h-full relative bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] border-2 border-cyan-500 rounded-4xl overflow-hidden shadow-lg hover:shadow-cyan-400/40 transition-all duration-500 hover:scale-[1.035] animate-glow-border before:absolute before:inset-0 before:bg-gradient-to-br before:from-cyan-500/10 before:to-cyan-500/0 before:rounded-4xl before:pointer-events-none">
                                     <Link to={val.url} className="w-full h-[400px] lg:h-[400px] sm:h-75 xs:h-36 overflow-hidden relative block">
                                         <img
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -65,20 +65,21 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                                         />
                                     </Link>
                                     <div className="p-5 sm:p-4 xs:p-3 flex-1 flex flex-col justify-between gap-3">
-                                        <h1 className="text-2xl sm:text-xl xs:text-lg font-semibold text-cyan-200 text-center tracking-wide">
+                                        <h1 className="text-2xl sm:text-xl xs:text-lg font-semibold text-cyan-200 text-center tracking-wide font-orbitron">
                                             {val.title}
                                         </h1>
-                                        <p className="text-sm xs:text-xs text-cyan-100/90 text-justify">
+                                        <p className="text-sm xs:text-xs text-cyan-100/90 text-justify font-orbitron">
                                             {truncate(val.text, { length: 140 })}
                                         </p>
                                     </div>
                                     <div className="w-full">
                                         <Link
                                             to={val.url}
-                                            className="block w-full text-center py-2 xs:py-1.5 text-cyan-300 text-sm xs:text-xs font-semibold tracking-wide bg-black bg-opacity-30 backdrop-blur-sm border-t border-cyan-400/30 hover:bg-cyan-600/10 hover:text-white transition-all duration-300"
+                                            className="block w-full text-center py-2 xs:py-1.5 text-cyan-300 text-sm xs:text-xs font-medium rounded-md bg-black bg-opacity-60 border border-cyan-400 hover:bg-cyan-500 hover:text-black hover:shadow-[0_0_15px_rgba(0,255,255,0.8)] transition-all duration-300 animate-plasma-pulse font-orbitron"
                                         >
                                             {val.btn}
                                         </Link>
+
                                     </div>
                                 </div>
                             </SplideSlide>
