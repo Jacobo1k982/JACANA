@@ -27,6 +27,7 @@ module.exports = {
         'sans': ['Poppins', 'sans-serif'],
         'serif': ['Merriweather', 'serif'],
         'poppins': ['Poppins', 'sans-serif'],
+        'orbitron': ['Orbitron', 'sans-serif'],
       },
       spacing: {
         '18': '4.5rem',
