@@ -49,7 +49,7 @@ const PortadaMarcasMañanitas = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="text-4xl sm:text-3xl xs:text-2xl font-extrabold text-white drop-shadow-md"
                 >
-                    Pijamas mañanitas
+                    <span className="text-sky-400 font-orbitron"> Estilos</span> Mañanitas
                 </motion.h2>
 
                 <motion.div
@@ -61,7 +61,7 @@ const PortadaMarcasMañanitas = () => {
                     {marcasmañanitas.length > 0 ? ( // Iteramos sobre 'marcas'
                         <Splide options={splideOptions}>
                             {marcasmañanitas.map((marcamañanitas) => ( // Mapeamos cada marca
-                                <SplideSlide key={marcamañanitas.id} className="flex justify-center">
+                                <SplideSlide key={marcamañanitas.id} className="overflow-visible flex justify-center">
                                     {marcamañanitas.slug === 'mañanitas' ? (
                                         <Link to="/catalogomañanitas" aria-label={`Ver catálogo de conjuntos de pijamas`}>
                                             <motion.div

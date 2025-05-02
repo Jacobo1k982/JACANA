@@ -132,7 +132,7 @@ const TiendaMañanitas = () => {
                             ))}
                         </Splide>
                     ) : (
-                        <p className="text-white text-lg font-medium">No hay carteras disponibles por el momento.</p>
+                        <p className="text-white text-lg font-medium">No hay Mañanitas disponibles por el momento.</p>
                     )}
                 </motion.div>
             </div>

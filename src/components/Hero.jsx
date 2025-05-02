@@ -29,7 +29,7 @@ const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImag
               className="w-full h-screen bg-cover bg-center"
               style={{
                 backgroundImage: `url(${img})`,
-                filter: 'brightness(0.4)',
+                filter: 'brightness(0.3) contrast(1.1)',
               }}
             ></div>
           </div>
@@ -37,33 +37,37 @@ const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImag
       </Slider>
 
       {/* Capa oscura con contenido */}
-      <div className="absolute inset-0 bg-black/40 z-10 flex items-center justify-center px-4">
-        <div className="max-w-5xl text-center space-y-8 text-white">
-          <h1 className="text-6xl sm:text-5xl xsm:text-3xl font-extrabold bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent drop-shadow-xl animate-fade-in">
+      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/70 z-10 flex items-center justify-center px-4">
+        <div className="max-w-5xl text-center space-y-10 text-white">
+          <h1 className="text-6xl sm:text-5xl xsm:text-3xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,255,255,0.7)] animate-pulse">
             {title}
           </h1>
-          <h2 className="text-3xl sm:text-2xl xsm:text-xl text-gray-200 font-medium animate-fade-in-slow">
+          <h2 className="text-3xl sm:text-2xl xsm:text-xl text-gray-300 font-medium animate-fade-in-slow">
             {subtitle}
           </h2>
 
           {btntext && (
             <button
               onClick={() => storiesRef?.current?.scrollIntoView({ behavior: 'smooth' })}
-              className="mt-6 px-6 py-3 bg-white text-gray-900 font-bold rounded-full shadow-lg hover:bg-gray-200 transition duration-300">
+              className="btn-cut-corners mt-6 px-8 py-4 bg-white/10 backdrop-blur-lg text-cyan-300 font-bold border border-cyan-400 hover:bg-cyan-400 hover:text-black shadow-lg transition duration-500 hover:shadow-cyan-400/50"
+            >
               {btntext}
             </button>
+
           )}
 
-          <div className="flex gap-6 justify-center mt-6">
+          <div className="flex gap-8 justify-center mt-8">
             {sociallinks?.map((val, i) => (
               <a
                 key={i}
                 href={val.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:scale-110 transition-transform duration-300"
+                className="hover:scale-125 transition-transform duration-300 hover:text-cyan-400"
               >
-                <SocialLink icon={val.icon} />
+                <div className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:shadow-[0_0_20px_cyan]">
+                  <SocialLink icon={val.icon} />
+                </div>
               </a>
             ))}
           </div>

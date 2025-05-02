@@ -9,7 +9,7 @@ import darkBackground from "../assets/darkabstract.jpg";
 
 const Mañanitas = ({ mañanitas: { title = "", news = [] } }) => {
     const splideOptions = {
-        perPage: 4,
+        perPage: 3,
         perMove: 1,
         type: 'loop',
         rewind: true,

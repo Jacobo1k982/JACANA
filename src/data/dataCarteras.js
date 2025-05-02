@@ -207,7 +207,7 @@ const dataCarteras = [
         color: "Celeste",
         material: "Parte externa o recubrimiento: 51% poliéster 49% poliuretano / forro: 100% poliéster",
         dimensiones: "",
-        precio: "585540",
+        precio: "58540",
         moneda: "₡",
         marca: "CalvinKlein",
     },
