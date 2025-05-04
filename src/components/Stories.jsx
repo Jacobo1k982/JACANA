@@ -34,7 +34,6 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
     return (
         <section ref={storiesRef} className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-slate-800 px-6 xs:px-4 py-12">
             <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-12 xs:gap-8">
-
                 <motion.h2
                     initial={{ opacity: 0, y: -40 }}
                     animate={{ opacity: 1, y: 0 }}

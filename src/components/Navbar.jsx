@@ -52,34 +52,35 @@ const Navbar = () => {
             <img
               src={logo}
               alt="logo"
-              className={`w-12 h-auto transition-all duration-300 ${navState ? 'brightness-0' : ''}`}
+              className={`transition-all duration-300 
+      ${navState ? 'w-12 drop-shadow-md' : 'w-16 drop-shadow-lg'}`}
             />
           </Link>
-
-          <ul className="flex items-center space-x-6">
-            <li className="group relative">
-              <button onClick={toggleSearch}>
-                <MagnifyingGlassIcon
-                  className={`w-6 h-6 cursor-pointer transition-all duration-300 group-hover:text-indigo-600 ${navState ? 'text-gray-800' : 'text-white'}`}
-                />
+          <ul className="flex items-center space-x-4 sm:space-x-6">
+            <li>
+              <button onClick={toggleSearch} className="relative flex items-center justify-center w-10 h-10 sm:w-8 sm:h-8 rounded-full hover:bg-gray-100 transition">
+                <MagnifyingGlassIcon className={`w-6 h-6 transition-all duration-300 ${navState ? 'text-gray-800' : 'text-white'}`} />
               </button>
             </li>
 
-            <li className="group relative">
-              <HeartIcon className={`w-6 h-6 cursor-pointer transition-all duration-300 group-hover:text-pink-500 ${navState ? 'text-gray-800' : 'text-white'}`} />
+            <li>
+              <button className="relative flex items-center justify-center w-10 h-10 sm:w-8 sm:h-8 rounded-full hover:bg-gray-100 transition">
+                <HeartIcon className={`w-6 h-6 transition-all duration-300 ${navState ? 'text-gray-800' : 'text-white'}`} />
+              </button>
             </li>
 
-            <li className="relative">
-              <button onClick={toggleDrawer} className="relative focus:outline-none">
-                <ShoppingBagIcon className={`w-6 h-6 transition-all duration-300 hover:scale-110 ${navState ? 'text-gray-800' : 'text-white'}`} />
+            <li>
+              <button onClick={toggleDrawer} className="relative flex items-center justify-center w-10 h-10 sm:w-8 sm:h-8 rounded-full hover:bg-gray-100 transition">
+                <ShoppingBagIcon className={`w-6 h-6 transition-all duration-300 ${navState ? 'text-gray-800' : 'text-white'}`} />
                 {totalQTY > 0 && (
-                  <span className="absolute -top-2 -right-2 text-[0.65rem] w-5 h-5 bg-red-500 text-white rounded-full flex items-center justify-center font-semibold shadow-md">
+                  <span className="absolute -top-1 -right-1 text-[0.65rem] w-5 h-5 bg-red-500 text-white rounded-full flex items-center justify-center font-semibold shadow-md">
                     {totalQTY}
                   </span>
                 )}
               </button>
             </li>
           </ul>
+
         </nav>
 
         {/* SearchBar */}

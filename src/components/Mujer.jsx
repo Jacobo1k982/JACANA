@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import darkBackground from "../assets/darkabstract.jpg";
 
-const Mujer = ({ dama: { title, news, subtitle, image } }) => {
+const Mujer = ({ dama: { title, subtitle, news } }) => {
   const splideOptions = {
     perPage: 3,
     perMove: 1,
@@ -16,20 +16,20 @@ const Mujer = ({ dama: { title, news, subtitle, image } }) => {
     keyboard: 'global',
     drag: true,
     swipe: true,
-    flickPower: 600,         // Sensibilidad de swipe
-    easing: 'cubic-bezier(0.25, 1, 0.5, 1)', // Transición suave tipo "snap"
-    speed: 600,             // Velocidad de cambio entre slides
-    gap: '1.5rem',
+    flickPower: 600,
+    easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+    speed: 600,
+    gap: '2rem',
     pagination: false,
-    padding: '2rem',
+    padding: '3rem',
     breakpoints: {
-      1200: { perPage: 3 },
-      991: { perPage: 2.3 },
-      768: { perPage: 2 },
-      500: { perPage: 1.3, gap: '1rem' },
-      425: { perPage: 1, gap: '0.8rem' },
-      375: { perPage: 1, gap: '0.6rem', padding: '1rem' },
-      320: { perPage: 1, gap: '0.4rem', padding: '0.5rem' },
+      1200: { perPage: 3, gap: '1.5rem', padding: '2rem' },
+      991: { perPage: 2.3, gap: '1.2rem', padding: '1.5rem' },
+      768: { perPage: 2, gap: '1rem', padding: '1rem' },
+      500: { perPage: 1.3, gap: '0.8rem', padding: '0.8rem' },
+      425: { perPage: 1, gap: '0.6rem', padding: '0.6rem' },
+      375: { perPage: 1, gap: '0.5rem', padding: '0.5rem' },
+      320: { perPage: 1, gap: '0.4rem', padding: '0.4rem' },
     },
   };
 
@@ -41,22 +41,24 @@ const Mujer = ({ dama: { title, news, subtitle, image } }) => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+
       }}
     >
-      <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-10 xs:gap-6 py-10">
+      <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-12 xs:gap-8">
         <motion.h2
-          initial={{ opacity: 0, y: -30 }}
+          initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-4xl sm:text-3xl xs:text-2xl font-extrabold text-white drop-shadow-md" // Texto en blanco para contraste
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          className="text-5xl sm:text-3xl xs:text-3xl font-Playfair text-white tracking-tight drop-shadow-lg"
+          style={{ textShadow: '0 0 10px rgba(0, 180, 216, 0.6)' }} // Neón sutil
         >
           <span className="text-sky-400 font-orbitron"> Todo</span> lo que buscas y más
         </motion.h2>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          transition={{ duration: 1.1, ease: "easeOut", delay: 0.2 }}
           className="w-full"
         >
           <Splide options={splideOptions}>
