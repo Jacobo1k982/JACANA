@@ -84,7 +84,7 @@ const marcamañanitasAPI = [
     {
         id: "logo1",
         slug: "catalogoMañanitas",
-        nombre: "Conjunto tirantes",
+        nombre: "Conjunto tirantes",  
         descripcion: "",
         img: [PortadaMañanitas],
         color: "",

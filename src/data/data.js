@@ -342,7 +342,7 @@ const topratedsales = {
 };
 
 const story = {
-  title: "",
+  title: "Categoorias",
   news: [
     {
       title: "MUJER",
@@ -598,7 +598,7 @@ const marcaszapatos2api = {
 }
 
 const marcaszapatosapi = {
-  heading: "Carrusel marcas de zapatos",
+  heading: "Carrusel marcas de zapatos Hombres",
   title: "JACANA Styles Costa Rica",
   subtitle: "Lineas deportivas",
   sociallinks: [

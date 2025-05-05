@@ -2,6 +2,8 @@ import React, { lazy, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import SearchResults from './pages/SearchResults';
 import ThankYou from './pages/ThankYou';
+import OfertasFuturistas from './components/OfertasFuturistas';
+
 
 import {
     heroapi, popularsales, topratedsales, highlight, sneaker, story, dama, ropa, caballero, deportivoapi, marcaszapatosapi,
@@ -89,9 +91,10 @@ export default function AppRoutes() {
             <Routes>
                 {/* Página principal */}
                 <Route path="/" element={
-                    <main className="flex flex-col relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden">
+                    <main className="flex flex-col relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden">
                         <Hero heroapi={heroapi} storiesRef={storiesRef} />
                         <Stories story={story} storiesRef={storiesRef} />
+                        <OfertasFuturistas />
                         <Sales endpoint={popularsales} ifExists />
                         <FlexContent endpoint={highlight} ifExists />
                         <Sales endpoint={topratedsales} />
@@ -109,7 +112,7 @@ export default function AppRoutes() {
                 <Route path="/marcaszapatos" element={<Shoebrands marcaszapatosapi={marcaszapatosapi} />} />
                 <Route path="/marcaszapatos2" element={<Shoebrands2 marcaszapatos2api={marcaszapatos2api} />} />
                 <Route path="/newb2" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaNB2 deportivoapi={deportivoapi} />
                         <div className='NewB2appwoman'>
                             <div className='fila'>
@@ -121,7 +124,7 @@ export default function AppRoutes() {
                     </main>
                 } />
                 <Route path="/newb" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaNB deportivoapi={deportivoapi} />
                         <div className='NewBappwoman'>
                             <div className='fila'>
@@ -133,7 +136,7 @@ export default function AppRoutes() {
                     </main>
                 } />
                 <Route path="/converse2" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaConverse2 deportivoapi={deportivoapi} />
                         <div className='Converse2appwoman'>
                             <div className='fila'>
@@ -145,7 +148,7 @@ export default function AppRoutes() {
                     </main>
                 } />
                 <Route path="/converse" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaConverse deportivoapi={deportivoapi} />
                         <div className='Converseappwoman'>
                             <div className='fila'>
@@ -157,7 +160,7 @@ export default function AppRoutes() {
                     </main>
                 } />
                 <Route path="/sandalias" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaSandalias deportivoapi={deportivoapi} />
                         <div className='Sandaliasappwoman'>
                             <div className='fila'>
@@ -169,7 +172,7 @@ export default function AppRoutes() {
                     </main>
                 } />
                 <Route path="/puma" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaPumaH deportivoapi={deportivoapi} />
                         <div className='Pumaappwoman'>
                             <div className='fila'>
@@ -181,7 +184,7 @@ export default function AppRoutes() {
                     </main>
                 } />
                 <Route path="/puma2" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaPumaM deportivoapi={deportivoapi} />
                         <div className='Puma2appwoman'>
                             <div className='fila'>
@@ -193,7 +196,7 @@ export default function AppRoutes() {
                     </main>
                 } />
                 <Route path="/gorra" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaGorra deportivoapi={deportivoapi} />
                         <div className='Filaappwoman'>
                             <div className='fila'>
@@ -206,7 +209,7 @@ export default function AppRoutes() {
                 } />
 
                 <Route path="/fila2" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaFilaM deportivoapi={deportivoapi} />
                         <div className='Filaappwoman'>
                             <div className='fila'>
@@ -218,7 +221,7 @@ export default function AppRoutes() {
                     </main>
                 } />
                 <Route path="/adidas2" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaAdidasM deportivoapi={deportivoapi} />
                         <div className='Adidasappwoman'>
                             <div className='fila'>
@@ -230,7 +233,7 @@ export default function AppRoutes() {
                     </main>
                 } />
                 <Route path="/adidas" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaAdidasH deportivoapi={deportivoapi} />
                         <div className='Adidasappman'>
                             <div className='fila'>
@@ -242,7 +245,7 @@ export default function AppRoutes() {
                     </main>
                 } />
                 <Route path="/tommy" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaTommyHombre deportivoapi={deportivoapi} />
                         <div className='Tommyappman'>
                             <div className='fila'>
@@ -254,7 +257,7 @@ export default function AppRoutes() {
                     </main>
                 } />
                 <Route path="/tommy2" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaTommyMujer deportivoapi={deportivoapi} />
                         <div className='Tommyappwoman'>
                             <div className='fila'>
@@ -267,7 +270,7 @@ export default function AppRoutes() {
                 } />
 
                 <Route path="/deportivo" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <Deportivo deportivoapi={deportivoapi} />
                         <div className='Nikeappman'>
                             <div className='fila'>
@@ -281,7 +284,7 @@ export default function AppRoutes() {
 
                 {/* Sport Mujer */}
                 <Route path="/sportmujer" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-100 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <Sportmujer deportivoapi={deportivoapi} />
                         <div className='Nikeappwoman'>
                             <h2 className='text-6xl lg:text-4xl md:text-3xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200 text-center'></h2>

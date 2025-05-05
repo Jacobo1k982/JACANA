@@ -93,22 +93,33 @@ function NewB() {
                                 <h3 className="text-lg font-semibold">{product.title}</h3>
                                 <p className="text-gray-400">{product.model}</p>
 
-                                <select
-                                    value={selectedSizes[product.id] || ""}
-                                    onChange={(e) => handleSizeChange(product.id, e.target.value)}
-                                    className="bg-gray-700 text-white p-2 rounded w-full text-sm"
-                                >
-                                    <option value="">Selecciona tu talla</option>
+                                <div className="flex flex-wrap gap-2 justify-center">
                                     {product.sizes.map((size) => (
-                                        <option key={size} value={size}>
-                                            Talla {size}
-                                        </option>
+                                        <button
+                                            key={size}
+                                            onClick={() => handleSizeChange(product.id, size)}
+                                            className={`px-3 py-1 rounded-md border text-sm 
+                ${selectedSizes[product.id] === size
+                                                    ? "bg-orange-500 text-white border-orange-500"
+                                                    : "bg-gray-700 text-white border-gray-600 hover:bg-gray-600"
+                                                }`}
+                                        >
+                                            {size}
+                                        </button>
                                     ))}
-                                </select>
+                                </div>
 
-                                <p className="text-orange-500 font-bold">
-                                    {product.Currency} {product.price}
-                                </p>
+                                <div className="flex items-center justify-center gap-2">
+                                    {product.originalPrice && (
+                                        <span className="text-gray-400 line-through decoration-red-500">
+                                            {product.Currency} {product.originalPrice}
+                                        </span>
+                                    )}
+                                    <span className="text-orange-500 font-bold">
+                                        {product.Currency} {product.price}
+                                    </span>
+                                </div>
+
 
                                 <button
                                     onClick={() => handleBuy(product)}
