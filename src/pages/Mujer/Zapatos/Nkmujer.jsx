@@ -13,9 +13,9 @@ function Nkmujer() {
     const [isImageClicked, setIsImageClicked] = useState(false);
 
     const products = [
-        { id: "nk-1", img: "/NKM/NKM1.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
-        { id: "nk-2", img: "/NKM/NKM2.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "33000", Currency: "₡" },
-        { id: "nk-3", img: "/NKM/NKM3.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37], price: "33000", Currency: "₡" },
+        { id: "nk-1", img: "/NKM/NKM1.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27,000", originalPrice: "30,000",Currency: "₡" },
+        { id: "nk-2", img: "/NKM/NKM2.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "29,700", originalPrice: "33,000",Currency: "₡" },
+        { id: "nk-3", img: "/NKM/NKM3.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37], price: "29,700", originalPrice: "33,000",Currency: "₡" },
         { id: "nk-4", img: "/NKM/NKM4.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "37500", Currency: "₡" },
         { id: "nk-5", img: "/NKM/NKM5.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37, 38], price: "24000", Currency: "₡" },
         { id: "nk-6", img: "/NKM/NKM6.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37], price: "24000", Currency: "₡" },
@@ -60,7 +60,7 @@ function Nkmujer() {
         { id: "nk-45", img: "/NKM/NKM45.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "24000", Currency: "₡" },
         { id: "nk-46", img: "/NKM/NKM46.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [40], price: "18500", Currency: "₡" },
         { id: "nk-47", img: "/NKM/NKM47.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37], price: "34500", Currency: "₡" },
-        { id: "nk-48", img: "/NKM/NKM48.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37, 38], price: "33000", Currency: "₡" },
+        { id: "nk-48", img: "/NKM/NKM48.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37, 38], price: "27,700", originalPrice: "33,000", Currency: "₡" },
         { id: "nk-49", img: "/NKM/NKM49.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "24000", Currency: "₡" },
         { id: "nk-50", img: "/NKM/NKM50.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37], price: "33000", Currency: "₡" },
         { id: "nk-51", img: "/NKM/NKM51.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39], price: "24000", Currency: "₡" },
