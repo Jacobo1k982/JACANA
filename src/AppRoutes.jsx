@@ -12,7 +12,6 @@ import {
 
 import { dataCarteras, marcacarteraapi } from './data/dataCarteras';
 import { dataMañanitas, marcamañanitasAPI } from './data/conjuntoMañanitas';
-import { mañanitaAppi } from './data/mañanita';
 
 import DetalleCartera from "./components/DetalleCartera";
 import CatalogoCarteras from "./components/CatalogoCarteras";
@@ -316,7 +315,6 @@ export default function AppRoutes() {
                 <Route path="/mañanitas" element={<TiendaMañanitas />} />
                 <Route path="/mañanitas/:id" element={<DetalleMañanitas />} />
                 <Route path="/caracteristicasmañanitas/:id" element={<CaracteristicasMañanitas />} />
-                <Route path="/pijama-mañanita" element={<Mañanita mañanitaAppi={mañanitaAppi} />} />
             </Routes>
         </>
     );
