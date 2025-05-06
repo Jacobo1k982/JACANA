@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { setAddItemToCart, setOpenCart } from "../../../app/CartSlice";
 import { FaCheckCircle, FaTimes } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
+import { FaRuler } from "react-icons/fa";
 
 function Converse2() {
 
@@ -90,7 +92,16 @@ function Converse2() {
                             </div>
                             <div className="p-4 space-y-2">
                                 <h3 className="text-lg font-semibold">{product.title}</h3>
-                                <p className="text-gray-400">{product.model}</p>
+                                <div className="flex items-center justify-center gap-2">
+                                    <p className="text-gray-400">{product.model}</p>
+                                    <Link
+                                        to="/guia-de-tallas"
+                                        className="flex items-center gap-1 text-sm text-blue-400 hover:underline"
+                                    >
+                                        <FaRuler className="text-blue-400" />
+                                        Guía de tallas
+                                    </Link>
+                                </div>
 
                                 <div className="flex flex-wrap gap-2 justify-center">
                                     {product.sizes.map((size) => (
@@ -98,7 +109,7 @@ function Converse2() {
                                             key={size}
                                             onClick={() => handleSizeChange(product.id, size)}
                                             className={`px-3 py-1 rounded-md border text-sm 
-                ${selectedSizes[product.id] === size
+                    ${selectedSizes[product.id] === size
                                                     ? "bg-orange-500 text-white border-orange-500"
                                                     : "bg-gray-700 text-white border-gray-600 hover:bg-gray-600"
                                                 }`}
@@ -107,6 +118,7 @@ function Converse2() {
                                         </button>
                                     ))}
                                 </div>
+
 
                                 <div className="flex items-center justify-center gap-2">
                                     {product.originalPrice && (
@@ -118,6 +130,7 @@ function Converse2() {
                                         {product.Currency} {product.price}
                                     </span>
                                 </div>
+
 
                                 <button
                                     onClick={() => handleBuy(product)}

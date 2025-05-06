@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import SearchResults from './pages/SearchResults';
 import ThankYou from './pages/ThankYou';
 import OfertasFuturistas from './components/OfertasFuturistas';
+import GuiaDeTallas from './pages/GuiaDeTallas';
 
 
 import {
@@ -314,6 +315,7 @@ export default function AppRoutes() {
                 <Route path="/mañanitas" element={<TiendaMañanitas />} />
                 <Route path="/mañanitas/:id" element={<DetalleMañanitas />} />
                 <Route path="/caracteristicasmañanitas/:id" element={<CaracteristicasMañanitas />} />
+                <Route path="/guia-de-tallas" element={<GuiaDeTallas />} />
             </Routes>
         </>
     );
