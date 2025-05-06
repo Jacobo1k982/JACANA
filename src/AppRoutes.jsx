@@ -75,7 +75,6 @@ const PortadaMarcasMañanitas = lazy(() => import('./components/Pijamas/PortadaM
 const CatalogoMañanitas = lazy(() => import('./components/Pijamas/CatalogoMañanitas'));
 const DetalleMañanitas = lazy(() => import('./components/Pijamas/DetalleMañanitas'));
 const CaracteristicasMañanitas = lazy(() => import('./components/Pijamas/CaracteristicasMañanitas'));
-const Mañanita = lazy(() => import('./pages/Mujer/Pijamas/Mañanita'));
 
 /* Sección: Componentes relacionados con Carteras */
 const TiendaCarteras = lazy(() => import('./components/TiendaCarteras'));
