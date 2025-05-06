@@ -107,7 +107,6 @@ const dataMañanitas = [
         talla: "S",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data2",
@@ -133,7 +132,6 @@ const dataMañanitas = [
         talla: "S",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data4",
@@ -146,7 +144,6 @@ const dataMañanitas = [
         talla: "S",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data5",
@@ -159,7 +156,6 @@ const dataMañanitas = [
         talla: "M",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data6",
@@ -172,7 +168,6 @@ const dataMañanitas = [
         talla: "M",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data7",
@@ -185,7 +180,6 @@ const dataMañanitas = [
         talla: "M",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data8",
@@ -198,7 +192,6 @@ const dataMañanitas = [
         talla: "M",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data9",
@@ -211,7 +204,6 @@ const dataMañanitas = [
         talla: "M",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data10",
@@ -224,7 +216,6 @@ const dataMañanitas = [
         talla: "M",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data11",
@@ -237,7 +228,6 @@ const dataMañanitas = [
         talla: "L",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data12",
@@ -250,7 +240,6 @@ const dataMañanitas = [
         talla: "L",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data13",
@@ -263,7 +252,6 @@ const dataMañanitas = [
         talla: "L",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data14",
@@ -276,7 +264,6 @@ const dataMañanitas = [
         talla: "L",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data15",
@@ -289,7 +276,6 @@ const dataMañanitas = [
         talla: "L",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data16",
@@ -302,7 +288,6 @@ const dataMañanitas = [
         talla: "L",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data17",
@@ -315,7 +300,6 @@ const dataMañanitas = [
         talla: "L",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data18",
@@ -328,7 +312,6 @@ const dataMañanitas = [
         talla: "XXL",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data19",
@@ -341,7 +324,6 @@ const dataMañanitas = [
         talla: "M",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data20",
@@ -354,7 +336,6 @@ const dataMañanitas = [
         talla: "XL",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data21",
@@ -367,7 +348,6 @@ const dataMañanitas = [
         talla: "XL",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data22",
@@ -380,7 +360,6 @@ const dataMañanitas = [
         talla: "XL",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data23",
@@ -393,7 +372,6 @@ const dataMañanitas = [
         talla: "S",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data24",
@@ -406,7 +384,6 @@ const dataMañanitas = [
         talla: "XXL",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data25",
@@ -419,7 +396,6 @@ const dataMañanitas = [
         talla: "XXL",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
     {
         id: "data26",
@@ -432,7 +408,6 @@ const dataMañanitas = [
         talla: "XXL",
         precio: "6000",
         moneda: "₡",
-        marca: "JACANA",
     },
 ];
 
