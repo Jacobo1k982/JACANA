@@ -45,6 +45,7 @@ const Puma = lazy(() => import('./pages/Hombre/Zapatos/Puma'));
 const Sandalias = lazy(() => import('./pages/Hombre/Zapatos/Sandalias'));
 const Converse = lazy(() => import('./pages/Hombre/Zapatos/Converse'));
 const NewB = lazy(() => import('./pages/Hombre/Zapatos/NewB'));
+const Vans = lazy(() => import('./pages/Hombre/Zapatos/Vans'));
 const Gorra = lazy(() => import('./pages/Hombre/Gorra'));
 const PortadaTommyHombre = lazy(() => import('./components/PortadaTommyHombre'));
 const PortadaAdidasH = lazy(() => import('./components/PortadaAdidasH'));
@@ -68,6 +69,7 @@ const PortadaFilaM = lazy(() => import('./components/PortadaFilaM'));
 const PortadaPumaM = lazy(() => import('./components/PortadaPumaM'));
 const PortadaConverse2 = lazy(() => import('./components/PortadaConverse2'));
 const PortadaNB2 = lazy(() => import('./components/PortadaNB2'));
+const VansMujer = lazy(() => import('./pages/Mujer/Zapatos/VansMujer'));
 
 /* Sección: Componentes relacionados con Pijamas Mañanitas */
 const TiendaMañanitas = lazy(() => import('./components/Pijamas/TiendaMañanitas'));
@@ -277,6 +279,30 @@ export default function AppRoutes() {
                             <div className='fila'>
                                 <div className='col'>
                                     <Nike />
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                } />
+                <Route path="/vans-hombre" element={
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                        <Deportivo deportivoapi={deportivoapi} />
+                        <div className='Vansappman'>
+                            <div className='vans'>
+                                <div className='col'>
+                                    <Vans />
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                } />
+                <Route path="/vans-mujer" element={
+                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                        <Deportivo deportivoapi={deportivoapi} />
+                        <div className='Vansappwoman'>
+                            <div className='vans'>
+                                <div className='col'>
+                                    <VansMujer />
                                 </div>
                             </div>
                         </div>

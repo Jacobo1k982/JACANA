@@ -56,3 +56,5 @@ export {default as PortadaMarcasMañanitas} from './Pijamas/PortadaMarcasMañani
 export {default as DetalleMañanitas} from './Pijamas/DetalleMañanitas.jsx';
 export {default as CatalogoMañanitas} from './Pijamas/CatalogoMañanitas.jsx';
 export {default as CaracteristicasMañanitas} from './Pijamas/CaracteristicasMañanitas.jsx';
+export {default as Vans} from '../pages/Hombre/Zapatos/Vans.jsx';
+export {default as VansMujer} from '../pages/Mujer/Zapatos/VansMujer.jsx';

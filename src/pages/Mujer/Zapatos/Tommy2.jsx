@@ -15,19 +15,19 @@ function Tommy2() {
     const [isImageClicked, setIsImageClicked] = useState(false);
 
     const products = [
-        { id: "tm-1", img: "/TOMMY/TM/TMM1.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
-        { id: "tm-2", img: "/TOMMY/TM/TMM2.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
-        { id: "tm-3", img: "/TOMMY/TM/TMM3.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
-        { id: "tm-4", img: "/TOMMY/TM/TMM4.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
-        { id: "tm-5", img: "/TOMMY/TM/TMM5.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39], price: "30000", Currency: "₡" },
-        { id: "tm-6", img: "/TOMMY/TM/TMM6.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
-        { id: "tm-7", img: "/TOMMY/TM/TMM7.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
-        { id: "tm-8", img: "/TOMMY/TM/TMM8.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
-        { id: "tm-9", img: "/TOMMY/TM/TMM9.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
-        { id: "tm-10", img: "/TOMMY/TM/TMM10.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
-        { id: "tm-11", img: "/TOMMY/TM/TMM11.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
-        { id: "tm-12", img: "/TOMMY/TM/TMM12.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
-        { id: "tm-13", img: "/TOMMY/TM/TMM13.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "30000", Currency: "₡" },
+        { id: "tm-1", img: "/TOMMY/TM/TMM1.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "tm-2", img: "/TOMMY/TM/TMM2.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "tm-3", img: "/TOMMY/TM/TMM3.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "tm-4", img: "/TOMMY/TM/TMM4.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "tm-5", img: "/TOMMY/TM/TMM5.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "tm-6", img: "/TOMMY/TM/TMM6.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "tm-7", img: "/TOMMY/TM/TMM7.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "tm-8", img: "/TOMMY/TM/TMM8.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "tm-9", img: "/TOMMY/TM/TMM9.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "tm-10", img: "/TOMMY/TM/TMM10.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "tm-11", img: "/TOMMY/TM/TMM11.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "tm-12", img: "/TOMMY/TM/TMM12.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "tm-13", img: "/TOMMY/TM/TMM13.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
 
     ];
 

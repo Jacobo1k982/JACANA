@@ -43,15 +43,6 @@ const CardMañanitas = ({ mañanitas }) => {
     const [expanded, setExpanded] = useState(false);
     const [expandedImageIndex, setExpandedImageIndex] = useState(0);
 
-    useEffect(() => {
-        if (mañanitas.img.length > 1 && !isHovered) {
-            const interval = setInterval(() => {
-                setCurrentImage((prev) => (prev + 1) % mañanitas.img.length);
-            }, 3000);
-            return () => clearInterval(interval);
-        }
-    }, [isHovered, mañanitas.img.length]);
-
     const handlePrev = () =>
         setCurrentImage((prev) => (prev - 1 + mañanitas.img.length) % mañanitas.img.length);
     const handleNext = () =>
@@ -170,7 +161,7 @@ const CardMañanitas = ({ mañanitas }) => {
                             <img
                                 src={mañanitas.img[expandedImageIndex]}
                                 alt="Imagen expandida"
-                                className="max-w-[50vw] max-h-[50vh] object-contain rounded-xl shadow-2xl"
+                                className="max-w-[80vw] max-h-[80vh] object-contain rounded-xl shadow-2xl"
                             />
                             {mañanitas.img.length > 1 && (
                                 <>

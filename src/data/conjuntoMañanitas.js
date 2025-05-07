@@ -378,7 +378,7 @@ const dataMañanitas = [
         slug: "CatalogoMañanitas",
         nombre: "Conjunto tipo tirantes",
         descripcion: "Conjunto mañanitas estilo tirantes y pantalones cortos, ideal para climas cálidos.",
-        img: [ConjMañanitas69, ConjMañanitas70, ConjMañanitas71, ConjMañanitas72],
+        img: [ConjMañanitas70, ConjMañanitas71, ConjMañanitas72, ConjMañanitas69],
         color: "Café",
         material: "Punto jersey algodón",
         talla: "XXL",

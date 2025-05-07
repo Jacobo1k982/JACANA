@@ -583,7 +583,7 @@ const marcaszapatos2api = {
       title: "VANS",
       text: "",
       img: logovans,
-      url: "",
+      url: "/vans-mujer",
       btn: "Explorar más"
     },
     {
@@ -666,7 +666,7 @@ const marcaszapatosapi = {
       title: "VANS",
       text: "",
       img: logovans,
-      url: "",
+      url: "/vans-hombre",
       btn: "Explorar más"
     },
   ]

@@ -15,21 +15,21 @@ function Converse() {
     const [isImageClicked, setIsImageClicked] = useState(false);
 
     const products = [
-        { id: "conv-1", img: "/CONVERSE/CONVH/CONVH1.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "30000", Currency: "₡" },
-        { id: "conv-2", img: "/CONVERSE/CONVH/CONVH2.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "30000", Currency: "₡" },
-        { id: "conv-3", img: "/CONVERSE/CONVH/CONVH3.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "30000", Currency: "₡" },
-        { id: "conv-4", img: "/CONVERSE/CONVH/CONVH4.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "24000", Currency: "₡" },
-        { id: "conv-5", img: "/CONVERSE/CONVH/CONVH5.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "24000", Currency: "₡" },
-        { id: "conv-6", img: "/CONVERSE/CONVH/CONVH6.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 45], price: "24000", Currency: "₡" },
-        { id: "conv-7", img: "/CONVERSE/CONVH/CONVH7.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44, 45], price: "24000", Currency: "₡" },
-        { id: "conv-8", img: "/CONVERSE/CONVH/CONVH8.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43], price: "24000", Currency: "₡" },
-        { id: "conv-9", img: "/CONVERSE/CONVH/CONVH9.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "24000", Currency: "₡" },
-        { id: "conv-10", img: "/CONVERSE/CONVH/CONVH10.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [42, 43, 44], price: "24000", Currency: "₡" },
-        { id: "conv-11", img: "/CONVERSE/CONVH/CONVH11.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44, 45], price: "24000", Currency: "₡" },
-        { id: "conv-12", img: "/CONVERSE/CONVH/CONVH12.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "33000", Currency: "₡" },
-        { id: "conv-13", img: "/CONVERSE/CONVH/CONVH13.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "33000", Currency: "₡" },
-        { id: "conv-14", img: "/CONVERSE/CONVH/CONVH14.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "24000", Currency: "₡" },
-        { id: "conv-15", img: "/CONVERSE/CONVH/CONVH15.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43], price: "24000", Currency: "₡" },
+        { id: "conv-1", img: "/CONVERSE/CONVH/CONVH1.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "conv-2", img: "/CONVERSE/CONVH/CONVH2.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "conv-3", img: "/CONVERSE/CONVH/CONVH3.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "conv-4", img: "/CONVERSE/CONVH/CONVH4.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "21600", originalPrice: "24000", Currency: "₡" },
+        { id: "conv-5", img: "/CONVERSE/CONVH/CONVH5.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "21600", originalPrice: "24000", Currency: "₡" },
+        { id: "conv-6", img: "/CONVERSE/CONVH/CONVH6.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 45], price: "21600", originalPrice: "24000", Currency: "₡" },
+        { id: "conv-7", img: "/CONVERSE/CONVH/CONVH7.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44, 45], price: "21600", originalPrice: "24000", Currency: "₡" },
+        { id: "conv-8", img: "/CONVERSE/CONVH/CONVH8.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44, 45], price: "21600", originalPrice: "24000", Currency: "₡" },
+        { id: "conv-9", img: "/CONVERSE/CONVH/CONVH9.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "21600", originalPrice: "24000", Currency: "₡" },
+        { id: "conv-10", img: "/CONVERSE/CONVH/CONVH10.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "21600", originalPrice: "24000", Currency: "₡" },
+        { id: "conv-11", img: "/CONVERSE/CONVH/CONVH11.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44, 45], price: "21600", originalPrice: "24000", Currency: "₡" },
+        { id: "conv-12", img: "/CONVERSE/CONVH/CONVH12.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "29700", originalPrice: "33000", Currency: "₡" },
+        { id: "conv-13", img: "/CONVERSE/CONVH/CONVH13.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "29700", originalPrice: "33000", Currency: "₡" },
+        { id: "conv-14", img: "/CONVERSE/CONVH/CONVH14.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "21600", originalPrice: "24000", Currency: "₡" },
+        { id: "conv-15", img: "/CONVERSE/CONVH/CONVH15.jpg", title: "Converse", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43], price: "21600", originalPrice: "24000", Currency: "₡" },
 
     ];
 

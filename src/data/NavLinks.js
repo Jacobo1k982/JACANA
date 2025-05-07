@@ -27,7 +27,7 @@ const navLinks = [
                                     {name: 'New Balance', path: '/newb2'},
                                     {name: 'Converse', path: '/converse2'},
                                     {name: 'Crocs', path: ''},
-                                    {name: 'Vans', path: ''},
+                                    {name: 'Vans', path: '/vans-mujer'},
                                     {name: 'Fila', path: '/fila2'},
                                 ]
                         },
@@ -53,7 +53,7 @@ const navLinks = [
                                 {name: 'New Balance', path: '/newb'},
                                 {name: 'Converse', path: '/converse'},
                                 {name: 'Crocs', path: ''},
-                                {name: 'Vans', path: ''},
+                                {name: 'Vans', path: '/vans-hombre'},
                             ]
                         },
                         {name: 'Gorras', path: '/gorra'},

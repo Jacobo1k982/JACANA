@@ -16,19 +16,19 @@ function NewB2() {
     const [isImageClicked, setIsImageClicked] = useState(false);
 
     const products = [
-        { id: "nb-1", img: "/NEWBALANCE/NBM/NBM1.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39], price: "37500", Currency: "₡" },
-        { id: "nb-2", img: "/NEWBALANCE/NBM/NBM2.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37], price: "37500", Currency: "₡" },
-        { id: "nb-3", img: "/NEWBALANCE/NBM/NBM3.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "37500", Currency: "₡" },
-        { id: "nb-4", img: "/NEWBALANCE/NBM/NBM4.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "37500", Currency: "₡" },
-        { id: "nb-5", img: "/NEWBALANCE/NBM/NBM5.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "37500", Currency: "₡" },
-        { id: "nb-6", img: "/NEWBALANCE/NBM/NBM6.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "37500", Currency: "₡" },
-        { id: "nb-7", img: "/NEWBALANCE/NBM/NBM7.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "37500", Currency: "₡" },
-        { id: "nb-8", img: "/NEWBALANCE/NBM/NBM8.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "37500", Currency: "₡" },
-        { id: "nb-9", img: "/NEWBALANCE/NBM/NBM9.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "37500", Currency: "₡" },
-        { id: "nb-10", img: "/NEWBALANCE/NBM/NBM10.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "37500", Currency: "₡" },
-        { id: "nb-11", img: "/NEWBALANCE/NBM/NBM11.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "37500", Currency: "₡" },
-        { id: "nb-12", img: "/NEWBALANCE/NBM/NBM12.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "37500", Currency: "₡" },
-        { id: "nb-13", img: "/NEWBALANCE/NBM/NBM13.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37], price: "37500", Currency: "₡" },
+        { id: "nb-1", img: "/NEWBALANCE/NBM/NBM1.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39], price: "33750", originalPrice: "37500", Currency: "₡" },
+        { id: "nb-2", img: "/NEWBALANCE/NBM/NBM2.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37], price: "33750", originalPrice: "37500", Currency: "₡" },
+        { id: "nb-3", img: "/NEWBALANCE/NBM/NBM3.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "33750", originalPrice: "37500", Currency: "₡" },
+        { id: "nb-4", img: "/NEWBALANCE/NBM/NBM4.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "33750", originalPrice: "37500", Currency: "₡" },
+        { id: "nb-5", img: "/NEWBALANCE/NBM/NBM5.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "33750", originalPrice: "37500", Currency: "₡" },
+        { id: "nb-6", img: "/NEWBALANCE/NBM/NBM6.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "33750", originalPrice: "37500", Currency: "₡" },
+        { id: "nb-7", img: "/NEWBALANCE/NBM/NBM7.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "33750", originalPrice: "37500", Currency: "₡" },
+        { id: "nb-8", img: "/NEWBALANCE/NBM/NBM8.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "33750", originalPrice: "37500", Currency: "₡" },
+        { id: "nb-9", img: "/NEWBALANCE/NBM/NBM9.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "33750", originalPrice: "37500", Currency: "₡" },
+        { id: "nb-10", img: "/NEWBALANCE/NBM/NBM10.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "33750", originalPrice: "37500", Currency: "₡" },
+        { id: "nb-11", img: "/NEWBALANCE/NBM/NBM11.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "33750", originalPrice: "37500", Currency: "₡" },
+        { id: "nb-12", img: "/NEWBALANCE/NBM/NBM12.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "33750", originalPrice: "37500", Currency: "₡" },
+        { id: "nb-13", img: "/NEWBALANCE/NBM/NBM13.jpg", title: "NewBalance", model: "Modelo Exclusivo", sizes: [36, 37], price: "33750", originalPrice: "37500", Currency: "₡" },
 
     ];
 

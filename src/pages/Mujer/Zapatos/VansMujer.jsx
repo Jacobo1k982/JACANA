@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { FaRuler } from "react-icons/fa";
 
-function Puma2() {
+function VansMujer() {
 
     const dispatch = useDispatch();
     const [clickedProductId, setClickedProductId] = useState(null);
@@ -15,22 +15,19 @@ function Puma2() {
     const [isImageClicked, setIsImageClicked] = useState(false);
 
     const products = [
-        { id: "PUMA-1", img: "/PUMA/PMM/PMM1.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "33750", originalPrice: "37500", Currency: "₡" },
-        { id: "PUMA-2", img: "/PUMA/PMM/PMM2.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "33750", originalPrice: "37500", Currency: "₡" },
-        { id: "PUMA-3", img: "/PUMA/PMM/PMM3.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39, 40], price: "33750", originalPrice: "37500", Currency: "₡" },
-        { id: "PUMA-4", img: "/PUMA/PMM/PMM4.jpg", title: "Puma", model: "Forever Faste", sizes: [36], price: "21600", originalPrice: "24000", Currency: "₡" },
-        { id: "PUMA-5", img: "/PUMA/PMM/PMM5.jpg", title: "Puma", model: "Forever Faste", sizes: [36], price: "21600", originalPrice: "24000", Currency: "₡" },
-        { id: "PUMA-6", img: "/PUMA/PMM/PMM6.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "33750", originalPrice: "37500", Currency: "₡" },
-        { id: "PUMA-7", img: "/PUMA/PMM/PMM7.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "33750", originalPrice: "37500", Currency: "₡" },
-        { id: "PUMA-8", img: "/PUMA/PMM/PMM8.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "33750", originalPrice: "37500", Currency: "₡" },
-        { id: "PUMA-9", img: "/PUMA/PMM/PMM9.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 38, 39, 40], price: "17550", originalPrice: "19500", Currency: "₡" },
-        { id: "PUMA-10", img: "/PUMA/PMM/PMM10.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39, 40], price: "21600", originalPrice: "24000", Currency: "₡" },
-        { id: "PUMA-11", img: "/PUMA/PMM/PMM11.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39, 40], price: "17550", originalPrice: "19500", Currency: "₡" },
-        { id: "PUMA-12", img: "/PUMA/PMM/PMM12.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37], price: "21600", originalPrice: "24000", Currency: "₡" },
-        { id: "PUMA-13", img: "/PUMA/PMM/PMM13.jpg", title: "Puma", model: "Forever Faste", sizes: [35], price: "17550", originalPrice: "19500", Currency: "₡" },
-        { id: "PUMA-14", img: "/PUMA/PMM/PMM14.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "21600", originalPrice: "24000", Currency: "₡" },
-        { id: "PUMA-15", img: "/PUMA/PMM/PMM15.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39, 40], price: "21600", originalPrice: "24000", Currency: "₡" },
-        { id: "PUMA-16", img: "/PUMA/PMM/PMM16.jpg", title: "Puma", model: "Forever Faste", sizes: [36, 37, 38, 39], price: "21600", originalPrice: "24000", Currency: "₡" },
+        { id: "vans-1", img: "/VANS/VANSM/VANSM1.jpg", title: "VANS", model: "Modelo Exclusivo", sizes: [36, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "vans-2", img: "/VANS/VANSM/VANSM2.jpg", title: "VANS", model: "Modelo Exclusivo", sizes: [36, 38], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "vans-3", img: "/VANS/VANSM/VANSM3.jpg", title: "VANS", model: "Modelo Exclusivo", sizes: [35, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "vans-4", img: "/VANS/VANSM/VANSM4.jpg", title: "VANS", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "vans-5", img: "/VANS/VANSM/VANSM5.jpg", title: "VANS", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "vans-6", img: "/VANS/VANSM/VANSM6.jpg", title: "VANS", model: "Modelo Exclusivo", sizes: [35, 36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "vans-7", img: "/VANS/VANSM/VANSM7.jpg", title: "VANS", model: "Modelo Exclusivo", sizes: [35, 36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "vans-8", img: "/VANS/VANSM/VANSM8.jpg", title: "VANS", model: "Modelo Exclusivo", sizes: [37, 38, 39], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "vans-9", img: "/VANS/VANSM/VANSM9.jpg", title: "VANS", model: "Modelo Exclusivo", sizes: [37, 38], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "vans-10", img: "/VANS/VANSM/VANSM10.jpg", title: "VANS", model: "Modelo Exclusivo", sizes: [37, 38], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "vans-11", img: "/VANS/VANSM/VANSM11.jpg", title: "VANS", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
+        { id: "vans-12", img: "/VANS/VANSM/VANSM12.jpg", title: "VANS", model: "Modelo Exclusivo", sizes: [37, 38], price: "27000", originalPrice: "30000", Currency: "₡" },
+
     ];
 
     const handleSizeChange = (productId, size) => {
@@ -176,4 +173,4 @@ function Puma2() {
     );
 };
 
-export default Puma2;
+export default VansMujer;
