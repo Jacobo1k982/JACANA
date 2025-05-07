@@ -1,26 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { dataCarteras, marcaNombres } from "../data/dataCarteras";
 import { motion, AnimatePresence } from "framer-motion";
+import { IoClose, IoShirt, IoColorPalette, IoResize } from "react-icons/io5";
+
+const imageFade = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+};
 
 const CatalogoCarteras = () => {
     const { marca } = useParams();
-    const nombreMarca = marcaNombres[marca?.toLowerCase()] || "Catálogo de Carteras";
+    const nombreMarca = marcaNombres[marca?.toLowerCase()] || "Catálogo de carteras";
 
     const productosFiltrados = marca
-        ? dataCarteras.filter((cartera) => cartera.marca.toLowerCase() === marca.toLowerCase())
+        ? dataCarteras.filter(
+            (m) => m.marca.toLowerCase() === marca.toLowerCase()
+        )
         : dataCarteras;
 
     return (
         <section className="min-h-screen bg-gradient-to-br from-slate-900 to-gray-800 px-6 py-12 relative overflow-hidden">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl text-white font-bold mb-10 text-center drop-shadow-lg">
+                <h2 className="text-4xl sm:text-5xl text-white font-bold mb-12 text-center drop-shadow-xl font-serif">
                     {nombreMarca}
                 </h2>
 
-                <div className="grid grid-cols-4 sm:grid-cols-1 lg:grid-cols-3 gap-10">
-                    {productosFiltrados.map((cartera) => (
-                        <CardCartera key={cartera.id} cartera={cartera} />
+                <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    {productosFiltrados.map((item) => (
+                        <CardCarteras key={item.id} carteras={item} />
                     ))}
                 </div>
             </div>
@@ -28,138 +37,163 @@ const CatalogoCarteras = () => {
     );
 };
 
-const CardCartera = ({ cartera }) => {
+const CardCarteras = ({ carteras }) => {
     const [currentImage, setCurrentImage] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
-    const [showOverlay, setShowOverlay] = useState(false);
-    const navigate = useNavigate();
+    const [expanded, setExpanded] = useState(false);
+    const [expandedImageIndex, setExpandedImageIndex] = useState(0);
 
-    useEffect(() => {
-        if (cartera.img.length > 1 && !isHovered) {
-            const interval = setInterval(() => {
-                setCurrentImage((prev) => (prev + 1) % cartera.img.length);
-            }, 3000);
-            return () => clearInterval(interval);
-        }
-    }, [cartera.img.length, isHovered]);
+    const handlePrev = () =>
+        setCurrentImage((prev) => (prev - 1 + carteras.img.length) % carteras.img.length);
+    const handleNext = () =>
+        setCurrentImage((prev) => (prev + 1) % carteras.img.length);
 
-    const handlePrev = () => {
-        setCurrentImage((prev) => (prev - 1 + cartera.img.length) % cartera.img.length);
+    const openExpanded = () => {
+        setExpandedImageIndex(currentImage);
+        setExpanded(true);
     };
+    const closeExpanded = () => setExpanded(false);
 
-    const handleNext = () => {
-        setCurrentImage((prev) => (prev + 1) % cartera.img.length);
+    const expandedPrev = (e) => {
+        e.stopPropagation();
+        setExpandedImageIndex((prev) => (prev - 1 + carteras.img.length) % carteras.img.length);
     };
-
-    const handleDragEnd = (event, info) => {
-        if (info.offset.x > 50) {
-            handlePrev();
-        } else if (info.offset.x < -50) {
-            handleNext();
-        }
-    };
-
-    const handleVerMas = () => {
-        setShowOverlay(true);
-        setTimeout(() => {
-            navigate(`/cartera/${cartera.id}`);
-        }, 600); // esperar a que la animación termine (600ms)
+    const expandedNext = (e) => {
+        e.stopPropagation();
+        setExpandedImageIndex((prev) => (prev + 1) % carteras.img.length);
     };
 
     return (
-        <motion.div
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 200, damping: 20 }}
-            className="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col hover:shadow-cyan-700/30 transition-shadow duration-500 group relative"
-        >
-            {/* Splash overlay */}
-            <AnimatePresence>
-                {showOverlay && (
-                    <motion.div
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 3, opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.6, ease: "easeInOut" }}
-                        className="absolute inset-0 bg-cyan-600 z-50"
-                    />
-                )}
-            </AnimatePresence>
-
-            {/* Carrusel de imágenes */}
-            <div
-                className="relative w-full h-72 bg-gray-100 overflow-hidden"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
+        <>
+            <motion.div
+                whileHover={{ scale: 1.03 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                className="bg-gradient-to-tr from-white/100 to-slate-100/100 backdrop-blur-xl rounded-3xl shadow-lg hover:shadow-cyan-500/30 overflow-hidden group relative flex flex-col border border-cyan-400/30"
             >
-                <AnimatePresence mode="wait">
-                    <motion.img
-                        key={cartera.img[currentImage]}
-                        src={cartera.img[currentImage]}
-                        alt={`${cartera.nombre} ${currentImage + 1}`}
+                <div
+                    className="relative w-full h-72 bg-gray-100"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    onClick={openExpanded}
+                >
+                    <AnimatePresence mode="wait">
+                        <motion.img
+                            key={carteras.img[currentImage]}
+                            src={carteras.img[currentImage]}
+                            alt={`${carteras.nombre} ${currentImage + 1}`}
+                            variants={imageFade}
+                            initial="initial"
+                            animate="animate"
+                            exit="exit"
+                            transition={{ duration: 0.4 }}
+                            drag="x"
+                            dragConstraints={{ left: 0, right: 0 }}
+                            onDragEnd={(event, info) => {
+                                if (info.offset.x > 50) handlePrev();
+                                else if (info.offset.x < -50) handleNext();
+                            }}
+                            className="absolute inset-0 w-full h-full object-cover p-4 rounded-t-3xl cursor-zoom-in"
+                        />
+                    </AnimatePresence>
+
+                    {carteras.img.length > 1 && (
+                        <>
+                            <ArrowButton position="left" onClick={(e) => { e.stopPropagation(); handlePrev(); }} />
+                            <ArrowButton position="right" onClick={(e) => { e.stopPropagation(); handleNext(); }} />
+                        </>
+                    )}
+
+                    {carteras.img.length > 1 && (
+                        <div className="absolute bottom-3 w-full flex justify-center gap-2">
+                            {carteras.img.map((_, idx) => (
+                                <div
+                                    key={idx}
+                                    className={`w-2.5 h-2.5 rounded-full ${idx === currentImage ? "bg-cyan-600" : "bg-gray-400"} transition-colors duration-300`}
+                                />
+                            ))}
+                        </div>
+                    )}
+                </div>
+
+                <div className="p-5 flex flex-col flex-grow justify-between">
+                    <div>
+                        <h3 className="text-xl font-semibold text-gray-800 mb-2">{carteras.nombre}</h3>
+                        <p className="text-gray-700 text-sm mb-4">{carteras.descripcion}</p>
+
+                        <div className="flex flex-col gap-2 text-sm text-gray-600">
+                            <div className="flex items-center gap-2">
+                                <IoShirt className="text-cyan-600" />
+                                <span>Material: {carteras.material || 'No especificado'}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <IoColorPalette className="text-cyan-600" />
+                                <span>Color: {carteras.color || 'Variedad'}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <IoResize className="text-cyan-600" />
+                                <span>Talla: {carteras.talla || 'Única / Varias'}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="mt-4 flex items-center justify-between">
+                        <span className="text-lg font-bold text-emerald-600">₡{carteras.precio}</span>
+                    </div>
+                </div>
+            </motion.div>
+
+            <AnimatePresence>
+                {expanded && (
+                    <motion.div
+                        className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}
-                        drag="x"
-                        dragConstraints={{ left: 0, right: 0 }}
-                        onDragEnd={handleDragEnd}
-                        className="absolute inset-0 w-full h-full object-contain p-6 cursor-grab active:cursor-grabbing"
-                    />
-                </AnimatePresence>
-
-                {/* Flechas */}
-                {cartera.img.length > 1 && (
-                    <>
-                        <button
-                            onClick={handlePrev}
-                            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full w-8 h-8 flex items-center justify-center transition"
-                        >
-                            ‹
-                        </button>
-                        <button
-                            onClick={handleNext}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full w-8 h-8 flex items-center justify-center transition"
-                        >
-                            ›
-                        </button>
-                    </>
-                )}
-
-                {/* Puntitos */}
-                {cartera.img.length > 1 && (
-                    <div className="absolute bottom-3 w-full flex justify-center items-center gap-2">
-                        {cartera.img.map((_, idx) => (
-                            <div
-                                key={idx}
-                                className={`w-2.5 h-2.5 rounded-full ${idx === currentImage ? "bg-cyan-600" : "bg-gray-400"
-                                    } transition-colors duration-300`}
-                            ></div>
-                        ))}
-                    </div>
-                )}
-            </div>
-
-            {/* Contenido */}
-            <div className="p-6 flex flex-col justify-between flex-grow">
-                <div>
-                    <h3 className="text-2xl font-semibold text-gray-800 mb-2">{cartera.nombre}</h3>
-                    <p className="text-gray-600 text-sm">{cartera.descripcion.slice(0, 60)}...</p>
-                </div>
-
-                <div className="mt-6 flex items-center justify-between">
-                    <span className="text-lg font-bold text-cyan-700">₡{cartera.precio}</span>
-                    <motion.button
-                        onClick={handleVerMas}
-                        whileTap={{ scale: 0.9 }}
-                        whileHover={{ scale: 1.05 }}
-                        className="bg-cyan-600 hover:bg-cyan-700 text-white px-5 py-2 rounded-full text-sm transition-all duration-300 shadow-md hover:shadow-lg"
+                        onClick={closeExpanded}
                     >
-                        Ver más
-                    </motion.button>
-                </div>
-            </div>
-        </motion.div>
+                        <motion.div
+                            initial={{ scale: 0.8 }}
+                            animate={{ scale: 1 }}
+                            exit={{ scale: 0.8 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="relative flex items-center justify-center"
+                        >
+                            <img
+                                src={carteras.img[expandedImageIndex]}
+                                alt="Imagen expandida"
+                                className="max-w-[80vw] max-h-[80vh] object-contain rounded-xl shadow-2xl"
+                            />
+                            {carteras.img.length > 1 && (
+                                <>
+                                    <ArrowButton position="left" onClick={expandedPrev} />
+                                    <ArrowButton position="right" onClick={expandedNext} />
+                                </>
+                            )}
+                            <button
+                                onClick={closeExpanded}
+                                aria-label="Cerrar imagen"
+                                className="absolute -top-4 -right-4 text-white bg-black/60 hover:bg-black/80 p-2 rounded-full text-2xl"
+                            >
+                                <IoClose />
+                            </button>
+                        </motion.div>
+
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </>
     );
 };
+
+const ArrowButton = ({ position, onClick }) => (
+    <button
+        onClick={onClick}
+        className={`absolute top-1/2 -translate-y-1/2 ${position === "left" ? "left-2" : "right-2"}
+        bg-black/30 hover:bg-black/50 text-white w-8 h-8 flex items-center justify-center rounded-full transition`}
+        aria-label={`Flecha ${position}`}
+    >
+        {position === "left" ? "‹" : "›"}
+    </button>
+);
 
 export default CatalogoCarteras;
