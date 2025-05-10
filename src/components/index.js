@@ -59,3 +59,4 @@ export {default as CaracteristicasMa√±anitas} from './Pijamas/CaracteristicasMa√
 export {default as Vans} from '../pages/Hombre/Zapatos/Vans.jsx';
 export {default as VansMujer} from '../pages/Mujer/Zapatos/VansMujer.jsx';
 export {default as Contacto} from '../pages/Contacto.jsx';
+export {default as ParticlesBackground} from '../pages/ParticlesBackground.jsx';

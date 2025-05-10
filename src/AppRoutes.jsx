@@ -18,6 +18,7 @@ import DetalleCartera from "./components/DetalleCartera";
 import CatalogoCarteras from "./components/CatalogoCarteras";
 import CaracteristicasCartera from "./components/CaracteristicasCartera";
 import CarteraMujer from "./components/CarteraMujer";
+import Contacto from './pages/Contacto';
 
 /* Sección: Componentes de la página principal */
 const Hero = lazy(() => import('./components/Hero'));
@@ -79,12 +80,13 @@ const CatalogoMañanitas = lazy(() => import('./components/Pijamas/CatalogoMaña
 const DetalleMañanitas = lazy(() => import('./components/Pijamas/DetalleMañanitas'));
 const CaracteristicasMañanitas = lazy(() => import('./components/Pijamas/CaracteristicasMañanitas'));
 
+const ParticlesBackground = lazy(() => import('./pages/ParticlesBackground'));
+
 /* Sección: Componentes relacionados con Carteras */
 const TiendaCarteras = lazy(() => import('./components/TiendaCarteras'));
 
 /* Sección: Componentes de utilidades */
 const ScrollToTop = lazy(() => import('./components/ScrollToTop'));
-
 export default function AppRoutes() {
     const storiesRef = useRef(null);
 
@@ -202,7 +204,7 @@ export default function AppRoutes() {
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <PortadaGorra deportivoapi={deportivoapi} />
                         <div className='Filaappwoman'>
-                            <div className='fila'>
+                            <div className='gorra'>
                                 <div className='col'>
                                     <Gorra />
                                 </div>
@@ -342,6 +344,7 @@ export default function AppRoutes() {
                 <Route path="/mañanitas/:id" element={<DetalleMañanitas />} />
                 <Route path="/caracteristicasmañanitas/:id" element={<CaracteristicasMañanitas />} />
                 <Route path="/guia-de-tallas" element={<GuiaDeTallas />} />
+                <Route path="/contacto" element={<Contacto />} />
             </Routes>
         </>
     );

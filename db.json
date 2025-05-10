@@ -1,0 +1,16 @@
+{
+  "contactos": [
+    {
+      "id": "4304",
+      "nombre": "Isidro Jacobo",
+      "correo": "askmecr@gmail.com",
+      "mensaje": "Gracias por la página"
+    },
+    {
+      "id": "acdf",
+      "nombre": "Jacobo",
+      "correo": "jgutierrez@bpomiconta.com",
+      "mensaje": "Lo máximo"
+    }
+  ]
+}

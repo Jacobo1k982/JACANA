@@ -38,7 +38,7 @@ const ofertas = [
         price: '₡27,000',
         originalPrice: '₡30,000',
         discount: '20%',
-        endsInSeconds: 240,
+        endsInSeconds: 8000,
         rating: 4,
         stock: 5,
         popular: true,
