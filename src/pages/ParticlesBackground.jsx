@@ -1,11 +1,11 @@
 // src/components/ParticlesBackground.jsx
 import React from "react";
 import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
+import { loadFull } from "tsparticles";
 
 export default function ParticlesBackground() {
     const particlesInit = async (main) => {
-        await loadSlim(main);
+        await loadFull(main);
     };
 
     return (
@@ -18,7 +18,10 @@ export default function ParticlesBackground() {
                     color: "#0f0c29",
                 },
                 particles: {
-                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    number: {
+                        value: 80,
+                        density: { enable: true, value_area: 800 },
+                    },
                     color: { value: "#a855f7" },
                     shape: { type: "circle" },
                     opacity: {
