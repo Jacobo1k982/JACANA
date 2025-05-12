@@ -17,7 +17,7 @@ function Nike() {
 
     const products = [
         { id: "nike-1", img: "/NKH/NKH1.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "31050", originalPrice: "34500", Currency: "₡" },
-        { id: "nike-2", img: "/NKH/NKH2.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "31050", originalPrice: "34500",  Currency: "₡" },
+        { id: "nike-2", img: "/NKH/NKH2.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "31050", originalPrice: "34500", Currency: "₡" },
         { id: "nike-3", img: "/NKH/NKH3.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "29700", originalPrice: "33000", Currency: "₡" },
         { id: "nike-4", img: "/NKH/NKH4.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43], price: "31050", originalPrice: "34500", Currency: "₡" },
         { id: "nike-5", img: "/NKH/NKH5.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [41, 42, 43], price: "31050", originalPrice: "34500", Currency: "₡" },
@@ -117,8 +117,8 @@ function Nike() {
         { id: "nike-99", img: "/NKH/NKH99.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43], price: "21600", originalPrice: "24000", Currency: "₡" },
         { id: "nike-100", img: "/NKH/NKH100.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [40, 41], price: "21600", originalPrice: "24000", Currency: "₡" },
         { id: "nike-101", img: "/NKH/NKH101.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43], price: "21600", originalPrice: "24000", Currency: "₡" },
-        { id: "nike-102", img: "/NKH/NKH102.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43], price: "21600", originalPrice: "24000",Currency: "₡" },
-        { id: "nike-103", img: "/NKH/NKH103.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [41], price: "21600", originalPrice: "24000",Currency: "₡" },
+        { id: "nike-102", img: "/NKH/NKH102.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43], price: "21600", originalPrice: "24000", Currency: "₡" },
+        { id: "nike-103", img: "/NKH/NKH103.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [41], price: "21600", originalPrice: "24000", Currency: "₡" },
         { id: "nike-104", img: "/NKH/NKH104.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [40, 41], price: "21600", originalPrice: "24000", Currency: "₡" },
         { id: "nike-105", img: "/NKH/NKH105.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [40, 41, 42, 43, 44], price: "29700", originalPrice: "33000", Currency: "₡" },
         { id: "nike-106", img: "/NKH/NKH106.jpg", title: "Nike", model: "Modelo Exclusivo", sizes: [41], price: "27000", originalPrice: "30000", Currency: "₡" },
@@ -218,7 +218,7 @@ function Nike() {
                                             key={size}
                                             onClick={() => handleSizeChange(product.id, size)}
                                             className={`px-3 py-1 rounded-md border text-sm 
-                ${selectedSizes[product.id] === size
+                            ${selectedSizes[product.id] === size
                                                     ? "bg-orange-500 text-white border-orange-500"
                                                     : "bg-gray-700 text-white border-gray-600 hover:bg-gray-600"
                                                 }`}

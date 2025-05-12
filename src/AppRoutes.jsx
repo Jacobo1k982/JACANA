@@ -32,8 +32,7 @@ const Shoebrands2 = lazy(() => import('./components/Shoebrands2'));
 const Mujer = lazy(() => import('./components/Mujer'));
 const Hombre = lazy(() => import('./components/Hombre'));
 const Ropa = lazy(() => import('./components/Ropa'));
-const Deportivo = lazy(() => import('./components/Deportivo'));
-const Sportmujer = lazy(() => import('./components/Sportmujer'));
+const EncabezadoCatalogo = lazy(() => import('./components/EncabezadoCatalogo'));
 const Juvenil = lazy(() => import('./components/Juvenil'));
 const Niña = lazy(() => import('./components/Niña'));
 const Niño = lazy(() => import('./components/Niño'));
@@ -48,13 +47,6 @@ const Converse = lazy(() => import('./pages/Hombre/Zapatos/Converse'));
 const NewB = lazy(() => import('./pages/Hombre/Zapatos/NewB'));
 const Vans = lazy(() => import('./pages/Hombre/Zapatos/Vans'));
 const Gorra = lazy(() => import('./pages/Hombre/Gorra'));
-const PortadaTommyHombre = lazy(() => import('./components/PortadaTommyHombre'));
-const PortadaAdidasH = lazy(() => import('./components/PortadaAdidasH'));
-const PortadaPumaH = lazy(() => import('./components/PortadaPumaH'));
-const PortadaSandalias = lazy(() => import('./components/PortadaSandalias'));
-const PortadaConverse = lazy(() => import('./components/PortadaConverse'));
-const PortadaNB = lazy(() => import('./components/PortadaNB'));
-const PortadaGorra = lazy(() => import('./components/PortadaGorra'));
 
 /* Sección: Componentes específicos de marcas para Mujer */
 const Nkmujer = lazy(() => import('./pages/Mujer/Zapatos/Nkmujer'));
@@ -64,12 +56,6 @@ const Fila2 = lazy(() => import('./pages/Mujer/Zapatos/Fila2'));
 const Puma2 = lazy(() => import('./pages/Mujer/Zapatos/Puma2'));
 const Converse2 = lazy(() => import('./pages/Mujer/Zapatos/Converse2'));
 const NewB2 = lazy(() => import('./pages/Mujer/Zapatos/NewB2'));
-const PortadaTommyMujer = lazy(() => import('./components/PortadaTommyMujer'));
-const PortadaAdidasM = lazy(() => import('./components/PortadaAdidasM'));
-const PortadaFilaM = lazy(() => import('./components/PortadaFilaM'));
-const PortadaPumaM = lazy(() => import('./components/PortadaPumaM'));
-const PortadaConverse2 = lazy(() => import('./components/PortadaConverse2'));
-const PortadaNB2 = lazy(() => import('./components/PortadaNB2'));
 const VansMujer = lazy(() => import('./pages/Mujer/Zapatos/VansMujer'));
 
 /* Sección: Componentes relacionados con Pijamas Mañanitas */
@@ -118,7 +104,7 @@ export default function AppRoutes() {
                 <Route path="/marcaszapatos2" element={<Shoebrands2 marcaszapatos2api={marcaszapatos2api} />} />
                 <Route path="/newb2" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaNB2 deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='NewB2appwoman'>
                             <div className='fila'>
                                 <div className='col'>
@@ -130,7 +116,7 @@ export default function AppRoutes() {
                 } />
                 <Route path="/newb" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaNB deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='NewBappwoman'>
                             <div className='fila'>
                                 <div className='col'>
@@ -142,7 +128,7 @@ export default function AppRoutes() {
                 } />
                 <Route path="/converse2" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaConverse2 deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Converse2appwoman'>
                             <div className='fila'>
                                 <div className='col'>
@@ -154,7 +140,7 @@ export default function AppRoutes() {
                 } />
                 <Route path="/converse" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaConverse deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Converseappwoman'>
                             <div className='fila'>
                                 <div className='col'>
@@ -166,7 +152,7 @@ export default function AppRoutes() {
                 } />
                 <Route path="/sandalias" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaSandalias deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Sandaliasappwoman'>
                             <div className='fila'>
                                 <div className='col'>
@@ -178,7 +164,7 @@ export default function AppRoutes() {
                 } />
                 <Route path="/puma" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaPumaH deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Pumaappwoman'>
                             <div className='fila'>
                                 <div className='col'>
@@ -190,7 +176,7 @@ export default function AppRoutes() {
                 } />
                 <Route path="/puma2" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaPumaM deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Puma2appwoman'>
                             <div className='fila'>
                                 <div className='col'>
@@ -202,7 +188,7 @@ export default function AppRoutes() {
                 } />
                 <Route path="/gorra" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaGorra deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Filaappwoman'>
                             <div className='gorra'>
                                 <div className='col'>
@@ -215,7 +201,7 @@ export default function AppRoutes() {
 
                 <Route path="/fila2" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaFilaM deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Filaappwoman'>
                             <div className='fila'>
                                 <div className='col'>
@@ -227,7 +213,7 @@ export default function AppRoutes() {
                 } />
                 <Route path="/adidas2" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaAdidasM deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Adidasappwoman'>
                             <div className='fila'>
                                 <div className='col'>
@@ -239,7 +225,7 @@ export default function AppRoutes() {
                 } />
                 <Route path="/adidas" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaAdidasH deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Adidasappman'>
                             <div className='fila'>
                                 <div className='col'>
@@ -251,7 +237,7 @@ export default function AppRoutes() {
                 } />
                 <Route path="/tommy" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaTommyHombre deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Tommyappman'>
                             <div className='fila'>
                                 <div className='col'>
@@ -263,7 +249,7 @@ export default function AppRoutes() {
                 } />
                 <Route path="/tommy2" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <PortadaTommyMujer deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Tommyappwoman'>
                             <div className='fila'>
                                 <div className='col'>
@@ -276,7 +262,7 @@ export default function AppRoutes() {
 
                 <Route path="/deportivo" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <Deportivo deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Nikeappman'>
                             <div className='nike'>
                                 <div className='col'>
@@ -288,7 +274,7 @@ export default function AppRoutes() {
                 } />
                 <Route path="/vans-hombre" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <Deportivo deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Vansappman'>
                             <div className='vans'>
                                 <div className='col'>
@@ -300,7 +286,7 @@ export default function AppRoutes() {
                 } />
                 <Route path="/vans-mujer" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <Deportivo deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Vansappwoman'>
                             <div className='vans'>
                                 <div className='col'>
@@ -314,7 +300,7 @@ export default function AppRoutes() {
                 {/* Sport Mujer */}
                 <Route path="/sportmujer" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
-                        <Sportmujer deportivoapi={deportivoapi} />
+                        <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Nikeappwoman'>
                             <h2 className='text-6xl lg:text-4xl md:text-3xl sm:text-2xl xsm:text-xl font-extrabold filter drop-shadow-sm text-slate-200 text-center'></h2>
                             <div className='fila'>
