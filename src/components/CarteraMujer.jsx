@@ -47,9 +47,9 @@ const CarteraMujer = () => {
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-4xl sm:text-3xl xs:text-2xl font-extrabold text-white drop-shadow-md"
+                    className="text-4xl sm:text-3xl xs:text-2xl font-semibold text-white drop-shadow-md"
                 >
-                    Para Cada Mujer, Una Cartera
+                    <span className="text-cyan-400 font-Orbitron">Para Cada</span> Mujer, Una Cartera
                 </motion.h2>
 
                 <motion.div

@@ -21,7 +21,7 @@ const CatalogoCarteras = () => {
         : dataCarteras;
 
     return (
-        <section className="min-h-screen bg-gradient-to-br from-slate-900 to-gray-800 px-6 py-12 relative overflow-hidden">
+        <section className="min-h-screen bg-gradient-to-br from-slate-900 to-gray-800 px-6 py-24 relative overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-3xl sm:text-5xl text-white font-bold mb-12 text-center drop-shadow-xl font-serif">
                     {nombreMarca}

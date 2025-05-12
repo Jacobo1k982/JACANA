@@ -102,19 +102,19 @@ const Navbar = () => {
           </Link>
 
           <ul className="flex items-center space-x-4 sm:space-x-6">
-            <li className="sm:block hidden">
+            <li className="">
               <button onClick={toggleSearch} className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
                 <MagnifyingGlassIcon className={`w-6 h-6 transition-all duration-300 ${navState ? 'text-gray-800' : 'text-white'}`} />
               </button>
             </li>
 
-            <li className="sm:block hidden">
+            <li className="">
               <button className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
                 <HeartIcon className={`w-6 h-6 transition-all duration-300 ${navState ? 'text-gray-800' : 'text-white'}`} />
               </button>
             </li>
 
-            <li className="sm:block hidden">
+            <li className="">
               <button onClick={toggleDrawer} className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
                 <ShoppingBagIcon className={`w-6 h-6 transition-all duration-300 ${navState ? 'text-gray-800' : 'text-white'}`} />
                 {totalQTY > 0 && (
