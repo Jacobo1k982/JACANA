@@ -1,8 +1,13 @@
 # JACANA STYLES Costa Rica
 Tienda Virtual JACANA Styles Costa Rica
 
- <p align="center"><img 
- src="https://github.com/Jacobo1k982/JACANA_img/blob/main/inicio_pantalla.png" width="65%"/></p>
+ <p style="text-align: center;">
+  <img 
+    src="https://raw.githubusercontent.com/Jacobo1k982/JACANA_img/main/inicio_pantalla.png" 
+    alt="Pantalla de inicio de JACANA" 
+    style="width: 65%; max-width: 100%; height: auto;" 
+  />
+</p>
  
 
 
