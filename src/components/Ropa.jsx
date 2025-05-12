@@ -19,19 +19,38 @@ const Ropa = ({ ropa: { title, subtitle, news } }) => {
         flickPower: 600,
         easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
         speed: 600,
-        gap: '2rem',
+        gap: '1.5rem',
         pagination: false,
-        padding: '3rem',
+        padding: '2rem',
         breakpoints: {
-            1200: { perPage: 3, gap: '1.5rem', padding: '2rem' },
-            991: { perPage: 2.3, gap: '1.2rem', padding: '1.5rem' },
-            768: { perPage: 2, gap: '1rem', padding: '1rem' },
-            500: { perPage: 1.3, gap: '0.8rem', padding: '0.8rem' },
-            425: { perPage: 1, gap: '0.6rem', padding: '0.6rem' },
-            375: { perPage: 1, gap: '0.5rem', padding: '0.5rem' },
-            320: { perPage: 1, gap: '0.4rem', padding: '0.4rem' },
+            1024: {
+                perPage: 2,
+                gap: '1.2rem',
+                padding: '1.5rem',
+            },
+            768: {
+                perPage: 1,
+                gap: '1rem',
+                padding: '1rem',
+            },
+            640: {
+                perPage: 1,
+                gap: '0.8rem',
+                padding: '0.8rem',
+            },
+            480: {
+                perPage: 1,
+                gap: '0.5rem',
+                padding: '0.5rem',
+            },
+            375: {
+                perPage: 1,
+                gap: '0.4rem',
+                padding: '0.3rem',
+            },
         },
     };
+
 
     return (
         <section
@@ -48,10 +67,10 @@ const Ropa = ({ ropa: { title, subtitle, news } }) => {
                     initial={{ opacity: 0, y: -40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.9, ease: "easeOut" }}
-                    className="text-5xl sm:text-3xl xs:text-3xl font-Playfair text-white tracking-tight drop-shadow-lg"
+                    className="text-3xl sm:text-2xl xs:text-2xl font-Playfair text-white tracking-tight drop-shadow-lg"
                     style={{ textShadow: '0 0 10px rgba(0, 180, 216, 0.6)' }} // Neón sutil
                 >
-                    <span className="text-sky-400 font-orbitron">Explora</span> nuestras categorías
+                    <span className="text-sky-400 font-Orbitron">Explora</span> nuestras categorías
                 </motion.h2>
 
                 <motion.div
@@ -89,14 +108,14 @@ const Ropa = ({ ropa: { title, subtitle, news } }) => {
                                             <h1 className="text-2xl sm:text-xl xs:text-lg font-Playfair text-sky-500 text-center tracking-wide">
                                                 {val.title}
                                             </h1>
-                                            <p className="text-sm xs:text-xs text-gray-400 text-justify font-orbitron leading-relaxed">
+                                            <p className="text-sm xs:text-xs text-gray-400 text-justify font-Orbitron leading-relaxed">
                                                 {truncate(val.text, { length: 130 })}
                                             </p>
                                         </div>
                                         <div className="w-full bg-gray-700 bg-opacity-80">
                                             <Link
                                                 to={val.url}
-                                                className="block w-full text-center py-2.5 xs:py-2 text-sky-500 text-sm xs:text-xs font-orbitron hover:bg-cyan-700 hover:text-cyan-200 transition-colors duration-300"
+                                                className="block w-full text-center py-2.5 xs:py-2 text-sky-500 text-sm xs:text-xs font-Orbitron hover:bg-cyan-700 hover:text-cyan-200 transition-colors duration-300"
                                             >
                                                 {val.btn} <span className="ml-1 text-cyan-400">&#8594;</span>
                                             </Link>

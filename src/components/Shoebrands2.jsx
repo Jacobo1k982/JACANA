@@ -11,7 +11,7 @@ const Shoebrands2 = ({ marcaszapatos2api: { news } }) => {
     const { width } = useWindowSize();
 
     const splideOptions = {
-        perPage: 4,
+        perPage: 3,
         perMove: 1,
         type: 'loop',
         rewind: true,
@@ -25,13 +25,31 @@ const Shoebrands2 = ({ marcaszapatos2api: { news } }) => {
         pagination: false,
         padding: '2rem',
         breakpoints: {
-            1200: { perPage: 3 },
-            991: { perPage: 2.3 },
-            768: { perPage: 2 },
-            500: { perPage: 1.3, gap: '1rem' },
-            425: { perPage: 1, gap: '0.8rem' },
-            375: { perPage: 1, gap: '0.6rem', padding: '1rem' },
-            320: { perPage: 1, gap: '0.4rem', padding: '0.5rem' },
+            1024: {
+                perPage: 2,
+                gap: '1.2rem',
+                padding: '1.5rem',
+            },
+            768: {
+                perPage: 1,
+                gap: '1rem',
+                padding: '1rem',
+            },
+            640: {
+                perPage: 1,
+                gap: '0.8rem',
+                padding: '0.8rem',
+            },
+            480: {
+                perPage: 1,
+                gap: '0.5rem',
+                padding: '0.5rem',
+            },
+            375: {
+                perPage: 1,
+                gap: '0.4rem',
+                padding: '0.3rem',
+            },
         },
     };
 
@@ -53,9 +71,9 @@ const Shoebrands2 = ({ marcaszapatos2api: { news } }) => {
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-4xl sm:text-3xl xs:text-2xl font-extrabold text-white drop-shadow-md"
+                    className="text-3xl sm:text-3xl xs:text-2xl font-semibold text-white drop-shadow-md"
                 >
-                    <span className="text-sky-400 font-orbitron">Un mundo</span> de marcas a tus pies
+                    <span className="text-sky-400 font-Orbitron">Un mundo</span> de marcas a tus pies
                 </motion.h2>
 
                 <motion.div
@@ -95,14 +113,14 @@ const Shoebrands2 = ({ marcaszapatos2api: { news } }) => {
                                             <h1 className="text-xl sm:text-lg xs:text-base font-Playfair text-sky-500 text-center tracking-wide">
                                                 {val.title}
                                             </h1>
-                                            <p className="text-xs xs:text-[10px] text-gray-400 text-justify font-orbitron leading-snug">
+                                            <p className="text-xs xs:text-[10px] text-gray-400 text-justify font-Orbitron leading-snug">
                                                 {truncate(val.text, { length: 100 })}
                                             </p>
                                         </div>
                                         <div className="w-full bg-gray-700 bg-opacity-80">
                                             <Link
                                                 to={val.url}
-                                                className="block w-full text-center py-2 xs:py-1.5 text-sky-500 text-xs xs:text-[10px] font-orbitron hover:bg-cyan-700 hover:text-cyan-200 transition-colors duration-300"
+                                                className="block w-full text-center py-2 xs:py-1.5 text-sky-500 text-xs xs:text-[10px] font-Orbitron hover:bg-cyan-700 hover:text-cyan-200 transition-colors duration-300"
                                             >
                                                 {val.btn} <span className="ml-1 text-cyan-400">&#8594;</span>
                                             </Link>

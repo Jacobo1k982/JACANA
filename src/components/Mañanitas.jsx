@@ -16,20 +16,38 @@ const Mañanitas = ({ mañanitas: { title = "", news = [] } }) => {
         keyboard: 'global',
         drag: true,
         swipe: true,
-        flickPower: 600,         // Sensibilidad de swipe
-        easing: 'cubic-bezier(0.25, 1, 0.5, 1)', // Transición suave tipo "snap"
-        speed: 600,             // Velocidad de cambio entre slides
+        flickPower: 600,
+        easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+        speed: 600,
         gap: '1.5rem',
         pagination: false,
         padding: '2rem',
         breakpoints: {
-            1200: { perPage: 3 },
-            991: { perPage: 2.3 },
-            768: { perPage: 2 },
-            500: { perPage: 1.3, gap: '1rem' },
-            425: { perPage: 1, gap: '0.8rem' },
-            375: { perPage: 1, gap: '0.6rem', padding: '1rem' },
-            320: { perPage: 1, gap: '0.4rem', padding: '0.5rem' },
+            1024: {
+                perPage: 2,
+                gap: '1.2rem',
+                padding: '1.5rem',
+            },
+            768: {
+                perPage: 1,
+                gap: '1rem',
+                padding: '1rem',
+            },
+            640: {
+                perPage: 1,
+                gap: '0.8rem',
+                padding: '0.8rem',
+            },
+            480: {
+                perPage: 1,
+                gap: '0.5rem',
+                padding: '0.5rem',
+            },
+            375: {
+                perPage: 1,
+                gap: '0.4rem',
+                padding: '0.3rem',
+            },
         },
     };
 
@@ -48,7 +66,7 @@ const Mañanitas = ({ mañanitas: { title = "", news = [] } }) => {
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-4xl sm:text-3xl xs:text-2xl font-extrabold text-white drop-shadow-md" // Texto en blanco para contraste
+                    className="text-3xl sm:text-2xl xs:text-2xl font-extrabold text-white drop-shadow-md" // Texto en blanco para contraste
                 >
                     Eleva tu Estilo
                 </motion.h2>

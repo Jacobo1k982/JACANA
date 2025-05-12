@@ -41,7 +41,7 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                     initial={{ opacity: 0, y: -40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.9, ease: "easeOut" }}
-                    className="text-5xl sm:text-3xl xs:text-3xl font-opensans font-semibold text-white tracking-tight drop-shadow-lg"
+                    className="text-3xl sm:text-2xl xs:text-2xl font-opensans font-semibold text-white tracking-tight drop-shadow-lg"
                     style={{ textShadow: '0 0 10px rgba(0, 180, 216, 0.6)' }}
                 >
                     <span className="text-sky-400 font-Orbitron">Explora</span> las Mejores Marcas

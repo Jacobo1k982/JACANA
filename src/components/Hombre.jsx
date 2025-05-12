@@ -66,7 +66,7 @@ const Hombre = ({ caballero: { news } }) => {
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-4xl sm:text-3xl xs:text-2xl font-semibold text-white drop-shadow-md" // Texto en blanco para contraste
+                    className="text-3xl sm:text-2xl xs:text-2xl font-semibold text-white drop-shadow-md" // Texto en blanco para contraste
                 >
                     <span className="text-sky-400 font-Orbitron">Todo</span> lo que buscas y más
                 </motion.h2>
@@ -106,14 +106,14 @@ const Hombre = ({ caballero: { news } }) => {
                                             <h1 className="text-2xl sm:text-xl xs:text-lg font-Playfair text-sky-500 text-center tracking-wide">
                                                 {val.title}
                                             </h1>
-                                            <p className="text-sm xs:text-xs text-gray-400 text-justify font-orbitron leading-relaxed">
+                                            <p className="text-sm xs:text-xs text-gray-400 text-justify font-Orbitron leading-relaxed">
                                                 {truncate(val.text, { length: 130 })}
                                             </p>
                                         </div>
                                         <div className="w-full bg-gray-700 bg-opacity-80">
                                             <Link
                                                 to={val.url}
-                                                className="block w-full text-center py-2.5 xs:py-2 text-sky-500 text-sm xs:text-xs font-orbitron hover:bg-cyan-700 hover:text-cyan-200 transition-colors duration-300"
+                                                className="block w-full text-center py-2.5 xs:py-2 text-sky-500 text-sm xs:text-xs font-Orbitron hover:bg-cyan-700 hover:text-cyan-200 transition-colors duration-300"
                                             >
                                                 {val.btn} <span className="ml-1 text-cyan-400">&#8594;</span>
                                             </Link>

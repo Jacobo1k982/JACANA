@@ -278,7 +278,7 @@ export default function AppRoutes() {
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <Deportivo deportivoapi={deportivoapi} />
                         <div className='Nikeappman'>
-                            <div className='fila'>
+                            <div className='nike'>
                                 <div className='col'>
                                     <Nike />
                                 </div>

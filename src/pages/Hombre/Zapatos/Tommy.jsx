@@ -69,7 +69,7 @@ function Tommy() {
 
     return (
         <div className="p-6 bg-gray-900 text-white min-h-screen">
-            <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {products.map((product) => {
                     const isClicked = clickedProductId === product.id;
                     return (
