@@ -60,8 +60,11 @@ export default function Contacto() {
                     )}
 
                     <form className="space-y-6" onSubmit={handleSubmit}>
-                        <div>
-                            <label htmlFor="nombre" className="block text-sm font-medium text-purple-200 mb-1">
+                        <div className="relative">
+                            <label
+                                htmlFor="nombre"
+                                className="absolute -top-3 left-3 bg-gray-900 px-1 text-sm text-white"
+                            >
                                 Nombre
                             </label>
                             <Input
@@ -70,12 +73,15 @@ export default function Contacto() {
                                 type="text"
                                 placeholder="Tu nombre completo"
                                 required
-                                className="bg-transparent border border-purple-500 focus:ring-2 focus:ring-purple-500/70 text-white placeholder-purple-400"
+                                className="bg-transparent border border-white focus:ring-2 focus:ring-white/70 text-white placeholder-gray-400 rounded-xl py-2 px-3"
                             />
                         </div>
 
-                        <div>
-                            <label htmlFor="correo" className="block text-sm font-medium text-purple-200 mb-1">
+                        <div className="relative">
+                            <label
+                                htmlFor="correo"
+                                className="absolute -top-3 left-3 bg-gray-900 px-1 text-sm text-white"
+                            >
                                 Correo electrónico
                             </label>
                             <Input
@@ -84,12 +90,15 @@ export default function Contacto() {
                                 type="email"
                                 placeholder="tuemail@ejemplo.com"
                                 required
-                                className="bg-transparent border border-purple-500 focus:ring-2 focus:ring-purple-500/70 text-white placeholder-purple-400"
+                                className="bg-transparent border border-white focus:ring-2 focus:ring-white/70 text-white placeholder-gray-400 rounded-xl py-2 px-3"
                             />
                         </div>
 
-                        <div>
-                            <label htmlFor="mensaje" className="block text-sm font-medium text-purple-200 mb-1">
+                        <div className="relative">
+                            <label
+                                htmlFor="mensaje"
+                                className="absolute -top-3 left-3 bg-gray-900 px-1 text-sm text-white"
+                            >
                                 Mensaje
                             </label>
                             <Textarea
@@ -98,7 +107,7 @@ export default function Contacto() {
                                 rows="4"
                                 placeholder="Escribe tu mensaje aquí..."
                                 required
-                                className="bg-transparent border border-purple-500 focus:ring-2 focus:ring-purple-500/70 text-white placeholder-purple-400"
+                                className="bg-transparent border border-white focus:ring-2 focus:ring-white/70 text-white placeholder-gray-400 rounded-xl py-2 px-3"
                             />
                         </div>
 

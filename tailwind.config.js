@@ -16,6 +16,8 @@ export default {
 		extend: {
 			fontFamily: {
 				opensans: ['"Open Sans"', 'sans-serif'],
+				Orbitron: ['"Orbitron"', 'sans-serif'],
+				Playfair: ['"Playfair Display"', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
