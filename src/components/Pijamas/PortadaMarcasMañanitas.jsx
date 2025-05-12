@@ -49,7 +49,7 @@ const PortadaMarcasMañanitas = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="text-4xl sm:text-3xl xs:text-2xl font-extrabold text-white drop-shadow-md"
                 >
-                    <span className="text-sky-400 font-orbitron"> Estilos</span> Mañanitas
+                    <span className="text-sky-400 font-Orbitron"> Estilos</span> Mañanitas
                 </motion.h2>
 
                 <motion.div

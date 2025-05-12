@@ -23,11 +23,11 @@ const CatalogoMañanitas = () => {
     return (
         <section className="min-h-screen bg-gradient-to-br from-slate-900 to-gray-800 px-6 py-12 relative overflow-hidden">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl sm:text-5xl text-white font-bold mb-12 text-center drop-shadow-xl font-serif">
+                <h2 className="text-3xl sm:text-5xl text-white font-semibold mb-12 text-center drop-shadow-xl font-serif">
                     {nombreMarca}
                 </h2>
 
-                <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
                     {productosFiltrados.map((item) => (
                         <CardMañanitas key={item.id} mañanitas={item} />
                     ))}
@@ -92,7 +92,7 @@ const CardMañanitas = ({ mañanitas }) => {
                                 if (info.offset.x > 50) handlePrev();
                                 else if (info.offset.x < -50) handleNext();
                             }}
-                            className="absolute inset-0 w-full h-full object-cover p-4 rounded-t-3xl cursor-zoom-in"
+                            className="absolute inset-0 w-full h-full object-cover p-1 rounded-t-3xl cursor-zoom-in"
                         />
                     </AnimatePresence>
 
