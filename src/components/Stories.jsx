@@ -21,25 +21,28 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
         pagination: false,
         padding: '3rem',
         breakpoints: {
-            1200: { perPage: 3, gap: '1.5rem', padding: '2rem' },
-            991: { perPage: 2.3, gap: '1.2rem', padding: '1.5rem' },
-            768: { perPage: 2, gap: '1rem', padding: '1rem' },
-            500: { perPage: 1.3, gap: '0.8rem', padding: '0.8rem' },
-            425: { perPage: 1, gap: '0.6rem', padding: '0.6rem' },
+            1200: { perPage: 2, gap: '1.5rem', padding: '2rem' },
+            1024: { perPage: 1.5, gap: '1.2rem', padding: '1.5rem' },
+            768: { perPage: 1, gap: '1rem', padding: '1rem' },
+            640: { perPage: 1, gap: '0.8rem', padding: '0.8rem' },
+            480: { perPage: 1, gap: '0.6rem', padding: '0.6rem' },
             375: { perPage: 1, gap: '0.5rem', padding: '0.5rem' },
             320: { perPage: 1, gap: '0.4rem', padding: '0.4rem' },
         },
     };
 
     return (
-        <section ref={storiesRef} className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-slate-800 px-6 xs:px-4 py-12">
+        <section
+            ref={storiesRef}
+            className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-slate-800 px-6 xs:px-4 py-12"
+        >
             <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-12 xs:gap-8">
                 <motion.h2
                     initial={{ opacity: 0, y: -40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.9, ease: "easeOut" }}
                     className="text-5xl sm:text-3xl xs:text-3xl font-Playfair text-white tracking-tight drop-shadow-lg"
-                    style={{ textShadow: '0 0 10px rgba(0, 180, 216, 0.6)' }} // Neón sutil
+                    style={{ textShadow: '0 0 10px rgba(0, 180, 216, 0.6)' }}
                 >
                     <span className="text-sky-400 font-orbitron">Explora</span> las Mejores Marcas
                 </motion.h2>
@@ -58,7 +61,7 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                                     style={{
                                         clipPath: 'polygon(0 0, 92% 0, 100% 8%, 100% 100%, 8% 100%, 0 92%)',
                                         backgroundColor: 'skyblue',
-                                        padding: '2px', // grosor del borde
+                                        padding: '2px',
                                     }}
                                 >
                                     <div
@@ -96,7 +99,6 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                             </SplideSlide>
                         ))}
                     </Splide>
-
                 </motion.div>
             </div>
         </section>
