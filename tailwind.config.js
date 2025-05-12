@@ -18,6 +18,7 @@ export default {
 				opensans: ['"Open Sans"', 'sans-serif'],
 				Orbitron: ['"Orbitron"', 'sans-serif'],
 				Playfair: ['"Playfair Display"', 'serif'],
+				outfit: ['Outfit', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
