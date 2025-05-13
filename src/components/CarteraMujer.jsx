@@ -49,7 +49,8 @@ const CarteraMujer = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="text-4xl sm:text-3xl xs:text-2xl font-semibold text-white drop-shadow-md"
                 >
-                    <span className="text-cyan-400 font-Orbitron">Para Cada</span> Mujer, Una Cartera
+                    <span className="text-5xl sm:text-3xl xs:text-3xl text-amber-400 block">Para cada</span>
+                    <span className="text-3xl sm:text-xl xs:text-xl block">mujer, una cartera</span>
                 </motion.h2>
 
                 <motion.div

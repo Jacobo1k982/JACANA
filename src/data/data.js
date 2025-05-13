@@ -79,7 +79,7 @@ import { image } from "framer-motion/client";
 
 const heroapi = {
   title: "JACANA Styles Costa Rica",
-  subtitle: "Tú moda a un clic",
+  subtitle: "",
   img: heroimg,
   btntext: "Ver colección",
 

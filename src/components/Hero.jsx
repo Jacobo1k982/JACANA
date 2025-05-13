@@ -41,7 +41,7 @@ const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImag
       <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/70 z-10 flex items-center justify-center px-4">
         <div className="max-w-5xl text-center space-y-10 text-white">
           <h1
-            className="text-5xl sm:text-6xl xsm:text-3xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,255,255,0.7)] animate-pulse"
+            className="text-5xl sm:text-6xl xsm:text-3xl font-extrabold bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-300 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(245, 211, 72, 0.7)] animate-pulse"
             aria-label={title}
           >
             {title}
@@ -53,7 +53,7 @@ const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImag
           {btntext && (
             <button
               onClick={() => storiesRef?.current?.scrollIntoView({ behavior: 'smooth' })}
-              className="btn-cut-corners mt-5 px-8 py-4 bg-white/10 backdrop-blur-lg text-cyan-300 font-opensans border border-cyan-400 hover:bg-cyan-400 hover:text-black shadow-lg transition duration-500 hover:shadow-cyan-400/50"
+              className="btn-cut-corners mt-5 px-8 py-4 bg-green/10 backdrop-blur-lg text-black-900 font-Outfit border border-amber-400 hover:bg-amber-400 hover:text-black shadow-lg transition duration-500 hover:shadow-cyan-400/50"
             >
               {btntext}
             </button>

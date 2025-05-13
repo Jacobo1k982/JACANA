@@ -11,49 +11,31 @@ const Mujer = ({ dama: { title, subtitle, news } }) => {
   const splideOptions = {
     perPage: 3,
     perMove: 1,
-    type: 'loop',
+    type: "loop",
     rewind: true,
-    keyboard: 'global',
+    keyboard: "global",
     drag: true,
     swipe: true,
     flickPower: 600,
-    easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+    easing: "cubic-bezier(0.25, 1, 0.5, 1)",
     speed: 600,
-    gap: '1.5rem',
+    gap: "2rem",
     pagination: false,
-    padding: '2rem',
+    padding: "3rem",
     breakpoints: {
-      1024: {
-        perPage: 2,
-        gap: '1.2rem',
-        padding: '1.5rem',
-      },
-      768: {
-        perPage: 1,
-        gap: '1rem',
-        padding: '1rem',
-      },
-      640: {
-        perPage: 1,
-        gap: '0.8rem',
-        padding: '0.8rem',
-      },
-      480: {
-        perPage: 1,
-        gap: '0.5rem',
-        padding: '0.5rem',
-      },
-      375: {
-        perPage: 1,
-        gap: '0.4rem',
-        padding: '0.3rem',
-      },
+      1200: { perPage: 2, gap: "1.5rem", padding: "2rem" },
+      1024: { perPage: 1.5, gap: "1.2rem", padding: "1.5rem" },
+      768: { perPage: 1, gap: "1rem", padding: "1rem" },
+      640: { perPage: 1, gap: "0.8rem", padding: "0.8rem" },
+      480: { perPage: 1, gap: "0.6rem", padding: "0.6rem" },
+      375: { perPage: 1, gap: "0.5rem", padding: "0.5rem" },
+      320: { perPage: 1, gap: "0.4rem", padding: "0.4rem" },
     },
   };
 
   return (
     <section
-      className="min-h-screen flex items-center justify-center px-4 xs:px-2"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0f0f0f] to-[#1f1f1f] px-6 xs:px-4 py-16"
       style={{
         backgroundImage: `url(${darkBackground})`,
         backgroundSize: 'cover',
@@ -67,10 +49,10 @@ const Mujer = ({ dama: { title, subtitle, news } }) => {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="text-3xl sm:text-2xl xs:text-2xl font-Playfair text-white tracking-tight drop-shadow-lg"
-          style={{ textShadow: '0 0 10px rgba(0, 180, 216, 0.6)' }} // Neón sutil
+          className="font-Playfair text-white tracking-tight text-center"
         >
-          <span className="text-sky-400 font-Orbitron"> Todo</span> lo que buscas y más
+          <span className="text-5xl sm:text-3xl xs:text-3xl text-amber-400 block">Todo</span>
+          <span className="text-3xl sm:text-xl xs:text-xl block">lo que buscas y más</span>
         </motion.h2>
 
         <motion.div
@@ -83,43 +65,36 @@ const Mujer = ({ dama: { title, subtitle, news } }) => {
             {news.map((val, i) => (
               <SplideSlide key={i} className="overflow-visible">
                 <div
-                  className="relative w-full h-full"
-                  style={{
-                    clipPath: 'polygon(0 0, 92% 0, 100% 8%, 100% 100%, 8% 100%, 0 92%)',
-                    backgroundColor: 'skyblue',
-                    padding: '2px', // grosor del borde
-                  }}
+                  className="group relative w-full h-full rounded-[2.5rem] bg-gradient-to-tr from-[#1c1c1e] to-[#2c2c2e] backdrop-blur-lg shadow-[0_4px_60px_rgba(255,255,255,0.05)] overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_6px_80px_rgba(255,255,255,0.1)] hover:scale-[1.015]"
                 >
-                  <div
-                    className="group flex flex-col items-center justify-between w-full h-full bg-gradient-to-br from-gray-800 to-gray-700 shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] transform-gpu"
-                    style={{
-                      clipPath: 'polygon(0 0, 92% 0, 100% 8%, 100% 100%, 8% 100%, 0 92%)',
-                    }}
+                  <Link
+                    to={val.url}
+                    className="block relative w-full h-[450px] overflow-hidden rounded-t-[2.5rem]"
                   >
-                    <Link to={val.url} className="w-full h-[450px] lg:h-[400px] sm:h-80 xs:h-40 overflow-hidden relative block">
-                      <img
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 transform-gpu"
-                        src={val.img}
-                        alt={`imagen de ${val.title}`}
-                        style={{ filter: 'brightness(90%) contrast(115%)' }}
-                      />
+                    <img
+                      src={val.img}
+                      alt={`imagen de ${val.title}`}
+                      className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                      style={{ filter: "brightness(85%) contrast(120%) saturate(120%)" }}
+                    />
+                  </Link>
+
+                  <div className="p-6 flex flex-col gap-4 text-white">
+                    <h1 className="text-2xl font-playfair font-semibold tracking-wide text-amber-400 text-center">
+                      {val.title}
+                    </h1>
+                    <p className="text-sm font-outfit text-gray-300 text-justify leading-relaxed">
+                      {truncate(val.text, { length: 120 })}
+                    </p>
+                  </div>
+
+                  <div className="px-6 pb-6">
+                    <Link
+                      to={val.url}
+                      className="inline-block w-full text-center py-2.5 rounded-full border border-amber-500 text-amber-300 hover:bg-amber-500 hover:text-black transition duration-300 font-semibold tracking-wider text-sm"
+                    >
+                      {val.btn} <span className="ml-1">&#10140;</span>
                     </Link>
-                    <div className="p-6 sm:p-5 xs:p-4 flex-1 flex flex-col justify-between gap-4">
-                      <h1 className="text-2xl sm:text-xl xs:text-lg font-Playfair text-sky-500 text-center tracking-wide">
-                        {val.title}
-                      </h1>
-                      <p className="text-sm xs:text-xs text-gray-400 text-justify font-Orbitron leading-relaxed">
-                        {truncate(val.text, { length: 130 })}
-                      </p>
-                    </div>
-                    <div className="w-full bg-gray-700 bg-opacity-80">
-                      <Link
-                        to={val.url}
-                        className="block w-full text-center py-2.5 xs:py-2 text-sky-500 text-sm xs:text-xs font-Orbitron hover:bg-cyan-700 hover:text-cyan-200 transition-colors duration-300"
-                      >
-                        {val.btn} <span className="ml-1 text-cyan-400">&#8594;</span>
-                      </Link>
-                    </div>
                   </div>
                 </div>
               </SplideSlide>

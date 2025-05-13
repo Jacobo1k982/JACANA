@@ -41,10 +41,12 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                     initial={{ opacity: 0, y: -40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.9, ease: "easeOut" }}
-                    className="text-4xl sm:text-3xl xs:text-2xl font-playfair text-white tracking-tight"
+                    className="font-Playfair text-white tracking-tight text-center"
                 >
-                    <span className="text-amber-400">Explora</span> las Mejores Marcas
+                    <span className="text-5xl sm:text-3xl xs:text-3xl text-amber-400 block">Explora</span>
+                    <span className="text-3xl sm:text-xl xs:text-xl block">las Mejores Marcas</span>
                 </motion.h2>
+
 
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}

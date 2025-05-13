@@ -11,46 +11,27 @@ const Mañanitas = ({ mañanitas: { title = "", news = [] } }) => {
     const splideOptions = {
         perPage: 3,
         perMove: 1,
-        type: 'loop',
+        type: "loop",
         rewind: true,
-        keyboard: 'global',
+        keyboard: "global",
         drag: true,
         swipe: true,
         flickPower: 600,
-        easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+        easing: "cubic-bezier(0.25, 1, 0.5, 1)",
         speed: 600,
-        gap: '1.5rem',
+        gap: "2rem",
         pagination: false,
-        padding: '2rem',
+        padding: "3rem",
         breakpoints: {
-            1024: {
-                perPage: 2,
-                gap: '1.2rem',
-                padding: '1.5rem',
-            },
-            768: {
-                perPage: 1,
-                gap: '1rem',
-                padding: '1rem',
-            },
-            640: {
-                perPage: 1,
-                gap: '0.8rem',
-                padding: '0.8rem',
-            },
-            480: {
-                perPage: 1,
-                gap: '0.5rem',
-                padding: '0.5rem',
-            },
-            375: {
-                perPage: 1,
-                gap: '0.4rem',
-                padding: '0.3rem',
-            },
+            1200: { perPage: 2, gap: "1.5rem", padding: "2rem" },
+            1024: { perPage: 1.5, gap: "1.2rem", padding: "1.5rem" },
+            768: { perPage: 1, gap: "1rem", padding: "1rem" },
+            640: { perPage: 1, gap: "0.8rem", padding: "0.8rem" },
+            480: { perPage: 1, gap: "0.6rem", padding: "0.6rem" },
+            375: { perPage: 1, gap: "0.5rem", padding: "0.5rem" },
+            320: { perPage: 1, gap: "0.4rem", padding: "0.4rem" },
         },
     };
-
     return (
         <section
             className="min-h-screen flex items-center justify-center px-4 xs:px-2"
