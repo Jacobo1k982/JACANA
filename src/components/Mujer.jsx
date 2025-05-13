@@ -51,8 +51,8 @@ const Mujer = ({ dama: { title, subtitle, news } }) => {
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="font-Playfair text-white tracking-tight text-center"
         >
-          <span className="text-5xl sm:text-3xl xs:text-3xl text-amber-400 block">Todo</span>
-          <span className="text-3xl sm:text-xl xs:text-xl block">lo que buscas y más</span>
+          <span className="text-5xl sm:text-6xl xs:text-3xl text-amber-400 block">Todo</span>
+          <span className="text-3xl sm:text-6xl xs:text-xl block">lo que buscas y más</span>
         </motion.h2>
 
         <motion.div

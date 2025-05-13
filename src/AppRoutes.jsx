@@ -85,7 +85,6 @@ export default function AppRoutes() {
                     <main className="flex flex-col relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden">
                         <Hero heroapi={heroapi} storiesRef={storiesRef} />
                         <Stories story={story} storiesRef={storiesRef} />
-                        <OfertasFuturistas />
                         <Sales endpoint={popularsales} ifExists />
                         <FlexContent endpoint={highlight} ifExists />
                         <Sales endpoint={topratedsales} />
@@ -297,8 +296,7 @@ export default function AppRoutes() {
                     </main>
                 } />
 
-                {/* Sport Mujer */}
-                <Route path="/sportmujer" element={
+                <Route path="/Nike-mujer" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='Nikeappwoman'>

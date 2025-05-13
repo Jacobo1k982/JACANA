@@ -132,8 +132,8 @@ function Nkmujer() {
     };
 
     return (
-        <div className="p-6 bg-gray-900 text-white min-h-screen">
-            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="p-1 bg-gray-900 text-white min-h-screen">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-1">
                 {products.map((product) => {
                     const isClicked = clickedProductId === product.id;
                     return (
@@ -141,14 +141,14 @@ function Nkmujer() {
                             key={product.id}
                             className="bg-gray-800 shadow-md border border-gray-700 rounded-xl p-2 flex flex-col items-center text-center hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
                         >
-                            <div className="relative w-full max-w-xs h-[300px] rounded-xl overflow-hidden mt-4 cursor-pointer" onClick={() => handleImageClick(product.img)}>
+                            <div className="relative w-full max-w-xs h-[300px] rounded-xl overflow-hidden mt-1 cursor-pointer" onClick={() => handleImageClick(product.img)}>
                                 <img
                                     src={product.img}
                                     alt={product.title}
                                     className={`w-full h-full object-cover transition-transform duration-200 ${isImageClicked ? 'scale-95' : 'scale-100'} hover:scale-105`}
                                 />
                             </div>
-                            <div className="p-4 space-y-2">
+                            <div className="p-0 space-y-2">
                                 <h3 className="text-lg font-semibold">{product.title}</h3>
                                 <div className="flex items-center justify-center gap-2">
                                     <p className="text-gray-400">{product.model}</p>

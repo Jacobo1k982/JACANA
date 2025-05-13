@@ -10,7 +10,7 @@ const PortadaMarcasMañanitas = () => {
     const marcasmañanitas = marcamañanitasAPI ?? [];
 
     const splideOptions = {
-        perPage: 1,
+        perPage: 3,
         perMove: 1,
         type: "loop",
         rewind: true,
@@ -22,15 +22,18 @@ const PortadaMarcasMañanitas = () => {
         speed: 600,
         gap: "2rem",
         pagination: false,
-        padding: "2rem",
+        padding: "3rem",
         breakpoints: {
-            1200: { perPage: 2.5 },
-            991: { perPage: 2 },
-            768: { perPage: 1.5 },
-            500: { perPage: 1, gap: "1rem" },
-            375: { perPage: 1, gap: "0.5rem", padding: "1rem" },
+            1200: { perPage: 2, gap: "1.5rem", padding: "2rem" },
+            1024: { perPage: 1.5, gap: "1.2rem", padding: "1.5rem" },
+            768: { perPage: 1, gap: "1rem", padding: "1rem" },
+            640: { perPage: 1, gap: "0.8rem", padding: "0.8rem" },
+            480: { perPage: 1, gap: "0.6rem", padding: "0.6rem" },
+            375: { perPage: 1, gap: "0.5rem", padding: "0.5rem" },
+            320: { perPage: 1, gap: "0.4rem", padding: "0.4rem" },
         },
     };
+
 
     return (
         <section
@@ -49,8 +52,8 @@ const PortadaMarcasMañanitas = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="text-4xl sm:text-3xl xs:text-2xl font-extrabold text-white drop-shadow-md"
                 >
-                    <span className="text-5xl sm:text-3xl xs:text-3xl text-amber-400 block">Pijamas</span>
-                    <span className="text-3xl sm:text-xl xs:text-xl block">mañanitas</span>
+                    <span className="text-5xl sm:text-6xl xs:text-3xl text-amber-400 block">Conjunto</span>
+                    <span className="text-3xl sm:text-6xl xs:text-xl block">mañanitas</span>
                 </motion.h2>
 
                 <motion.div

@@ -23,7 +23,7 @@ const navLinks = [
                     {
                         name: 'Zapatos deportivos', path: '#', icon: ShoppingBagIcon,
                         subLinks: [
-                            { name: 'Nike', path: '/sportmujer', icon: ShoppingBagIcon },
+                            { name: 'Nike', path: '/Nike-mujer', icon: ShoppingBagIcon },
                             { name: 'Adidas', path: '/adidas2', icon: ShoppingBagIcon },
                             { name: 'Tommy Hilfiger', path: '/tommy2', icon: ShoppingBagIcon },
                             { name: 'Puma', path: '/puma2', icon: ShoppingBagIcon },

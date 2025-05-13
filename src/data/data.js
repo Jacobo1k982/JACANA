@@ -534,7 +534,7 @@ const marcaszapatos2api = {
       title: "NIKE",
       text: "",
       img: logonike,
-      url: "/sportmujer",
+      url: "/Nike-mujer",
       btn: "Explorar más"
     },
     {

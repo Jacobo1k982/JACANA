@@ -43,8 +43,8 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                     transition={{ duration: 0.9, ease: "easeOut" }}
                     className="font-Playfair text-white tracking-tight text-center"
                 >
-                    <span className="text-5xl sm:text-3xl xs:text-3xl text-amber-400 block">Explora</span>
-                    <span className="text-3xl sm:text-xl xs:text-xl block">las Mejores Marcas</span>
+                    <span className="text-5xl sm:text-7xl xs:text-3xl text-amber-400 block">Explora</span>
+                    <span className="text-3xl sm:text-4xl xs:text-xl block">las Mejores Marcas</span>
                 </motion.h2>
 
 
