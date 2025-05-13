@@ -20,6 +20,9 @@ import CaracteristicasCartera from "./components/CaracteristicasCartera";
 import CarteraMujer from "./components/CarteraMujer";
 import Contacto from './pages/Contacto';
 
+/*Belleza*/
+const Belleza = lazy(() => import('./components/Belleza/Belleza'));
+
 /* Sección: Componentes de la página principal */
 const Hero = lazy(() => import('./components/Hero'));
 const Stories = lazy(() => import('./components/Stories'));
@@ -329,6 +332,7 @@ export default function AppRoutes() {
                 <Route path="/caracteristicasmañanitas/:id" element={<CaracteristicasMañanitas />} />
                 <Route path="/guia-de-tallas" element={<GuiaDeTallas />} />
                 <Route path="/contacto" element={<Contacto />} />
+                <Route path="belleza" element={<Belleza />} />
             </Routes>
         </>
     );

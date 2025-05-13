@@ -9,7 +9,10 @@ const navLinks = [
             {
                 name: 'Mujer', path: '#', icon: TagIcon,
                 subLinks: [
-                    {
+                    { name: 'Belleza', path: '/belleza', icon: TagIcon,
+
+                    },
+                    {   
                         name: 'Ropa', path: '#', icon: TagIcon,
                         subLinks: [
                             {

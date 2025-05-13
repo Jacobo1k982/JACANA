@@ -91,7 +91,9 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 font-poppins ${navState ? 'bg-white/80 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'}`}>
+      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 font-poppins ${navState
+          ? 'bg-white/70 backdrop-blur-md shadow-md py-3' // <--- Cambiado aquí
+          : 'bg-white py-3'}`}>
         <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <img
@@ -102,21 +104,21 @@ const Navbar = () => {
           </Link>
 
           <ul className="flex items-center space-x-4 sm:space-x-6">
-            <li className="">
+            <li>
               <button onClick={toggleSearch} className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
-                <MagnifyingGlassIcon className={`w-6 h-6 transition-all duration-300 ${navState ? 'text-gray-800' : 'text-white'}`} />
+                <MagnifyingGlassIcon className="w-6 h-6 text-gray-800 transition-all duration-300" />
               </button>
             </li>
 
-            <li className="">
+            <li>
               <button className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
-                <HeartIcon className={`w-6 h-6 transition-all duration-300 ${navState ? 'text-gray-800' : 'text-white'}`} />
+                <HeartIcon className="w-6 h-6 text-gray-800 transition-all duration-300" />
               </button>
             </li>
 
-            <li className="">
+            <li>
               <button onClick={toggleDrawer} className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
-                <ShoppingBagIcon className={`w-6 h-6 transition-all duration-300 ${navState ? 'text-gray-800' : 'text-white'}`} />
+                <ShoppingBagIcon className="w-6 h-6 text-gray-800 transition-all duration-300" />
                 {totalQTY > 0 && (
                   <span className="absolute -top-1 -right-1 text-[0.65rem] w-5 h-5 bg-red-500 text-white rounded-full flex items-center justify-center font-semibold shadow-md">
                     {totalQTY}
@@ -128,15 +130,16 @@ const Navbar = () => {
             <li>
               <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
                 {mobileMenuOpen ? (
-                  <XMarkIcon className={`w-6 h-6 ${navState ? 'text-gray-800' : 'text-white'}`} />
+                  <XMarkIcon className="w-6 h-6 text-gray-800" />
                 ) : (
-                  <Bars3Icon className={`w-6 h-6 ${navState ? 'text-gray-800' : 'text-white'}`} />
+                  <Bars3Icon className="w-6 h-6 text-gray-800" />
                 )}
               </button>
             </li>
           </ul>
         </nav>
 
+        {/* SearchBar */}
         <AnimatePresence>
           {showSearch && (
             <Suspense fallback={<div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50">Cargando búsqueda...</div>}>
@@ -146,6 +149,7 @@ const Navbar = () => {
         </AnimatePresence>
       </header>
 
+      {/* Cart Drawer */}
       <AnimatePresence>
         {drawerOpen && (
           <Suspense fallback={<div className="fixed right-0 top-0 w-[300px] md:w-[400px] h-screen bg-white shadow-lg z-[999] flex items-center justify-center">Cargando...</div>}>
@@ -154,7 +158,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
 
-      {/* Mobile Menu with SubLinks and Animations */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
