@@ -13,14 +13,6 @@
             {
                 "color": "Rojo natural",
                 "codigo": "#FF0000"
-            },
-            {
-                "color": "pink",
-                "codigo": "#0000FF"
-            },
-            {
-                "color": "Verde",
-                "codigo": "#00FF00"
             }
         ]
     },
@@ -52,5 +44,84 @@
         "imagenes": [
             "/Belleza/img-productos/Sally/sally8.webp"
         ]
+    },
+    {
+        "id": 5,
+        "titulo": "CoverGirl",
+        "subtitulo": "Base de maquijllaje Clean Invisible Foundation",
+        "precio": 13400,
+        "imagenes": [
+            "/Belleza/img-productos/Clean/cover1.webp",
+            "/Belleza/img-productos/Clean/cover2.webp",
+            "/Belleza/img-productos/Clean/cover3.webp",
+            "/Belleza/img-productos/Clean/cover4.webp",
+            "/Belleza/img-productos/Clean/cover5.webp",
+            "/Belleza/img-productos/Clean/cover6.webp",
+            "/Belleza/img-productos/Clean/cover7.webp",
+            "/Belleza/img-productos/Clean/cover8.webp"
+        ],
+        "detalles": "Vegano y formulado sin parabenos, sulfatos, ftalatos, aceite mineral y talco.",
+        "ingredientes": "Vegano y formulado sin parabenos, sulfatos, ftalatos, aceite mineral y talco.",
+        "colores": [
+            {
+                "color": "Creamy Natural",
+                "codigo": "#e9e4d3"
+            },
+            {
+                "color": "Classic Beige",
+                "codigo": "#CBB595"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "titulo": "MAC Cosmetics",
+        "subtitulo": "MAC LABIAL LÍQUIDO POWDER KISS",
+        "precio": 26550,
+        "imagenes": [
+            "/Belleza/img-productos/MAC-LABIAL/mac1.webp",
+            "/Belleza/img-productos/MAC-LABIAL/mac2.webp",
+            "/Belleza/img-productos/MAC-LABIAL/mac3.webp",
+            "/Belleza/img-productos/MAC-LABIAL/mac4.webp",
+            "/Belleza/img-productos/MAC-LABIAL/mac5.webp",
+            "/Belleza/img-productos/MAC-LABIAL/mac6.webp",
+            "/Belleza/img-productos/MAC-LABIAL/mac7.webp",
+            "/Belleza/img-productos/MAC-LABIAL/mac8.webp"
+        ],
+        "detalles": "Powder Kiss ahora en su versión líquida que te dará ese suave e impactante acabado matte. Descubre un fórmula ligera que te da diez horas de humectación. Su suave textura, similar a un mousse, se aplica fácil y uniformemente dejando la cantidad perfecta de color en los labios. La mezcla especial de polvos y propiedades emolientes le dan a la fórmula la flexibilidad, duración y humectación que te dejará unos labios suaves y sedosos durante todo el día. Su aplicador en forma de reloj de arena se adapta a la forma de los labios, llenando lineas y realzando los labios con un efecto suave.",
+        "ingredientes": "",
+        "colores": [
+            {
+                "color": "HABIT",
+                "codigo": "#CBB595"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "titulo": "MAC Cosmetics",
+        "subtitulo": "MAC Labial MACXimal Sleek Satin",
+        "precio": 23250,
+        "imagenes": [
+            "/Belleza/img-productos/MAC-LABIAL/macximal/mac1.webp",
+            "/Belleza/img-productos/MAC-LABIAL/macximal/mac2.webp",
+            "/Belleza/img-productos/MAC-LABIAL/macximal/mac3.webp",
+            "/Belleza/img-productos/MAC-LABIAL/macximal/mac4.webp",
+            "/Belleza/img-productos/MAC-LABIAL/macximal/mac5.webp", 
+            "/Belleza/img-productos/MAC-LABIAL/macximal/mac6.webp",
+            "/Belleza/img-productos/MAC-LABIAL/macximal/mac7.webp",
+            "/Belleza/img-productos/MAC-LABIAL/macximal/mac8.webp",
+            "/Belleza/img-productos/MAC-LABIAL/macximal/mac9.webp",
+            "/Belleza/img-productos/MAC-LABIAL/macximal/mac10.webp"
+        ],
+        "detalles": "Nuestro exclusivo lápiz labial satinado se ha maximizado para darles a los labios MÁS con un acabado satinado elegante y una fórmula buena para los labios que se ve más rica, se siente más cremosa, se desliza más suave e hidrata los labios durante ocho horas completas.  Obtén MÁS COLOR con cobertura total y rico en pigmentos en una gama de 27 tonos llenos de personalidad aprobados por los artistas. Obtén MÁS COMODIDAD con una mezcla balsámica de ingredientes buenos para los labios, que incluyen extracto de flor de granada para hidratar los labios y aceites de semilla de camelia y rosa mosqueta para acondicionar. Vuélvete MÁS ELEGANTE con esta induplicable línea de colores meticulosamente elaborados que proporciona un aspecto impecablemente pulido en los labios. Obtén MÁS CHIC con esta fórmula multiusos que brinda un brillo monocromático y sin costuras en las mejillas. Consigue un look MÁS LUJOSO con un diseño de envase de alto brillo en el exterior y bala M·A·C  con relieve en el interior. Y, por último, sé MÁS RESPONSABLE con un estuche de lápiz labial que contenga material PCR. Cada tono famoso y fresco sigue ofreciendo ese característico aroma a vainilla que ya te gusta (o que pronto lo harás).",
+        "ingredientes": "",
+        "colores": [
+            {
+                "color": "Stone",
+                "codigo": "#CBB591"
+            }
+        ]
     }
+    
 ]

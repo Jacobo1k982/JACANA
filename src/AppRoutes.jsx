@@ -22,6 +22,7 @@ import Contacto from './pages/Contacto';
 
 /*Belleza*/
 const Belleza = lazy(() => import('./components/Belleza/Belleza'));
+const DetalleProducto = lazy(() => import('./components/Belleza/DetalleProducto'));
 
 /* Sección: Componentes de la página principal */
 const Hero = lazy(() => import('./components/Hero'));
@@ -333,6 +334,7 @@ export default function AppRoutes() {
                 <Route path="/guia-de-tallas" element={<GuiaDeTallas />} />
                 <Route path="/contacto" element={<Contacto />} />
                 <Route path="belleza" element={<Belleza />} />
+                <Route path="/producto/:id" element={<DetalleProducto />} />
             </Routes>
         </>
     );

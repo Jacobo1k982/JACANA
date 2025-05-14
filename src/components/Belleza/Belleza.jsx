@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { Dialog } from '@headlessui/react';
+import { Link } from 'react-router-dom';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Belleza = () => {
@@ -15,7 +16,8 @@ const Belleza = () => {
     const [imagenExpandida, setImagenExpandida] = useState(null);
     const [imagenesActuales, setImagenesActuales] = useState([]);
     const [imagenIndex, setImagenIndex] = useState(0);
-    const [colorSeleccionado, setColorSeleccionado] = useState({}); // objeto con id de producto y color
+    const [colorSeleccionado, setColorSeleccionado] = useState({});
+    const carruselRef = useRef(null);
 
     useEffect(() => {
         fetch('/data/productos.json')
@@ -49,21 +51,26 @@ const Belleza = () => {
     };
 
     const seleccionarColor = (productoId, colorCodigo) => {
-        setColorSeleccionado(prev => ({
+        setColorSeleccionado((prev) => ({
             ...prev,
-            [productoId]: colorCodigo
+            [productoId]: colorCodigo,
         }));
     };
 
+    const scrollCarrusel = (offset) => {
+        if (carruselRef.current) {
+            carruselRef.current.scrollBy({ left: offset, behavior: 'smooth' });
+        }
+    };
+
     return (
-        <div className="w-full pt-[110px] relative">
+        <div className="w-full pt-[110px] relative p-4 bg-gray-100">
+            <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent h-[110px] z-10" />
+
             {/* Modal */}
             <Dialog open={!!imagenExpandida} onClose={cerrarModal} className="relative z-50">
                 <div className="fixed inset-0 bg-black/80 flex items-center justify-center">
-                    <Dialog.Panel
-                        className="relative animate-scale-in"
-                        onClick={(e) => e.stopPropagation()}
-                    >
+                    <Dialog.Panel className="relative animate-scale-in" onClick={(e) => e.stopPropagation()}>
                         <button
                             onClick={cerrarModal}
                             className="absolute top-2 right-2 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-200 z-50"
@@ -71,20 +78,17 @@ const Belleza = () => {
                         >
                             ✕
                         </button>
-
                         <button
                             onClick={mostrarAnterior}
                             className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-200 z-50"
                         >
                             ‹
                         </button>
-
                         <img
                             src={imagenExpandida}
                             alt="Imagen expandida"
                             className="max-w-full max-h-screen object-contain rounded-md"
                         />
-
                         <button
                             onClick={mostrarSiguiente}
                             className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-200 z-50"
@@ -118,15 +122,36 @@ const Belleza = () => {
                 ))}
             </Carousel>
 
-            {/* Lista de productos */}
-            <div className="mt-6 px-2">
+            {/* Carrusel de productos */}
+            <div className="mt-10 relative">
                 <h2 className="text-2xl font-bold mb-6 text-center">LO NUEVO</h2>
 
-                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {/* Botones de navegación */}
+                <button
+                    onClick={() => scrollCarrusel(-300)}
+                    className="absolute left-0 top-[50%] transform -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+                    aria-label="Scroll izquierdo"
+                >
+                    ‹
+                </button>
+
+                <button
+                    onClick={() => scrollCarrusel(300)}
+                    className="absolute right-0 top-[50%] transform -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+                    aria-label="Scroll derecho"
+                >
+                    ›
+                </button>
+
+                {/* Lista horizontal scrollable */}
+                <div
+                    ref={carruselRef}
+                    className="flex gap-6 overflow-x-auto px-8 pb-4 scroll-smooth"
+                >
                     {productos.map((producto) => (
                         <div
                             key={producto.id}
-                            className="bg-white shadow-md rounded-lg p-4 hover:shadow-xl transition text-center"
+                            className="min-w-[280px] max-w-[280px] flex-shrink-0 bg-white shadow-md rounded-lg p-4 hover:shadow-xl transition text-center"
                         >
                             <Carousel
                                 showThumbs={false}
@@ -158,12 +183,10 @@ const Belleza = () => {
                                 ₡{producto.precio.toFixed(2)}
                             </p>
 
-                            {/* Colores */}
                             {producto.colores && (
                                 <div className="flex justify-center items-center gap-2 mt-3">
                                     {producto.colores.map((color, index) => {
                                         const isSelected = colorSeleccionado[producto.id] === color.codigo;
-
                                         return (
                                             <div
                                                 key={index}
@@ -179,12 +202,20 @@ const Belleza = () => {
                                     })}
                                 </div>
                             )}
+
+                            <div className="flex justify-end">
+                                <Link
+                                    to={`/producto/${producto.id}`}
+                                    className="mt-4 inline-block text-sm text-blue-500 font-medium hover:underline"
+                                >
+                                    Ver detalle
+                                </Link>
+                            </div>
                         </div>
                     ))}
                 </div>
             </div>
 
-            {/* Animación personalizada */}
             <style>
                 {`
           @keyframes scaleIn {
