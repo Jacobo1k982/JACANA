@@ -106,19 +106,19 @@ const Navbar = () => {
           <ul className="flex items-center space-x-4 sm:space-x-6">
             <li>
               <button onClick={toggleSearch} className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
-                <MagnifyingGlassIcon className="w-6 h-6 text-gray-500 transition-all duration-300" />
+                <MagnifyingGlassIcon className="w-6 h-6 text-gray-700 transition-all duration-300" />
               </button>
             </li>
 
             <li>
               <button className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
-                <HeartIcon className="w-6 h-6 text-gray-500 transition-all duration-300" />
+                <HeartIcon className="w-6 h-6 text-gray-700 transition-all duration-300" />
               </button>
             </li>
 
             <li>
               <button onClick={toggleDrawer} className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
-                <ShoppingBagIcon className="w-6 h-6 text-gray-500 transition-all duration-300" />
+                <ShoppingBagIcon className="w-6 h-6 text-gray-700 transition-all duration-300" />
                 {totalQTY > 0 && (
                   <span className="absolute -top-1 -right-1 text-[0.65rem] w-5 h-5 bg-red-500 text-white rounded-full flex items-center justify-center font-semibold shadow-md">
                     {totalQTY}
@@ -132,7 +132,7 @@ const Navbar = () => {
                 {mobileMenuOpen ? (
                   <XMarkIcon className="w-6 h-6 text-gray-500" />
                 ) : (
-                  <Bars3Icon className="w-6 h-6 text-gray-500" />
+                  <Bars3Icon className="w-6 h-6 text-gray-700" />
                 )}
               </button>
             </li>

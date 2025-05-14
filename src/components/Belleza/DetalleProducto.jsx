@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Dialog } from '@headlessui/react';
-import { useNavigate } from 'react-router-dom';
-
 
 const DetalleProducto = () => {
     const { id } = useParams();
@@ -58,12 +56,8 @@ const DetalleProducto = () => {
             </button>
 
             <div className="grid md:grid-cols-2 gap-6">
-                {/* Galería */}
                 <div>
-                    <div
-                        className="w-full cursor-pointer"
-                        onClick={() => abrirModal(indexActual)}
-                    >
+                    <div className="w-full cursor-pointer" onClick={() => abrirModal(indexActual)}>
                         <img
                             src={imagenSeleccionada}
                             alt="Producto principal"
@@ -81,27 +75,24 @@ const DetalleProducto = () => {
                                     setImagenSeleccionada(img);
                                     setIndexActual(index);
                                 }}
-                                className={`w-20 h-20 object-cover rounded border-2 cursor-pointer ${img === imagenSeleccionada ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-300'
-                                    }`}
+                                className={`w-20 h-20 object-cover rounded border-2 cursor-pointer ${img === imagenSeleccionada ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-300'}`}
                             />
                         ))}
                     </div>
                 </div>
 
-                {/* Detalles del producto */}
                 <div>
                     <h1 className="text-3xl font-bold mb-2">{producto.titulo}</h1>
                     <p className="text-gray-600 mb-2">{producto.subtitulo}</p>
                     <p className="text-blue-600 font-bold text-2xl mb-4">
                         ₡{producto.precio.toFixed(2)}
                     </p>
-                    {/* Detalles */}
+
                     <div className="mt-6">
                         <h2 className="text-xl font-bold mb-2">Detalles</h2>
                         <p className="text-gray-700">{producto.detalles}</p>
                     </div>
 
-                    {/* Ingredientes */}
                     <div className="mt-4">
                         <h2 className="text-xl font-bold mb-2">Ingredientes</h2>
                         <p className="text-gray-700">{producto.ingredientes}</p>
@@ -125,7 +116,22 @@ const DetalleProducto = () => {
                 </div>
             </div>
 
-            {/* Modal ampliado con flechas */}
+            {/* Beneficios desde producto.beneficios */}
+            {producto.beneficios?.length > 0 && (
+                <div className="mt-12 bg-white rounded-2xl shadow-lg p-6 max-w-4xl mx-auto border border-gray-200">
+                    <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">Beneficios de nuestros productos</h2>
+                    <ul className="space-y-3">
+                        {producto.beneficios.map((beneficio, index) => (
+                            <li key={index} className="flex items-start gap-3 text-gray-700 text-base md:text-lg">
+                                <span className="text-green-500 text-xl">✔️</span>
+                                <span>{beneficio}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+
+            {/* Modal de imagen */}
             <Dialog open={modalAbierto} onClose={() => setModalAbierto(false)} className="relative z-50">
                 <div className="fixed inset-0 bg-black/80 flex items-center justify-center">
                     <Dialog.Panel className="relative animate-scale-in p-4">
@@ -135,20 +141,17 @@ const DetalleProducto = () => {
                         >
                             ✕
                         </button>
-
                         <button
                             onClick={mostrarAnterior}
                             className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-200 z-50"
                         >
                             ‹
                         </button>
-
                         <img
                             src={imagenSeleccionada}
                             alt="Imagen ampliada"
                             className="max-w-full max-h-screen object-contain rounded-md"
                         />
-
                         <button
                             onClick={mostrarSiguiente}
                             className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-200 z-50"
@@ -159,18 +162,12 @@ const DetalleProducto = () => {
                 </div>
             </Dialog>
 
-            {/* Animación personalizada */}
+            {/* Animación */}
             <style>
                 {`
                 @keyframes scaleIn {
-                    0% {
-                        transform: scale(0.9);
-                        opacity: 0;
-                    }
-                    100% {
-                        transform: scale(1);
-                        opacity: 1;
-                    }
+                    0% { transform: scale(0.9); opacity: 0; }
+                    100% { transform: scale(1); opacity: 1; }
                 }
                 .animate-scale-in {
                     animation: scaleIn 0.25s ease-out;

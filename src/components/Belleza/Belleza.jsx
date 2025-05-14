@@ -64,7 +64,8 @@ const Belleza = () => {
     };
 
     return (
-        <div className="w-full pt-[110px] relative p-4 bg-gray-100">
+        <div className="w-full pt-[110px] relative p-4 bg-gray-900 text-gray-100 min-h-screen">
+
             <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent h-[110px] z-10" />
 
             {/* Modal */}
@@ -193,8 +194,8 @@ const Belleza = () => {
                                                 title={color.color}
                                                 onClick={() => seleccionarColor(producto.id, color.codigo)}
                                                 className={`w-6 h-6 rounded-full border-2 cursor-pointer transition-transform duration-200 ${isSelected
-                                                        ? 'border-blue-600 ring-2 ring-blue-300 scale-110'
-                                                        : 'border-gray-300'
+                                                    ? 'border-blue-600 ring-2 ring-blue-300 scale-110'
+                                                    : 'border-gray-300'
                                                     }`}
                                                 style={{ backgroundColor: color.codigo }}
                                             />

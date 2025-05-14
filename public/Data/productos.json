@@ -121,7 +121,171 @@
                 "color": "Stone",
                 "codigo": "#CBB591"
             }
+        ],
+        "beneficios": [
+            "Acondiciona y nutre los labios.",
+            "Humedad inmediata y de 8 horas.",
+            "Fórmula cómoda",
+            "Los labios lucen visiblemente más llenos, 12 horas",
+            "De larga duración y color fiel, 12 horas",
+            "Sin plumas ni sangrado, 12 horas",
+            "Sin descamación ni apelmazamiento, 12 horas"
+        ]
+    },
+    {
+        "id": 8,
+        "titulo": "MAC Cosmetics",
+        "subtitulo": "MAC LABIAL MACXIMAL MATE SEDOSO",
+        "precio": 23250,
+        "imagenes": [
+            "/Belleza/img-productos/MAC-LABIAL/maximal-mate/mac1.webp",
+            "/Belleza/img-productos/MAC-LABIAL/maximal-mate/mac2.webp",
+            "/Belleza/img-productos/MAC-LABIAL/maximal-mate/mac3.webp",
+            "/Belleza/img-productos/MAC-LABIAL/maximal-mate/mac4.webp",
+            "/Belleza/img-productos/MAC-LABIAL/maximal-mate/mac5.webp",
+            "/Belleza/img-productos/MAC-LABIAL/maximal-mate/mac7.webp",
+            "/Belleza/img-productos/MAC-LABIAL/maximal-mate/mac8.webp"
+        ],
+        "detalles": "M·A·CXIMAL LABIAL MATE SEDOSO. Nuestro icónico lápiz labial se ha maximizado para brindar MÁS a los labios con un acabado mate sedoso y una fórmula buena para los labios que se ve más rica, se siente mejor y dura más. Obtenga MÁS COLOR con cobertura total y resultados ricos en pigmentos en nuestra gama más amplia de tonos aprobados por artistas. Obtenga MÁS COMODIDAD con una mezcla cremosa de aceite de coco, manteca de karité orgánica y manteca de cacao orgánica que acondiciona y nutre los labios. Obtenga MÁS CUIDADO con hidratación instantánea y durante ocho horas. Obtenga DURACIÓN MÁS LARGA con 12 horas de color duradero que no se desvanece y que deja los labios con un aspecto visiblemente más lleno desde el primer deslizamiento ultravibrante. Obtenga una apariencia MÁS LUJOSA con un diseño de empaque de alto brillo en el exterior y una bala en relieve M·A·C en el interior. Y por último, sea MÁS RESPONSABLE con un estuche de pintalabios hecho con, al menos, un 30 % de material PCR. Es posible que el icónico lápiz labial mate que cambió el mundo en el que vivimos haya sido reinventado, pero cada tono famoso y fresco aún ofrece ese aroma de vainilla característico que ya te encanta (o que pronto amarás…).",
+        "ingredientes": "",
+        "colores": [
+            {
+                "color": "COOL TEDDY",
+                "codigo": "#896d58"
+            }
+        ],
+        "beneficios": [
+            "Acondiciona y nutre los labios.",
+            "Humedad inmediata y de 8 horas.",
+            "Fórmula cómoda",
+            "Los labios lucen visiblemente más llenos, 12 horas",
+            "De larga duración y color fiel, 12 horas",
+            "Sin plumas ni sangrado, 12 horas",
+            "Sin descamación ni apelmazamiento, 12 horas"
+        ]
+    },
+    {
+        "id": 9,
+        "titulo": "MAC Cosmetics",
+        "subtitulo": "MAC LABIAL LÍQUIDO POWDER KISS",
+        "precio": 26550,
+        "imagenes": [
+            "/Belleza/img-productos/MAC-LABIAL/powder/powder1.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder/powder2.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder/powder3.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder/powder4.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder/powder5.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder/powder6.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder/powder7.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder/powder8.webp"
+
+        ],
+        "detalles": "Powder Kiss ahora en su versión líquida que te dará ese suave e impactante acabado matte. Descubre un fórmula ligera que te da diez horas de humectación. Su suave textura, similar a un mousse, se aplica fácil y uniformemente dejando la cantidad perfecta de color en los labios. La mezcla especial de polvos y propiedades emolientes le dan a la fórmula la flexibilidad, duración y humectación que te dejará unos labios suaves y sedosos durante todo el día. Su aplicador en forma de reloj de arena se adapta a la forma de los labios, llenando lineas y realzando los labios con un efecto suave.",
+        "ingredientes": "",
+        "colores": [
+            {
+                "color": "TAKEN",
+                "codigo": "#896d58"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "titulo": "MAC Cosmetics",
+        "subtitulo": "MAC Labial Lustreglass Sheer-Shine",
+        "precio": 24900,
+        "imagenes": [
+            "/Belleza/img-productos/MAC-LABIAL/lustreglass/lustreglass1.webp",
+            "/Belleza/img-productos/MAC-LABIAL/lustreglass/lustreglass2.webp",
+            "/Belleza/img-productos/MAC-LABIAL/lustreglass/lustreglass3.webp",
+            "/Belleza/img-productos/MAC-LABIAL/lustreglass/lustreglass4.webp",
+            "/Belleza/img-productos/MAC-LABIAL/lustreglass/lustreglass5.webp",
+            "/Belleza/img-productos/MAC-LABIAL/lustreglass/lustreglass6.webp",
+            "/Belleza/img-productos/MAC-LABIAL/lustreglass/lustreglass7.webp",
+            "/Belleza/img-productos/MAC-LABIAL/lustreglass/lustreglass8.webp"
+        ],
+        "detalles": "Experimenta el glamour en un deslizamiento con nuestra fórmula renovada de lápiz labial translúcido y brillante. Nuestro lápiz labial Lustre original ha sido mejorado para ofrecer el mismo color translúcido y brillante sin esfuerzo en una barra que te encanta, ahora con una exquisita mezcla de ingredientes buenos para los labios. Una cremosa combinación de aceites de jojoba, semilla de frambuesa, coco y oliva virgen extra orgánico nutre los labios, mientras que la manteca de karité acondiciona y el ácido hialurónico ayuda a hidratarlos. ¿El resultado? Un color cómodo y modulable, un acabado luminoso y de larga duración, y unos labios más suaves, tersos y flexibles que se ven tan bien como se sienten. Su textura ultraligera y suave como la seda se desliza por los labios con un deslizamiento increíble para realzar tu look al instante, sin necesidad de espejo. Consiente tus labios con estos tonos brillantes y atractivos. Ideal para todos los días y lujoso en todos los sentidos, el lápiz labial Lustreglass Sheer-Shine es pura perfección.",
+        "ingredientes": "",
+        "colores": [
+            {
+                "color": "ALONE TIME",
+                "codigo": "#896d58"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "titulo": "MAC Cosmetics",
+        "subtitulo": "MAC LABIAL LÍQUIDO POWDER KISS",
+        "precio": 26500,
+        "imagenes": [
+            "/Belleza/img-productos/MAC-LABIAL/powder2/powder1.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder2/powder2.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder2/powder3.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder2/powder4.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder2/powder5.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder2/powder6.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder2/powder7.webp",
+            "/Belleza/img-productos/MAC-LABIAL/powder2/powder8.webp"
+        ],
+        "detalles": "Powder Kiss ahora en su versión líquida que te dará ese suave e impactante acabado matte. Descubre un fórmula ligera que te da diez horas de humectación. Su suave textura, similar a un mousse, se aplica fácil y uniformemente dejando la cantidad perfecta de color en los labios. La mezcla especial de polvos y propiedades emolientes le dan a la fórmula la flexibilidad, duración y humectación que te dejará unos labios suaves y sedosos durante todo el día. Su aplicador en forma de reloj de arena se adapta a la forma de los labios, llenando lineas y realzando los labios con un efecto suave.",
+        "ingredientes": "",
+        "colores": [
+            {
+                "color": "CHESTNUT",
+                "codigo": "#954535"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "titulo": "MAC Cosmetics",
+        "subtitulo": "MAC Labial MACXimal Sleek Satin",
+        "precio": 23250,
+        "imagenes": [
+            "/Belleza/img-productos/MAC-LABIAL/FLESHPOT/fleshpot1.webp",
+            "/Belleza/img-productos/MAC-LABIAL/FLESHPOT/fleshpot2.webp",
+            "/Belleza/img-productos/MAC-LABIAL/FLESHPOT/fleshpot3.webp",
+            "/Belleza/img-productos/MAC-LABIAL/FLESHPOT/fleshpot4.webp",
+            "/Belleza/img-productos/MAC-LABIAL/FLESHPOT/fleshpot5.webp",
+            "/Belleza/img-productos/MAC-LABIAL/FLESHPOT/fleshpot6.webp",
+            "/Belleza/img-productos/MAC-LABIAL/FLESHPOT/fleshpot7.webp",
+            "/Belleza/img-productos/MAC-LABIAL/FLESHPOT/fleshpot8.webp",
+            "/Belleza/img-productos/MAC-LABIAL/FLESHPOT/fleshpot9.webp"
+        ],
+        "detalles": "Nuestro exclusivo lápiz labial satinado se ha maximizado para darles a los labios MÁS con un acabado satinado elegante y una fórmula buena para los labios que se ve más rica, se siente más cremosa, se desliza más suave e hidrata los labios durante ocho horas completas.  Obtén MÁS COLOR con cobertura total y rico en pigmentos en una gama de 27 tonos llenos de personalidad aprobados por los artistas. Obtén MÁS COMODIDAD con una mezcla balsámica de ingredientes buenos para los labios, que incluyen extracto de flor de granada para hidratar los labios y aceites de semilla de camelia y rosa mosqueta para acondicionar. Vuélvete MÁS ELEGANTE con esta induplicable línea de colores meticulosamente elaborados que proporciona un aspecto impecablemente pulido en los labios. Obtén MÁS CHIC con esta fórmula multiusos que brinda un brillo monocromático y sin costuras en las mejillas. Consigue un look MÁS LUJOSO con un diseño de envase de alto brillo en el exterior y bala M·A·C  con relieve en el interior. Y, por último, sé MÁS RESPONSABLE con un estuche de lápiz labial que contenga material PCR. Cada tono famoso y fresco sigue ofreciendo ese característico aroma a vainilla que ya te gusta (o que pronto lo harás).",
+        "ingredientes": "",
+        "colores": [
+            {
+                "color": "FLESHPOT",
+                "codigo": "#ffe9d1"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "titulo": "MAC Cosmetics",
+        "subtitulo": "MAC PALETA DE SOMBRAS CONNECT IN COLOUR INTIMATE NUDES",
+        "precio": 31500,
+        "imagenes": [
+            "/Belleza/img-productos/MAC-LABIAL/PALETA/paleta1.webp",
+            "/Belleza/img-productos/MAC-LABIAL/PALETA/paleta2.webp",
+            "/Belleza/img-productos/MAC-LABIAL/PALETA/paleta3.webp",
+            "/Belleza/img-productos/MAC-LABIAL/PALETA/paleta4.webp",
+            "/Belleza/img-productos/MAC-LABIAL/PALETA/paleta5.webp",
+            "/Belleza/img-productos/MAC-LABIAL/PALETA/paleta6.webp",
+            "/Belleza/img-productos/MAC-LABIAL/PALETA/paleta7.webp"
+        ],
+        "detalles": "Paleta repleta de pigmentos de seis colores nude tostados para tu mirada más sensual. Atrévete a desnudar con esta paleta de sombras de ojos de seis bandejas de compañeros de juego de maquillaje neutro que cuentan con un }pigmento puro de una sola pasada para looks ilimitados de mínimos a máximos. Esta línea de dorados, marrones y beiges cálidos presenta una textura ligera y suave como la seda en una gama de acabados mate, brillante y metálicos. Nuestra fórmula, la primera de su tipo, se desliza sin problemas por los párpados, lo que permite una aplicación sin esfuerzo, modulable y difuminable, mientras personaliza sus ojos a su manera. Nuestra sombra de ojos más pigmentada hasta la fecha está formulada con hasta un 25% más de carga de pigmento en comparación con M·A· C Paletas de sombras de ojos.",
+        "ingredientes": "",
+        "colores": [
+            {
+                "color": "INTIMATE NUDES",
+                "codigo": "#"
+            }
         ]
     }
+    
+    
     
 ]
