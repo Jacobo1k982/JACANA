@@ -29,5 +29,14 @@
         "imagenes": [
             "/Belleza/img-productos/Sally/sally7.webp"
         ]
+    },
+    {
+        "id": 4,
+        "titulo": "Sampoo TERRE DE-VIE",
+        "subtitulo": "Shampoo de Aceite de Coco 400ml",
+        "precio": 9110,
+        "imagenes": [
+            "/Belleza/img-productos/Sally/sally8.webp"
+        ]
     }
 ]
