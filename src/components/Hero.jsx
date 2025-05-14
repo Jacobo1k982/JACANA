@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import { SocialLink } from './utils/SocialLink';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImages }, storiesRef }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const sliderSettings = {
     dots: false,
@@ -20,14 +28,16 @@ const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImag
     lazyLoad: 'ondemand',
   };
 
+  const imagesToShow = isMobile && backgroundImages.mobile ? backgroundImages.mobile : backgroundImages.desktop;
+
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen sm:h-[75vh] xsm:h-[60vh] overflow-hidden">
       {/* Fondo Slider */}
       <Slider {...sliderSettings}>
-        {backgroundImages?.map((img, index) => (
+        {imagesToShow?.map((img, index) => (
           <div key={index}>
             <div
-              className="w-full h-screen bg-cover bg-center"
+              className="w-full h-screen sm:h-[75vh] xsm:h-[60vh] bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url(${img})`,
                 filter: 'brightness(0.3) contrast(1.1)',
@@ -41,7 +51,7 @@ const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImag
       <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/70 z-10 flex items-center justify-center px-4">
         <div className="max-w-5xl text-center space-y-10 text-white">
           <h1
-            className="text-5xl sm:text-6xl xsm:text-3xl font-extrabold bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-300 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(245, 211, 72, 0.7)] animate-pulse"
+            className="text-5xl sm:text-6xl xsm:text-3xl font-extrabold bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-300 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(245,211,72,0.7)] animate-pulse"
             aria-label={title}
           >
             {title}

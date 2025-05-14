@@ -8,6 +8,20 @@
             "/Belleza/img-productos/Sally/sally1.webp",
             "/Belleza/img-productos/Sally/sally2.webp",
             "/Belleza/img-productos/Sally/sally3.webp"
+        ],
+        "colores": [
+            {
+                "color": "Rojo natural",
+                "codigo": "#FF0000"
+            },
+            {
+                "color": "pink",
+                "codigo": "#0000FF"
+            },
+            {
+                "color": "Verde",
+                "codigo": "#00FF00"
+            }
         ]
     },
     {
