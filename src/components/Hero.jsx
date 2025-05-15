@@ -31,13 +31,13 @@ const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImag
   const imagesToShow = isMobile && backgroundImages.mobile ? backgroundImages.mobile : backgroundImages.desktop;
 
   return (
-    <div className="relative w-full h-screen sm:h-[75vh] xsm:h-[60vh] overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden">
       {/* Fondo Slider */}
       <Slider {...sliderSettings}>
         {imagesToShow?.map((img, index) => (
           <div key={index}>
             <div
-              className="w-full h-screen sm:h-[75vh] xsm:h-[60vh] bg-cover bg-center bg-no-repeat"
+              className="w-full h-screen bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url(${img})`,
                 filter: 'brightness(0.3) contrast(1.1)',

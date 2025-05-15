@@ -89,10 +89,10 @@ export default function AppRoutes() {
                     <main className="flex flex-col relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden">
                         <Hero heroapi={heroapi} storiesRef={storiesRef} />
                         <Stories story={story} storiesRef={storiesRef} />
-                        <Sales endpoint={popularsales} ifExists />
-                        <FlexContent endpoint={highlight} ifExists />
-                        <Sales endpoint={topratedsales} />
-                        <FlexContent endpoint={sneaker} />
+                        {/*<Sales endpoint={popularsales} ifExists />*/}
+                        {/*<FlexContent endpoint={highlight} ifExists />*/}
+                        {/*<Sales endpoint={topratedsales} />*/}
+                        {/*<FlexContent endpoint={sneaker} />*/}
                     </main>
                 } />
                 <Route path="/search" element={<SearchResults />} />
