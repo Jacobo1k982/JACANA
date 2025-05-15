@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Dialog } from '@headlessui/react';
+import BrandCarousel from "@/pages/BrandCarousel";
 
 const DetalleProducto = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const [producto, setProducto] = useState(null);
+    const [producto, setProducto] = useState({ colores: [] });
+    const [colorSeleccionado, setColorSeleccionado] = useState(null);
     const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
     const [modalAbierto, setModalAbierto] = useState(false);
     const [indexActual, setIndexActual] = useState(0);
@@ -15,36 +17,57 @@ const DetalleProducto = () => {
             .then((res) => res.json())
             .then((data) => {
                 const productoEncontrado = data.find(p => p.id.toString() === id);
-                setProducto(productoEncontrado);
-                if (productoEncontrado?.imagenes?.length > 0) {
-                    setImagenSeleccionada(productoEncontrado.imagenes[0]);
-                    setIndexActual(0);
+                if (productoEncontrado) {
+                    setProducto(productoEncontrado);
+
+                    const colorInicial = productoEncontrado.colores?.[0]?.color;
+                    setColorSeleccionado(colorInicial);
+
+                    let imagenesIniciales = [];
+
+                    if (productoEncontrado.imagenesPorColor && colorInicial) {
+                        imagenesIniciales = productoEncontrado.imagenesPorColor[colorInicial] || [];
+                    }
+
+                    // Si no hay imágenes por color, usar "imagenes" directo
+                    if (imagenesIniciales.length === 0 && productoEncontrado.imagenes?.length > 0) {
+                        imagenesIniciales = productoEncontrado.imagenes;
+                    }
+
+                    if (imagenesIniciales.length > 0) {
+                        setImagenSeleccionada(imagenesIniciales[0]);
+                        setIndexActual(0);
+                    } else {
+                        console.warn('No hay imágenes disponibles para este producto.');
+                    }
                 }
             })
             .catch((err) => console.error('Error cargando detalles:', err));
     }, [id]);
 
+    if (!producto || !colorSeleccionado) {
+        return <div className="p-4 text-center">Cargando producto...</div>;
+    }
+
+    const imagenesColorActual = (producto.imagenesPorColor?.[colorSeleccionado] || producto.imagenes) || [];
+
     const abrirModal = (index) => {
         setIndexActual(index);
-        setImagenSeleccionada(producto.imagenes[index]);
+        setImagenSeleccionada(imagenesColorActual[index]);
         setModalAbierto(true);
     };
 
     const mostrarAnterior = () => {
-        const nuevoIndex = (indexActual - 1 + producto.imagenes.length) % producto.imagenes.length;
+        const nuevoIndex = (indexActual - 1 + imagenesColorActual.length) % imagenesColorActual.length;
         setIndexActual(nuevoIndex);
-        setImagenSeleccionada(producto.imagenes[nuevoIndex]);
+        setImagenSeleccionada(imagenesColorActual[nuevoIndex]);
     };
 
     const mostrarSiguiente = () => {
-        const nuevoIndex = (indexActual + 1) % producto.imagenes.length;
+        const nuevoIndex = (indexActual + 1) % imagenesColorActual.length;
         setIndexActual(nuevoIndex);
-        setImagenSeleccionada(producto.imagenes[nuevoIndex]);
+        setImagenSeleccionada(imagenesColorActual[nuevoIndex]);
     };
-
-    if (!producto) {
-        return <div className="p-4 text-center">Cargando producto...</div>;
-    }
 
     return (
         <div className="p-6 max-w-5xl mx-auto mt-20">
@@ -66,7 +89,7 @@ const DetalleProducto = () => {
                     </div>
 
                     <div className="flex gap-3 mt-4 justify-center flex-wrap">
-                        {producto.imagenes.map((img, index) => (
+                        {imagenesColorActual.map((img, index) => (
                             <img
                                 key={index}
                                 src={img}
@@ -75,7 +98,8 @@ const DetalleProducto = () => {
                                     setImagenSeleccionada(img);
                                     setIndexActual(index);
                                 }}
-                                className={`w-20 h-20 object-cover rounded border-2 cursor-pointer ${img === imagenSeleccionada ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-300'}`}
+                                className={`w-20 h-20 object-cover rounded border-2 cursor-pointer ${img === imagenSeleccionada ? 'border-blue-500 ring-2 ring-blue-300' : 'border-gray-300'
+                                    }`}
                             />
                         ))}
                     </div>
@@ -88,6 +112,28 @@ const DetalleProducto = () => {
                         ₡{producto.precio.toFixed(2)}
                     </p>
 
+                    <div className="mb-6">
+                        <h3 className="font-semibold mb-2">Colores disponibles:</h3>
+                        <div className="flex gap-3">
+                            {producto.colores.map((color, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => {
+                                        setColorSeleccionado(color.color);
+                                        const nuevasImagenes = producto.imagenesPorColor?.[color.color] || [];
+                                        setImagenSeleccionada(nuevasImagenes[0] || null);
+                                        setIndexActual(0);
+                                    }}
+
+                                    className={`w-6 h-6 rounded-full border-2 ${color.color === colorSeleccionado ? 'border-black' : 'border-gray-300'
+                                        }`}
+                                    style={{ backgroundColor: color.codigo }}
+                                    title={color.color}
+                                />
+                            ))}
+                        </div>
+                    </div>
+
                     <div className="mt-6">
                         <h2 className="text-xl font-bold mb-2">Detalles</h2>
                         <p className="text-gray-700">{producto.detalles}</p>
@@ -97,26 +143,9 @@ const DetalleProducto = () => {
                         <h2 className="text-xl font-bold mb-2">Ingredientes</h2>
                         <p className="text-gray-700">{producto.ingredientes}</p>
                     </div>
-
-                    {producto.colores && (
-                        <div className="mb-6">
-                            <h3 className="font-semibold mb-2">Colores disponibles:</h3>
-                            <div className="flex gap-3">
-                                {producto.colores.map((color, i) => (
-                                    <div
-                                        key={i}
-                                        className="w-6 h-6 rounded-full border border-gray-400"
-                                        title={color.color}
-                                        style={{ backgroundColor: color.codigo }}
-                                    />
-                                ))}
-                            </div>
-                        </div>
-                    )}
                 </div>
             </div>
 
-            {/* Beneficios desde producto.beneficios */}
             {producto.beneficios?.length > 0 && (
                 <div className="mt-12 bg-white rounded-2xl shadow-lg p-6 max-w-4xl mx-auto border border-gray-200">
                     <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">Beneficios de nuestros productos</h2>
@@ -131,7 +160,6 @@ const DetalleProducto = () => {
                 </div>
             )}
 
-            {/* Modal de imagen */}
             <Dialog open={modalAbierto} onClose={() => setModalAbierto(false)} className="relative z-50">
                 <div className="fixed inset-0 bg-black/80 flex items-center justify-center">
                     <Dialog.Panel className="relative animate-scale-in p-4">
@@ -162,7 +190,6 @@ const DetalleProducto = () => {
                 </div>
             </Dialog>
 
-            {/* Animación */}
             <style>
                 {`
                 @keyframes scaleIn {

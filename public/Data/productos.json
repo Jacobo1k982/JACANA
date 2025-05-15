@@ -11,10 +11,11 @@
         ],
         "colores": [
             {
-                "color": "Rojo natural",
+                "color": "Rojo-natural",
                 "codigo": "#FF0000"
             }
-        ]
+        ],
+        "beneficios": []
     },
     {
         "id": 2,
@@ -25,7 +26,16 @@
             "/Belleza/img-productos/Sally/sally4.webp",
             "/Belleza/img-productos/Sally/sally5.webp",
             "/Belleza/img-productos/Sally/sally6.webp"
-        ]
+        ],
+        "detalles": "",
+        "ingredientes": "",
+        "colores": [
+            {
+                "color": "Celeste-natural",
+                "codigo": "#88c1dc"
+            }
+        ],
+        "beneficios": []
     },
     {
         "id": 3,
@@ -34,21 +44,35 @@
         "precio": 11680,
         "imagenes": [
             "/Belleza/img-productos/Sally/sally7.webp"
-        ]
+        ],
+        "detalles": "",
+        "ingredientes": "",
+        "colores": [
+            {
+                "color": "Café-natural",
+                "codigo": "#af8b7c"
+            }
+        ],
+        "beneficios": []
     },
     {
         "id": 4,
-        "titulo": "Sampoo TERRE DE-VIE",
+        "titulo": "Sampoo TERRE DE VIE",
         "subtitulo": "Shampoo de Aceite de Coco 400ml",
         "precio": 9110,
         "imagenes": [
-            "/Belleza/img-productos/Sally/sally8.webp"
-        ]
+            "/Belleza/img-productos/Sally/sally8.webp",
+            "/Belleza/img-productos/Sally/sally9.webp"
+        ],
+        "detalles": "",
+        "ingredientes": "",
+        "colores": [],
+        "beneficios": []
     },
     {
         "id": 5,
         "titulo": "CoverGirl",
-        "subtitulo": "Base de maquijllaje Clean Invisible Foundation",
+        "subtitulo": "Base de maquillaje Clean Invisible Foundation",
         "precio": 13400,
         "imagenes": [
             "/Belleza/img-productos/Clean/cover1.webp",
@@ -64,19 +88,20 @@
         "ingredientes": "Vegano y formulado sin parabenos, sulfatos, ftalatos, aceite mineral y talco.",
         "colores": [
             {
-                "color": "Creamy Natural",
+                "color": "Creamy-Natural",
                 "codigo": "#e9e4d3"
             },
             {
                 "color": "Classic Beige",
                 "codigo": "#CBB595"
             }
-        ]
+        ],
+        "beneficios": []
     },
     {
         "id": 6,
         "titulo": "MAC Cosmetics",
-        "subtitulo": "MAC LABIAL LÍQUIDO POWDER KISS",
+        "subtitulo": "MAC LABIAL LÍQUIDO POWDER KISS-HABIT",
         "precio": 26550,
         "imagenes": [
             "/Belleza/img-productos/MAC-LABIAL/mac1.webp",
@@ -95,7 +120,8 @@
                 "color": "HABIT",
                 "codigo": "#CBB595"
             }
-        ]
+        ],
+        "beneficios": []
     },
     {
         "id": 7,
@@ -107,7 +133,7 @@
             "/Belleza/img-productos/MAC-LABIAL/macximal/mac2.webp",
             "/Belleza/img-productos/MAC-LABIAL/macximal/mac3.webp",
             "/Belleza/img-productos/MAC-LABIAL/macximal/mac4.webp",
-            "/Belleza/img-productos/MAC-LABIAL/macximal/mac5.webp", 
+            "/Belleza/img-productos/MAC-LABIAL/macximal/mac5.webp",
             "/Belleza/img-productos/MAC-LABIAL/macximal/mac6.webp",
             "/Belleza/img-productos/MAC-LABIAL/macximal/mac7.webp",
             "/Belleza/img-productos/MAC-LABIAL/macximal/mac8.webp",
@@ -150,7 +176,7 @@
         "ingredientes": "",
         "colores": [
             {
-                "color": "COOL TEDDY",
+                "color": "COOL-TEDDY",
                 "codigo": "#896d58"
             }
         ],
@@ -167,7 +193,7 @@
     {
         "id": 9,
         "titulo": "MAC Cosmetics",
-        "subtitulo": "MAC LABIAL LÍQUIDO POWDER KISS",
+        "subtitulo": "MAC LABIAL LÍQUIDO POWDER KIS-TAKEN",
         "precio": 26550,
         "imagenes": [
             "/Belleza/img-productos/MAC-LABIAL/powder/powder1.webp",
@@ -178,7 +204,6 @@
             "/Belleza/img-productos/MAC-LABIAL/powder/powder6.webp",
             "/Belleza/img-productos/MAC-LABIAL/powder/powder7.webp",
             "/Belleza/img-productos/MAC-LABIAL/powder/powder8.webp"
-
         ],
         "detalles": "Powder Kiss ahora en su versión líquida que te dará ese suave e impactante acabado matte. Descubre un fórmula ligera que te da diez horas de humectación. Su suave textura, similar a un mousse, se aplica fácil y uniformemente dejando la cantidad perfecta de color en los labios. La mezcla especial de polvos y propiedades emolientes le dan a la fórmula la flexibilidad, duración y humectación que te dejará unos labios suaves y sedosos durante todo el día. Su aplicador en forma de reloj de arena se adapta a la forma de los labios, llenando lineas y realzando los labios con un efecto suave.",
         "ingredientes": "",
@@ -187,7 +212,8 @@
                 "color": "TAKEN",
                 "codigo": "#896d58"
             }
-        ]
+        ],
+        "beneficios": []
     },
     {
         "id": 10,
@@ -208,15 +234,16 @@
         "ingredientes": "",
         "colores": [
             {
-                "color": "ALONE TIME",
+                "color": "ALONE-TIME",
                 "codigo": "#896d58"
             }
-        ]
+        ],
+        "beneficios": []
     },
     {
         "id": 11,
         "titulo": "MAC Cosmetics",
-        "subtitulo": "MAC LABIAL LÍQUIDO POWDER KISS",
+        "subtitulo": "MAC LABIAL LÍQUIDO POWDER KISS-CHESTNUT",
         "precio": 26500,
         "imagenes": [
             "/Belleza/img-productos/MAC-LABIAL/powder2/powder1.webp",
@@ -235,7 +262,8 @@
                 "color": "CHESTNUT",
                 "codigo": "#954535"
             }
-        ]
+        ],
+        "beneficios": []
     },
     {
         "id": 12,
@@ -260,7 +288,8 @@
                 "color": "FLESHPOT",
                 "codigo": "#ffe9d1"
             }
-        ]
+        ],
+        "beneficios": []
     },
     {
         "id": 13,
@@ -280,12 +309,138 @@
         "ingredientes": "",
         "colores": [
             {
-                "color": "INTIMATE NUDES",
+                "color": "INTIMATE-NUDES",
                 "codigo": "#"
             }
-        ]
+        ],
+        "beneficios": []
+    },
+    {
+        "id": 14,
+        "titulo": "MAC Cosmetics",
+        "subtitulo": "MAC LÁPIZ DE GEL DELINEADOR PARA OJOS COLOUR EXCESS",
+        "precio": 21900,
+        "imagenesPorColor": {
+            "INCORRUPTIBLE": [
+                "/Belleza/img-productos/lapiz-gel/INCORRUPTIBLE/lapiz1.webp",
+                "/Belleza/img-productos/lapiz-gel/INCORRUPTIBLE/lapiz2.webp",
+                "/Belleza/img-productos/lapiz-gel/INCORRUPTIBLE/lapiz3.webp",
+                "/Belleza/img-productos/lapiz-gel/INCORRUPTIBLE/lapiz4.webp",
+                "/Belleza/img-productos/lapiz-gel/INCORRUPTIBLE/lapiz5.webp",
+                "/Belleza/img-productos/lapiz-gel/INCORRUPTIBLE/lapiz6.webp",
+                "/Belleza/img-productos/lapiz-gel/INCORRUPTIBLE/lapiz7.webp"
+            ],
+            "GLIDE-OR-DIE": [
+                "/Belleza/img-productos/lapiz-gel/GLIDE-OR-DIE/lapiz1.webp",
+                "/Belleza/img-productos/lapiz-gel/GLIDE-OR-DIE/lapiz2.webp",
+                "/Belleza/img-productos/lapiz-gel/GLIDE-OR-DIE/lapiz3.webp",
+                "/Belleza/img-productos/lapiz-gel/GLIDE-OR-DIE/lapiz4.webp",
+                "/Belleza/img-productos/lapiz-gel/GLIDE-OR-DIE/lapiz5.webp",
+                "/Belleza/img-productos/lapiz-gel/GLIDE-OR-DIE/lapiz6.webp",
+                "/Belleza/img-productos/lapiz-gel/GLIDE-OR-DIE/lapiz7.webp"
+            ],
+            "GRAPHIC-CONTENT": [
+                "/Belleza/img-productos/lapiz-gel/GRAPHIC-CONTENT/lapiz1.webp",
+                "/Belleza/img-productos/lapiz-gel/GRAPHIC-CONTENT/lapiz2.webp",
+                "/Belleza/img-productos/lapiz-gel/GRAPHIC-CONTENT/lapiz3.webp",
+                "/Belleza/img-productos/lapiz-gel/GRAPHIC-CONTENT/lapiz4.webp",
+                "/Belleza/img-productos/lapiz-gel/GRAPHIC-CONTENT/lapiz5.webp",
+                "/Belleza/img-productos/lapiz-gel/GRAPHIC-CONTENT/lapiz6.webp",
+                "/Belleza/img-productos/lapiz-gel/GRAPHIC-CONTENT/lapiz7.webp"
+            ],
+            "PERPETUAL-SHOCK": [
+                "/Belleza/img-productos/lapiz-gel/PERPETUAL-SHOCK/lapiz1.webp",
+                "/Belleza/img-productos/lapiz-gel/PERPETUAL-SHOCK/lapiz2.webp",
+                "/Belleza/img-productos/lapiz-gel/PERPETUAL-SHOCK/lapiz3.webp",
+                "/Belleza/img-productos/lapiz-gel/PERPETUAL-SHOCK/lapiz4.webp",
+                "/Belleza/img-productos/lapiz-gel/PERPETUAL-SHOCK/lapiz5.webp",
+                "/Belleza/img-productos/lapiz-gel/PERPETUAL-SHOCK/lapiz6.webp",
+                "/Belleza/img-productos/lapiz-gel/PERPETUAL-SHOCK/lapiz7.webp"
+            ],
+            "COMMIMENT-ISSUES": [
+                "/Belleza/img-productos/lapiz-gel/COMMIMENT-ISSUES/lapiz1.webp",
+                "/Belleza/img-productos/lapiz-gel/COMMIMENT-ISSUES/lapiz2.webp",
+                "/Belleza/img-productos/lapiz-gel/COMMIMENT-ISSUES/lapiz3.webp",
+                "/Belleza/img-productos/lapiz-gel/COMMIMENT-ISSUES/lapiz4.webp",
+                "/Belleza/img-productos/lapiz-gel/COMMIMENT-ISSUES/lapiz5.webp",
+                "/Belleza/img-productos/lapiz-gel/COMMIMENT-ISSUES/lapiz6.webp",
+                "/Belleza/img-productos/lapiz-gel/COMMIMENT-ISSUES/lapiz7.webp"
+            ],
+            "POOL-SHARK": [
+                "/Belleza/img-productos/lapiz-gel/POOL-SHARK/lapiz1.webp",
+                "/Belleza/img-productos/lapiz-gel/POOL-SHARK/lapiz2.webp",
+                "/Belleza/img-productos/lapiz-gel/POOL-SHARK/lapiz3.webp",
+                "/Belleza/img-productos/lapiz-gel/POOL-SHARK/lapiz4.webp"
+            ],
+            "ISNT-IT-IRON": [
+                "/Belleza/img-productos/lapiz-gel/ISNT-IT-IRON/lapiz1.webp",
+                "/Belleza/img-productos/lapiz-gel/ISNT-IT-IRON/lapiz2.webp",
+                "/Belleza/img-productos/lapiz-gel/ISNT-IT-IRON/lapiz3.webp",
+                "/Belleza/img-productos/lapiz-gel/ISNT-IT-IRON/lapiz4.webp"
+            ],
+            "STAY-THE-NIGHT": [
+                "/Belleza/img-productos/lapiz-gel/STAY-THE-NIGHT/lapiz1.webp",
+                "/Belleza/img-productos/lapiz-gel/STAY-THE-NIGHT/lapiz2.webp",
+                "/Belleza/img-productos/lapiz-gel/STAY-THE-NIGHT/lapiz3.webp",
+                "/Belleza/img-productos/lapiz-gel/STAY-THE-NIGHT/lapiz4.webp"
+            ],
+            "FULL-SLEEVE": [
+                "/Belleza/img-productos/lapiz-gel/FULL-SLEEVE/lapiz1.webp",
+                "/Belleza/img-productos/lapiz-gel/FULL-SLEEVE/lapiz2.webp",
+                "/Belleza/img-productos/lapiz-gel/FULL-SLEEVE/lapiz3.webp",
+                "/Belleza/img-productos/lapiz-gel/FULL-SLEEVE/lapiz4.webp"
+            ],
+            "HELL-BENT": [
+                "/Belleza/img-productos/lapiz-gel/HELL-BENT/lapiz1.webp",
+                "/Belleza/img-productos/lapiz-gel/HELL-BENT/lapiz2.webp",
+                "/Belleza/img-productos/lapiz-gel/HELL-BENT/lapiz3.webp",
+                "/Belleza/img-productos/lapiz-gel/HELL-BENT/lapiz4.webp"
+            ]
+        },
+        "colores": [
+            {
+                "color": "INCORRUPTIBLE",
+                "codigo": "#e8e8e8"
+            },
+            {
+                "color": "GLIDE-OR-DIE",
+                "codigo": "#010103"
+            },
+            {
+                "color": "GRAPHIC-CONTENT",
+                "codigo": "#8f4f6b"
+            },
+            {
+                "color": "PERPETUAL-SHOCK",
+                "codigo": "#075fc5"
+            },
+            {
+                "color": "COMMIMENT-ISSUES",
+                "codigo": "#d1a7cc"
+            },
+            {
+                "color": "POOL-SHARK",
+                "codigo": "#008b7a"
+            },
+            {
+                "color": "ISNT-IT-IRON",
+                "codigo": "#6c6d75"
+            },
+            {
+                "color": "STAY-THE-NIGHT",
+                "codigo": "#023857"
+            },
+            {
+                "color": "FULL-SLEEVE",
+                "codigo": "#ffd4a8"
+            },
+            {
+                "color": "HELL-BENT",
+                "codigo": "#015f64"
+            }
+        ],
+        "detalles": "La tecnología de larga duración se une a un pigmento sedoso y saturado en una línea de lápices de ojos con un toque de alta definición y tecnicolor. La tecnología line-lock promete una aplicación duradera a prueba de transferencias, mientras que la alquimia pigmentaria ofrece un deslizamiento suave y un resultado potente con una sola pasada. ¿dónde vas a poner el límite?",
+        "ingredientes": "",
+        "beneficios": []
     }
-    
-    
-    
 ]

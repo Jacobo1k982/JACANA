@@ -6,6 +6,7 @@ import OfertasFuturistas from './components/OfertasFuturistas';
 import GuiaDeTallas from './pages/GuiaDeTallas';
 
 
+
 import {
     heroapi, popularsales, topratedsales, highlight, sneaker, story, dama, ropa, caballero, deportivoapi, marcaszapatosapi,
     marcaszapatos2api
@@ -23,6 +24,8 @@ import Contacto from './pages/Contacto';
 /*Belleza*/
 const Belleza = lazy(() => import('./components/Belleza/Belleza'));
 const DetalleProducto = lazy(() => import('./components/Belleza/DetalleProducto'));
+const BrandCarousel = lazy(() => import('./pages/BrandCarousel'));
+
 
 /* Sección: Componentes de la página principal */
 const Hero = lazy(() => import('./components/Hero'));
@@ -333,7 +336,12 @@ export default function AppRoutes() {
                 <Route path="/caracteristicasmañanitas/:id" element={<CaracteristicasMañanitas />} />
                 <Route path="/guia-de-tallas" element={<GuiaDeTallas />} />
                 <Route path="/contacto" element={<Contacto />} />
-                <Route path="belleza" element={<Belleza />} />
+                <Route path="belleza" element={
+                    <>
+                    <Belleza />
+                    <BrandCarousel />
+                    </>
+                } />
                 <Route path="/producto/:id" element={<DetalleProducto />} />
             </Routes>
         </>

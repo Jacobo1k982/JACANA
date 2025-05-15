@@ -47,3 +47,4 @@ export {default as VansMujer} from '../pages/Mujer/Zapatos/VansMujer.jsx';
 export {default as Contacto} from '../pages/Contacto.jsx';
 export {default as ParticlesBackground} from '../pages/ParticlesBackground.jsx';
 export {default as Belleza} from './Belleza/Belleza.jsx';
+export {default as BrandCarousel} from '../pages/BrandCarousel.jsx';

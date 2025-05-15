@@ -64,8 +64,7 @@ const Belleza = () => {
     };
 
     return (
-        <div className="w-full pt-[110px] relative p-4 bg-gray-900 text-gray-100 min-h-screen">
-
+        <div className="w-full pt-[110px] relative p-4 bg-gray-100 text-gray-900 min-h-screen">
             <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent h-[110px] z-10" />
 
             {/* Modal */}
@@ -162,7 +161,7 @@ const Belleza = () => {
                                 emulateTouch
                                 className="rounded-md mb-2"
                             >
-                                {producto.imagenes.map((img, idx) => (
+                                {producto.imagenes?.map((img, idx) => (
                                     <div key={idx}>
                                         <div
                                             onClick={() => abrirModal(producto.imagenes, idx)}
@@ -176,6 +175,7 @@ const Belleza = () => {
                                         </div>
                                     </div>
                                 ))}
+
                             </Carousel>
 
                             <h3 className="text-lg font-semibold mt-2">{producto.titulo}</h3>
@@ -184,7 +184,7 @@ const Belleza = () => {
                                 ₡{producto.precio.toFixed(2)}
                             </p>
 
-                            {producto.colores && (
+                            {producto.colores?.length > 0 && (
                                 <div className="flex justify-center items-center gap-2 mt-3">
                                     {producto.colores.map((color, index) => {
                                         const isSelected = colorSeleccionado[producto.id] === color.codigo;
@@ -194,8 +194,8 @@ const Belleza = () => {
                                                 title={color.color}
                                                 onClick={() => seleccionarColor(producto.id, color.codigo)}
                                                 className={`w-6 h-6 rounded-full border-2 cursor-pointer transition-transform duration-200 ${isSelected
-                                                    ? 'border-blue-600 ring-2 ring-blue-300 scale-110'
-                                                    : 'border-gray-300'
+                                                        ? 'border-blue-600 ring-2 ring-blue-300 scale-110'
+                                                        : 'border-gray-300'
                                                     }`}
                                                 style={{ backgroundColor: color.codigo }}
                                             />
