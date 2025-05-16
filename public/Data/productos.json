@@ -319,6 +319,9 @@
         "id": 14,
         "titulo": "MAC Cosmetics",
         "subtitulo": "MAC LÁPIZ DE GEL DELINEADOR PARA OJOS COLOUR EXCESS",
+        "imagenes": [
+            "/Belleza/img-productos/lapiz-gel/GLIDE-OR-DIE/lapiz1.webp"
+        ],
         "precio": 21900,
         "imagenesPorColor": {
             "INCORRUPTIBLE": [
