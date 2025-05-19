@@ -4,6 +4,7 @@ import SearchResults from './pages/SearchResults';
 import ThankYou from './pages/ThankYou';
 import OfertasFuturistas from './components/OfertasFuturistas';
 import GuiaDeTallas from './pages/GuiaDeTallas';
+import Inicio from './components/Inicio';
 
 
 
@@ -89,8 +90,9 @@ export default function AppRoutes() {
             <Routes>
                 {/* Página principal */}
                 <Route path="/" element={
-                    <main className="flex flex-col relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden">
-                        <Hero heroapi={heroapi} storiesRef={storiesRef} />
+                    <main className="flex flex-col relative bg-[#ffffff] dark:bg-[#000000] min-h-screen overflow-hidden">
+                        {/*<Hero heroapi={heroapi} storiesRef={storiesRef} />*/}
+                        <Inicio />
                         <Stories story={story} storiesRef={storiesRef} />
                         {/*<Sales endpoint={popularsales} ifExists />*/}
                         {/*<FlexContent endpoint={highlight} ifExists />*/}
@@ -109,7 +111,7 @@ export default function AppRoutes() {
                 <Route path="/marcaszapatos" element={<Shoebrands marcaszapatosapi={marcaszapatosapi} />} />
                 <Route path="/marcaszapatos2" element={<Shoebrands2 marcaszapatos2api={marcaszapatos2api} />} />
                 <Route path="/newb2" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main class="flex flex-col gap-20 relative bg-white dark:bg-black min-h-screen overflow-hidden">
                         <EncabezadoCatalogo deportivoapi={deportivoapi} />
                         <div className='NewB2appwoman'>
                             <div className='fila'>
@@ -338,8 +340,8 @@ export default function AppRoutes() {
                 <Route path="/contacto" element={<Contacto />} />
                 <Route path="belleza" element={
                     <>
-                    <Belleza />
-                    <BrandCarousel />
+                        <Belleza />
+                        <BrandCarousel />
                     </>
                 } />
                 <Route path="/producto/:id" element={<DetalleProducto />} />

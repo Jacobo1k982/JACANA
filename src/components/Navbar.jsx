@@ -2,7 +2,6 @@ import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { HeartIcon, MagnifyingGlassIcon, ShoppingBagIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/logo.png';
 import { selectCartItems, selectTotalQTY } from '../app/CartSlice';
 import { Link, useNavigate } from 'react-router-dom';
 import navLinks from '../data/NavLinks';
@@ -55,7 +54,7 @@ const MobileMenuItem = ({ link, onClose }) => {
   );
 };
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   const [navState, setNavState] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
@@ -91,34 +90,43 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 font-poppins ${navState
-          ? 'bg-white/40 backdrop-blur-md shadow-md py-3' // <--- Cambiado aquí
-          : 'bg-transparent py-3'}`}>
+      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 font-poppins
+  ${navState
+          ? 'bg-white/40 dark:bg-[#000000]/90 backdrop-blur-md shadow-md py-4'
+          : 'bg-transparent py-5'
+        }`}>
+
         <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
+
+          <Link to="/" className="flex items-center space-x-2 h-12">
             <img
-              src={logo}
-              alt="logo"
-              className={`transition-all duration-300 ${navState ? 'w-12 drop-shadow-md' : 'w-16 drop-shadow-lg'}`}
+              src="/CapaDark.png"
+              alt="Logo claro"
+              className="block dark:hidden h-full object-contain"
+            />
+            <img
+              src="/CapaLight.png"
+              alt="Logo oscuro"
+              className="hidden dark:block h-full object-contain"
             />
           </Link>
 
-          <ul className="flex items-center space-x-4 sm:space-x-6">
+          <ul className="flex items-center space-x-2 sm:space-x-6">
             <li>
-              <button onClick={toggleSearch} className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
-                <MagnifyingGlassIcon className="w-6 h-6 text-gray-700 transition-all duration-300" />
+              <button onClick={toggleSearch} className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-[#000000] transition">
+                <MagnifyingGlassIcon className="w-5 h-5 text-gray-700 dark:text-gray-200" />
               </button>
             </li>
 
             <li>
-              <button className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
-                <HeartIcon className="w-6 h-6 text-gray-700 transition-all duration-300" />
+              <button className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-[#000000] transition">
+                <HeartIcon className="w-5 h-5 text-gray-700 dark:text-gray-200" />
               </button>
             </li>
 
             <li>
-              <button onClick={toggleDrawer} className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
-                <ShoppingBagIcon className="w-6 h-6 text-gray-700 transition-all duration-300" />
+              <button onClick={toggleDrawer} className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-[#000000] transition">
+                <ShoppingBagIcon className="w-5 h-5 text-gray-700 dark:text-gray-200" />
                 {totalQTY > 0 && (
                   <span className="absolute -top-1 -right-1 text-[0.65rem] w-5 h-5 bg-red-500 text-white rounded-full flex items-center justify-center font-semibold shadow-md">
                     {totalQTY}
@@ -128,28 +136,31 @@ const Navbar = () => {
             </li>
 
             <li>
-              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition">
+              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-[#000000] transition">
                 {mobileMenuOpen ? (
-                  <XMarkIcon className="w-6 h-6 text-gray-500" />
+                  <XMarkIcon className="w-5 h-5 text-gray-700 dark:text-gray-200" />
                 ) : (
-                  <Bars3Icon className="w-6 h-6 text-gray-700" />
+                  <Bars3Icon className="w-6 h-6 text-gray-700 dark:text-gray-200" />
                 )}
               </button>
             </li>
           </ul>
         </nav>
 
-        {/* SearchBar */}
         <AnimatePresence>
           {showSearch && (
             <Suspense fallback={<div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50">Cargando búsqueda...</div>}>
-              <SearchBar value={searchQuery} onChange={handleSearchChange} onClose={() => setShowSearch(false)} onSubmit={handleSearchSubmit} />
+              <SearchBar
+                value={searchQuery}
+                onChange={handleSearchChange}
+                onClose={() => setShowSearch(false)}
+                onSubmit={handleSearchSubmit}
+              />
             </Suspense>
           )}
         </AnimatePresence>
       </header>
 
-      {/* Cart Drawer */}
       <AnimatePresence>
         {drawerOpen && (
           <Suspense fallback={<div className="fixed right-0 top-0 w-[300px] md:w-[400px] h-screen bg-white shadow-lg z-[999] flex items-center justify-center">Cargando...</div>}>
@@ -158,7 +169,6 @@ const Navbar = () => {
         )}
       </AnimatePresence>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -166,7 +176,7 @@ const Navbar = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -100, opacity: 0 }}
             transition={{ duration: 0.4, ease: 'easeInOut' }}
-            className="fixed top-0 left-0 w-full h-full bg-gray-900/95 backdrop-blur-lg shadow-2xl z-50 flex flex-col items-center justify-center px-8"
+            className="fixed top-0 left-0 w-full h-full bg-[#000000]/95 backdrop-blur-lg shadow-2xl z-50 flex flex-col items-center justify-center px-8"
           >
             <ul className="space-y-6 text-center w-full">
               {navLinks.map((link) => (

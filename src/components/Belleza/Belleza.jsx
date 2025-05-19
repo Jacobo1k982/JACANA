@@ -64,175 +64,172 @@ const Belleza = () => {
     };
 
     return (
-        <div className="w-full pt-[110px] relative p-4 bg-gray-100 text-gray-900 min-h-screen">
-            <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent h-[110px] z-10" />
-
-            {/* Modal */}
-            <Dialog open={!!imagenExpandida} onClose={cerrarModal} className="relative z-50">
-                <div className="fixed inset-0 bg-black/80 flex items-center justify-center">
-                    <Dialog.Panel className="relative animate-scale-in" onClick={(e) => e.stopPropagation()}>
-                        <button
-                            onClick={cerrarModal}
-                            className="absolute top-2 right-2 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-200 z-50"
-                            aria-label="Cerrar imagen"
-                        >
-                            ✕
-                        </button>
-                        <button
-                            onClick={mostrarAnterior}
-                            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-200 z-50"
-                        >
-                            ‹
-                        </button>
-                        <img
-                            src={imagenExpandida}
-                            alt="Imagen expandida"
-                            className="max-w-full max-h-screen object-contain rounded-md"
-                        />
-                        <button
-                            onClick={mostrarSiguiente}
-                            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-200 z-50"
-                        >
-                            ›
-                        </button>
-                    </Dialog.Panel>
-                </div>
-            </Dialog>
-
-            {/* Carrusel de banners */}
-            <Carousel
-                autoPlay
-                infiniteLoop
-                interval={4000}
-                showThumbs={false}
-                showStatus={false}
-                showArrows={false}
-                swipeable
-                emulateTouch
-                className="rounded-md"
-            >
-                {banners.map((src, index) => (
-                    <div key={index}>
-                        <img
-                            src={src}
-                            alt={`Hero ${index + 1}`}
-                            className="w-full object-cover max-h-[500px] md:max-h-[800px] object-center"
-                        />
-                    </div>
-                ))}
-            </Carousel>
-
-            {/* Carrusel de productos */}
-            <div className="mt-10 relative">
-                <h2 className="text-2xl font-bold mb-6 text-center">LO NUEVO</h2>
-
-                {/* Botones de navegación */}
-                <button
-                    onClick={() => scrollCarrusel(-300)}
-                    className="absolute left-0 top-[50%] transform -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
-                    aria-label="Scroll izquierdo"
-                >
-                    ‹
-                </button>
-
-                <button
-                    onClick={() => scrollCarrusel(300)}
-                    className="absolute right-0 top-[50%] transform -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
-                    aria-label="Scroll derecho"
-                >
-                    ›
-                </button>
-
-                {/* Lista horizontal scrollable */}
-                <div
-                    ref={carruselRef}
-                    className="flex gap-6 overflow-x-auto px-8 pb-4 scroll-smooth"
-                >
-                    {productos.map((producto) => (
-                        <div
-                            key={producto.id}
-                            className="min-w-[280px] max-w-[280px] flex-shrink-0 bg-white shadow-md rounded-lg p-4 hover:shadow-xl transition text-center"
-                        >
-                            <Carousel
-                                showThumbs={false}
-                                showStatus={false}
-                                infiniteLoop
-                                swipeable
-                                emulateTouch
-                                className="rounded-md mb-2"
+        <div
+            className="w-full pt-[110px] relative p-4 text-gray-900 dark:text-gray-100 min-h-screen bg-white dark:bg-black"
+        >
+            <div className="relative z-10">
+                {/* Modal */}
+                <Dialog open={!!imagenExpandida} onClose={cerrarModal} className="relative z-50">
+                    <div className="fixed inset-0 bg-black/80 flex items-center justify-center">
+                        <Dialog.Panel className="relative animate-scale-in" onClick={(e) => e.stopPropagation()}>
+                            <button
+                                onClick={cerrarModal}
+                                className="absolute top-2 right-2 bg-white dark:bg-gray-800 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
+                                aria-label="Cerrar imagen"
                             >
-                                {producto.imagenes?.map((img, idx) => (
-                                    <div key={idx}>
-                                        <div
-                                            onClick={() => abrirModal(producto.imagenes, idx)}
-                                            className="cursor-pointer"
-                                        >
-                                            <img
-                                                src={img}
-                                                alt={`${producto.titulo} ${idx + 1}`}
-                                                className="w-full object-contain object-center rounded-md max-h-52"
-                                            />
-                                        </div>
-                                    </div>
-                                ))}
+                                ✕
+                            </button>
+                            <button
+                                onClick={mostrarAnterior}
+                                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
+                            >
+                                ‹
+                            </button>
+                            <img
+                                src={imagenExpandida}
+                                alt="Imagen expandida"
+                                className="max-w-full max-h-screen object-contain rounded-md"
+                            />
+                            <button
+                                onClick={mostrarSiguiente}
+                                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
+                            >
+                                ›
+                            </button>
+                        </Dialog.Panel>
+                    </div>
+                </Dialog>
 
-                            </Carousel>
-
-                            <h3 className="text-lg font-semibold mt-2">{producto.titulo}</h3>
-                            <p className="text-sm text-gray-600">{producto.subtitulo}</p>
-                            <p className="text-blue-600 font-bold mt-1">
-                                ₡{producto.precio.toFixed(2)}
-                            </p>
-
-                            {producto.colores?.length > 0 && (
-                                <div className="flex justify-center items-center gap-2 mt-3">
-                                    {producto.colores.map((color, index) => {
-                                        const isSelected = colorSeleccionado[producto.id] === color.codigo;
-                                        return (
-                                            <div
-                                                key={index}
-                                                title={color.color}
-                                                onClick={() => seleccionarColor(producto.id, color.codigo)}
-                                                className={`w-6 h-6 rounded-full border-2 cursor-pointer transition-transform duration-200 ${isSelected
-                                                        ? 'border-blue-600 ring-2 ring-blue-300 scale-110'
-                                                        : 'border-gray-300'
-                                                    }`}
-                                                style={{ backgroundColor: color.codigo }}
-                                            />
-                                        );
-                                    })}
-                                </div>
-                            )}
-
-                            <div className="flex justify-end">
-                                <Link
-                                    to={`/producto/${producto.id}`}
-                                    className="mt-4 inline-block text-sm text-blue-500 font-medium hover:underline"
-                                >
-                                    Ver detalle
-                                </Link>
-                            </div>
+                {/* Carrusel de banners */}
+                <Carousel
+                    autoPlay
+                    infiniteLoop
+                    interval={4000}
+                    showThumbs={false}
+                    showStatus={false}
+                    showArrows={false}
+                    swipeable
+                    emulateTouch
+                    className="rounded-md"
+                >
+                    {banners.map((src, index) => (
+                        <div key={index}>
+                            <img
+                                src={src}
+                                alt={`Hero ${index + 1}`}
+                                className="w-full object-cover max-h-[500px] md:max-h-[800px] object-center"
+                            />
                         </div>
                     ))}
+                </Carousel>
+
+                {/* Carrusel de productos */}
+                <div className="mt-10 relative">
+                    <h2 className="text-2xl font-bold mb-6 text-center">LO NUEVO</h2>
+
+                    <button
+                        onClick={() => scrollCarrusel(-300)}
+                        className="absolute left-0 top-[50%] transform -translate-y-1/2 z-20 bg-white dark:bg-gray-800 text-black dark:text-white p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700"
+                        aria-label="Scroll izquierdo"
+                    >
+                        ‹
+                    </button>
+
+                    <button
+                        onClick={() => scrollCarrusel(300)}
+                        className="absolute right-0 top-[50%] transform -translate-y-1/2 z-20 bg-white dark:bg-gray-800 text-black dark:text-white p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700"
+                        aria-label="Scroll derecho"
+                    >
+                        ›
+                    </button>
+
+                    <div
+                        ref={carruselRef}
+                        className="flex gap-6 overflow-x-auto px-8 pb-4 scroll-smooth"
+                    >
+                        {productos.map((producto) => (
+                            <div
+                                key={producto.id}
+                                className="min-w-[280px] max-w-[280px] flex-shrink-0 bg-white dark:bg-gray-900 shadow-md dark:shadow-gray-700 rounded-lg p-4 hover:shadow-xl transition text-center"
+                            >
+                                <Carousel
+                                    showThumbs={false}
+                                    showStatus={false}
+                                    infiniteLoop
+                                    swipeable
+                                    emulateTouch
+                                    className="rounded-md mb-2"
+                                >
+                                    {producto.imagenes?.map((img, idx) => (
+                                        <div key={idx}>
+                                            <div
+                                                onClick={() => abrirModal(producto.imagenes, idx)}
+                                                className="cursor-pointer"
+                                            >
+                                                <img
+                                                    src={img}
+                                                    alt={`${producto.titulo} ${idx + 1}`}
+                                                    className="w-full object-contain object-center rounded-md max-h-52"
+                                                />
+                                            </div>
+                                        </div>
+                                    ))}
+                                </Carousel>
+
+                                <h3 className="text-lg font-semibold mt-2">{producto.titulo}</h3>
+                                <p className="text-sm text-gray-600 dark:text-gray-300">{producto.subtitulo}</p>
+                                <p className="text-blue-600 font-bold mt-1">₡{producto.precio.toFixed(2)}</p>
+
+                                {producto.colores?.length > 0 && (
+                                    <div className="flex justify-center items-center gap-2 mt-3">
+                                        {producto.colores.map((color, index) => {
+                                            const isSelected = colorSeleccionado[producto.id] === color.codigo;
+                                            return (
+                                                <div
+                                                    key={index}
+                                                    title={color.color}
+                                                    onClick={() => seleccionarColor(producto.id, color.codigo)}
+                                                    className={`w-6 h-6 rounded-full border-2 cursor-pointer transition-transform duration-200 ${isSelected
+                                                            ? 'border-blue-600 ring-2 ring-blue-300 scale-110'
+                                                            : 'border-gray-300 dark:border-gray-600'
+                                                        }`}
+                                                    style={{ backgroundColor: color.codigo }}
+                                                />
+                                            );
+                                        })}
+                                    </div>
+                                )}
+
+                                <div className="flex justify-end">
+                                    <Link
+                                        to={`/producto/${producto.id}`}
+                                        className="mt-4 inline-block text-sm text-blue-500 font-medium hover:underline"
+                                    >
+                                        Ver detalle
+                                    </Link>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
 
             <style>
                 {`
-          @keyframes scaleIn {
-            0% {
-              transform: scale(0.9);
-              opacity: 0;
-            }
-            100% {
-              transform: scale(1);
-              opacity: 1;
-            }
-          }
-          .animate-scale-in {
-            animation: scaleIn 0.25s ease-out;
-          }
-        `}
+                    @keyframes scaleIn {
+                        0% {
+                            transform: scale(0.9);
+                            opacity: 0;
+                        }
+                        100% {
+                            transform: scale(1);
+                            opacity: 1;
+                        }
+                    }
+                    .animate-scale-in {
+                        animation: scaleIn 0.25s ease-out;
+                    }
+                `}
             </style>
         </div>
     );

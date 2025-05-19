@@ -34,19 +34,22 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
     return (
         <section
             ref={storiesRef}
-            className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0f0f0f] to-[#1f1f1f] px-6 xs:px-4 py-16"
+            className="min-h-screen flex items-center justify-center bg-white dark:bg-[#000000] px-6 xs:px-4 py-16 transition-colors duration-500"
         >
             <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-12 xs:gap-8">
                 <motion.h2
                     initial={{ opacity: 0, y: -40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.9, ease: "easeOut" }}
-                    className="font-Playfair text-white tracking-tight text-center"
+                    className="font-Playfair tracking-tight text-center"
                 >
-                    <span className="text-5xl sm:text-7xl xs:text-3xl text-amber-400 block">Explora</span>
-                    <span className="text-3xl sm:text-4xl xs:text-xl block">las Mejores Marcas</span>
+                    {/* Contenedor con modo oscuro activado en Tailwind */}
+                    <div className="dark:bg-black bg-white p-6">
+                        <span className="text-4xl sm:text-4xl xs:text-2xl text-black-600 dark:text-black-400 block">
+                            Categoría
+                        </span>
+                    </div>
                 </motion.h2>
-
 
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -57,9 +60,7 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                     <Splide options={splideOptions}>
                         {news.map((val, i) => (
                             <SplideSlide key={i} className="overflow-visible">
-                                <div
-                                    className="group relative w-full h-full rounded-[2.5rem] bg-gradient-to-tr from-[#1c1c1e] to-[#2c2c2e] backdrop-blur-lg shadow-[0_4px_60px_rgba(255,255,255,0.05)] overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_6px_80px_rgba(255,255,255,0.1)] hover:scale-[1.015]"
-                                >
+                                <div className="group relative w-full h-full rounded-[2.5rem] bg-zinc-100 dark:bg-gradient-to-tr dark:from-[#1c1c1e] dark:to-[#2c2c2e] shadow-lg dark:shadow-[0_4px_60px_rgba(255,255,255,0.05)] overflow-hidden border border-zinc-300 dark:border-white/10 transition-all duration-500 hover:shadow-2xl hover:scale-[1.015]">
                                     <Link
                                         to={val.url}
                                         className="block relative w-full h-[450px] overflow-hidden rounded-t-[2.5rem]"
@@ -68,15 +69,17 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                                             src={val.img}
                                             alt={`imagen de ${val.title}`}
                                             className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-700 ease-in-out"
-                                            style={{ filter: "brightness(85%) contrast(120%) saturate(120%)" }}
+                                            style={{
+                                                filter: "brightness(85%) contrast(120%) saturate(120%)",
+                                            }}
                                         />
                                     </Link>
 
-                                    <div className="p-6 flex flex-col gap-4 text-white">
-                                        <h1 className="text-2xl font-playfair font-semibold tracking-wide text-amber-400 text-center">
+                                    <div className="p-6 flex flex-col gap-4 text-black dark:text-white">
+                                        <h1 className="text-2xl font-playfair font-semibold tracking-wide text-amber-600 dark:text-amber-400 text-center">
                                             {val.title}
                                         </h1>
-                                        <p className="text-sm font-outfit text-gray-300 text-justify leading-relaxed">
+                                        <p className="text-sm font-outfit text-zinc-700 dark:text-gray-300 text-justify leading-relaxed">
                                             {truncate(val.text, { length: 120 })}
                                         </p>
                                     </div>
@@ -84,9 +87,9 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                                     <div className="px-6 pb-6">
                                         <Link
                                             to={val.url}
-                                            className="inline-block w-full text-center py-2.5 rounded-full border border-amber-500 text-amber-300 hover:bg-amber-500 hover:text-black transition duration-300 font-semibold tracking-wider text-sm"
+                                            className="inline-block w-full text-center py-2.5 rounded-full border border-amber-600 dark:border-amber-400 text-amber-600 dark:text-amber-300 hover:bg-amber-500 hover:text-white dark:hover:text-black dark:hover:bg-amber-400 transition duration-300 font-semibold tracking-wider text-sm"
                                         >
-                                            {val.btn} <span className="ml-1">&#10140;</span>
+                                            {val.btn} <span className="ml-1">&#000000;</span>
                                         </Link>
                                     </div>
                                 </div>

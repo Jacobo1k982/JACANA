@@ -31,7 +31,7 @@ const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImag
   const imagesToShow = isMobile && backgroundImages.mobile ? backgroundImages.mobile : backgroundImages.desktop;
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden bg-white dark:bg-black transition-colors duration-500">
       {/* Fondo Slider */}
       <Slider {...sliderSettings}>
         {imagesToShow?.map((img, index) => (
@@ -40,30 +40,32 @@ const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImag
               className="w-full h-screen bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url(${img})`,
+                backgroundColor: '#000000', // Fallback si no carga la imagen
                 filter: 'brightness(0.3) contrast(1.1)',
               }}
-            ></div>
+            />
           </div>
         ))}
       </Slider>
 
       {/* Capa oscura con contenido */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/70 z-10 flex items-center justify-center px-4">
-        <div className="max-w-5xl text-center space-y-10 text-white">
+      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/70 dark:from-black/70 dark:via-black/60 dark:to-black/80 z-10 flex items-center justify-center px-4">
+        <div className="max-w-5xl text-center space-y-10 text-white dark:text-gray-100">
           <h1
             className="text-5xl sm:text-6xl xsm:text-3xl font-extrabold bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-300 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(245,211,72,0.7)] animate-pulse"
             aria-label={title}
           >
             {title}
           </h1>
-          <h2 className="text-2xl sm:text-2xl xsm:text-xl text-gray-300 font-medium opacity-90 transition-opacity duration-1000">
+
+          <h2 className="text-2xl sm:text-2xl xsm:text-xl text-gray-300 dark:text-gray-300 font-medium opacity-90 transition-opacity duration-1000">
             {subtitle}
           </h2>
 
           {btntext && (
             <button
               onClick={() => storiesRef?.current?.scrollIntoView({ behavior: 'smooth' })}
-              className="btn-cut-corners mt-5 px-8 py-4 bg-green/10 backdrop-blur-lg text-black-900 font-Outfit border border-amber-400 hover:bg-amber-400 hover:text-black shadow-lg transition duration-500 hover:shadow-cyan-400/50"
+              className="mt-5 px-8 py-4 font-Outfit border border-amber-400 text-black dark:text-white bg-white/10 dark:bg-black/10 backdrop-blur-lg hover:bg-amber-400 hover:text-black shadow-lg transition duration-500 hover:shadow-cyan-400/50 rounded-md"
             >
               {btntext}
             </button>
@@ -80,7 +82,7 @@ const Hero = ({ heroapi: { title, subtitle, btntext, sociallinks, backgroundImag
                     rel="noopener noreferrer"
                     className="hover:scale-125 transition-transform duration-300 hover:text-cyan-400"
                   >
-                    <div className="p-1 rounded-full bg-white/8 backdrop-blur-sm hover:shadow-[0_0_17px_white]">
+                    <div className="p-1 rounded-full bg-white/10 dark:bg-white/5 backdrop-blur-sm hover:shadow-[0_0_17px_white]">
                       <SocialLink icon={icon} />
                     </div>
                   </a>
