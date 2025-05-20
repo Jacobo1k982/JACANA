@@ -35,13 +35,12 @@ const Mujer = ({ dama: { title, subtitle, news } }) => {
 
   return (
     <section
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0f0f0f] to-[#1f1f1f] px-6 xs:px-4 py-16"
+      className="min-h-screen flex items-center justify-center px-6 xs:px-4 py-16 bg-white dark:bg-[#0f0f0f]"
       style={{
         backgroundImage: `url(${darkBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-12 xs:gap-8">
@@ -49,10 +48,12 @@ const Mujer = ({ dama: { title, subtitle, news } }) => {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="font-Playfair text-white tracking-tight text-center"
+          className="font-Playfair text-black dark:text-white tracking-tight text-center"
         >
-          <span className="text-5xl sm:text-6xl xs:text-3xl text-amber-400 block">Todo</span>
-          <span className="text-3xl sm:text-6xl xs:text-xl block">lo que buscas y más</span>
+          <span className="text-4xl sm:text-5xl xs:text-3xl font-Playfair block text-white dark:text-white">
+            Todo lo que buscas y más
+          </span>
+
         </motion.h2>
 
         <motion.div
@@ -64,9 +65,7 @@ const Mujer = ({ dama: { title, subtitle, news } }) => {
           <Splide options={splideOptions}>
             {news.map((val, i) => (
               <SplideSlide key={i} className="overflow-visible">
-                <div
-                  className="group relative w-full h-full rounded-[2.5rem] bg-gradient-to-tr from-[#1c1c1e] to-[#2c2c2e] backdrop-blur-lg shadow-[0_4px_60px_rgba(255,255,255,0.05)] overflow-hidden border border-white/10 transition-all duration-500 hover:shadow-[0_6px_80px_rgba(255,255,255,0.1)] hover:scale-[1.015]"
-                >
+                <div className="group relative w-full h-full rounded-[2.5rem] bg-gradient-to-tr from-white to-gray-100 dark:from-[#1c1c1e] dark:to-[#2c2c2e] backdrop-blur-lg shadow-[0_4px_60px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_60px_rgba(255,255,255,0.05)] overflow-hidden border border-black/10 dark:border-white/10 transition-all duration-500 hover:shadow-[0_6px_80px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_6px_80px_rgba(255,255,255,0.1)] hover:scale-[1.015]">
                   <Link
                     to={val.url}
                     className="block relative w-full h-[450px] overflow-hidden rounded-t-[2.5rem]"
@@ -75,15 +74,17 @@ const Mujer = ({ dama: { title, subtitle, news } }) => {
                       src={val.img}
                       alt={`imagen de ${val.title}`}
                       className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-700 ease-in-out"
-                      style={{ filter: "brightness(85%) contrast(120%) saturate(120%)" }}
+                      style={{
+                        filter: "brightness(85%) contrast(120%) saturate(120%)",
+                      }}
                     />
                   </Link>
 
-                  <div className="p-6 flex flex-col gap-4 text-white">
-                    <h1 className="text-2xl font-playfair font-semibold tracking-wide text-amber-400 text-center">
+                  <div className="p-6 flex flex-col gap-4 text-black dark:text-white">
+                    <h1 className="text-2xl font-playfair font-semibold tracking-wide text-black dark:text-white text-center">
                       {val.title}
                     </h1>
-                    <p className="text-sm font-outfit text-gray-300 text-justify leading-relaxed">
+                    <p className="text-sm font-outfit text-black dark:text-white text-justify leading-relaxed">
                       {truncate(val.text, { length: 120 })}
                     </p>
                   </div>
@@ -91,7 +92,7 @@ const Mujer = ({ dama: { title, subtitle, news } }) => {
                   <div className="px-6 pb-6">
                     <Link
                       to={val.url}
-                      className="inline-block w-full text-center py-2.5 rounded-full border border-amber-500 text-amber-300 hover:bg-amber-500 hover:text-black transition duration-300 font-semibold tracking-wider text-sm"
+                      className="inline-block w-full text-center py-2.5 rounded-full border border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition duration-300 font-semibold tracking-wider text-sm"
                     >
                       {val.btn} <span className="ml-1">&#10140;</span>
                     </Link>

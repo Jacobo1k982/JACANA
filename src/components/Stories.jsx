@@ -34,7 +34,7 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
     return (
         <section
             ref={storiesRef}
-            className="min-h-screen flex items-center justify-center bg-white dark:bg-[#000000] px-6 xs:px-4 py-16 transition-colors duration-500"
+            className="min-h-screen flex items-center justify-center bg-white dark:bg-[#000000] px-6 xs:px-4 py-5 transition-colors duration-500"
         >
             <div className="max-w-7xl w-full mx-auto flex flex-col items-center justify-center text-center gap-12 xs:gap-8">
                 <motion.h2
@@ -44,11 +44,11 @@ const Stories = ({ story: { title, subtitle, news }, storiesRef }) => {
                     className="font-Playfair tracking-tight text-center"
                 >
                     {/* Contenedor con modo oscuro activado en Tailwind */}
-                    <div className="dark:bg-black bg-white p-6">
+                    {/*<div className="dark:bg-black bg-white p-6">
                         <span className="text-4xl sm:text-4xl xs:text-2xl text-black-600 dark:text-black-400 block">
                             Categoría
                         </span>
-                    </div>
+                    </div>*/}
                 </motion.h2>
 
                 <motion.div

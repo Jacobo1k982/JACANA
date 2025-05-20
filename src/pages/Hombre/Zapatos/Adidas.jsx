@@ -133,23 +133,23 @@ function Adidas() {
     return (
         <div className="p-4 sm:p-6 bg-gray-900 text-white min-h-screen"> {/* Ajuste de padding general de la página */}
             {/* La clase grid-cols-2 hace que en las pantallas más pequeñas (por defecto) haya 2 columnas.
-                        sm:grid-cols-1 hace que a partir del breakpoint 'sm' (640px) haya 1 columna.
-                        Esto es un poco inusual, normalmente es grid-cols-1 y sm:grid-cols-2.
-                        Mantendremos tu configuración, pero los ajustes internos de la card son clave. */}
-            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"> {/* Ajuste de gap para diferentes pantallas */}
+                                sm:grid-cols-1 hace que a partir del breakpoint 'sm' (640px) haya 1 columna.
+                                Esto es un poco inusual, normalmente es grid-cols-1 y sm:grid-cols-2.
+                                Mantendremos tu configuración, pero los ajustes internos de la card son clave. */}
+            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 sm:gap-6"> {/* Ajuste de gap para diferentes pantallas */}
                 {products.map((product) => {
                     const isClicked = clickedProductId === product.id;
                     return (
                         <div
                             key={product.id}
                             // Ajustamos el padding de la card para que sea responsivo: p-3 en pantallas pequeñas (cuando hay 2 columnas), p-4 en 'sm' y más grandes.
-                            className="bg-gray-800 shadow-md border border-gray-700 rounded-xl p-3 sm:p-4 flex flex-col items-center text-center hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                            className="bg-gray-800 shadow-md border border-gray-700 rounded-xl p-1 sm:p-4 flex flex-col items-center text-center hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
                         >
                             {/* Contenedor de la imagen:
-                                        - w-full: ocupa todo el ancho del contenedor padre (la card).
-                                        - aspect-square: mantiene una relación de aspecto cuadrada (altura igual al ancho). Puedes cambiarlo a aspect-[4/3] u otro si prefieres.
-                                        - Eliminamos max-w-xs y mt-4 para que se adapte mejor al padding de la card.
-                                    */}
+                                                - w-full: ocupa todo el ancho del contenedor padre (la card).
+                                                - aspect-square: mantiene una relación de aspecto cuadrada (altura igual al ancho). Puedes cambiarlo a aspect-[4/3] u otro si prefieres.
+                                                - Eliminamos max-w-xs y mt-4 para que se adapte mejor al padding de la card.
+                                            */}
                             <div
                                 className="relative w-full aspect-square rounded-xl overflow-hidden cursor-pointer"
                                 onClick={() => handleImageClick(product.img)}
@@ -161,10 +161,10 @@ function Adidas() {
                                 />
                             </div>
                             {/* Contenedor de información del producto:
-                                        - w-full: para que ocupe el ancho disponible dentro del padding de la card.
-                                        - pt-3 o pt-4: para dar un espacio superior después de la imagen.
-                                        - space-y-3: para un espaciado vertical entre los elementos de texto.
-                                    */}
+                                                - w-full: para que ocupe el ancho disponible dentro del padding de la card.
+                                                - pt-3 o pt-4: para dar un espacio superior después de la imagen.
+                                                - space-y-3: para un espaciado vertical entre los elementos de texto.
+                                            */}
                             <div className="w-full pt-3 sm:pt-4 space-y-3">
                                 <h3 className="text-base sm:text-lg font-semibold">{product.title}</h3>
                                 {/* Modelo y Guía de tallas con gap responsivo */}
@@ -187,7 +187,7 @@ function Adidas() {
                                             onClick={() => handleSizeChange(product.id, size)}
                                             // Ajustamos padding de botones de talla para móviles si es necesario, pero px-3 py-1 suele ser bueno.
                                             className={`px-2 py-1 sm:px-3 text-xs sm:text-sm rounded-md border 
-                                                    ${selectedSizes[product.id] === size
+                                                            ${selectedSizes[product.id] === size
                                                     ? "bg-orange-500 text-white border-orange-500"
                                                     : "bg-gray-700 text-white border-gray-600 hover:bg-gray-600"
                                                 }`}

@@ -67,14 +67,14 @@ function Puma() {
                         sm:grid-cols-1 hace que a partir del breakpoint 'sm' (640px) haya 1 columna.
                         Esto es un poco inusual, normalmente es grid-cols-1 y sm:grid-cols-2.
                         Mantendremos tu configuración, pero los ajustes internos de la card son clave. */}
-            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"> {/* Ajuste de gap para diferentes pantallas */}
+            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 sm:gap-6"> {/* Ajuste de gap para diferentes pantallas */}
                 {products.map((product) => {
                     const isClicked = clickedProductId === product.id;
                     return (
                         <div
                             key={product.id}
                             // Ajustamos el padding de la card para que sea responsivo: p-3 en pantallas pequeñas (cuando hay 2 columnas), p-4 en 'sm' y más grandes.
-                            className="bg-gray-800 shadow-md border border-gray-700 rounded-xl p-3 sm:p-4 flex flex-col items-center text-center hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                            className="bg-gray-800 shadow-md border border-gray-700 rounded-xl p-1 sm:p-4 flex flex-col items-center text-center hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
                         >
                             {/* Contenedor de la imagen:
                                         - w-full: ocupa todo el ancho del contenedor padre (la card).
