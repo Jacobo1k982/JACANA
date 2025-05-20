@@ -72,12 +72,13 @@ const Inicio = () => {
     return (
         <section className="w-full flex flex-col items-center bg-white dark:bg-[#000000] transition-colors duration-300">
             {/* Sección de animación */}
-            <div className="w-full max-w-8xl relative">
-                <img
-                    src={gifSrc}
-                    alt="Animación de bienvenida"
-                    className="w-full h-full object-cover object-center"
-                />
+            <div className="w-screen relative">
+    <img
+        src={gifSrc}
+        alt="Animación de bienvenida"
+        className="w-full h-auto object-cover object-center"
+    />
+
                 <div className="absolute inset-0 flex flex-col items-center justify-start text-center pt-12 px-4">
                     <h1 className="text-3xl sm:text-5xl font-Playfair font-extrabold text-white drop-shadow-lg">
                         M-A-C ICONOS COTIDIANOS

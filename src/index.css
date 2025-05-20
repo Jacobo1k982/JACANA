@@ -8,12 +8,11 @@
   * {
     margin: 0;
     padding: 0;
-    font-family: 'outfit', sans-serif;
   }
 
   .nike-container {
-    @apply container mx-auto px-3 mb-20 w-11/12 m-auto;
-  }
+  @apply w-screen max-w-none px-0 m-0 mb-20;
+}
 
   .nike-container.stories-container-padding {
     @apply pt-16;

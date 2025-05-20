@@ -90,7 +90,7 @@ export default function AppRoutes() {
             <Routes>
                 {/* Página principal */}
                 <Route path="/" element={
-                    <main className="flex flex-col relative bg-[#ffffff] dark:bg-[#000000] min-h-screen overflow-hidden">
+                    <main className="flex flex-col relative w-full bg-[#ffffff] dark:bg-[#000000] min-h-screen overflow-hidden">
                         {/*<Hero heroapi={heroapi} storiesRef={storiesRef} />*/}
                         <Inicio />
                         <Stories story={story} storiesRef={storiesRef} />
@@ -171,7 +171,7 @@ export default function AppRoutes() {
                     </main>
                 } />
                 <Route path="/puma" element={
-                    <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
+                    <main className="w-full flex flex-col gap-20 relative bg-white dark:bg-slate-900 min-h-screen overflow-hidden">
                         {/*<EncabezadoCatalogo deportivoapi={deportivoapi} />*/}
                         <div className='Pumaappman'>
                             <div className='fila'>
