@@ -40,7 +40,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-[#000000] text-[#000000] dark:text-[#ffffff] transition-colors duration-300">
       <ProgressBar />
 
       {isPageLoading && <PageLoader />}
