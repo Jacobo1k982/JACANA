@@ -1,22 +1,33 @@
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { XMarkIcon } from '@heroicons/react/24/outline';
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
-const SearchBar = ({ value, onChange, onClose, onSubmit }) => {
+function SearchBar({ products, onClose, onFiltered }) {
+    const [searchTerm, setSearchTerm] = useState("");
+
     useEffect(() => {
         const handleKeyDown = (e) => {
-            if (e.key === 'Escape') onClose();
+            if (e.key === "Escape") onClose && onClose();
         };
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
     }, [onClose]);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const filtered = products.filter(
+            (p) =>
+                p.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                p.model.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        onFiltered && onFiltered(filtered);
+        setSearchTerm("");
+        onClose && onClose();
+    };
 
     return (
         <motion.form
-            onSubmit={(e) => {
-                e.preventDefault();
-                if (value.trim()) onSubmit(e);
-            }}
+            onSubmit={handleSubmit}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -26,20 +37,25 @@ const SearchBar = ({ value, onChange, onClose, onSubmit }) => {
             <div className="relative">
                 <input
                     type="text"
-                    value={value}
-                    onChange={onChange}
-                    placeholder="Buscar productos..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    placeholder="Buscar producto por modelo o nombre..."
                     aria-label="Buscar productos"
                     autoFocus
-                    className="w-full py-2 pl-4 pr-10 rounded-lg shadow-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-white dark:border-gray-600"
+                    className="w-full p-3 pr-10 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
                 />
-                <XMarkIcon
-                    onClick={onClose}
-                    className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer hover:text-red-500"
-                />
+                {/* Botón oculto para permitir envío con Enter */}
+                <button type="submit" className="hidden" aria-hidden="true"></button>
+
+                {onClose && (
+                    <XMarkIcon
+                        onClick={onClose}
+                        className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer hover:text-red-500"
+                    />
+                )}
             </div>
         </motion.form>
     );
-};
+}
 
 export default SearchBar;

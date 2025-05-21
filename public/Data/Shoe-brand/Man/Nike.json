@@ -1,0 +1,44 @@
+[
+  {
+    "id": "nike-1",
+    "img": "/NKH/NKH1.jpg",
+    "title": "Nike",
+    "model": "Modelo Exclusivo",
+    "sizes": [40, 41, 42, 43, 44],
+    "price": "31050",
+    "originalPrice": "34500",
+    "Currency": "₡",
+    "description": "Diseño atlético con estilo urbano.",
+    "category": "Hombre",
+    "benefits": ["Cómodos", "Modernos", "Versátiles"],
+    "color": "Negro con detalles en blanco"
+  },
+  {
+    "id": "nike-2",
+    "img": "/NKH/NKH2.jpg",
+    "title": "Nike",
+    "model": "Modelo Exclusivo",
+    "sizes": [40, 41, 42, 43, 44],
+    "price": "31050",
+    "originalPrice": "34500",
+    "Currency": "₡",
+    "description": "Tenis casuales con excelente soporte.",
+    "category": "Hombre",
+    "benefits": ["Durabilidad", "Diseño clásico", "Confort"],
+    "color": "Blanco con detalles en rojo"
+  },
+  {
+    "id": "nike-3",
+    "img": "/NKH/NKH3.jpg",
+    "title": "Nike",
+    "model": "Modelo Exclusivo",
+    "sizes": [40, 41, 42, 43, 44],
+    "price": "29700",
+    "originalPrice": "33000",
+    "Currency": "₡",
+    "description": "Zapatillas ideales para caminar o entrenar.",
+    "category": "Hombre",
+    "benefits": ["Suela antideslizante", "Transpirables", "Ligeros"],
+    "color": "Azul marino con blanco"
+  }
+]

@@ -2,10 +2,8 @@ import React, { lazy, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import SearchResults from './pages/SearchResults';
 import ThankYou from './pages/ThankYou';
-import OfertasFuturistas from './components/OfertasFuturistas';
 import GuiaDeTallas from './pages/GuiaDeTallas';
 import Inicio from './components/Inicio';
-
 
 
 import {
@@ -74,7 +72,7 @@ const CatalogoMañanitas = lazy(() => import('./components/Pijamas/CatalogoMaña
 const DetalleMañanitas = lazy(() => import('./components/Pijamas/DetalleMañanitas'));
 const CaracteristicasMañanitas = lazy(() => import('./components/Pijamas/CaracteristicasMañanitas'));
 
-const ParticlesBackground = lazy(() => import('./pages/ParticlesBackground'));
+/*const ParticlesBackground = lazy(() => import('./pages/ParticlesBackground'));*/
 
 /* Sección: Componentes relacionados con Carteras */
 const TiendaCarteras = lazy(() => import('./components/TiendaCarteras'));
@@ -111,7 +109,7 @@ export default function AppRoutes() {
                 <Route path="/marcaszapatos" element={<Shoebrands marcaszapatosapi={marcaszapatosapi} />} />
                 <Route path="/marcaszapatos2" element={<Shoebrands2 marcaszapatos2api={marcaszapatos2api} />} />
                 <Route path="/newb2" element={
-                    <main class="flex flex-col gap-20 relative bg-white dark:bg-black min-h-screen overflow-hidden">
+                    <main className="flex flex-col gap-20 relative bg-white dark:bg-black min-h-screen overflow-hidden">
                         {/*<EncabezadoCatalogo deportivoapi={deportivoapi} />*/}
                         <div className='NewB2appwoman'>
                             <div className='fila'>
