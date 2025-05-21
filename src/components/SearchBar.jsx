@@ -8,10 +8,14 @@ function SearchBar({ products, onClose, onFiltered }) {
     useEffect(() => {
         const handleKeyDown = (e) => {
             if (e.key === "Escape") onClose && onClose();
+            if (e.key === "Enter") {
+                e.preventDefault();
+                handleSubmit(e);
+            }
         };
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [onClose]);
+    }, [searchTerm]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -44,7 +48,6 @@ function SearchBar({ products, onClose, onFiltered }) {
                     autoFocus
                     className="w-full p-3 pr-10 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
                 />
-                {/* Botón oculto para permitir envío con Enter */}
                 <button type="submit" className="hidden" aria-hidden="true"></button>
 
                 {onClose && (

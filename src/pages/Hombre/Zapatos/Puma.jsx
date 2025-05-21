@@ -4,6 +4,7 @@ import { setAddItemToCart, setOpenCart } from "../../../app/CartSlice";
 import { FaCheckCircle, FaTimes, FaRuler } from "react-icons/fa";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+import SearchBar from "../../../components/SearchBar";
 
 function Puma() {
     const dispatch = useDispatch();
@@ -11,7 +12,7 @@ function Puma() {
     const [selectedSizes, setSelectedSizes] = useState({});
     const [expandedImage, setExpandedImage] = useState(null);
     const [isImageClicked, setIsImageClicked] = useState(false);
-    const [searchTerm, setSearchTerm] = useState("");
+    const [filteredProducts, setFilteredProducts] = useState([]);
 
     const products = [
         { id: "PUMA-1", img: "/PUMA/PMH/PMH1.jpg", title: "Puma", model: "Forever Faste", sizes: [40, 41, 42, 43, 44], price: "33750", originalPrice: "37500", Currency: "₡" },
@@ -20,7 +21,8 @@ function Puma() {
         { id: "PUMA-4", img: "/PUMA/PMH/PMH4.jpg", title: "Puma", model: "Forever Faste", sizes: [40, 41, 42, 43, 44], price: "33750", originalPrice: "37500", Currency: "₡" },
     ];
 
-    const formatCurrency = (value, currency = "₡") => `${currency} ${Number(value).toLocaleString("es-CR")}`;
+    const formatCurrency = (value, currency = "₡") =>
+        `${currency} ${Number(value).toLocaleString("es-CR")}`;
 
     const getSizeButtonClass = (productId, size) => {
         const isSelected = selectedSizes[productId] === size;
@@ -68,26 +70,20 @@ function Puma() {
         setExpandedImage(null);
     };
 
-    const filteredProducts = products.filter((product) =>
-        `${product.title} ${product.model}`.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const displayedProducts = filteredProducts.length > 0 ? filteredProducts : products;
 
     return (
         <div className="p-4 bg-white dark:bg-black text-black dark:text-white min-h-screen max-w-6xl mx-auto">
-            {/* SearchBar integrada */}
-            <div className="mb-6">
-                <input
-                    type="text"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    placeholder="Buscar producto..."
-                    className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
-                />
-            </div>
+            {/* ✅ SearchBar integrada */}
+            <SearchBar
+                products={products}
+                onFiltered={setFilteredProducts}
+                onClose={() => setFilteredProducts([])}
+            />
 
             <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 sm:gap-6">
-                {filteredProducts.length > 0 ? (
-                    filteredProducts.map((product) => {
+                {displayedProducts.length > 0 ? (
+                    displayedProducts.map((product) => {
                         const isClicked = recentlyAddedId === product.id;
                         return (
                             <div
@@ -113,7 +109,7 @@ function Puma() {
                                         <p className="text-gray-600 dark:text-gray-400">{product.model}</p>
                                         <Link
                                             to="/guia-de-tallas"
-                                            className="flex items-center gap-1 text-blueL-600 dark:text-blue-400 hover:underline"
+                                            className="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline"
                                         >
                                             <FaRuler />
                                             Guía de tallas
