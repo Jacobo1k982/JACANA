@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 function Puma() {
+    
     const dispatch = useDispatch();
     const [recentlyAddedId, setRecentlyAddedId] = useState(null);
     const [selectedSizes, setSelectedSizes] = useState({});
@@ -68,7 +69,7 @@ function Puma() {
     };
 
     return (
-        <div className="p-1 sm:p-4 bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen">
+        <div className="p-1 sm:p-4 bg-white dark:bg-black text-black dark:text-white min-h-screen">
             <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 sm:gap-6">
                 {products.map((product) => {
                     const isClicked = recentlyAddedId === product.id;
