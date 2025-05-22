@@ -151,7 +151,7 @@ const Belleza = () => {
                         {productos.map((producto) => (
                             <div
                                 key={producto.id}
-                                className="min-w-[280px] max-w-[280px] flex-shrink-0 bg-white dark:bg-neutral-900 shadow-md dark:shadow-gray-700 rounded-lg p-4 hover:shadow-xl transition text-center"
+                                className="min-w-[280px] max-w-[280px] flex-shrink-0 bg-white dark:bg-neutral-900 shadow-md dark:shadow-lg rounded-lg p-4 hover:shadow-xl transition text-center border border-gray-600 hover:border-pink-400 dark:hover:border-pink-500"
                             >
                                 <Carousel
                                     showThumbs={false}
