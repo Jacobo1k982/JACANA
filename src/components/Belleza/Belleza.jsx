@@ -65,7 +65,8 @@ const Belleza = () => {
 
     return (
         <div
-            className="w-full pt-[55px] relative p-1 text-gray-900 dark:text-gray-100 min-h-screen bg-white dark:bg-black"
+            className="w-full pt-[55px] relative p-1 text-gray-900 dark:text-gray-100 min-h-screen bg-white dark:bg-neutral-900
+"
         >
             <div className="relative z-10">
                 {/* Modal */}
@@ -74,14 +75,14 @@ const Belleza = () => {
                         <Dialog.Panel className="relative animate-scale-in" onClick={(e) => e.stopPropagation()}>
                             <button
                                 onClick={cerrarModal}
-                                className="absolute top-2 right-2 bg-white dark:bg-gray-800 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
+                                className="absolute top-2 right-2 bg-white dark:bg-neutral-900 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
                                 aria-label="Cerrar imagen"
                             >
                                 ✕
                             </button>
                             <button
                                 onClick={mostrarAnterior}
-                                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
+                                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-neutral-900 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
                             >
                                 ‹
                             </button>
@@ -92,7 +93,7 @@ const Belleza = () => {
                             />
                             <button
                                 onClick={mostrarSiguiente}
-                                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-900 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
+                                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-neutral-900 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
                             >
                                 ›
                             </button>
@@ -129,7 +130,7 @@ const Belleza = () => {
 
                     <button
                         onClick={() => scrollCarrusel(-300)}
-                        className="absolute left-0 top-[50%] transform -translate-y-1/2 z-20 bg-white dark:bg-gray-800 text-black dark:text-white p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700"
+                        className="absolute left-0 top-[50%] transform -translate-y-1/2 z-20 bg-white dark:bg-neutral-900 text-black dark:text-white p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700"
                         aria-label="Scroll izquierdo"
                     >
                         ‹
@@ -137,7 +138,7 @@ const Belleza = () => {
 
                     <button
                         onClick={() => scrollCarrusel(300)}
-                        className="absolute right-0 top-[50%] transform -translate-y-1/2 z-20 bg-white dark:bg-gray-800 text-black dark:text-white p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700"
+                        className="absolute right-0 top-[50%] transform -translate-y-1/2 z-20 bg-white dark:bg-neutral-900 text-black dark:text-white p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700"
                         aria-label="Scroll derecho"
                     >
                         ›
@@ -150,7 +151,7 @@ const Belleza = () => {
                         {productos.map((producto) => (
                             <div
                                 key={producto.id}
-                                className="min-w-[280px] max-w-[280px] flex-shrink-0 bg-white dark:bg-gray-900 shadow-md dark:shadow-gray-700 rounded-lg p-4 hover:shadow-xl transition text-center"
+                                className="min-w-[280px] max-w-[280px] flex-shrink-0 bg-white dark:bg-neutral-900 shadow-md dark:shadow-gray-700 rounded-lg p-4 hover:shadow-xl transition text-center"
                             >
                                 <Carousel
                                     showThumbs={false}
