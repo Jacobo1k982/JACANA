@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setAddItemToCart, setOpenCart } from "../../../app/CartSlice";
-import { FaCheckCircle, FaTimes } from "react-icons/fa";
+import { FaCheckCircle, FaTimes, FaRuler } from "react-icons/fa";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
-import { FaRuler } from "react-icons/fa";
+import SearchBar from "../../../components/SearchBar";
 
 function Tommy2() {
 
     const dispatch = useDispatch();
-    const [clickedProductId, setClickedProductId] = useState(null);
+    const [recentlyAddedId, setRecentlyAddedId] = useState(null);
     const [selectedSizes, setSelectedSizes] = useState({});
     const [expandedImage, setExpandedImage] = useState(null);
     const [isImageClicked, setIsImageClicked] = useState(false);
+    const [filteredProducts, setFilteredProducts] = useState([]);
 
     const products = [
         { id: "tm-1", img: "/TOMMY/TM/TMM1.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
@@ -30,6 +31,17 @@ function Tommy2() {
         { id: "tm-13", img: "/TOMMY/TM/TMM13.jpg", title: "Tommy Hilfiger", model: "Modelo Exclusivo", sizes: [36, 37, 38, 39, 40], price: "27000", originalPrice: "30000", Currency: "₡" },
 
     ];
+
+    const formatCurrency = (value, currency = "₡") =>
+        `${currency} ${Number(value).toLocaleString("es-CR")}`;
+
+    const getSizeButtonClass = (productId, size) => {
+        const isSelected = selectedSizes[productId] === size;
+        return `px-2 py-1 sm:px-3 text-xs sm:text-sm rounded-md border ${isSelected
+            ? "bg-black dark:bg-gray-500 text-white border-gray-500"
+            : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white border-gray-300 dark:border-gray-600 hover:bg-gray-300 dark:hover:bg-gray-600"
+            }`;
+    };
 
     const handleSizeChange = (productId, size) => {
         setSelectedSizes((prev) => ({ ...prev, [productId]: size }));
@@ -55,135 +67,135 @@ function Tommy2() {
         dispatch(setOpenCart({ cartState: true }));
         toast.success(`${product.title} agregado al carrito`);
 
-        setClickedProductId(product.id);
-        setTimeout(() => {
-            setClickedProductId(null);
-        }, 2000);
+        setRecentlyAddedId(product.id);
+        setTimeout(() => setRecentlyAddedId(null), 2000);
     };
 
     const handleImageClick = (imageSrc) => {
         setExpandedImage(imageSrc);
         setIsImageClicked(true);
-        setTimeout(() => setIsImageClicked(false), 150); // Simula un breve estado de "clicado"
+        setTimeout(() => setIsImageClicked(false), 150);
     };
 
     const handleCloseExpandedImage = () => {
         setExpandedImage(null);
     };
 
+    const displayedProducts = filteredProducts.length > 0 ? filteredProducts : products;
+
     return (
-        <div className="p-4 sm:p-6 bg-gray-900 text-white min-h-screen"> {/* Ajuste de padding general de la página */}
-            {/* La clase grid-cols-2 hace que en las pantallas más pequeñas (por defecto) haya 2 columnas.
-                        sm:grid-cols-1 hace que a partir del breakpoint 'sm' (640px) haya 1 columna.
-                        Esto es un poco inusual, normalmente es grid-cols-1 y sm:grid-cols-2.
-                        Mantendremos tu configuración, pero los ajustes internos de la card son clave. */}
-            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"> {/* Ajuste de gap para diferentes pantallas */}
-                {products.map((product) => {
-                    const isClicked = clickedProductId === product.id;
-                    return (
-                        <div
-                            key={product.id}
-                            // Ajustamos el padding de la card para que sea responsivo: p-3 en pantallas pequeñas (cuando hay 2 columnas), p-4 en 'sm' y más grandes.
-                            className="bg-gray-800 shadow-md border border-gray-700 rounded-xl p-3 sm:p-4 flex flex-col items-center text-center hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
-                        >
-                            {/* Contenedor de la imagen:
-                                        - w-full: ocupa todo el ancho del contenedor padre (la card).
-                                        - aspect-square: mantiene una relación de aspecto cuadrada (altura igual al ancho). Puedes cambiarlo a aspect-[4/3] u otro si prefieres.
-                                        - Eliminamos max-w-xs y mt-4 para que se adapte mejor al padding de la card.
-                                    */}
+        <div className="p-4 bg-white dark:bg-black text-black dark:text-white min-h-screen max-w-10xl mx-auto">
+            {/* ✅ SearchBar integrada */}
+            <SearchBar
+                products={products}
+                onFiltered={setFilteredProducts}
+                onClose={() => setFilteredProducts([])}
+            />
+
+            <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-1 sm:gap-6">
+                {displayedProducts.length > 0 ? (
+                    displayedProducts.map((product) => {
+                        const isClicked = recentlyAddedId === product.id;
+                        return (
                             <div
-                                className="relative w-full aspect-square rounded-xl overflow-hidden cursor-pointer"
-                                onClick={() => handleImageClick(product.img)}
+                                key={product.id}
+                                className="bg-white dark:bg-gray-800 text-black dark:text-white shadow-md border border-gray-200 dark:border-gray-700 rounded-xl p-1 sm:p-4 flex flex-col items-center text-center hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
                             >
-                                <img
-                                    src={product.img}
-                                    alt={product.title}
-                                    className={`w-full h-full object-cover transition-transform duration-200 ${isImageClicked ? 'scale-95' : 'scale-100'} hover:scale-105`}
-                                />
-                            </div>
-                            {/* Contenedor de información del producto:
-                                        - w-full: para que ocupe el ancho disponible dentro del padding de la card.
-                                        - pt-3 o pt-4: para dar un espacio superior después de la imagen.
-                                        - space-y-3: para un espaciado vertical entre los elementos de texto.
-                                    */}
-                            <div className="w-full pt-3 sm:pt-4 space-y-3">
-                                <h3 className="text-base sm:text-lg font-semibold">{product.title}</h3>
-                                {/* Modelo y Guía de tallas con gap responsivo */}
-                                <div className="flex flex-col xs:flex-row items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm">
-                                    <p className="text-gray-400">{product.model}</p>
-                                    <Link
-                                        to="/guia-de-tallas"
-                                        className="flex items-center gap-1 text-blue-400 hover:underline"
-                                    >
-                                        <FaRuler className="text-blue-400" />
-                                        Guía de tallas
-                                    </Link>
-                                </div>
-
-                                {/* Tallas con botones y gap responsivo */}
-                                <div className="flex flex-wrap gap-1 sm:gap-2 justify-center">
-                                    {product.sizes.map((size) => (
-                                        <button
-                                            key={size}
-                                            onClick={() => handleSizeChange(product.id, size)}
-                                            // Ajustamos padding de botones de talla para móviles si es necesario, pero px-3 py-1 suele ser bueno.
-                                            className={`px-2 py-1 sm:px-3 text-xs sm:text-sm rounded-md border 
-                                                    ${selectedSizes[product.id] === size
-                                                    ? "bg-orange-500 text-white border-orange-500"
-                                                    : "bg-gray-700 text-white border-gray-600 hover:bg-gray-600"
-                                                }`}
-                                        >
-                                            {size}
-                                        </button>
-                                    ))}
-                                </div>
-
-                                {/* Precio con gap responsivo */}
-                                <div className="flex items-center justify-center gap-1 sm:gap-2">
-                                    {product.originalPrice && (
-                                        <span className="text-gray-400 line-through decoration-red-500 text-sm sm:text-base">
-                                            {product.Currency} {product.originalPrice}
-                                        </span>
-                                    )}
-                                    <span className="text-orange-500 font-bold text-sm sm:text-base">
-                                        {product.Currency} {product.price}
-                                    </span>
-                                </div>
-
-                                <button
-                                    onClick={() => handleBuy(product)}
-                                    disabled={isClicked}
-                                    // Aseguramos que el botón ocupe el ancho y tenga un padding adecuado.
-                                    className={`w-full flex items-center justify-center gap-2 text-sm sm:text-base font-medium rounded-lg px-4 py-2 transition-all duration-300 ${isClicked
-                                        ? "bg-green-600 cursor-not-allowed"
-                                        : "bg-orange-500 hover:bg-orange-600"
-                                        }`}
+                                <div
+                                    className="relative w-full aspect-square rounded-xl overflow-hidden cursor-pointer"
+                                    onClick={() => handleImageClick(product.img)}
                                 >
-                                    {isClicked ? (
-                                        <>
-                                            <FaCheckCircle className="animate-ping-once" /> Agregado
-                                        </>
-                                    ) : (
-                                        "Comprar"
-                                    )}
-                                </button>
+                                    <img
+                                        loading="lazy"
+                                        src={product.img}
+                                        alt={product.title}
+                                        className={`w-full h-full object-cover transition-transform duration-200 ${isImageClicked ? 'scale-95' : 'scale-100'} hover:scale-105`}
+                                    />
+                                </div>
+
+                                <div className="w-full pt-3 sm:pt-4 space-y-3">
+                                    <h3 className="text-base sm:text-lg font-semibold">{product.title}</h3>
+
+                                    <div className="flex flex-col xs:flex-row items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm">
+                                        <p className="text-gray-600 dark:text-gray-400">{product.model}</p>
+                                        <Link
+                                            to="/guia-de-tallas"
+                                            className="flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline"
+                                        >
+                                            <FaRuler />
+                                            Guía de tallas
+                                        </Link>
+                                    </div>
+
+                                    <div className="flex flex-wrap gap-1 sm:gap-2 justify-center">
+                                        {product.sizes.map((size) => (
+                                            <button
+                                                key={size}
+                                                onClick={() => handleSizeChange(product.id, size)}
+                                                className={getSizeButtonClass(product.id, size)}
+                                                aria-label={`Seleccionar talla ${size}`}
+                                            >
+                                                {size}
+                                            </button>
+                                        ))}
+                                    </div>
+
+                                    <div className="flex items-center justify-center gap-1 sm:gap-2">
+                                        {product.originalPrice && (
+                                            <span className="text-gray-500 dark:text-gray-400 line-through decoration-red-500 text-sm sm:text-base">
+                                                {formatCurrency(product.originalPrice, product.Currency)}
+                                            </span>
+                                        )}
+                                        <span className="text-black-600 dark:text-black-400 font-bold text-sm sm:text-base">
+                                            {formatCurrency(product.price, product.Currency)}
+                                        </span>
+                                    </div>
+
+                                    <button
+                                        onClick={() => handleBuy(product)}
+                                        disabled={isClicked}
+                                        className={`w-full flex items-center justify-center gap-2 text-sm sm:text-base font-medium rounded-lg px-4 py-2 transition-all duration-300
+                      ${isClicked
+                                                ? "bg-black-600 text-white cursor-not-allowed"
+                                                : "bg-black hover:bg-gray-800 text-white"
+                                            }`}
+                                        aria-label={isClicked ? "Producto agregado al carrito" : "Agregar al carrito"}
+                                    >
+                                        {isClicked ? (
+                                            <>
+                                                <FaCheckCircle className="animate-ping-once" /> Agregado
+                                            </>
+                                        ) : (
+                                            "Comprar"
+                                        )}
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    );
-                })}
+                        );
+                    })
+                ) : (
+                    <p className="text-center col-span-full text-gray-500 dark:text-gray-400">No se encontraron productos.</p>
+                )}
             </div>
 
             {expandedImage && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center p-4">
-                    <div className="relative animate-fadeIn">
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center p-4"
+                    onClick={handleCloseExpandedImage}
+                >
+                    <div
+                        className="relative animate-fadeIn"
+                        onClick={(e) => e.stopPropagation()}
+                    >
                         <img
                             src={expandedImage}
-                            alt="Expanded Product"
+                            alt="Producto ampliado"
                             className="max-w-[90vw] max-h-[90vh] w-auto h-auto rounded-2xl shadow-2xl object-contain transition-transform duration-200 scale-100"
                         />
                         <button
                             onClick={handleCloseExpandedImage}
                             className="absolute top-2 right-2 bg-white text-gray-800 hover:bg-gray-200 rounded-full p-2 shadow-lg transition-all"
+                            aria-label="Cerrar imagen ampliada"
                         >
                             <FaTimes size={20} />
                         </button>
@@ -192,6 +204,6 @@ function Tommy2() {
             )}
         </div>
     );
-};
+}
 
 export default Tommy2;

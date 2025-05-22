@@ -7,31 +7,33 @@ function SearchBar({ products, onClose, onFiltered }) {
 
     useEffect(() => {
         const handleKeyDown = (e) => {
-            if (e.key === "Escape") onClose && onClose();
+            if (e.key === "Escape") onClose?.();
             if (e.key === "Enter") {
                 e.preventDefault();
-                handleSubmit(e);
+                handleSubmit();
             }
         };
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [searchTerm]);
+    }, []); // ✅ solo se ejecuta al montar
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const filtered = products.filter(
+    const handleSubmit = () => {
+        const filtered = products?.filter(
             (p) =>
                 p.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 p.model.toLowerCase().includes(searchTerm.toLowerCase())
         );
-        onFiltered && onFiltered(filtered);
+        onFiltered?.(filtered);
         setSearchTerm("");
-        onClose && onClose();
+        onClose?.();
     };
 
     return (
         <motion.form
-            onSubmit={handleSubmit}
+            onSubmit={(e) => {
+                e.preventDefault();
+                handleSubmit();
+            }}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
