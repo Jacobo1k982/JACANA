@@ -23,7 +23,8 @@ import Contacto from './pages/Contacto';
 /*Belleza*/
 const Belleza = lazy(() => import('./components/Belleza/Belleza'));
 const DetalleProducto = lazy(() => import('./components/Belleza/DetalleProducto'));
-const BrandCarousel = lazy(() => import('./pages/BrandCarousel'));
+const BrandCarousel = lazy(() => import('./components/Belleza/BrandCarousel'));
+const CardMenu = lazy(() => import('./components/Belleza/CardMenu'));
 
 
 /* Sección: Componentes de la página principal */
@@ -91,6 +92,7 @@ export default function AppRoutes() {
                     <main className="flex flex-col relative w-full bg-[#ffffff] dark:bg-[#000000] min-h-screen overflow-hidden">
                         {/*<Hero heroapi={heroapi} storiesRef={storiesRef} />*/}
                         <Inicio />
+                        <CardMenu />
                         <Stories story={story} storiesRef={storiesRef} />
                         {/*<Sales endpoint={popularsales} ifExists />*/}
                         {/*<FlexContent endpoint={highlight} ifExists />*/}
@@ -336,13 +338,13 @@ export default function AppRoutes() {
                 <Route path="/caracteristicasmañanitas/:id" element={<CaracteristicasMañanitas />} />
                 <Route path="/guia-de-tallas" element={<GuiaDeTallas />} />
                 <Route path="/contacto" element={<Contacto />} />
+                <Route path="/producto/:id" element={<DetalleProducto />} />
                 <Route path="belleza" element={
                     <>
                         <Belleza />
                         <BrandCarousel />
                     </>
                 } />
-                <Route path="/producto/:id" element={<DetalleProducto />} />
             </Routes>
         </>
     );

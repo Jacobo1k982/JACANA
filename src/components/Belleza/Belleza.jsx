@@ -65,7 +65,7 @@ const Belleza = () => {
 
     return (
         <div
-            className="w-full pt-[110px] relative p-4 text-gray-900 dark:text-gray-100 min-h-screen bg-white dark:bg-black"
+            className="w-full pt-[55px] relative p-1 text-gray-900 dark:text-gray-100 min-h-screen bg-white dark:bg-black"
         >
             <div className="relative z-10">
                 {/* Modal */}
@@ -92,7 +92,7 @@ const Belleza = () => {
                             />
                             <button
                                 onClick={mostrarSiguiente}
-                                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
+                                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-900 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
                             >
                                 ›
                             </button>

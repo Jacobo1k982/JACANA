@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
-import logo from '../assets/logo.png'; // Asegúrate de tener este archivo
+import logo from '/CapaLight.png';
 
 const loaderVariants = {
     initial: { opacity: 0 },
@@ -14,7 +14,7 @@ const PageLoader = () => {
     return (
         <AnimatePresence>
             <motion.div
-                className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-white via-sky-100 to-cyan-100"
+                className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-gray via-white to-white"
                 variants={loaderVariants}
                 initial="initial"
                 animate="animate"
@@ -23,7 +23,7 @@ const PageLoader = () => {
                 <motion.img
                     src={logo}
                     alt="Logo"
-                    className="w-24 h-24 mb-6 drop-shadow-md"
+                    className="w-32 h-22 mb-6 drop-shadow-md"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
