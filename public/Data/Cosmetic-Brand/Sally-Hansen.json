@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "titulo": "Sally Hansen",
+        "subtitulo": "Esmalte Endurecedor Good Kind Pure",
+        "precio": 10150,
+        "imagenes": [
+            "/Belleza/img_productos/Sally/Esmalte-Endurecedor/sally1.webp",
+            "/Belleza/img_productos/Sally/Esmalte-Endurecedor/sally2.webp"
+        ],
+        "colores": [
+            {
+                "color": "Esmalte",
+                "codigo": "#d0bcd5"
+            }
+        ],
+        "beneficios": []
+    },
+    {
+        "id": 2,
+        "titulo": "Sally Hansen",
+        "subtitulo": "Tratamiento Double Duty Strengthening Base & Top Coat",
+        "precio": 10150,
+        "imagenes": [
+            "/Belleza/img_productos/Sally/DoubleDuty/duty1",
+            "/Belleza/img_productos/Sally/DoubleDuty/duty2",
+            "/Belleza/img_productos/Sally/DoubleDuty/duty3"
+        ],
+        "colores": [
+            {
+                "color": "Esmalte",
+                "codigo": "#d0bcd5"
+            }
+        ],
+        "beneficios": []
+    }
+]

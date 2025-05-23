@@ -91,7 +91,10 @@ export default function AppRoutes() {
                 <Route path="/" element={
                     <main className="flex flex-col relative w-full bg-[#ffffff] dark:bg-[#000000] min-h-screen overflow-hidden">
                         {/*<Hero heroapi={heroapi} storiesRef={storiesRef} />*/}
+                        <>
                         <Inicio />
+                        <Belleza />
+                        </>
                         <CardMenu />
                         <Stories story={story} storiesRef={storiesRef} />
                         {/*<Sales endpoint={popularsales} ifExists />*/}
