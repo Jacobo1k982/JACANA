@@ -4,7 +4,7 @@ const categorias = [
     {
         nombre: "CONJUNTO MAÑANITAS",
         imagen: "/Belleza/img_menu/mañanitas.png",
-        ruta: "/catalogomañanitas/catalogoMañanitas",
+        ruta: "/mañanitas",
     },
     {
         nombre: "NIKE-AIR",

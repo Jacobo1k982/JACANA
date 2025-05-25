@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "titulo": "Conjunto Mañanitas Verde Oscuro",
+        "subtitulo": "Camiseta manga corta y pantalón corto con logo Tommy Hilfiger.",
+        "precio": 6000,
+        "moneda": "MXN",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM1.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM2.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM3.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Verde oscuro",
+                "codigo": "#a78b56"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Comodidad y elegancia para el descanso.",
+            "Diseño holgado que favorece la relajación.",
+            "Tela suave que permite libertad de movimiento."
+        ]
+    },
+    {
+        "id": 2,
+        "titulo": "Conjunto Mañanitas Azul Oscuro",
+        "subtitulo": "Camiseta con finos tirantes y pantalón corto.",
+        "precio": 6000,
+        "moneda": "MXN",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM4.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM5.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM6.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM7.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM8.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Azul oscuro",
+                "codigo": "#5b7288"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Conjunto fresco y ligero para las noches de verano.",
+            "Estilo moderno con tirantes finos.",
+            "Tela cómoda para un descanso placentero."
+        ]
+    },
+    {
+        "id": 3,
+        "titulo": "Conjunto Mañanitas Gris Oscuro",
+        "subtitulo": "Camiseta y pantalón corto estilo casual.",
+        "precio": 6000,
+        "moneda": "MXN",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM9.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM10.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM11.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Gris oscuro",
+                "codigo": "#3c454b"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Perfecto para dormir o descansar en casa.",
+            "Estilo deportivo y relajado.",
+            "Tela suave que se adapta al cuerpo."
+        ]
+    },
+    {
+        "id": 4,
+        "titulo": "Conjunto Mañanitas Gris Claro",
+        "subtitulo": "Camiseta y pantalón corto en tono gris claro.",
+        "precio": 6000,
+        "moneda": "MXN",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM12.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM13.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM14.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Gris claro",
+                "codigo": "#6b8492"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Diseño ligero y transpirable.",
+            "Estilo casual con colores neutros.",
+            "Ideal para climas cálidos o descanso diario."
+        ]
+    }
+]

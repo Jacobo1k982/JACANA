@@ -12,7 +12,6 @@ import {
 } from './data/data';
 
 import { dataCarteras, marcacarteraapi } from './data/dataCarteras';
-import { dataMañanitas, marcamañanitasAPI } from './data/conjuntoMañanitas';
 
 import DetalleCartera from "./components/DetalleCartera";
 import CatalogoCarteras from "./components/CatalogoCarteras";
@@ -39,7 +38,6 @@ const Shoebrands2 = lazy(() => import('./components/Shoebrands2'));
 const Mujer = lazy(() => import('./components/Mujer'));
 const Hombre = lazy(() => import('./components/Hombre'));
 const Ropa = lazy(() => import('./components/Ropa'));
-const EncabezadoCatalogo = lazy(() => import('./components/EncabezadoCatalogo'));
 const Juvenil = lazy(() => import('./components/Juvenil'));
 const Niña = lazy(() => import('./components/Niña'));
 const Niño = lazy(() => import('./components/Niño'));
@@ -66,12 +64,11 @@ const NewB2 = lazy(() => import('./pages/Mujer/Zapatos/NewB2'));
 const VansMujer = lazy(() => import('./pages/Mujer/Zapatos/VansMujer'));
 
 /* Sección: Componentes relacionados con Pijamas Mañanitas */
-const TiendaMañanitas = lazy(() => import('./components/Pijamas/TiendaMañanitas'));
-const MarcaMañanitas = lazy(() => import('./components/Pijamas/MarcaMañanitas'));
-const PortadaMarcasMañanitas = lazy(() => import('./components/Pijamas/PortadaMarcasMañanitas'));
-const CatalogoMañanitas = lazy(() => import('./components/Pijamas/CatalogoMañanitas'));
-const DetalleMañanitas = lazy(() => import('./components/Pijamas/DetalleMañanitas'));
-const CaracteristicasMañanitas = lazy(() => import('./components/Pijamas/CaracteristicasMañanitas'));
+const Mañanitas = lazy(() => import('./components/Pijamas/Mujer/Mañanitas'));
+const DetalleProductoMañanitas = lazy(() => import('./components/Pijamas/Mujer/DetalleProductoMañanitas'));
+ 
+
+
 
 /*const ParticlesBackground = lazy(() => import('./pages/ParticlesBackground'));*/
 
@@ -93,9 +90,8 @@ export default function AppRoutes() {
                         {/*<Hero heroapi={heroapi} storiesRef={storiesRef} />*/}
                         <>
                         <Inicio />
-                        <Belleza />
-                        </>
                         <CardMenu />
+                        </>
                         <Stories story={story} storiesRef={storiesRef} />
                         {/*<Sales endpoint={popularsales} ifExists />*/}
                         {/*<FlexContent endpoint={highlight} ifExists />*/}
@@ -332,13 +328,6 @@ export default function AppRoutes() {
                 <Route path="/catalogo/:marca" element={<CatalogoCarteras />} />
                 <Route path="/caracteristicas/:id" element={<CaracteristicasCartera />} />
                 <Route path="/carteras" element={<TiendaCarteras />} />
-                <Route path="/mañanitas" element={<PortadaMarcasMañanitas marcamañanitasAPI={{ news: marcamañanitasAPI }}
-                    dataMañanitas={{ news: dataMañanitas }} />} />
-                <Route path="/marca-mañanitas" element={<MarcaMañanitas />} />
-                <Route path="/catalogomañanitas/:marca" element={<CatalogoMañanitas />} />
-                <Route path="/mañanitas" element={<TiendaMañanitas />} />
-                <Route path="/mañanitas/:id" element={<DetalleMañanitas />} />
-                <Route path="/caracteristicasmañanitas/:id" element={<CaracteristicasMañanitas />} />
                 <Route path="/guia-de-tallas" element={<GuiaDeTallas />} />
                 <Route path="/contacto" element={<Contacto />} />
                 <Route path="/producto/:id" element={<DetalleProducto />} />
@@ -348,6 +337,8 @@ export default function AppRoutes() {
                         <BrandCarousel />
                     </>
                 } />
+                <Route path="/mañanitas" element={<Mañanitas />} />
+                <Route path="/detalle/:id" element={<DetalleProductoMañanitas />} />
             </Routes>
         </>
     );

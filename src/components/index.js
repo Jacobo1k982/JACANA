@@ -36,12 +36,6 @@ export {default as DetalleCartera} from './DetalleCartera.jsx';
 export {default as CaracteristicasCartera} from './CaracteristicasCartera.jsx';
 export {default as TiendaCarteras} from './TiendaCarteras.jsx'
 export {default as MarcasCartera} from './MarcasCartera.jsx';
-export {default as TiendaMañanitas} from './Pijamas/TiendaMañanitas.jsx';
-export {default as MarcaMañanitas} from './Pijamas/MarcaMañanitas.jsx';
-export {default as PortadaMarcasMañanitas} from './Pijamas/PortadaMarcasMañanitas.jsx';
-export {default as DetalleMañanitas} from './Pijamas/DetalleMañanitas.jsx';
-export {default as CatalogoMañanitas} from './Pijamas/CatalogoMañanitas.jsx';
-export {default as CaracteristicasMañanitas} from './Pijamas/CaracteristicasMañanitas.jsx';
 export {default as Vans} from '../pages/Hombre/Zapatos/Vans.jsx';
 export {default as VansMujer} from '../pages/Mujer/Zapatos/VansMujer.jsx';
 export {default as Contacto} from '../pages/Contacto.jsx';
@@ -49,3 +43,5 @@ export {default as ParticlesBackground} from '../pages/ParticlesBackground.jsx';
 export {default as Belleza} from './Belleza/Belleza.jsx';
 export {default as BrandCarousel} from './Belleza/BrandCarousel.jsx';
 export {default as Inicio} from './Inicio.jsx' ;
+export {default as Mañanitas} from './Pijamas/Mujer/Mañanitas.jsx';
+export {default as DetalleProductoMañanitas} from './Pijamas/Mujer/DetalleProductoMañanitas.jsx';

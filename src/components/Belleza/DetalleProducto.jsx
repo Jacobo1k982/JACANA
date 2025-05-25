@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Dialog } from '@headlessui/react';
+import { useDispatch } from 'react-redux';
+import { setAddItemToCart, setOpenCart } from '../../app/CartSlice';
+
 
 const DetalleProducto = () => {
     const { id } = useParams();
@@ -10,6 +13,8 @@ const DetalleProducto = () => {
     const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
     const [modalAbierto, setModalAbierto] = useState(false);
     const [indexActual, setIndexActual] = useState(0);
+    const dispatch = useDispatch();
+
 
     useEffect(() => {
         fetch('/data/productos.json')
@@ -18,20 +23,15 @@ const DetalleProducto = () => {
                 const productoEncontrado = data.find(p => p.id.toString() === id);
                 if (productoEncontrado) {
                     setProducto(productoEncontrado);
-
                     const colorInicial = productoEncontrado.colores?.[0]?.color;
                     setColorSeleccionado(colorInicial);
-
                     let imagenesIniciales = [];
-
                     if (productoEncontrado.imagenesPorColor && colorInicial) {
                         imagenesIniciales = productoEncontrado.imagenesPorColor[colorInicial] || [];
                     }
-
                     if (imagenesIniciales.length === 0 && productoEncontrado.imagenes?.length > 0) {
                         imagenesIniciales = productoEncontrado.imagenes;
                     }
-
                     if (imagenesIniciales.length > 0) {
                         setImagenSeleccionada(imagenesIniciales[0]);
                         setIndexActual(0);
@@ -98,8 +98,8 @@ const DetalleProducto = () => {
                                     setIndexActual(index);
                                 }}
                                 className={`w-20 h-20 object-cover rounded-lg border-2 cursor-pointer ${img === imagenSeleccionada
-                                        ? 'border-blue-500 ring-2 ring-blue-300'
-                                        : 'border-gray-300 dark:border-gray-600'
+                                    ? 'border-blue-500 ring-2 ring-blue-300'
+                                    : 'border-gray-300 dark:border-gray-600'
                                     }`}
                             />
                         ))}
@@ -107,45 +107,71 @@ const DetalleProducto = () => {
                 </div>
 
                 {/* Info producto */}
-                <div>
-                    <h1 className="text-4xl font-bold mb-2">{producto.titulo}</h1>
-                    <p className="text-gray-600 dark:text-gray-400 mb-2">{producto.subtitulo}</p>
-                    <p className="text-blue-600 dark:text-blue-400 font-semibold text-2xl mb-4">
-                        ₡{producto.precio.toFixed(2)}
-                    </p>
+                <div className="flex flex-col justify-between">
+                    <div>
+                        <h1 className="text-4xl font-bold mb-2">{producto.titulo}</h1>
+                        <p className="text-gray-600 dark:text-gray-400 mb-2">{producto.subtitulo}</p>
+                        <p className="text-blue-600 dark:text-blue-400 font-semibold text-2xl mb-4">
+                            ₡{producto.precio.toFixed(2)}
+                        </p>
 
-                    {/* Colores */}
-                    <div className="mb-6">
-                        <h3 className="font-semibold mb-2">Colores disponibles:</h3>
-                        <div className="flex gap-3">
-                            {producto.colores.map((color, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => {
-                                        setColorSeleccionado(color.color);
-                                        const nuevasImagenes = producto.imagenesPorColor?.[color.color] || [];
-                                        setImagenSeleccionada(nuevasImagenes[0] || null);
-                                        setIndexActual(0);
-                                    }}
-                                    className={`w-7 h-7 rounded-full border-2 ${color.color === colorSeleccionado ? 'border-black dark:border-white' : 'border-gray-300 dark:border-gray-600'
-                                        }`}
-                                    style={{ backgroundColor: color.codigo }}
-                                    title={color.color}
-                                />
-                            ))}
+                        {/* Colores */}
+                        <div className="mb-6">
+                            <h3 className="font-semibold mb-2">Colores disponibles:</h3>
+                            <div className="flex gap-3">
+                                {producto.colores.map((color, i) => (
+                                    <button
+                                        key={i}
+                                        onClick={() => {
+                                            setColorSeleccionado(color.color);
+                                            const nuevasImagenes = producto.imagenesPorColor?.[color.color] || [];
+                                            setImagenSeleccionada(nuevasImagenes[0] || null);
+                                            setIndexActual(0);
+                                        }}
+                                        className={`w-7 h-7 rounded-full border-2 ${color.color === colorSeleccionado
+                                            ? 'border-black dark:border-white'
+                                            : 'border-gray-300 dark:border-gray-600'
+                                            }`}
+                                        style={{ backgroundColor: color.codigo }}
+                                        title={color.color}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Detalles */}
+                        <div className="mt-6">
+                            <h2 className="text-xl font-bold mb-2">Detalles</h2>
+                            <p className="text-gray-700 dark:text-gray-300">{producto.detalles}</p>
+                        </div>
+
+                        {/* Ingredientes */}
+                        <div className="mt-4">
+                            <h2 className="text-xl font-bold mb-2">Ingredientes</h2>
+                            <p className="text-gray-700 dark:text-gray-300">{producto.ingredientes}</p>
                         </div>
                     </div>
 
-                    {/* Detalles */}
-                    <div className="mt-6">
-                        <h2 className="text-xl font-bold mb-2">Detalles</h2>
-                        <p className="text-gray-700 dark:text-gray-300">{producto.detalles}</p>
-                    </div>
+                    {/* Botones acción */}
+                    <div className="flex justify-between mt-10">
+                        <button
+                            onClick={() => {
+                                dispatch(setAddItemToCart({
+                                    id: producto.id,
+                                    title: producto.titulo,
+                                    text: producto.subtitulo,
+                                    img: imagenSeleccionada,
+                                    price: producto.precio,
+                                    color: colorSeleccionado,
+                                    shadow: "shadow-md",
+                                }));
+                                dispatch(setOpenCart());
+                            }}
+                            className="bg-blue-500 hover:bg-cyan-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out"
+                        >
+                            Comprar
+                        </button>
 
-                    {/* Ingredientes */}
-                    <div className="mt-4">
-                        <h2 className="text-xl font-bold mb-2">Ingredientes</h2>
-                        <p className="text-gray-700 dark:text-gray-300">{producto.ingredientes}</p>
                     </div>
                 </div>
             </div>
@@ -199,14 +225,14 @@ const DetalleProducto = () => {
             {/* Animación modal */}
             <style>
                 {`
-          @keyframes scaleIn {
-            0% { transform: scale(0.9); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-          }
-          .animate-scale-in {
-            animation: scaleIn 0.25s ease-out;
-          }
-        `}
+                    @keyframes scaleIn {
+                        0% { transform: scale(0.9); opacity: 0; }
+                        100% { transform: scale(1); opacity: 1; }
+                    }
+                    .animate-scale-in {
+                        animation: scaleIn 0.25s ease-out;
+                    }
+                `}
             </style>
         </div>
     );

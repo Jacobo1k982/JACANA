@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import productosData from '../../public/Data/productos.json'; // ajusta el path si es necesario
+import productosData from '../../public/Data/productos.json';
 
 const Inicio = () => {
     const [productos, setProductos] = useState([]);
@@ -10,7 +10,7 @@ const Inicio = () => {
     const [imagenesActuales, setImagenesActuales] = useState([]);
     const [imagenIndex, setImagenIndex] = useState(0);
     const [colorSeleccionado, setColorSeleccionado] = useState({});
-    const [gifSrc, setGifSrc] = useState("/animacion.gif"); // 👈 Estado para el gif
+    const [gifSrc, setGifSrc] = useState("/Fondo.png"); // 👈 Estado para el gif
     const carruselRef = useRef(null);
 
     useEffect(() => {
@@ -18,9 +18,9 @@ const Inicio = () => {
 
         const verificarTamañoPantalla = () => {
             if (window.innerWidth <= 640) {
-                setGifSrc("/animacion-mobile.gif");
+                setGifSrc("/img-mobile.png");
             } else {
-                setGifSrc("/animacion.gif");
+                setGifSrc("/Fondo.png");
             }
         };
 
@@ -73,25 +73,20 @@ const Inicio = () => {
         <section className="w-full flex flex-col items-center bg-white dark:bg-[#000000] transition-colors duration-300">
             {/* Sección de animación */}
             <div className="w-screen relative">
-    <img
-        src={gifSrc}
-        alt="Animación de bienvenida"
-        className="w-full h-auto object-cover object-center"
-    />
+                <img
+                    src={gifSrc}
+                    alt="Animación de bienvenida"
+                    className="w-full h-auto object-cover object-center"
+                />
 
                 <div className="absolute inset-0 flex flex-col items-center justify-start text-center pt-12 px-4">
-                    <h1 className="text-3xl sm:text-5xl font-Playfair font-extrabold text-white drop-shadow-lg">
+                    <h1 className="text-3xl sm:text-5xl font-Playfair font-extrabold text-black drop-shadow-lg">
                         M-A-C ICONOS COTIDIANOS
                     </h1>
-                    <p className="mt-4 text-base sm:text-lg text-white font-Poppins drop-shadow-md max-w-2xl">
+                    <p className="mt-4 text-base sm:text-lg text-black font-Poppins drop-shadow-md max-w-2xl">
                         Eleva tu característico look de labios con nuestro nuevo set seleccionado con M-A-Lápiz labial y lápiz labial mate sedoso Cximal
                     </p>
                 </div>
-            </div>
-
-            {/* Carrusel de productos */}
-            <div className="w-full max-w-7xl px-4 mt-10 relative">
-                <h2 className="text-2xl font-Playfair font-semibold mb-6 text-center text-black dark:text-white">EXPLORE</h2>
             </div>
 
             {/* Estilo para animación opcional */}
