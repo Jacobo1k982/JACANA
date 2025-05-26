@@ -1,27 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { Dialog } from '@headlessui/react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const Mañanitas = () => {
-    const [mañanitas, setMañanitas] = useState([]);
+    const [productos, setProductos] = useState([]);
     const [imagenExpandida, setImagenExpandida] = useState(null);
     const [imagenesActuales, setImagenesActuales] = useState([]);
     const [imagenIndex, setImagenIndex] = useState(0);
     const [colorSeleccionado, setColorSeleccionado] = useState({});
     const carruselRef = useRef(null);
-    const { id } = useParams();
 
     useEffect(() => {
-        fetch('/Data/Ropa/Mujer/mañanitas.json')
+        fetch('/data/Ropa/Mujer/mañanitas.json')
             .then((res) => res.json())
-            .then((data) => {
-                const producto = data.find(item => item.id === Number(id));
-                setMañanitas(producto ? [producto] : []);
-            });
-    }, [id]);
+            .then((data) => setProductos(data))
+            .catch((err) => console.error('Error cargando productos:', err));
+    }, []);
 
     const abrirModal = (imagenes, index) => {
         setImagenesActuales(imagenes);
@@ -47,10 +44,10 @@ const Mañanitas = () => {
         setImagenExpandida(imagenesActuales[nuevoIndex]);
     };
 
-    const seleccionarColor = (detalleId, colorCodigo) => {
+    const seleccionarColor = (productoId, colorCodigo) => {
         setColorSeleccionado((prev) => ({
             ...prev,
-            [detalleId]: colorCodigo,
+            [productoId]: colorCodigo,
         }));
     };
 
@@ -61,157 +58,124 @@ const Mañanitas = () => {
     };
 
     return (
-        <div className="w-full pt-[55px] relative p-1 text-gray-900 dark:text-gray-100 min-h-screen bg-white dark:bg-black">
-            <div className="relative z-10">
-                <Dialog open={!!imagenExpandida} onClose={cerrarModal} className="relative z-50" role="dialog" aria-modal="true">
-                    <div className="fixed inset-0 bg-black/80 flex items-center justify-center">
-                        <Dialog.Panel className="relative animate-scale-in max-w-screen-md mx-auto">
-                            <button
-                                onClick={cerrarModal}
-                                className="absolute top-2 right-2 bg-white dark:bg-neutral-900 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
-                                aria-label="Cerrar imagen"
+        <div className="w-full pt-[55px] px-2 pb-10 min-h-screen bg-white dark:bg-zinc-950 text-gray-900 dark:text-gray-100 relative">
+            {/* Modal */}
+            <AnimatePresence>
+                {imagenExpandida && (
+                    <Dialog open={true} onClose={cerrarModal} className="fixed inset-0 z-50">
+                        <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-4">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.95 }}
+                                className="relative max-w-4xl w-full"
                             >
-                                <X className="w-5 h-5" />
-                            </button>
-                            <button
-                                onClick={mostrarAnterior}
-                                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-neutral-900 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
-                                aria-label="Imagen anterior"
-                            >
-                                <ChevronLeft className="w-5 h-5" />
-                            </button>
-                            <img
-                                src={imagenExpandida}
-                                alt="Imagen expandida"
-                                className="max-w-full max-h-[80vh] object-contain rounded-md"
-                            />
-                            <button
-                                onClick={mostrarSiguiente}
-                                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white dark:bg-neutral-900 text-black dark:text-white rounded-full p-2 shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700 z-50"
-                                aria-label="Imagen siguiente"
-                            >
-                                <ChevronRight className="w-5 h-5" />
-                            </button>
-                        </Dialog.Panel>
-                    </div>
-                </Dialog>
-
-                <div className="mt-10 relative">
-                    <h2 className="text-3xl font-bold mb-6 text-center text-pink-600 dark:text-pink-400">CONJUNTO MAÑANITAS</h2>
-
-                    <button
-                        onClick={() => scrollCarrusel(-300)}
-                        className="absolute left-0 top-[50%] transform -translate-y-1/2 z-20 bg-white dark:bg-neutral-900 text-black dark:text-white p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700"
-                        aria-label="Scroll izquierdo"
-                    >
-                        <ChevronLeft className="w-5 h-5" />
-                    </button>
-
-                    <button
-                        onClick={() => scrollCarrusel(300)}
-                        className="absolute right-0 top-[50%] transform -translate-y-1/2 z-20 bg-white dark:bg-neutral-900 text-black dark:text-white p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700"
-                        aria-label="Scroll derecho"
-                    >
-                        <ChevronRight className="w-5 h-5" />
-                    </button>
-
-                    <div
-                        ref={carruselRef}
-                        className="flex gap-6 overflow-x-auto px-8 pb-4 scroll-smooth"
-                    >
-                        {mañanitas.length === 0 ? (
-                            <p className="text-center w-full text-red-500">Producto no encontrado.</p>
-                        ) : (
-                            mañanitas.map((detalle) => (
-                                <div
-                                    key={detalle.id}
-                                    className="min-w-[280px] max-w-[280px] flex-shrink-0 backdrop-blur-md bg-white/60 dark:bg-neutral-900/60 shadow-lg dark:shadow-lg rounded-2xl p-4 hover:shadow-2xl transition-shadow duration-300 ease-in-out text-center border border-gray-300 dark:border-gray-700 hover:border-pink-400 dark:hover:border-pink-500"
-                                >
-                                    <Carousel
-                                        showThumbs={false}
-                                        showStatus={false}
-                                        infiniteLoop
-                                        swipeable
-                                        emulateTouch
-                                        className="rounded-md mb-2"
+                                <Dialog.Panel className="relative bg-white dark:bg-zinc-900 rounded-lg overflow-hidden">
+                                    <button
+                                        onClick={cerrarModal}
+                                        className="absolute top-3 right-3 text-xl bg-zinc-100 dark:bg-zinc-800 p-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700"
                                     >
-                                        {detalle.imagenes?.map((img, idx) => (
-                                            <div key={idx}>
-                                                <div
-                                                    onClick={() => abrirModal(detalle.imagenes, idx)}
-                                                    className="cursor-pointer"
-                                                >
-                                                    <img
-                                                        src={img}
-                                                        alt={`${detalle.titulo} - imagen ${idx + 1}`}
-                                                        className="w-full object-contain object-center rounded-md max-h-52"
-                                                    />
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </Carousel>
+                                        ✕
+                                    </button>
+                                    <button
+                                        onClick={mostrarAnterior}
+                                        className="absolute left-3 top-1/2 -translate-y-1/2 text-2xl bg-zinc-100 dark:bg-zinc-800 p-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700"
+                                    >
+                                        ‹
+                                    </button>
+                                    <img
+                                        src={imagenExpandida}
+                                        alt="Imagen expandida"
+                                        className="w-full h-auto max-h-[80vh] object-contain"
+                                    />
+                                    <button
+                                        onClick={mostrarSiguiente}
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-2xl bg-zinc-100 dark:bg-zinc-800 p-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700"
+                                    >
+                                        ›
+                                    </button>
+                                </Dialog.Panel>
+                            </motion.div>
+                        </div>
+                    </Dialog>
+                )}
+            </AnimatePresence>
 
-                                    <h3 className="text-lg md:text-xl font-semibold mt-2">{detalle.titulo}</h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-300">{detalle.subtitulo}</p>
-                                    <p className="text-pink-600 dark:text-pink-400 font-bold mt-1 text-lg">₡{detalle.precio.toFixed(2)}</p>
+            <div className="mt-10 relative">
+                <h2
+                    className="text-3xl md:text-4xl font-semibold font-sans mb-8 text-gray-900 dark:text-gray-100 transition-colors duration-300 relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full mx-auto text-center w-fit"
+                >
+                    Pijamas Mañanitas
+                </h2>
 
-                                    {detalle.colores?.length > 0 && (
-                                        <div className="flex justify-center items-center gap-2 mt-3">
-                                            {detalle.colores.map((color, index) => {
-                                                const isSelected = colorSeleccionado[detalle.id] === color.codigo;
-                                                return (
-                                                    <div
-                                                        key={index}
-                                                        title={color.color}
-                                                        aria-label={color.color}
-                                                        onClick={() => seleccionarColor(detalle.id, color.codigo)}
-                                                        className={`w-6 h-6 rounded-full border-2 cursor-pointer transition-transform duration-200 hover:scale-110 ${isSelected
-                                                            ? 'border-blue-600 ring-2 ring-blue-300 scale-110'
-                                                            : 'border-gray-300 dark:border-gray-600'
-                                                            }`}
-                                                        style={{ backgroundColor: color.codigo }}
-                                                    />
-                                                );
-                                            })}
-                                        </div>
-                                    )}
+                <button
+                    onClick={() => scrollCarrusel(-300)}
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-white dark:bg-zinc-800 text-black dark:text-white p-2 rounded-full shadow-md hover:scale-110 transition"
+                >
+                    ‹
+                </button>
 
-                                    <div className="flex justify-between items-center mt-4">
-                                        <Link
-                                            to={`/detalle/${detalle.id}`}
-                                            className="text-sm text-blue-500 font-medium hover:underline"
-                                        >
-                                            Ver detalle
-                                        </Link>
+                <button
+                    onClick={() => scrollCarrusel(300)}
+                    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-white dark:bg-zinc-800 text-black dark:text-white p-2 rounded-full shadow-md hover:scale-110 transition"
+                >
+                    ›
+                </button>
 
-                                        <button className="text-sm px-3 py-1 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition">
-                                            Agregar
-                                        </button>
+                <div ref={carruselRef} className="flex gap-6 overflow-x-auto px-10 pb-6 scroll-smooth">
+                    {productos.map((producto) => (
+                        <div
+                            key={producto.id}
+                            className="min-w-[280px] max-w-[280px] bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-2xl p-4 shadow-md hover:shadow-xl transition-transform hover:-translate-y-1"
+                        >
+                            <Carousel showThumbs={false} showStatus={false} infiniteLoop swipeable emulateTouch>
+                                {producto.imagenes?.map((img, idx) => (
+                                    <div key={idx} onClick={() => abrirModal(producto.imagenes, idx)} className="cursor-pointer">
+                                        <img
+                                            src={img}
+                                            alt={`${producto.titulo} ${idx + 1}`}
+                                            className="rounded-lg object-contain max-h-52"
+                                        />
                                     </div>
+                                ))}
+                            </Carousel>
+
+                            <h3 className="text-lg font-bold mt-3">{producto.titulo}</h3>
+                            <p className="text-sm text-zinc-500 dark:text-zinc-400">{producto.subtitulo}</p>
+                            <p className="text-blue-600 font-bold text-md mt-1">₡{producto.precio.toFixed(2)}</p>
+
+                            {producto.colores?.length > 0 && (
+                                <div className="flex justify-center gap-2 mt-3">
+                                    {producto.colores.map((color, index) => {
+                                        const isSelected = colorSeleccionado[producto.id] === color.codigo;
+                                        return (
+                                            <div
+                                                key={index}
+                                                title={color.color}
+                                                onClick={() => seleccionarColor(producto.id, color.codigo)}
+                                                className={`w-6 h-6 rounded-full border-2 cursor-pointer transition-transform duration-200 ${isSelected
+                                                    ? 'border-pink-500 ring-2 ring-pink-300 scale-110'
+                                                    : 'border-zinc-300 dark:border-zinc-600'
+                                                    }`}
+                                                style={{ backgroundColor: color.codigo }}
+                                            />
+                                        );
+                                    })}
                                 </div>
-                            ))
-                        )}
-                    </div>
+                            )}
+
+                            <div className="flex justify-end mt-4">
+                                <Link
+                                    to={`/detalle/${producto.id}`}
+                                    className="text-sm text-blue-500 font-medium hover:underline"
+                                >
+                                    Ver detalle
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-
-            <style>
-                {`
-                    @keyframes scaleIn {
-                        0% {
-                            transform: scale(0.9);
-                            opacity: 0;
-                        }
-                        100% {
-                            transform: scale(1);
-                            opacity: 1;
-                        }
-                    }
-                    .animate-scale-in {
-                        animation: scaleIn 0.25s ease-out;
-                    }
-                `}
-            </style>
         </div>
     );
 };

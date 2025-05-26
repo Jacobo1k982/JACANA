@@ -66,9 +66,6 @@ const VansMujer = lazy(() => import('./pages/Mujer/Zapatos/VansMujer'));
 /* Sección: Componentes relacionados con Pijamas Mañanitas */
 const Mañanitas = lazy(() => import('./components/Pijamas/Mujer/Mañanitas'));
 const DetalleProductoMañanitas = lazy(() => import('./components/Pijamas/Mujer/DetalleProductoMañanitas'));
- 
-
-
 
 /*const ParticlesBackground = lazy(() => import('./pages/ParticlesBackground'));*/
 

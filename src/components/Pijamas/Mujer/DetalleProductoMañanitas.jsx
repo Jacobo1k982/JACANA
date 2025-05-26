@@ -8,41 +8,40 @@ import { Helmet } from 'react-helmet';
 const DetalleProductoMañanitas = () => {
     const { id } = useParams();
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+
     const [detalle, setDetalle] = useState(null);
     const [colorSeleccionado, setColorSeleccionado] = useState(null);
     const [tallaSeleccionada, setTallaSeleccionada] = useState(null);
     const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
     const [modalAbierto, setModalAbierto] = useState(false);
     const [indexActual, setIndexActual] = useState(0);
-    const dispatch = useDispatch();
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         fetch('/Data/Ropa/Mujer/mañanitas.json')
             .then(res => res.json())
             .then(data => {
-                const detalleProducto = data.find(p => p.id === Number(id));
-                if (detalleProducto) {
-                    setDetalle(detalleProducto);
+                const producto = data.find(p => p.id.toString() === id.toString());
+                if (producto) {
+                    setDetalle(producto);
                 }
                 setIsLoading(false);
             });
     }, [id]);
 
     useEffect(() => {
-        if (detalle) {
-            if (detalle.colores?.length > 0 && !colorSeleccionado) {
-                setColorSeleccionado(detalle.colores[0].color);
-            }
-            if (detalle.imagenes?.length > 0 && !imagenSeleccionada) {
-                setImagenSeleccionada(detalle.imagenes[0]);
-            }
-            if (detalle.tallas?.length > 0 && !tallaSeleccionada) {
-                const disponible = detalle.tallas.find(t => t.disponible);
-                if (disponible) {
-                    setTallaSeleccionada(disponible.valor);
-                }
-            }
+        if (!detalle) return;
+
+        if (!colorSeleccionado && detalle.colores?.length)
+            setColorSeleccionado(detalle.colores[0].color);
+
+        if (!imagenSeleccionada && detalle.imagenes?.length)
+            setImagenSeleccionada(detalle.imagenes[0]);
+
+        if (!tallaSeleccionada && detalle.tallas?.length) {
+            const disponible = detalle.tallas.find(t => t.disponible);
+            if (disponible) setTallaSeleccionada(disponible.valor);
         }
     }, [detalle]);
 
@@ -50,6 +49,23 @@ const DetalleProductoMañanitas = () => {
         setIndexActual(index);
         setImagenSeleccionada(detalle.imagenes[index]);
         setModalAbierto(true);
+    };
+
+    const handleComprar = () => {
+        if (!detalle || !colorSeleccionado || !tallaSeleccionada || !imagenSeleccionada) return;
+
+        dispatch(setAddItemToCart({
+            id: detalle.id,
+            title: detalle.titulo,
+            text: detalle.subtitulo,
+            img: imagenSeleccionada,
+            price: detalle.precio,
+            color: colorSeleccionado,
+            talla: tallaSeleccionada,
+            shadow: "shadow-md",
+        }));
+
+        dispatch(setOpenCart());
     };
 
     const mostrarAnterior = () => {
@@ -64,23 +80,9 @@ const DetalleProductoMañanitas = () => {
         setImagenSeleccionada(detalle.imagenes[nuevoIndex]);
     };
 
-    const handleComprar = () => {
-        dispatch(setAddItemToCart({
-            id: detalle.id,
-            title: detalle.titulo,
-            text: detalle.subtitulo,
-            img: imagenSeleccionada,
-            price: detalle.precio,
-            color: colorSeleccionado,
-            talla: tallaSeleccionada,
-            shadow: "shadow-md",
-        }));
-        dispatch(setOpenCart());
-    };
-
-    if (isLoading || !detalle || !detalle.colores || !detalle.imagenes || !detalle.tallas) {
+    if (isLoading || !detalle) {
         return (
-            <div className="flex justify-center items-center h-64 text-gray-700 dark:text-gray-300">
+            <div className="flex justify-center items-center h-64">
                 <div className="animate-pulse text-lg font-medium">Cargando producto...</div>
             </div>
         );
@@ -89,7 +91,7 @@ const DetalleProductoMañanitas = () => {
     return (
         <div className="p-6 max-w-6xl mx-auto mt-20 text-gray-800 dark:text-gray-200">
             <Helmet>
-                <title>{detalle?.titulo} - Tienda Mañanitas</title>
+                <title>{detalle.titulo} - Tienda Mañanitas</title>
             </Helmet>
 
             <button
@@ -112,7 +114,7 @@ const DetalleProductoMañanitas = () => {
                                 loading="lazy"
                                 key={index}
                                 src={img}
-                                alt={`Miniatura ${index + 1}`}
+                                alt={`Vista ${index + 1}`}
                                 onClick={() => {
                                     setImagenSeleccionada(img);
                                     setIndexActual(index);
@@ -152,16 +154,16 @@ const DetalleProductoMañanitas = () => {
                         <div className="mb-6">
                             <h3 className="font-semibold mb-2">Tallas disponibles:</h3>
                             <div className="flex gap-3 mb-2 flex-wrap">
-                                {detalle.tallas?.map((talla, i) => (
+                                {detalle.tallas.map((talla, i) => (
                                     <button
                                         key={i}
                                         onClick={() => talla.disponible && setTallaSeleccionada(talla.valor)}
                                         disabled={!talla.disponible}
                                         className={`
-                                            px-4 py-2 border rounded-lg font-medium transition
-                                            ${talla.valor === tallaSeleccionada ? 'bg-blue-500 text-white' : 'bg-white dark:bg-gray-700 text-black dark:text-white'}
-                                            ${talla.disponible ? 'border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600' : 'line-through text-gray-400 border-gray-200 dark:border-gray-600 cursor-not-allowed'}
-                                        `}
+                      px-4 py-2 border rounded-lg font-medium transition
+                      ${talla.valor === tallaSeleccionada ? 'bg-blue-500 text-white' : 'bg-white dark:bg-gray-700 text-black dark:text-white'}
+                      ${talla.disponible ? 'border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600' : 'line-through text-gray-400 border-gray-200 dark:border-gray-600 cursor-not-allowed'}
+                    `}
                                         title={!talla.disponible ? "Agotada" : ""}
                                     >
                                         {talla.valor}
@@ -191,10 +193,10 @@ const DetalleProductoMañanitas = () => {
                 <div className="mt-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 max-w-4xl mx-auto border border-gray-200 dark:border-gray-600">
                     <h2 className="text-2xl font-bold mb-4 text-center">Beneficios del producto</h2>
                     <ul className="space-y-3">
-                        {detalle.beneficios.map((beneficio, index) => (
-                            <li key={index} className="flex items-start gap-3 text-base">
+                        {detalle.beneficios.map((b, i) => (
+                            <li key={i} className="flex items-start gap-3 text-base">
                                 <span className="text-green-500 text-xl">✔️</span>
-                                <span>{beneficio}</span>
+                                <span>{b}</span>
                             </li>
                         ))}
                     </ul>
@@ -215,14 +217,14 @@ const DetalleProductoMañanitas = () => {
 
             <style>
                 {`
-                    @keyframes scaleIn {
-                        0% { transform: scale(0.9); opacity: 0; }
-                        100% { transform: scale(1); opacity: 1; }
-                    }
-                    .animate-scale-in {
-                        animation: scaleIn 0.25s ease-out;
-                    }
-                `}
+          @keyframes scaleIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+          }
+          .animate-scale-in {
+            animation: scaleIn 0.25s ease-out;
+          }
+        `}
             </style>
         </div>
     );
