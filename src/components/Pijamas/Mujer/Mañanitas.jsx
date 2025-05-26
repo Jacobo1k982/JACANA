@@ -21,7 +21,7 @@ const Mañanitas = () => {
     }, []);
 
     const abrirModal = (imagenes, index) => {
-        setImagenesActuales(imagenes);
+        setImagenesActuales(imagenes); // estas no deben incluir la portada
         setImagenIndex(index);
         setImagenExpandida(imagenes[index]);
     };
@@ -129,6 +129,18 @@ const Mañanitas = () => {
                             className="min-w-[280px] max-w-[280px] bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-2xl p-4 shadow-md hover:shadow-xl transition-transform hover:-translate-y-1"
                         >
                             <Carousel showThumbs={false} showStatus={false} infiniteLoop swipeable emulateTouch>
+                                {/* Portada como primera imagen (no clickeable) */}
+                                {producto.portada && (
+                                    <div>
+                                        <img
+                                            src={producto.portada}
+                                            alt={`${producto.titulo} portada`}
+                                            className="rounded-lg object-contain max-h-52"
+                                        />
+                                    </div>
+                                )}
+
+                                {/* Resto de las imágenes con click para abrir modal */}
                                 {producto.imagenes?.map((img, idx) => (
                                     <div key={idx} onClick={() => abrirModal(producto.imagenes, idx)} className="cursor-pointer">
                                         <img

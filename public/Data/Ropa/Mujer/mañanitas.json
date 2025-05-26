@@ -4,6 +4,7 @@
         "titulo": "Conjunto mañanitas verde oscuro",
         "subtitulo": "Camiseta manga corta y pantalón corto con logo Tommy Hilfiger.",
         "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada5.png",
         "moneda": "CRC",
         "imagenes": [
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM1.jpg",
@@ -41,6 +42,7 @@
         "titulo": "Conjunto mañanitas azul oscuro",
         "subtitulo": "Camiseta con finos tirantes y pantalón corto.",
         "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada4.png",
         "moneda": "CRC",
         "imagenes": [
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM4.jpg",
@@ -80,6 +82,7 @@
         "titulo": "Conjunto mañanitas gris oscuro",
         "subtitulo": "Camiseta y pantalón corto estilo casual.",
         "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada1.png",
         "moneda": "CRC",
         "imagenes": [
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM9.jpg",
@@ -117,6 +120,7 @@
         "titulo": "Conjunto mañanitas gris claro",
         "subtitulo": "Camiseta y pantalón corto en tono gris claro.",
         "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada6.png",
         "moneda": "CRC",
         "imagenes": [
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM12.jpg",
@@ -154,6 +158,7 @@
         "titulo": "Conjunto mañanitas Rojo",
         "subtitulo": "Mañanitas tipo camiseta y pantalón corto en tono negro claro.",
         "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada7.png",
         "moneda": "CRC",
         "imagenes": [
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM15.jpg",
@@ -191,6 +196,7 @@
         "titulo": "Conjunto mañanitas blanco",
         "subtitulo": "Mañanitas de tirantes y pantalón corto claro.",
         "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada2.png",
         "moneda": "CRC",
         "imagenes": [
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM18.jpg",
@@ -228,6 +234,7 @@
         "titulo": "Conjunto mañanitas gris",
         "subtitulo": "Mañanitas tipo camiseta y pantalón corto de tono azul claro.",
         "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada6.png",
         "moneda": "CRC",
         "imagenes": [
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM21.jpg",
@@ -265,6 +272,7 @@
         "titulo": "Conjunto mañanitas rojo",
         "subtitulo": "Mañanitas tipo camiseta y pantalón corto de tono rojo.",
         "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada8.png",
         "moneda": "CRC",
         "imagenes": [
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM24.jpg",
@@ -302,6 +310,7 @@
         "titulo": "Conjunto mañanitas negro",
         "subtitulo": "Mañanitas tipo camisa y pantalón corto de tono blanco.",
         "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada9.png",
         "moneda": "CRC",
         "imagenes": [
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM27.jpg",
@@ -339,6 +348,7 @@
         "titulo": "Conjunto mañanitas gris oscuro",
         "subtitulo": "Mañanitas blusa cuello 'V' y pantalón corto de tono gris oscuro.",
         "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada12.png",
         "moneda": "CRC",
         "imagenes": [
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM30.jpg",
@@ -378,6 +388,7 @@
         "titulo": "Conjunto mañanitas gris claro",
         "subtitulo": "Mañanitas tipo camiseta y pantalón corto de tono gris oscuro",
         "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada6.png",
         "moneda": "CRC",
         "imagenes": [
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM35.jpg",
@@ -415,11 +426,430 @@
         "titulo": "Conjunto mañanitas blanco",
         "subtitulo": "Mañanitas de tirantes y pantalón corto de tono gris oscuro",
         "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada3.png",
         "moneda": "CRC",
         "imagenes": [
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM38.jpg",
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM39.jpg",
             "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM40.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Blanco",
+                "codigo": "#ffffff"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Diseño ligero y transpirable.",
+            "Estilo casual con colores neutros.",
+            "Ideal para climas cálidos o descanso diario."
+        ]
+    },
+    {
+        "id": "13",
+        "titulo": "Conjunto mañanitas blanco",
+        "subtitulo": "Mañanitas de tirantes y pantalón corto de tono gris oscuro",
+        "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada2.png",
+        "moneda": "CRC",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM41.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM42.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM43.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Blanco",
+                "codigo": "#ffffff"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Diseño ligero y transpirable.",
+            "Estilo casual con colores neutros.",
+            "Ideal para climas cálidos o descanso diario."
+        ]
+    },
+    {
+        "id": "14",
+        "titulo": "Conjunto mañanitas gris claro",
+        "subtitulo": "Mañanitas tipo camiseta sin mangas y pantalón corto de tono negro",
+        "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada6.png",
+        "moneda": "CRC",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM44.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM45.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM46.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Gris claro",
+                "codigo": "#adcde0"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Diseño ligero y transpirable.",
+            "Estilo casual con colores neutros.",
+            "Ideal para climas cálidos o descanso diario."
+        ]
+    },
+    {
+        "id": "15",
+        "titulo": "Conjunto mañanitas azul oscuro",
+        "subtitulo": "Mañanitas tipo camiseta sin mangas y pantalón corto de tono negro",
+        "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada10.png",
+        "moneda": "CRC",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM51.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM52.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM46.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Azul oscuro",
+                "codigo": "#adcde0"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Diseño ligero y transpirable.",
+            "Estilo casual con colores neutros.",
+            "Ideal para climas cálidos o descanso diario."
+        ]
+    },
+    {
+        "id": "16",
+        "titulo": "Conjunto mañanitas amarillo",
+        "subtitulo": "Mañanitas estilo blusa mangas cortas y pantalón corto de tono negro",
+        "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada11.png",
+        "moneda": "CRC",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM53.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM46.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Amarillo",
+                "codigo": "#fef8b9"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Diseño ligero y transpirable.",
+            "Estilo casual con colores neutros.",
+            "Ideal para climas cálidos o descanso diario."
+        ]
+    },
+    {
+        "id": "17",
+        "titulo": "Conjunto mañanitas gris",
+        "subtitulo": "Mañanitas estilo blusa de tirantes y pantalón corto de tono negro",
+        "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada13.png",
+        "moneda": "CRC",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM54.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM55.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM46.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Gris",
+                "codigo": "#6b8492"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Diseño ligero y transpirable.",
+            "Estilo casual con colores neutros.",
+            "Ideal para climas cálidos o descanso diario."
+        ]
+    },
+    {
+        "id": "18",
+        "titulo": "Conjunto mañanitas gris",
+        "subtitulo": "Mañanitas estilo camiseta de tirantes y pantalón corto de tono gris",
+        "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada1.png",
+        "moneda": "CRC",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM56.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM57.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM58.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Gris",
+                "codigo": "#6b8492"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Diseño ligero y transpirable.",
+            "Estilo casual con colores neutros.",
+            "Ideal para climas cálidos o descanso diario."
+        ]
+    },
+    {
+        "id": "19",
+        "titulo": "Conjunto mañanitas blanco",
+        "subtitulo": "Mañanitas estilo camiseta de tirantes y pantalón corto de tono rojo",
+        "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada14.png",
+        "moneda": "CRC",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM59.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM60.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM61.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Blanco",
+                "codigo": "#ffffff"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Diseño ligero y transpirable.",
+            "Estilo casual con colores neutros.",
+            "Ideal para climas cálidos o descanso diario."
+        ]
+    },
+    {
+        "id": "20",
+        "titulo": "Conjunto mañanitas blanco",
+        "subtitulo": "Mañanitas estilo camiseta de tirantes y pantalón corto de tono negro",
+        "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada6.png",
+        "moneda": "CRC",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM62.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM63.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM64.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Blanco",
+                "codigo": "#ffffff"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Diseño ligero y transpirable.",
+            "Estilo casual con colores neutros.",
+            "Ideal para climas cálidos o descanso diario."
+        ]
+    },
+    {
+        "id": "21",
+        "titulo": "Conjunto mañanitas rojo",
+        "subtitulo": "Mañanitas estilo camiseta de tirantes y pantalón corto de tono negro",
+        "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada8.png",
+        "moneda": "CRC",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM65.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM66.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM67.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM68.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Rojo",
+                "codigo": "#c73b5f"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Diseño ligero y transpirable.",
+            "Estilo casual con colores neutros.",
+            "Ideal para climas cálidos o descanso diario."
+        ]
+    },
+    {
+        "id": "22",
+        "titulo": "Conjunto mañanitas café oscuro",
+        "subtitulo": "Mañanitas estilo camiseta de tirantes y pantalón corto de tono café oscuro",
+        "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada1.png",
+        "moneda": "CRC",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM70.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM71.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM72.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM69.jpg"
+        ],
+        "colores": [
+            {
+                "color": "Café oscuro",
+                "codigo": "#372a29"
+            }
+        ],
+        "tallas": [
+            {
+                "valor": "S",
+                "disponible": true
+            },
+            {
+                "valor": "M",
+                "disponible": false
+            },
+            {
+                "valor": "L",
+                "disponible": true
+            }
+        ],
+        "beneficios": [
+            "Diseño ligero y transpirable.",
+            "Estilo casual con colores neutros.",
+            "Ideal para climas cálidos o descanso diario."
+        ]
+    },
+    {
+        "id": "23",
+        "titulo": "Conjunto mañanitas blanco",
+        "subtitulo": "Mañanitas estilo camiseta de tirantes y pantalón corto de tono blanco",
+        "precio": 6000,
+        "portada": "/Ropa/Mujer/Mañanitas/portada14.png",
+        "moneda": "CRC",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM77.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM76.jpg"
         ],
         "colores": [
             {
