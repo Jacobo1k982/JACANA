@@ -16,9 +16,9 @@ const navLinks = [
                         name: 'Ropa', path: '#', icon: TagIcon,
                         subLinks: [
                             {
-                                name: 'Mañanitas', path: '#', icon: TagIcon,
+                                name: 'mañanitas', path: '#', icon: TagIcon,
                                 subLinks: [
-                                    { name: 'Catálogo', path: '/catalogomañanitas/catalogoMañanitas', icon: TagIcon }
+                                    { name: 'Catálogo', path: '/mañanitas', icon: TagIcon }
                                 ]
                             }
                         ]
