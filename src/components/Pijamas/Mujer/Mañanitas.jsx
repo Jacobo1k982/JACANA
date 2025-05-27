@@ -105,7 +105,7 @@ const Mañanitas = () => {
                 <h2
                     className="text-3xl md:text-4xl font-semibold font-sans mb-8 text-gray-900 dark:text-gray-100 transition-colors duration-300 relative after:content-[''] after:block after:w-0 after:h-[2px] after:bg-pink-500 after:transition-all after:duration-300 hover:after:w-full mx-auto text-center w-fit"
                 >
-                    Pijamas Mañanitas
+                    Pijamas, Conjunto Mañanitas
                 </h2>
 
                 <button

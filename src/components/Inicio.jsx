@@ -83,7 +83,7 @@ const Inicio = () => {
                     <h1 className="text-3xl sm:text-5xl font-Playfair font-extrabold text-black drop-shadow-lg">
                         M-A-C ICONOS COTIDIANOS
                     </h1>
-                    <p className="mt-4 text-base sm:text-lg text-black font-Poppins drop-shadow-md max-w-2xl">
+                    <p className="mt-4 sm:text-lg text-black font-Poppins drop-shadow-md max-w-2xl">
                         Eleva tu característico look de labios con nuestro nuevo set seleccionado con M-A-Lápiz labial y lápiz labial mate sedoso Cximal
                     </p>
                 </div>
