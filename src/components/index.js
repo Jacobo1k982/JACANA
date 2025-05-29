@@ -45,3 +45,4 @@ export {default as BrandCarousel} from './Belleza/BrandCarousel.jsx';
 export {default as Inicio} from './Inicio.jsx' ;
 export {default as Mañanitas} from './Pijamas/Mujer/Mañanitas.jsx';
 export {default as DetalleProductoMañanitas} from './Pijamas/Mujer/DetalleProductoMañanitas.jsx';
+export {default as Trend} from './MacCosmetic/Trend.jsx';

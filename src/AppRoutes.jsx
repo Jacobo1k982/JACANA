@@ -25,6 +25,9 @@ const DetalleProducto = lazy(() => import('./components/Belleza/DetalleProducto'
 const BrandCarousel = lazy(() => import('./components/Belleza/BrandCarousel'));
 const CardMenu = lazy(() => import('./components/Belleza/CardMenu'));
 
+{/* Sección: Trend */}
+const Trend = lazy(() => import('./components/MacCosmetic/Trend'));
+
 
 /* Sección: Componentes de la página principal */
 const Hero = lazy(() => import('./components/Hero'));
@@ -336,6 +339,9 @@ export default function AppRoutes() {
                 } />
                 <Route path="/mañanitas" element={<Mañanitas />} />
                 <Route path="/detalle/:id" element={<DetalleProductoMañanitas />} />
+
+                {/*Trend*/}
+                <Route path="/MacCosmetic/Trend" element={<Trend />} />
             </Routes>
         </>
     );

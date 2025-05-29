@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
-const Inicio = () => {
+const Trend = () => {
     const [gifSrc, setGifSrc] = useState("/IMG-MAC/VINTAGE_MINT/banner_desktop.webp");
 
     useEffect(() => {
@@ -9,7 +8,7 @@ const Inicio = () => {
             if (window.innerWidth <= 640) {
                 setGifSrc("/IMG-MAC/VINTAGE_MINT/banner_mobile.webp");
             } else {
-                setGifSrc("/IMG-MAC/VINTAGE_MINT/banner_desktop.webp");
+                setGifSrc("/IMG-MAC/VINTAGE_MINT/trend.webp");
             }
         };
 
@@ -25,13 +24,11 @@ const Inicio = () => {
         <section className="w-full flex flex-col items-center bg-white dark:bg-[#000000] transition-colors duration-300">
             {/* Sección de animación */}
             <div className="w-screen relative">
-                <Link to="/components/MacCosmetic/Trend">
-                    <img
-                        src={gifSrc}
-                        alt="Animación de bienvenida"
-                        className="w-full h-auto object-cover object-center cursor-pointer"
-                    />
-                </Link>
+                <img
+                    src={gifSrc}
+                    alt="Animación de bienvenida"
+                    className="w-full h-auto object-cover object-center"
+                />
 
                 <div className="absolute inset-0 flex flex-col items-center justify-end text-center pb-4 px-4 animate-fade-up">
                     <p className="text-sm sm:text-base font-Poppins font-light text-black drop-shadow-sm">
@@ -69,4 +66,4 @@ const Inicio = () => {
     );
 };
 
-export default Inicio;
+export default Trend;
