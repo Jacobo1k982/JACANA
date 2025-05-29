@@ -340,7 +340,7 @@ export default function AppRoutes() {
                 <Route path="/mañanitas" element={<Mañanitas />} />
                 <Route path="/detalle/:id" element={<DetalleProductoMañanitas />} />
 
-                {/*Trend*/}
+                {/*MacCosmetics*/}
                 <Route path="trend" element={<Trend />} />
             </Routes>
         </>

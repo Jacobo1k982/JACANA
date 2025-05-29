@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Inicio = () => {
-    const [gifSrc, setGifSrc] = useState("/IMG-MAC/VINTAGE_MINT/banner_desktop.webp");
+    const [gifSrc, setGifSrc] = useState("/trend");
     const [linkTo, setLinkTo] = useState("/trend");
 
     // Definimos las rutas y fuentes de imágenes en un objeto
     const config = {
         desktop: {
             img: "/IMG-MAC/VINTAGE_MINT/banner_desktop.webp",
-            link: "/desktop-trend"
+            link: "/trend"
         },
         mobile: {
             img: "/IMG-MAC/VINTAGE_MINT/banner_mobile.webp",
-            link: "/mobile-trend"
+            link: "/trend"
         }
     };
 
@@ -48,7 +48,7 @@ const Inicio = () => {
                     />
                 </Link>
 
-                <div className="absolute inset-0 flex flex-col items-center justify-end text-center pb-4 px-4 animate-fade-up">
+                <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-end text-center pb-4 px-4 animate-fade-up">
                     <p className="text-textbalck text-sm sm:text-base font-Poppins font-light text-black drop-shadow-sm">
                         AHORA EN TENDENCIA
                     </p>
