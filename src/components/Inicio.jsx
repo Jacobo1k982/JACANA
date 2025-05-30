@@ -49,14 +49,14 @@ const Inicio = () => {
                 </Link>
 
                 <div className="absolute inset-0 flex flex-col items-center justify-end text-center pb-4 px-4 animate-fade-up">
-                    <p className="!text-black text-sm sm:text-base font-Poppins font-light text-black drop-shadow-sm">
+                    <p className="text-textbalck text-sm sm:text-base font-Poppins font-light text-black drop-shadow-sm">
                         AHORA EN TENDENCIA
                     </p>
 
-                    <h1 className="!text-black text-3xl sm:text-5xl font-Playfair font-extrabold text-black drop-shadow-lg">
+                    <h1 className="text-textbalck text-3xl sm:text-5xl font-Playfair font-extrabold text-black drop-shadow-lg">
                         VINTAGE MINT
                     </h1>
-                    <p className="mt-4 !text-black text-sm sm:text-base font-Poppins font-light text-black drop-shadow-md max-w-2xl">
+                    <p className="mt-4 text-textbalck text-sm sm:text-base font-Poppins font-light text-black drop-shadow-md max-w-2xl">
                         Reimagina el maquillaje de los años 60' con tonos pastel, verdes y azules, y un toque de brillo. ¡Descubre la colección Vintage Mint!
                     </p>
                 </div>
