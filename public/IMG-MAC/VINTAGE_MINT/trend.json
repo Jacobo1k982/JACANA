@@ -1,9 +1,7 @@
 [
     {
-        "id": 1,
-        "nombre": "SOMBRA DE OJOS",
-        "precio": 12.99,
-        "precioAnterior": 18.99,
+        "id": "prod1",
+        "nombre": "MINT CONDITION",
         "imagenes": [
             "/IMG-MAC/VINTAGE_MINT/mac_sku_MY6RP7_1x1_0.png",
             "/IMG-MAC/VINTAGE_MINT/mac_sku_MY6RP7_1x1_1.png",
@@ -15,11 +13,12 @@
             "/IMG-MAC/VINTAGE_MINT/mac_sku_MY6RP7_1x1_7.jpeg",
             "/IMG-MAC/VINTAGE_MINT/mac_sku_MY6RP7_1x1_8.jpeg"
         ],
-        "descripcion": "Tono fresco con acabado suave",
-        "etiqueta": "NEW",
-        "colorHex": "#d8eecf",
-        "tono": "mint glow",
-        "rating": 4.5,
-        "reviews": 126
+        "category": "EYE SHADOW",
+        "rating": 5,
+        "reviews": 1033,
+        "badge": "NEW",
+        "price": 25.00,
+        "originalPrice": null,
+        "description": "Rich Colour, Professional, Iconic"
     }
 ]
