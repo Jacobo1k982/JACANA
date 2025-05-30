@@ -3,13 +3,28 @@ import { Link } from 'react-router-dom';
 
 const Inicio = () => {
     const [gifSrc, setGifSrc] = useState("/IMG-MAC/VINTAGE_MINT/banner_desktop.webp");
+    const [linkTo, setLinkTo] = useState("/trend");
+
+    // Definimos las rutas y fuentes de imágenes en un objeto
+    const config = {
+        desktop: {
+            img: "/IMG-MAC/VINTAGE_MINT/banner_desktop.webp",
+            link: "/desktop-trend"
+        },
+        mobile: {
+            img: "/IMG-MAC/VINTAGE_MINT/banner_mobile.webp",
+            link: "/mobile-trend"
+        }
+    };
 
     useEffect(() => {
         const verificarTamañoPantalla = () => {
             if (window.innerWidth <= 640) {
-                setGifSrc("/IMG-MAC/VINTAGE_MINT/banner_mobile.webp");
+                setGifSrc(config.mobile.img);
+                setLinkTo(config.mobile.link);
             } else {
-                setGifSrc("/IMG-MAC/VINTAGE_MINT/banner_desktop.webp");
+                setGifSrc(config.desktop.img);
+                setLinkTo(config.desktop.link);
             }
         };
 
@@ -25,7 +40,7 @@ const Inicio = () => {
         <section className="w-full flex flex-col items-center bg-white dark:bg-[#000000] transition-colors duration-300">
             {/* Sección de animación */}
             <div className="w-screen relative">
-                <Link to="/components/MacCosmetic/Trend">
+                <Link to={linkTo}>
                     <img
                         src={gifSrc}
                         alt="Animación de bienvenida"
@@ -34,14 +49,14 @@ const Inicio = () => {
                 </Link>
 
                 <div className="absolute inset-0 flex flex-col items-center justify-end text-center pb-4 px-4 animate-fade-up">
-                    <p className="text-sm sm:text-base font-Poppins font-light text-black drop-shadow-sm">
+                    <p className="!text-black text-sm sm:text-base font-Poppins font-light text-black drop-shadow-sm">
                         AHORA EN TENDENCIA
                     </p>
 
-                    <h1 className="text-3xl sm:text-5xl font-Playfair font-extrabold text-black drop-shadow-lg">
+                    <h1 className="!text-black text-3xl sm:text-5xl font-Playfair font-extrabold text-black drop-shadow-lg">
                         VINTAGE MINT
                     </h1>
-                    <p className="mt-4 sm:text-base font-Poppins font-light text-black drop-shadow-md max-w-2xl">
+                    <p className="mt-4 !text-black text-sm sm:text-base font-Poppins font-light text-black drop-shadow-md max-w-2xl">
                         Reimagina el maquillaje de los años 60' con tonos pastel, verdes y azules, y un toque de brillo. ¡Descubre la colección Vintage Mint!
                     </p>
                 </div>
