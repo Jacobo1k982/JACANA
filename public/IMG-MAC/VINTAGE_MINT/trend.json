@@ -1,7 +1,7 @@
 [
     {
         "id": "prod1",
-        "nombre": "MINT CONDITION",
+        "nombre": "Eye Shadow",
         "imagenes": [
             "/IMG-MAC/VINTAGE_MINT/mac_sku_MY6RP7_1x1_0.png",
             "/IMG-MAC/VINTAGE_MINT/mac_sku_MY6RP7_1x1_1.png",
@@ -17,8 +17,23 @@
         "rating": 5,
         "reviews": 1033,
         "badge": "NEW",
-        "price": 25.00,
+        "price": 22000.00,
         "originalPrice": null,
-        "description": "Rich Colour, Professional, Iconic"
+        "description": "Rich Colour, Professional, Iconic ",
+        "longDescription": "NEGRO : Carbón\nBEIGE : Omega, Brulé, Seta, Arenisca, Miel Lujuria, Todo Lo Que Brilla, ¡Motivo!, L.E.S. Artiste, Royal Rendezvous, Naked Lunch, Papel de Arroz, Malta, Grano, Vex, Nylon, Blanc Tipo\nAZUL : Stormwatch, Cobalto, Triennial Wave, Tilt, In The Shadows\nMARRÓN : Finjan, Jingle Ball Bronze, Natural Wilderness, Haux, Antiqued, Brown Script, Amber Lights, Charcoal Brown, Cork, Satin Taupe, Embark, Brun, Espresso, Mantillo, Marrón, Marrón Suave, Textura, Chocolate Suizo, Silla de montar, Cuña, Guiñado en madera, Tete-a-tint\nVERDE : Perfecto estado, ¿Cuál es el Wifi?, Mo' Money Mo' Problemas, Eso es Showbiz Bebé, Marisma, Nueva Cosecha, Vaporoso\nGRIS : Gris acogedor, Piedra gris, Escena, Coqueta, Estampado\nNARANJA : Coral, Seda de Samoa, Melocotón de concha, Regla\nROSA : Libra, Rose Before Bros, In Living Pink, Tutú Good, Yogurt, Orbe, Rosa Caro, Girlie\nPURPLE : Power To The Purple, Starry Night, Nude Model, #Humblebrag, Darkroom, Sketch, Cranberry, Stars 'N' Rockets\nRED : Haute Sauce, Shady Santa\nYELLOW : Memorias Del Espacio, Si No Es Barroco",
+        "ingredients": "Talco, estearato de zinc, estearato de octildodecilo estearoil, neopentanoato de isostearilo, acetato de tocoferilo, fluorflogopita sintética, borosilicato de calcio y aluminio, borosilicato de calcio y sodio, silicato de aluminio y calcio y sodio, trietoxicaprililsilano, óxido de estaño, sílice, caprilil glicol, hexilenglicol, fenoxietanol, [+/- mica, dióxido de titanio (ci 77891), oxicloruro de bismuto (ci 77163), óxidos de hierro (ci 77491, ci 77492, ci 77499), azul 1 laca (ci 42090), polvo de bronce (ci 77400), Carmín (Ci 75470), Hidróxido de Cromo Verde (Ci 77289), Óxido de Cromo Verdes (Ci 77288), Polvo de Cobre (Ci 77400), Ferrrocianuro de Amonio Férrico (Ci 77510), Ferrocianuro Férrico (Ci 77510), Violeta de Manganeso (Ci 77742), Lago Rojo 40 (Ci 16035), Ultramarinos (Ci 77007), Lago Amarillo 5 (Ci 19140)] ILN41374",
+        "howToUse": "Ojos prime con Prep + Prime 24-Hour Extend Eye Base para una mayor intensidad de color\nAplícalo sobre el contorno de los ojos (párpados y pliegues) con una brocha 239S, con un movimiento de presión para crear color y conseguir un look más atrevido.\nAplica la sombra de ojos sobre el área de los ojos con un pincel 217S, con movimientos circulares para difuminar el color y obtener una apariencia difuminada.",
+        "features": [
+            "Ftalatos",
+            "Felicidades",
+            "Donantes de formaldehído",
+            "Lauril sulfato de sodio A.K.A SLS",
+            "Laurethsulfato de sodio A.K.A SLES",
+            "Triclosán",
+            "D&C Amarillo Nº 11",
+            "Oxibenzona",
+            "Microperlas sintéticas de 5 mm o más pequeñas"
+        ],
+        "netWeight": "1.5 g / 0.05 oz"
     }
 ]

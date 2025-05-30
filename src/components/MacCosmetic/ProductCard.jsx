@@ -1,28 +1,33 @@
 import React from 'react';
 
+// No es necesario 'onImageClick' si el ProductCard no necesita hacer nada más
+// que llamar a la función que se le pasa. La prop se llamará onImageClick desde Trend,
+// pero aquí la recibimos y la usamos directamente.
 const ProductCard = ({ product, onImageClick }) => {
     const renderStars = (rating) => {
         let stars = '';
         const totalStars = 5;
         for (let i = 0; i < totalStars; i++) {
-            stars += i < rating ? '★' : '☆';
+            stars += i < (rating || 0) ? '★' : '☆';
         }
         return stars;
     };
 
-    // Asegúrate de que product.imagenes existe y tiene elementos antes de acceder a product.imagenActual
-    const currentImageUrl = product.imagenes && product.imagenes.length > 0
-        ? product.imagenes[product.imagenActual % product.imagenes.length]
-        : 'https://via.placeholder.com/200x200.png?text=No+Image'; // Imagen por defecto
+    // Si el producto tiene múltiples imágenes, usamos la primera como portada para la tarjeta.
+    // El modal se encargará de mostrar todas las imágenes del producto.
+    const cardImageUrl = product.imagenes && product.imagenes.length > 0
+        ? product.imagenes[0] // Mostrar siempre la primera imagen en la tarjeta
+        : 'https://via.placeholder.com/200x200.png?text=No+Image';
 
     return (
-        <div className="bg-white text-black w-60 flex-shrink-0 snap-start flex flex-col"> {/* Ancho fijo y flex-col */}
+        // El product.id ya está siendo usado como key en Trend.jsx en el .map()
+        <div className="bg-white text-black w-60 flex-shrink-0 snap-start flex flex-col">
             <div className="relative">
                 <img
-                    src={currentImageUrl}
+                    src={cardImageUrl}
                     alt={product.nombre}
-                    className="w-full h-48 object-cover cursor-pointer"
-                    onClick={() => onImageClick(product.id)} // Llama a la función para cambiar imagen
+                    className="w-full h-48 object-cover cursor-pointer" // cursor-pointer indica que es clickeable
+                    onClick={() => onImageClick(product)} // Pasa el objeto 'product' completo
                 />
                 {product.badge && (
                     <span
@@ -33,23 +38,18 @@ const ProductCard = ({ product, onImageClick }) => {
                     </span>
                 )}
             </div>
-            <div className="p-4 text-center flex flex-col flex-grow"> {/* flex-grow para empujar botón abajo */}
-                {/* Stars and Reviews */}
+            <div className="p-4 text-center flex flex-col flex-grow">
                 {typeof product.rating === 'number' && typeof product.reviews === 'number' && (
                     <div className="text-left text-xs mb-2">
                         <span className="text-yellow-500">{renderStars(product.rating)}</span>
                         <span className="ml-1 text-gray-500">({product.reviews})</span>
                     </div>
                 )}
-
-                {/* Category */}
                 {product.category && (
                     <h3 className="text-xs uppercase text-gray-700 font-semibold truncate h-8 mb-1 flex items-center justify-center">
                         {product.category}
                     </h3>
                 )}
-
-                {/* Price */}
                 {typeof product.price === 'number' && (
                     <div className="mb-2 h-10 flex items-center justify-center">
                         {product.originalPrice && typeof product.originalPrice === 'number' ? (
@@ -58,25 +58,22 @@ const ProductCard = ({ product, onImageClick }) => {
                                 <span className="text-red-600">${product.price.toFixed(2)}</span>
                             </div>
                         ) : (
-                            <p className="text-lg font-bold">₡{product.price.toFixed(2)}</p>
+                            <p className="text-lg font-bold">${product.price.toFixed(2)}</p>
                         )}
                     </div>
                 )}
-
-                {/* Description */}
                 {product.description && (
                     <p className="text-xs text-gray-600 mb-3 h-10 overflow-hidden">
                         {product.description}
                     </p>
                 )}
-
-                <div className="mt-auto"> {/* Empuja estos elementos al final de la tarjeta */}
-                    {/* Product Name/Variant */}
+                <div className="mt-auto">
                     <p className="text-sm font-semibold mb-3 uppercase">{product.nombre}</p>
-
-                    {/* Add to Bag Button */}
-                    <button className="bg-black text-white uppercase text-sm py-2.5 px-4 w-full hover:bg-gray-800 transition-colors">
-                        Add to Bag
+                    <button
+                        onClick={() => onImageClick(product)} // También el botón puede abrir detalles
+                        className="bg-black text-white uppercase text-sm py-2.5 px-4 w-full hover:bg-gray-800 transition-colors"
+                    >
+                        Ver Detalles {/* O "Añadir a la bolsa" si va directo a eso y detalles en otro lado */}
                     </button>
                 </div>
             </div>
