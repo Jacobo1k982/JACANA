@@ -7,9 +7,9 @@ const categorias = [
         ruta: "/mañanitas",
     },
     {
-        nombre: "NIKE-AIR",
-        imagen: "/Belleza/img_menu/Nike.png",
-        ruta: "/deportivo",
+        nombre: "NIKE-AIR/DAMAS",
+        imagen: "/NKM/nike_img-dama.png",
+        ruta: "/Nike-mujer",
     },
     {
         nombre: "SATCHEL H&CO",
@@ -17,9 +17,9 @@ const categorias = [
         ruta: "/catalogo/HCO",
     },
     {
-        nombre: "EYES",
-        imagen: "/Belleza/img_menu/Eyes.avif",
-        ruta: "/eyes",
+        nombre: "BELLEZA",
+        imagen: "/Belleza/img_portada_belleza.png",
+        ruta: "/belleza",
     },
     {
         nombre: "FACE",
