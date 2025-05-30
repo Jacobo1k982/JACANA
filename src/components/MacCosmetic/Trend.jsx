@@ -1,19 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Trend = () => {
     const [gifSrc, setGifSrc] = useState("");
     const [productos, setProductos] = useState([]);
+    const scrollRef = useRef(null);
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(false);
+
+    const verificarTamañoPantalla = () => {
+        const isMobile = window.innerWidth <= 640;
+        setGifSrc(
+            isMobile
+                ? "/IMG-MAC/VINTAGE_MINT/trend.webp"
+                : "/IMG-MAC/VINTAGE_MINT/trend.webp"
+        );
+    };
 
     useEffect(() => {
-        const verificarTamañoPantalla = () => {
-            const isMobile = window.innerWidth <= 640;
-            setGifSrc(
-                isMobile
-                    ? "/IMG-MAC/VINTAGE_MINT/trend.webp"
-                    : "/IMG-MAC/VINTAGE_MINT/trend.webp"
-            );
-        };
-
         verificarTamañoPantalla();
         window.addEventListener("resize", verificarTamañoPantalla);
         return () => window.removeEventListener("resize", verificarTamañoPantalla);
@@ -23,7 +26,6 @@ const Trend = () => {
         fetch("/IMG-MAC/VINTAGE_MINT/trend.json")
             .then((res) => res.json())
             .then((data) => {
-                // Agrega índice de imagen activa a cada producto
                 const productosConIndice = data.map((producto) => ({
                     ...producto,
                     imagenActual: 0
@@ -31,6 +33,25 @@ const Trend = () => {
                 setProductos(productosConIndice);
             })
             .catch((error) => console.error("Error al cargar trend.json:", error));
+    }, []);
+
+    useEffect(() => {
+        const el = scrollRef.current;
+        if (!el) return;
+
+        const checkScroll = () => {
+            setCanScrollLeft(el.scrollLeft > 0);
+            setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth);
+        };
+
+        checkScroll();
+        el.addEventListener("scroll", checkScroll);
+        window.addEventListener("resize", checkScroll);
+
+        return () => {
+            el.removeEventListener("scroll", checkScroll);
+            window.removeEventListener("resize", checkScroll);
+        };
     }, []);
 
     const cambiarImagen = (id) => {
@@ -49,7 +70,6 @@ const Trend = () => {
 
     return (
         <section className="w-full min-h-screen flex flex-col items-center bg-[#d1f5e1] dark:bg-black transition-colors duration-300">
-            {/* Imagen principal */}
             <div className="w-full">
                 <img
                     src={gifSrc}
@@ -58,7 +78,6 @@ const Trend = () => {
                 />
             </div>
 
-            {/* Texto descriptivo */}
             <div className="w-full flex flex-col items-center text-center py-6 px-4 animate-fade-up">
                 <p className="text-sm sm:text-base font-Poppins font-light text-black dark:text-white">
                     AHORA EN TENDENCIA
@@ -70,7 +89,6 @@ const Trend = () => {
                     Reimagina el maquillaje de los años 60' con tonos pastel, verdes y azules, y un toque de brillo. ¡Descubre la colección Vintage Mint!
                 </p>
 
-                {/* Video */}
                 <video
                     className="w-full max-w-4xl mt-6 rounded-2xl shadow-lg"
                     autoPlay
@@ -83,31 +101,51 @@ const Trend = () => {
                 </video>
             </div>
 
-            {/* Carrusel de productos */}
-            <div className="w-full mt-10 px-4 pb-10">
+            <div className="w-full mt-10 px-4 pb-10 relative">
                 <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-4 text-black dark:text-white">
                     Productos destacados
                 </h2>
 
-                <div className="flex gap-4 overflow-x-auto scrollbar-hide py-2">
+                {canScrollLeft && (
+                    <button
+                        onClick={() => scrollRef.current.scrollBy({ left: -300, behavior: "smooth" })}
+                        className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-zinc-800 shadow-md p-2 rounded-full hover:scale-110 transition"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                )}
+
+                {canScrollRight && (
+                    <button
+                        onClick={() => scrollRef.current.scrollBy({ left: 300, behavior: "smooth" })}
+                        className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-zinc-800 shadow-md p-2 rounded-full hover:scale-110 transition"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                )}
+
+                <div
+                    ref={scrollRef}
+                    className="flex gap-4 overflow-x-auto scrollbar-hide py-2 scroll-smooth"
+                >
                     {productos.map((item) => (
                         <div
                             key={item.id}
                             className="min-w-[220px] sm:min-w-[250px] bg-white dark:bg-zinc-900 p-4 rounded-xl shadow-md flex-shrink-0 text-center"
                         >
-                            {/* Título arriba */}
                             <p className="text-base font-semibold text-black dark:text-white mb-2">
                                 {item.nombre}
                             </p>
-
-                            {/* Imagen activa */}
                             <img
                                 src={item.imagenes[item.imagenActual]}
                                 alt={item.nombre}
                                 className="w-full h-40 object-cover rounded-md cursor-pointer"
                                 onClick={() => cambiarImagen(item.id)}
                             />
-
                             <p className="text-xs mt-2 text-gray-500 dark:text-gray-400">
                                 Haz clic para ver más
                             </p>
@@ -116,23 +154,22 @@ const Trend = () => {
                 </div>
             </div>
 
-            {/* Animación */}
             <style>
                 {`
-          @keyframes fadeUp {
-            0% {
-              opacity: 0;
-              transform: translateY(30px);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          .animate-fade-up {
-            animation: fadeUp 0.8s ease-out forwards;
-          }
-        `}
+                    @keyframes fadeUp {
+                        0% {
+                            opacity: 0;
+                            transform: translateY(30px);
+                        }
+                        100% {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                    .animate-fade-up {
+                        animation: fadeUp 0.8s ease-out forwards;
+                    }
+                `}
             </style>
         </section>
     );
