@@ -59,7 +59,8 @@ const ProductDetailModal = ({ product, isOpen, onClose }) => {
                     <img
                         src={currentImageUrl}
                         alt={product.nombre}
-                        className="max-w-full max-h-80 md:max-h-96 object-contain rounded"
+                        className="max-w-full max-h-80 md:max-h-96 object-contain rounded cursor-pointer"
+                        onClick={nextImage}
                     />
                     {totalImages > 1 && (
                         <div className="absolute bottom-3 left-0 right-0 flex justify-center space-x-16">

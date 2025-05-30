@@ -126,7 +126,7 @@ const Trend = () => {
                 <img
                     src={gifSrc}
                     alt="Tendencia Vintage Mint"
-                    className="w-full h-auto object-cover object-center"
+                    className="w-full max-w-5xl h-auto object-cover object-center mx-auto px-4"
                 />
             </div>
 

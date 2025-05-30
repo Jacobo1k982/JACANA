@@ -1,7 +1,7 @@
 [
     {
         "id": "prod1",
-        "nombre": "Eye Shadow",
+        "nombre": "SOMBRA DE OJOS",
         "imagenes": [
             "/IMG-MAC/VINTAGE_MINT/mac_sku_MY6RP7_1x1_0.png",
             "/IMG-MAC/VINTAGE_MINT/mac_sku_MY6RP7_1x1_1.png",
@@ -13,7 +13,7 @@
             "/IMG-MAC/VINTAGE_MINT/mac_sku_MY6RP7_1x1_7.jpeg",
             "/IMG-MAC/VINTAGE_MINT/mac_sku_MY6RP7_1x1_8.jpeg"
         ],
-        "category": "EYE SHADOW",
+        "category": "EYE",
         "rating": 5,
         "reviews": 1033,
         "badge": "NEW",
@@ -35,5 +35,31 @@
             "Microperlas sintéticas de 5 mm o más pequeñas"
         ],
         "netWeight": "1.5 g / 0.05 oz"
+    },
+    {
+        "id": "prod2",
+        "nombre": "Máscara de pestañas refrescante",
+        "imagenes": [
+            "/IMG-MAC/MASCARA/mac_sku_ST0001_1x1_0.avif",
+            "/IMG-MAC/MASCARA/mac_sku_ST0001_NA_1x1_2.avif",
+            "/IMG-MAC/MASCARA/mac_sku_ST0001_1x1_1.webp",
+            "/IMG-MAC/MASCARA/mac_sku_ST0001_1x1_2.avif"
+        ],
+        "category": "EYE",
+        "rating": 5,
+        "reviews": 904,
+        "badge": "NEW",
+        "price": 12000.00,
+        "originalPrice": null,
+        "description": "Refresca y revive la máscara de pestañas, Refrescante de máscara de pestañas, Retoque de máscara de pestañas",
+        "longDescription": "",
+        "ingredients": "Agua, Aqua, Eau, ácido esteárico, cera de abeja, Cera Alba, Cire d'Abeille, triglicérido ácido C18-36, diestearato de poligliceril-6, goma de acacia senegal, propanodiol, behenato de glicerilo, cera de salvado de arroz hidrogenada, copolímero Vp / hexadeceno, aminometilpropanodiol, aceite de semilla de Argania spinosa, cera de salvado de Oryza Sativa (arroz), etilhexilglicerina, estearato de cetilo, palmitato de cetilo, parafina, palmitato de estearilo, estearato de estearil, pantenol, cera microcristalina, Cera microcristalina, Cire microcristalina, Caolín, Sílice, Polisorbato 60, Ácido palmítico, Ácido behénico, Ácido araquídico, Hidroxietilcelulosa, Tocoferol, Fosfato de sodio, Fosfato disódico, Fenoxietanol, Óxidos de hierro (Ci 77499), Ultramarinos (Ci 77007)  ILN50876 ",
+        "howToUse": [
+            "Cepilla la fórmula a través de las pestañas sobre las pestañas secas y fija el rímel para mejorar el aspecto de tus pestañas en cualquier momento.",
+            "Se puede aplicar sobre la capa seca de rímel después de cualquier cantidad de tiempo. No se necesitan capas adicionales de rímel."
+        ],
+        "features": [
+        ],
+        "netWeight": "6.5 ML / 0.22 oz"
     }
 ]
