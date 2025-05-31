@@ -15,11 +15,11 @@
         ],
         "category": "EYE",
         "rating": 5,
-        "reviews": 1033,
+        "reviews": 1051,
         "badge": "NEW",
-        "price": 22000.00,
+        "price": 22000,
         "originalPrice": null,
-        "description": "Rich Colour, Professional, Iconic ",
+        "description": "Colores intensos, profesionales, icónicos",
         "longDescription": "NEGRO : Carbón\nBEIGE : Omega, Brulé, Seta, Arenisca, Miel Lujuria, Todo Lo Que Brilla, ¡Motivo!, L.E.S. Artiste, Royal Rendezvous, Naked Lunch, Papel de Arroz, Malta, Grano, Vex, Nylon, Blanc Tipo\nAZUL : Stormwatch, Cobalto, Triennial Wave, Tilt, In The Shadows\nMARRÓN : Finjan, Jingle Ball Bronze, Natural Wilderness, Haux, Antiqued, Brown Script, Amber Lights, Charcoal Brown, Cork, Satin Taupe, Embark, Brun, Espresso, Mantillo, Marrón, Marrón Suave, Textura, Chocolate Suizo, Silla de montar, Cuña, Guiñado en madera, Tete-a-tint\nVERDE : Perfecto estado, ¿Cuál es el Wifi?, Mo' Money Mo' Problemas, Eso es Showbiz Bebé, Marisma, Nueva Cosecha, Vaporoso\nGRIS : Gris acogedor, Piedra gris, Escena, Coqueta, Estampado\nNARANJA : Coral, Seda de Samoa, Melocotón de concha, Regla\nROSA : Libra, Rose Before Bros, In Living Pink, Tutú Good, Yogurt, Orbe, Rosa Caro, Girlie\nPURPLE : Power To The Purple, Starry Night, Nude Model, #Humblebrag, Darkroom, Sketch, Cranberry, Stars 'N' Rockets\nRED : Haute Sauce, Shady Santa\nYELLOW : Memorias Del Espacio, Si No Es Barroco",
         "ingredients": "Talco, estearato de zinc, estearato de octildodecilo estearoil, neopentanoato de isostearilo, acetato de tocoferilo, fluorflogopita sintética, borosilicato de calcio y aluminio, borosilicato de calcio y sodio, silicato de aluminio y calcio y sodio, trietoxicaprililsilano, óxido de estaño, sílice, caprilil glicol, hexilenglicol, fenoxietanol, [+/- mica, dióxido de titanio (ci 77891), oxicloruro de bismuto (ci 77163), óxidos de hierro (ci 77491, ci 77492, ci 77499), azul 1 laca (ci 42090), polvo de bronce (ci 77400), Carmín (Ci 75470), Hidróxido de Cromo Verde (Ci 77289), Óxido de Cromo Verdes (Ci 77288), Polvo de Cobre (Ci 77400), Ferrrocianuro de Amonio Férrico (Ci 77510), Ferrocianuro Férrico (Ci 77510), Violeta de Manganeso (Ci 77742), Lago Rojo 40 (Ci 16035), Ultramarinos (Ci 77007), Lago Amarillo 5 (Ci 19140)] ILN41374",
         "howToUse": "Ojos prime con Prep + Prime 24-Hour Extend Eye Base para una mayor intensidad de color\nAplícalo sobre el contorno de los ojos (párpados y pliegues) con una brocha 239S, con un movimiento de presión para crear color y conseguir un look más atrevido.\nAplica la sombra de ojos sobre el área de los ojos con un pincel 217S, con movimientos circulares para difuminar el color y obtener una apariencia difuminada.",
@@ -47,9 +47,9 @@
         ],
         "category": "EYE",
         "rating": 5,
-        "reviews": 904,
+        "reviews": 921,
         "badge": "NEW",
-        "price": 12000.00,
+        "price": 12000,
         "originalPrice": null,
         "description": "Refresca y revive la máscara de pestañas, Refrescante de máscara de pestañas, Retoque de máscara de pestañas",
         "longDescription": "",
@@ -58,7 +58,45 @@
             "Cepilla la fórmula a través de las pestañas sobre las pestañas secas y fija el rímel para mejorar el aspecto de tus pestañas en cualquier momento.",
             "Se puede aplicar sobre la capa seca de rímel después de cualquier cantidad de tiempo. No se necesitan capas adicionales de rímel."
         ],
+        "features": [],
+        "netWeight": "6.5 ML / 0.22 oz"
+    },
+    {
+        "id": "prod3",
+        "nombre": "M·A·C Colour Excess Gel Pencil Eye Liner",
+        "imagenes": [
+            "/IMG-MAC/VINTAGE_MINT/Pencil/mac_sku_SLJ439_1x1_0.avif",
+            "/IMG-MAC/VINTAGE_MINT/Pencil/mac_sku_SLJ439_1x1_1.avif",
+            "/IMG-MAC/VINTAGE_MINT/Pencil/mac_sku_SLJ439_1x1_2.webp",
+            "/IMG-MAC/VINTAGE_MINT/Pencil/mac_sku_SLJ439_1x1_3.avif",
+            "/IMG-MAC/VINTAGE_MINT/Pencil/mac_sku_SLJ439_1x1_4.webp",
+            "/IMG-MAC/VINTAGE_MINT/Pencil/mac_sku_SLJ439_1x1_5.avif",
+            "/IMG-MAC/VINTAGE_MINT/Pencil/mac_sku_SLJ439_1x1_6.avif"
+        ],
+        "category": "EYE",
+        "rating": 5,
+        "reviews": 921,
+        "badge": "NEW",
+        "price": 12000,
+        "originalPrice": null,
+        "description": "Un delineador de ojos en lápiz de gel ultrapigmentado e impermeable con 24+ horas de uso en párpados y 12 horas de uso en líneas de flotación.",
+        "longDescription": "",
+        "ingredients": "",
+        "howToUse": [
+            "Aplícalo directamente sobre las líneas de las pestañas para obtener la máxima precisión",
+            "Aplícalo en las líneas de flotación inferiores/bordes interiores presionando el lápiz suavemente contra las líneas de flotación inferiores y trabajando con trazos cortos y suaves hasta que alcances la intensidad deseada",
+            "Aplícalo en las líneas de flotación superiores levantando suavemente los párpados para facilitar el acceso, luego desliza el lápiz a lo largo de las líneas de flotación superiores"
+        ],
         "features": [
+            "Textura similar a un gel con aplicación de deslizamiento preciso",
+            "24+ horas de uso en las tapas",
+            "12 horas de uso en líneas de flotación",
+            "Resultado de color ultrapigmentado",
+            "Sin tirones",
+            "Resistente a las manchas",
+            "Resistente al agua y a la transferencia",
+            "Seguro para los usuarios de lentes de contacto",
+            "Probado por oftalmólogos"
         ],
         "netWeight": "6.5 ML / 0.22 oz"
     }

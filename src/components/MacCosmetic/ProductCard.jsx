@@ -58,7 +58,7 @@ const ProductCard = ({ product, onImageClick }) => {
                                 <span className="text-red-600">${product.price.toFixed(2)}</span>
                             </div>
                         ) : (
-                            <p className="text-lg font-bold">${product.price.toFixed(2)}</p>
+                            <p className="text-lg font-bold">₡{product.price.toFixed(2)}</p>
                         )}
                     </div>
                 )}

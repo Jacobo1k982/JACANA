@@ -18,7 +18,7 @@ const categorias = [
     },
     {
         nombre: "BELLEZA",
-        imagen: "/Belleza/img_portada_belleza.png",
+        imagen: "/IMG-MAC/portada.png",
         ruta: "/belleza",
     },
     {
