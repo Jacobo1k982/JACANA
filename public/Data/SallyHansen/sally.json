@@ -1,0 +1,124 @@
+[
+    {
+        "id": "sally1",
+        "nombre": "",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/instadri.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.4,
+        "reviews": 451,
+        "badge": "NEW",
+        "price": 7400,
+        "originalPrice": null,
+        "description": "Insta Dri Clearly Quick 103",
+        "longDescription": "Fórmula INSTA-DRI® 3 en 1 para un 33 % de resistencia al desgaste prolongado y al astillado en comparación con la fórmula anterior. Ahora también disponible en nuevos acabados Matte Metalizados. Como el esmalte de secado rápido # 1 en América del Norte, Insta-Dri® está formulado con una base y una capa superior para un uso prolongado y un brillo total y sin rayas. Seque exprésel en 60 segundos con un solo paso para que puedas llevar ese look de uñas a cualquier momento y en cualquier lugar.",
+        "ingredients": "",
+        "howToUse": [
+            "Aplique una capa de Insta-Dri para limpiar, secar, las uñas y dejar secar durante 1 minuto",
+            "Termine con Insta-Dro Clearly Quick para obtener mejores resultados",
+            "¡Has completado tu manicura en tiempo récord!"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "sally2",
+        "nombre": "",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Glazed/Glazed1.png",
+            "/Belleza/SallyHansen/img/Glazed/Glazed2.png",
+            "/Belleza/SallyHansen/img/Glazed/Glazed3.png",
+            "/Belleza/SallyHansen/img/Glazed/Glazed4.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.4,
+        "reviews": 456,
+        "badge": "NEW",
+        "price": 11100,
+        "originalPrice": null,
+        "description": "Miracle Gel Nail Top Coat - Glazed",
+        "longDescription": "Fórmula INSTA-DRI® 3 en 1 para un 33 % de resistencia al desgaste prolongado y al astillado en comparación con la fórmula anterior. Ahora también disponible en nuevos acabados Matte Metalizados. Como el esmalte de secado rápido # 1 en América del Norte, Insta-Dri® está formulado con una base y una capa superior para un uso prolongado y un brillo total y sin rayas. Seque exprésel en 60 segundos con un solo paso para que puedas llevar ese look de uñas a cualquier momento y en cualquier lugar.",
+        "ingredients": "",
+        "howToUse": [
+            "Aplique una capa de Insta-Dri para limpiar, secar, las uñas y dejar secar durante 1 minuto",
+            "Termine con Insta-Dro Clearly Quick para obtener mejores resultados",
+            "¡Has completado tu manicura en tiempo récord!"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "sally3",
+        "nombre": "",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Shiny/Shiny1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.4,
+        "reviews": 456,
+        "badge": "NEW",
+        "price": 11100,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel 101 Shiny Top Coat",
+        "longDescription": "PULIDO A PRUEBA DE VIDA. NUESTRO ESMALTE DE UÑAS DEFINITIVO Y RESISTENTE A LAS ASTILLAS, MIRACLE GEL™, ES UNA TECNOLOGÍA PATENTADA PARA UNA MAYOR DURACIÓN. NO SE REQUIERE LÁMPARA UV. NUESTRO ESMALTE DE UÑAS DEFINITIVO Y RESISTENTE A LAS ASTILLAS, MIRACLE GEL™, ES UNA TECNOLOGÍA PATENTADA PARA UNA MAYOR DURACIÓN. NO SE REQUIERE LÁMPARA UV.",
+        "ingredients": "",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña",
+            "Aplica 2 capas de color Miracle Gel™",
+            "Deja que el color se seque durante 5 minutos",
+            "Aplica 1 capa de Miracle Gel™ Top Coat. ¡Se elimina fácilmente con un quitaesmalte normal!"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "sally4",
+        "nombre": "",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Cinna/cinna1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.1,
+        "reviews": 358,
+        "badge": "NEW",
+        "price": 7500,
+        "originalPrice": null,
+        "description": "Insta Dri - Cinna-Snap",
+        "longDescription": "INSTA-DRI® 3-in-1 formula for 33% long wear and chip resistance versus old formula. Now also available in new Matte Metallic finishes. As the #1 quick-dry polish in North America, Insta-Dri® is formulated with a base and top coat for extended wear and full-coverage, streak-free shine. Express dry in 60 seconds with just a single step so you can take that nail look to-go anytime, anywhere.",
+        "ingredients": "",
+        "howToUse": [
+            "Aplique una capa de Insta-Dri para limpiar, secar, las uñas y dejar secar durante 1 minuto",
+            "Termine con Insta-Dro Clearly Quick para obtener mejores resultados",
+            "¡Has completado tu manicura en tiempo récord!"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "sally5",
+        "nombre": "",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Confetti/confetti1.png",
+            "/Belleza/SallyHansen/img/Confetti/confetti2.png",
+            "/Belleza/SallyHansen/img/Confetti/confetti3.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.1,
+        "reviews": 358,
+        "badge": "NEW",
+        "price": 7390,
+        "originalPrice": null,
+        "description": "Esmalte Insta Dri Confetti Pop",
+        "longDescription": "Fórmula INSTA-DRI® 3 en 1 para un 33 % de resistencia al desgaste prolongado y al astillado en comparación con la fórmula anterior. Ahora también disponible en nuevos acabados Matte Metalizados. Como el esmalte de secado rápido # 1 en América del Norte, Insta-Dri® está formulado con una base y una capa superior para un uso prolongado y un brillo total y sin rayas. Seque exprésel en 60 segundos con un solo paso para que puedas llevar ese look de uñas a cualquier momento y en cualquier lugar.",
+        "ingredients": "",
+        "howToUse": [
+            "Aplique una capa de Insta-Dri para limpiar, secar, las uñas y dejar secar durante 1 minuto",
+            "Termine con Insta-Dro Clearly Quick para obtener mejores resultados",
+            "¡Has completado tu manicura en tiempo récord!"
+        ],
+        "features": [],
+        "netWeight": ""
+    }
+]

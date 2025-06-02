@@ -2,23 +2,20 @@ import { Link } from "react-router-dom";
 
 const categorias = [
     {
-        nombre: "",
-        imagen: "/Belleza/SallyHansen/logo.svg",
-        ruta: "/",
+        nombre: "Sally Hansen",
+        imagen: "/Belleza/SallyHansen/logo.png",
+        ruta: "/SallyHansen",
     }
 ];
 
 const BrandMenu = () => {
     return (
         <>
-            {/* Imagen tipo banner arriba */}
-            {/*<div className="w-full mt-2">
-                <img
-                    src="/banner_lipstick.webp"
-                    alt="Banner promocional"
-                    className="w-full h-[120px] sm:h-[200px] md:h-[200px] object-cover shadow-md dark:shadow-lg transition-transform duration-300 hover:scale-105"
-                />
-            </div>*/}
+            <div>
+                <h1 className="text-3xl sm:text-5xl text-center font-light mb-8 text-black dark:text-white font-Playfair font-extrabold text-black dark:text-white">
+                    Explora las marcas
+                </h1>
+            </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 p-6 bg-white dark:bg-black transition-colors duration-500">
                 {categorias.map((categoria, index) => (
                     <Link
@@ -39,14 +36,6 @@ const BrandMenu = () => {
                     </Link>
                 ))}
             </div>
-            {/* Imagen tipo banner debajo */}
-            {/*<div className="w-full mt-2">
-                <img
-                    src="/banner_foundation.avif"
-                    alt="Banner promocional"
-                    className="w-full h-[120px] sm:h-[200px] md:h-[200px] object-cover shadow-md dark:shadow-lg transition-transform duration-300 hover:scale-105"
-                />
-            </div>*/}
         </>
     );
 };

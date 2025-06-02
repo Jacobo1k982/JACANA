@@ -1,8 +1,5 @@
 import React from 'react';
 
-// No es necesario 'onImageClick' si el ProductCard no necesita hacer nada más
-// que llamar a la función que se le pasa. La prop se llamará onImageClick desde Trend,
-// pero aquí la recibimos y la usamos directamente.
 const ProductCard = ({ product, onImageClick }) => {
     const renderStars = (rating) => {
         let stars = '';
@@ -13,26 +10,22 @@ const ProductCard = ({ product, onImageClick }) => {
         return stars;
     };
 
-    // Si el producto tiene múltiples imágenes, usamos la primera como portada para la tarjeta.
-    // El modal se encargará de mostrar todas las imágenes del producto.
     const cardImageUrl = product.imagenes && product.imagenes.length > 0
-        ? product.imagenes[0] // Mostrar siempre la primera imagen en la tarjeta
+        ? product.imagenes[0]
         : 'https://via.placeholder.com/200x200.png?text=No+Image';
 
     return (
-        // El product.id ya está siendo usado como key en Trend.jsx en el .map()
-        <div className="bg-white text-black w-60 flex-shrink-0 snap-start flex flex-col">
-            <div className="relative">
+        <div className="bg-white text-black w-60 flex-shrink-0 snap-start flex flex-col shadow-md overflow-hidden">
+            <div className="relative w-full h-40 flex items-center justify-center overflow-hidden">
                 <img
                     src={cardImageUrl}
                     alt={product.nombre}
-                    className="w-full h-48 object-cover cursor-pointer" // cursor-pointer indica que es clickeable
-                    onClick={() => onImageClick(product)} // Pasa el objeto 'product' completo
+                    className="max-h-40 object-contain cursor-pointer"
+                    onClick={() => onImageClick(product)}
                 />
                 {product.badge && (
                     <span
-                        className={`absolute top-2 text-xs font-semibold uppercase text-white py-1 px-2 ${product.badge.toUpperCase() === 'NEW' ? 'left-2 bg-black bg-opacity-70' : 'right-2 bg-black bg-opacity-70'
-                            }`}
+                        className={`absolute top-2 text-xs font-semibold uppercase text-white py-1 px-2 ${product.badge.toUpperCase() === 'NEW' ? 'left-2 bg-black bg-opacity-70' : 'right-2 bg-black bg-opacity-70'}`}
                     >
                         {product.badge}
                     </span>
@@ -70,10 +63,10 @@ const ProductCard = ({ product, onImageClick }) => {
                 <div className="mt-auto">
                     <p className="text-sm font-semibold mb-3 uppercase">{product.nombre}</p>
                     <button
-                        onClick={() => onImageClick(product)} // También el botón puede abrir detalles
+                        onClick={() => onImageClick(product)}
                         className="bg-black text-white uppercase text-sm py-2.5 px-4 w-full hover:bg-gray-800 transition-colors"
                     >
-                        Ver Detalles {/* O "Añadir a la bolsa" si va directo a eso y detalles en otro lado */}
+                        Ver Detalles
                     </button>
                 </div>
             </div>
