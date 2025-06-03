@@ -28,7 +28,7 @@ const BrandMenu = lazy(() => import('./components/Belleza/BrandMenu'));
 const SallyHansen = lazy(() => import('./components/SallyHansen/SallyHansen'));
 const GoodKind = lazy(() => import('./components/SallyHansen/GoodKind'));
 
-{/* Sección: Trend */}
+{/* Sección: Trend */ }
 const Trend = lazy(() => import('./components/MacCosmetic/Trend'));
 
 
@@ -92,8 +92,8 @@ export default function AppRoutes() {
                     <main className="flex flex-col relative w-full bg-[#ffffff] dark:bg-[#000000] min-h-screen overflow-hidden">
                         {/*<Hero heroapi={heroapi} storiesRef={storiesRef} />*/}
                         <>
-                        <Inicio />
-                        <CardMenu />
+                            <Inicio />
+                            <CardMenu />
                         </>
                         <Stories story={story} storiesRef={storiesRef} />
                         {/*<Sales endpoint={popularsales} ifExists />*/}
@@ -348,8 +348,10 @@ export default function AppRoutes() {
                 <Route path="trend" element={<Trend />} />
                 <Route path="SallyHansen" element={
                     <>
-                        <SallyHansen />
-                        <GoodKind />
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'none' }}>
+                            <SallyHansen />
+                            <GoodKind />
+                        </div>
                     </>
                 } />
             </Routes>
