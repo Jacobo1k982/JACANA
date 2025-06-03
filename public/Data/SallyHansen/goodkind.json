@@ -1,0 +1,177 @@
+[
+    {
+        "id": "prod1",
+        "nombre": "Good Kind",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Good-Kind/Peony/prod1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.3,
+        "reviews": 456,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Good Kind Pure - 290 Peony Origins",
+        "longDescription": "Ahora con una infusión de bambú sostenible y algas marinas nutritivas, nuestra fórmula mejorada protege las uñas de los agresores ambientales y las deja con un aspecto y una sensación fuertes y saludables. Todavía libre de 16 y 100% vegano, el nuevo Good.Kind.Pure ahora proporciona un color rico y cuidadoso, una aplicación suave, una cobertura uniforme ... y dura tanto como el esmalte tradicional",
+        "ingredients": "COLOR ACETATO DE BUTILO, ACETATO DE ETILO, NITROCELULOSA, DICAPRILATO/CAPRATO DE ISOSORBIDA, ÁCIDO ADÍPICO/COPOLÍMERO DE ANHÍDRIDO TRIMELÍTICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, ALCOHOL, BOROSILICATO DE CALCIO Y ALUMINIO, BENTONITA DE ESTEARALCONIO, FLUORFLOGOPITA SINTÉTICA, ALCOHOL ISOPROPÍLICO, SÍLICE, ALCOHOL DIACETONA, ÓXIDO DE ESTAÑO, ÁCIDO FOSFÓRICO, [PUEDE CONTENER/PEUT CONTENIR/+/-:MICA, DIÓXIDO DE TITANIO (CI 77891), D&C RED NO. 7 CALCIUM LAKE (CI 15850), POLVO DE ALUMINIO (CI 77000), ÓXIDOS DE HIERRO (CI 77491, CI 77492, CI 77499), D&C RED NO. 34 CALCIUM LAKE (CI 15880), D&C RED NO. 6 BARIUM LAKE (CI 15850), ULTRAMARINES (CI 77007), FD&C YELLOW NO. 5 ALUMINUM LAKE (CI 19140), D&C BLACK NO. 2 [nano] (CI 77266), FERROCIANURO DE AMONIO FÉRRICO (CI 77510), VIOLETA DE MANGANESO (CI 77742)]. ABRIGO SUPERIOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, COPOLÍMERO DE ÁCIDO ADÍPICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ISOBUTIRATO DE ACETATO DE SACAROSA, ALCOHOL N-BUTÍLICO, ETOCRILENO, DIMETICONA, RIMETILSILOXISILICATO, DIBENZOATO DE TRIMETILPENTANEDIILO, D&C VIOLETA N.º 2 (CI 60725). ENDURECEDOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, ÁCIDO ADÍPICO/COPOLÍMERO DE NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ALCOHOL N-BUTÍLICO, ETOCRILENO, AGUA/AGUA/AGUA, GLICERINA, HEXANAL, TRIGLICÉRIDO CAPRÍLICO/CÁPRICO, METILPROPANODIOL, PROPILENGLICOL, METILTIOPROPYLAMIDO ACETIL METIONINA, DIBENZOATO DE TRIMETILPENTANEDIILO, ACEITE DE GOMA DE PISTACIA LENTISCUS (LENTISCO), EXTRACTO DE FRUTA DE PERSEA GRATISSIMA (AGUACATE), ÁCIDO CÍTRICO, EXTRACTO DE HOJA DE CAMELIA SINENSIS, HIDROLIZADO PROTEÍNA VEGETAL PG-PROPIL SILANOTRIOL, BENZOATO DE SODIO, ISOBUTIRATO DE ACETATO DE SACAROSA, SORBATO DE POTASIO, EDTA, EXTRACTO DE HOJA DE SPINACIA OLERACEA (ESPINACA), D&C VIOLETA Nº 2 (CI 60725).",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod2",
+        "nombre": "Good Kind",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Good-Kind/Red/red1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.3,
+        "reviews": 426,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Good Kind Pure - Rojo Natural",
+        "longDescription": "Ahora con una infusión de bambú sostenible y algas marinas nutritivas, nuestra fórmula mejorada protege las uñas de los agresores ambientales y las deja con un aspecto y una sensación fuertes y saludables. Todavía libre de 16 y 100% vegano, el nuevo Good.Kind.Pure ahora proporciona un color rico y cuidadoso, una aplicación suave, una cobertura uniforme ... y dura tanto como el esmalte tradicional",
+        "ingredients": "COLOR ACETATO DE BUTILO, ACETATO DE ETILO, NITROCELULOSA, DICAPRILATO/CAPRATO DE ISOSORBIDA, ÁCIDO ADÍPICO/COPOLÍMERO DE ANHÍDRIDO TRIMELÍTICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, ALCOHOL, BOROSILICATO DE CALCIO Y ALUMINIO, BENTONITA DE ESTEARALCONIO, FLUORFLOGOPITA SINTÉTICA, ALCOHOL ISOPROPÍLICO, SÍLICE, ALCOHOL DIACETONA, ÓXIDO DE ESTAÑO, ÁCIDO FOSFÓRICO, [PUEDE CONTENER/PEUT CONTENIR/+/-:MICA, DIÓXIDO DE TITANIO (CI 77891), D&C RED NO. 7 CALCIUM LAKE (CI 15850), POLVO DE ALUMINIO (CI 77000), ÓXIDOS DE HIERRO (CI 77491, CI 77492, CI 77499), D&C RED NO. 34 CALCIUM LAKE (CI 15880), D&C RED NO. 6 BARIUM LAKE (CI 15850), ULTRAMARINES (CI 77007), FD&C YELLOW NO. 5 ALUMINUM LAKE (CI 19140), D&C BLACK NO. 2 [nano] (CI 77266), FERROCIANURO DE AMONIO FÉRRICO (CI 77510), VIOLETA DE MANGANESO (CI 77742)]. ABRIGO SUPERIOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, COPOLÍMERO DE ÁCIDO ADÍPICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ISOBUTIRATO DE ACETATO DE SACAROSA, ALCOHOL N-BUTÍLICO, ETOCRILENO, DIMETICONA, RIMETILSILOXISILICATO, DIBENZOATO DE TRIMETILPENTANEDIILO, D&C VIOLETA N.º 2 (CI 60725). ENDURECEDOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, ÁCIDO ADÍPICO/COPOLÍMERO DE NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ALCOHOL N-BUTÍLICO, ETOCRILENO, AGUA/AGUA/AGUA, GLICERINA, HEXANAL, TRIGLICÉRIDO CAPRÍLICO/CÁPRICO, METILPROPANODIOL, PROPILENGLICOL, METILTIOPROPYLAMIDO ACETIL METIONINA, DIBENZOATO DE TRIMETILPENTANEDIILO, ACEITE DE GOMA DE PISTACIA LENTISCUS (LENTISCO), EXTRACTO DE FRUTA DE PERSEA GRATISSIMA (AGUACATE), ÁCIDO CÍTRICO, EXTRACTO DE HOJA DE CAMELIA SINENSIS, HIDROLIZADO PROTEÍNA VEGETAL PG-PROPIL SILANOTRIOL, BENZOATO DE SODIO, ISOBUTIRATO DE ACETATO DE SACAROSA, SORBATO DE POTASIO, EDTA, EXTRACTO DE HOJA DE SPINACIA OLERACEA (ESPINACA), D&C VIOLETA Nº 2 (CI 60725).",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod3",
+        "nombre": "Good Kind",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Good-Kind/Red-Rock/red1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.3,
+        "reviews": 426,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Good Kind - Cañón de Red Rock",
+        "longDescription": "Ahora con una infusión de bambú sostenible y algas marinas nutritivas, nuestra fórmula mejorada protege las uñas de los agresores ambientales y las deja con un aspecto y una sensación fuertes y saludables. Todavía libre de 16 y 100% vegano, el nuevo Good.Kind.Pure ahora proporciona un color rico y cuidadoso, una aplicación suave, una cobertura uniforme ... y dura tanto como el esmalte tradicional",
+        "ingredients": "COLOR ACETATO DE BUTILO, ACETATO DE ETILO, NITROCELULOSA, DICAPRILATO/CAPRATO DE ISOSORBIDA, ÁCIDO ADÍPICO/COPOLÍMERO DE ANHÍDRIDO TRIMELÍTICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, ALCOHOL, BOROSILICATO DE CALCIO Y ALUMINIO, BENTONITA DE ESTEARALCONIO, FLUORFLOGOPITA SINTÉTICA, ALCOHOL ISOPROPÍLICO, SÍLICE, ALCOHOL DIACETONA, ÓXIDO DE ESTAÑO, ÁCIDO FOSFÓRICO, [PUEDE CONTENER/PEUT CONTENIR/+/-:MICA, DIÓXIDO DE TITANIO (CI 77891), D&C RED NO. 7 CALCIUM LAKE (CI 15850), POLVO DE ALUMINIO (CI 77000), ÓXIDOS DE HIERRO (CI 77491, CI 77492, CI 77499), D&C RED NO. 34 CALCIUM LAKE (CI 15880), D&C RED NO. 6 BARIUM LAKE (CI 15850), ULTRAMARINES (CI 77007), FD&C YELLOW NO. 5 ALUMINUM LAKE (CI 19140), D&C BLACK NO. 2 [nano] (CI 77266), FERROCIANURO DE AMONIO FÉRRICO (CI 77510), VIOLETA DE MANGANESO (CI 77742)]. ABRIGO SUPERIOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, COPOLÍMERO DE ÁCIDO ADÍPICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ISOBUTIRATO DE ACETATO DE SACAROSA, ALCOHOL N-BUTÍLICO, ETOCRILENO, DIMETICONA, RIMETILSILOXISILICATO, DIBENZOATO DE TRIMETILPENTANEDIILO, D&C VIOLETA N.º 2 (CI 60725). ENDURECEDOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, ÁCIDO ADÍPICO/COPOLÍMERO DE NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ALCOHOL N-BUTÍLICO, ETOCRILENO, AGUA/AGUA/AGUA, GLICERINA, HEXANAL, TRIGLICÉRIDO CAPRÍLICO/CÁPRICO, METILPROPANODIOL, PROPILENGLICOL, METILTIOPROPYLAMIDO ACETIL METIONINA, DIBENZOATO DE TRIMETILPENTANEDIILO, ACEITE DE GOMA DE PISTACIA LENTISCUS (LENTISCO), EXTRACTO DE FRUTA DE PERSEA GRATISSIMA (AGUACATE), ÁCIDO CÍTRICO, EXTRACTO DE HOJA DE CAMELIA SINENSIS, HIDROLIZADO PROTEÍNA VEGETAL PG-PROPIL SILANOTRIOL, BENZOATO DE SODIO, ISOBUTIRATO DE ACETATO DE SACAROSA, SORBATO DE POTASIO, EDTA, EXTRACTO DE HOJA DE SPINACIA OLERACEA (ESPINACA), D&C VIOLETA Nº 2 (CI 60725).",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod4",
+        "nombre": "Good Kind",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Good-Kind/Endurecedor/pure1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.3,
+        "reviews": 412,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Good Kind - Cañón de Red Rock",
+        "longDescription": "Ahora con una infusión de bambú sostenible y algas marinas nutritivas, nuestra fórmula mejorada protege las uñas de los agresores ambientales y las deja con un aspecto y una sensación fuertes y saludables. Todavía libre de 16 y 100% vegano, el nuevo Good.Kind.Pure ahora proporciona un color rico y cuidadoso, una aplicación suave, una cobertura uniforme ... y dura tanto como el esmalte tradicional",
+        "ingredients": "COLOR ACETATO DE BUTILO, ACETATO DE ETILO, NITROCELULOSA, DICAPRILATO/CAPRATO DE ISOSORBIDA, ÁCIDO ADÍPICO/COPOLÍMERO DE ANHÍDRIDO TRIMELÍTICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, ALCOHOL, BOROSILICATO DE CALCIO Y ALUMINIO, BENTONITA DE ESTEARALCONIO, FLUORFLOGOPITA SINTÉTICA, ALCOHOL ISOPROPÍLICO, SÍLICE, ALCOHOL DIACETONA, ÓXIDO DE ESTAÑO, ÁCIDO FOSFÓRICO, [PUEDE CONTENER/PEUT CONTENIR/+/-:MICA, DIÓXIDO DE TITANIO (CI 77891), D&C RED NO. 7 CALCIUM LAKE (CI 15850), POLVO DE ALUMINIO (CI 77000), ÓXIDOS DE HIERRO (CI 77491, CI 77492, CI 77499), D&C RED NO. 34 CALCIUM LAKE (CI 15880), D&C RED NO. 6 BARIUM LAKE (CI 15850), ULTRAMARINES (CI 77007), FD&C YELLOW NO. 5 ALUMINUM LAKE (CI 19140), D&C BLACK NO. 2 [nano] (CI 77266), FERROCIANURO DE AMONIO FÉRRICO (CI 77510), VIOLETA DE MANGANESO (CI 77742)]. ABRIGO SUPERIOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, COPOLÍMERO DE ÁCIDO ADÍPICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ISOBUTIRATO DE ACETATO DE SACAROSA, ALCOHOL N-BUTÍLICO, ETOCRILENO, DIMETICONA, RIMETILSILOXISILICATO, DIBENZOATO DE TRIMETILPENTANEDIILO, D&C VIOLETA N.º 2 (CI 60725). ENDURECEDOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, ÁCIDO ADÍPICO/COPOLÍMERO DE NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ALCOHOL N-BUTÍLICO, ETOCRILENO, AGUA/AGUA/AGUA, GLICERINA, HEXANAL, TRIGLICÉRIDO CAPRÍLICO/CÁPRICO, METILPROPANODIOL, PROPILENGLICOL, METILTIOPROPYLAMIDO ACETIL METIONINA, DIBENZOATO DE TRIMETILPENTANEDIILO, ACEITE DE GOMA DE PISTACIA LENTISCUS (LENTISCO), EXTRACTO DE FRUTA DE PERSEA GRATISSIMA (AGUACATE), ÁCIDO CÍTRICO, EXTRACTO DE HOJA DE CAMELIA SINENSIS, HIDROLIZADO PROTEÍNA VEGETAL PG-PROPIL SILANOTRIOL, BENZOATO DE SODIO, ISOBUTIRATO DE ACETATO DE SACAROSA, SORBATO DE POTASIO, EDTA, EXTRACTO DE HOJA DE SPINACIA OLERACEA (ESPINACA), D&C VIOLETA Nº 2 (CI 60725).",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod5",
+        "nombre": "Good Kind",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Good-Kind/Coat/coat1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.3,
+        "reviews": 412,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Good Kind - Pure Top Coat",
+        "longDescription": "Ahora con una infusión de bambú sostenible y algas marinas nutritivas, nuestra fórmula mejorada protege las uñas de los agresores ambientales y las deja con un aspecto y una sensación fuertes y saludables. Todavía libre de 16 y 100% vegano, el nuevo Good.Kind.Pure ahora proporciona un color rico y cuidadoso, una aplicación suave, una cobertura uniforme ... y dura tanto como el esmalte tradicional",
+        "ingredients": "COLOR ACETATO DE BUTILO, ACETATO DE ETILO, NITROCELULOSA, DICAPRILATO/CAPRATO DE ISOSORBIDA, ÁCIDO ADÍPICO/COPOLÍMERO DE ANHÍDRIDO TRIMELÍTICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, ALCOHOL, BOROSILICATO DE CALCIO Y ALUMINIO, BENTONITA DE ESTEARALCONIO, FLUORFLOGOPITA SINTÉTICA, ALCOHOL ISOPROPÍLICO, SÍLICE, ALCOHOL DIACETONA, ÓXIDO DE ESTAÑO, ÁCIDO FOSFÓRICO, [PUEDE CONTENER/PEUT CONTENIR/+/-:MICA, DIÓXIDO DE TITANIO (CI 77891), D&C RED NO. 7 CALCIUM LAKE (CI 15850), POLVO DE ALUMINIO (CI 77000), ÓXIDOS DE HIERRO (CI 77491, CI 77492, CI 77499), D&C RED NO. 34 CALCIUM LAKE (CI 15880), D&C RED NO. 6 BARIUM LAKE (CI 15850), ULTRAMARINES (CI 77007), FD&C YELLOW NO. 5 ALUMINUM LAKE (CI 19140), D&C BLACK NO. 2 [nano] (CI 77266), FERROCIANURO DE AMONIO FÉRRICO (CI 77510), VIOLETA DE MANGANESO (CI 77742)]. ABRIGO SUPERIOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, COPOLÍMERO DE ÁCIDO ADÍPICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ISOBUTIRATO DE ACETATO DE SACAROSA, ALCOHOL N-BUTÍLICO, ETOCRILENO, DIMETICONA, RIMETILSILOXISILICATO, DIBENZOATO DE TRIMETILPENTANEDIILO, D&C VIOLETA N.º 2 (CI 60725). ENDURECEDOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, ÁCIDO ADÍPICO/COPOLÍMERO DE NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ALCOHOL N-BUTÍLICO, ETOCRILENO, AGUA/AGUA/AGUA, GLICERINA, HEXANAL, TRIGLICÉRIDO CAPRÍLICO/CÁPRICO, METILPROPANODIOL, PROPILENGLICOL, METILTIOPROPYLAMIDO ACETIL METIONINA, DIBENZOATO DE TRIMETILPENTANEDIILO, ACEITE DE GOMA DE PISTACIA LENTISCUS (LENTISCO), EXTRACTO DE FRUTA DE PERSEA GRATISSIMA (AGUACATE), ÁCIDO CÍTRICO, EXTRACTO DE HOJA DE CAMELIA SINENSIS, HIDROLIZADO PROTEÍNA VEGETAL PG-PROPIL SILANOTRIOL, BENZOATO DE SODIO, ISOBUTIRATO DE ACETATO DE SACAROSA, SORBATO DE POTASIO, EDTA, EXTRACTO DE HOJA DE SPINACIA OLERACEA (ESPINACA), D&C VIOLETA Nº 2 (CI 60725).",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod6",
+        "nombre": "Good Kind",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Good-Kind/Beet/beet1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.3,
+        "reviews": 422,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Good Kind - Pure 330 Beet It",
+        "longDescription": "Ahora con una infusión de bambú sostenible y algas marinas nutritivas, nuestra fórmula mejorada protege las uñas de los agresores ambientales y las deja con un aspecto y una sensación fuertes y saludables. Todavía libre de 16 y 100% vegano, el nuevo Good.Kind.Pure ahora proporciona un color rico y cuidadoso, una aplicación suave, una cobertura uniforme ... y dura tanto como el esmalte tradicional",
+        "ingredients": "COLOR ACETATO DE BUTILO, ACETATO DE ETILO, NITROCELULOSA, DICAPRILATO/CAPRATO DE ISOSORBIDA, ÁCIDO ADÍPICO/COPOLÍMERO DE ANHÍDRIDO TRIMELÍTICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, ALCOHOL, BOROSILICATO DE CALCIO Y ALUMINIO, BENTONITA DE ESTEARALCONIO, FLUORFLOGOPITA SINTÉTICA, ALCOHOL ISOPROPÍLICO, SÍLICE, ALCOHOL DIACETONA, ÓXIDO DE ESTAÑO, ÁCIDO FOSFÓRICO, [PUEDE CONTENER/PEUT CONTENIR/+/-:MICA, DIÓXIDO DE TITANIO (CI 77891), D&C RED NO. 7 CALCIUM LAKE (CI 15850), POLVO DE ALUMINIO (CI 77000), ÓXIDOS DE HIERRO (CI 77491, CI 77492, CI 77499), D&C RED NO. 34 CALCIUM LAKE (CI 15880), D&C RED NO. 6 BARIUM LAKE (CI 15850), ULTRAMARINES (CI 77007), FD&C YELLOW NO. 5 ALUMINUM LAKE (CI 19140), D&C BLACK NO. 2 [nano] (CI 77266), FERROCIANURO DE AMONIO FÉRRICO (CI 77510), VIOLETA DE MANGANESO (CI 77742)]. ABRIGO SUPERIOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, COPOLÍMERO DE ÁCIDO ADÍPICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ISOBUTIRATO DE ACETATO DE SACAROSA, ALCOHOL N-BUTÍLICO, ETOCRILENO, DIMETICONA, RIMETILSILOXISILICATO, DIBENZOATO DE TRIMETILPENTANEDIILO, D&C VIOLETA N.º 2 (CI 60725). ENDURECEDOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, ÁCIDO ADÍPICO/COPOLÍMERO DE NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ALCOHOL N-BUTÍLICO, ETOCRILENO, AGUA/AGUA/AGUA, GLICERINA, HEXANAL, TRIGLICÉRIDO CAPRÍLICO/CÁPRICO, METILPROPANODIOL, PROPILENGLICOL, METILTIOPROPYLAMIDO ACETIL METIONINA, DIBENZOATO DE TRIMETILPENTANEDIILO, ACEITE DE GOMA DE PISTACIA LENTISCUS (LENTISCO), EXTRACTO DE FRUTA DE PERSEA GRATISSIMA (AGUACATE), ÁCIDO CÍTRICO, EXTRACTO DE HOJA DE CAMELIA SINENSIS, HIDROLIZADO PROTEÍNA VEGETAL PG-PROPIL SILANOTRIOL, BENZOATO DE SODIO, ISOBUTIRATO DE ACETATO DE SACAROSA, SORBATO DE POTASIO, EDTA, EXTRACTO DE HOJA DE SPINACIA OLERACEA (ESPINACA), D&C VIOLETA Nº 2 (CI 60725).",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod7",
+        "nombre": "Good Kind",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Good-Kind/Papaya/papaya1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.3,
+        "reviews": 356,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Good Kind - Pure 280 Fruity Papaya",
+        "longDescription": "Ahora con una infusión de bambú sostenible y algas marinas nutritivas, nuestra fórmula mejorada protege las uñas de los agresores ambientales y las deja con un aspecto y una sensación fuertes y saludables. Todavía libre de 16 y 100% vegano, el nuevo Good.Kind.Pure ahora proporciona un color rico y cuidadoso, una aplicación suave, una cobertura uniforme ... y dura tanto como el esmalte tradicional",
+        "ingredients": "COLOR ACETATO DE BUTILO, ACETATO DE ETILO, NITROCELULOSA, DICAPRILATO/CAPRATO DE ISOSORBIDA, ÁCIDO ADÍPICO/COPOLÍMERO DE ANHÍDRIDO TRIMELÍTICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, ALCOHOL, BOROSILICATO DE CALCIO Y ALUMINIO, BENTONITA DE ESTEARALCONIO, FLUORFLOGOPITA SINTÉTICA, ALCOHOL ISOPROPÍLICO, SÍLICE, ALCOHOL DIACETONA, ÓXIDO DE ESTAÑO, ÁCIDO FOSFÓRICO, [PUEDE CONTENER/PEUT CONTENIR/+/-:MICA, DIÓXIDO DE TITANIO (CI 77891), D&C RED NO. 7 CALCIUM LAKE (CI 15850), POLVO DE ALUMINIO (CI 77000), ÓXIDOS DE HIERRO (CI 77491, CI 77492, CI 77499), D&C RED NO. 34 CALCIUM LAKE (CI 15880), D&C RED NO. 6 BARIUM LAKE (CI 15850), ULTRAMARINES (CI 77007), FD&C YELLOW NO. 5 ALUMINUM LAKE (CI 19140), D&C BLACK NO. 2 [nano] (CI 77266), FERROCIANURO DE AMONIO FÉRRICO (CI 77510), VIOLETA DE MANGANESO (CI 77742)]. ABRIGO SUPERIOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, COPOLÍMERO DE ÁCIDO ADÍPICO/NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ISOBUTIRATO DE ACETATO DE SACAROSA, ALCOHOL N-BUTÍLICO, ETOCRILENO, DIMETICONA, RIMETILSILOXISILICATO, DIBENZOATO DE TRIMETILPENTANEDIILO, D&C VIOLETA N.º 2 (CI 60725). ENDURECEDOR ACETATO DE ETILO, ACETATO DE BUTILO, NITROCELULOSA, ÁCIDO ADÍPICO/COPOLÍMERO DE NEOPENTILGLICOL/ANHÍDRIDO TRIMELÍTICO, DICAPRILATO/CAPRATO DE ISOSORBIDA, ALCOHOL DESNATURALIZADO, ALCOHOL N-BUTÍLICO, ETOCRILENO, AGUA/AGUA/AGUA, GLICERINA, HEXANAL, TRIGLICÉRIDO CAPRÍLICO/CÁPRICO, METILPROPANODIOL, PROPILENGLICOL, METILTIOPROPYLAMIDO ACETIL METIONINA, DIBENZOATO DE TRIMETILPENTANEDIILO, ACEITE DE GOMA DE PISTACIA LENTISCUS (LENTISCO), EXTRACTO DE FRUTA DE PERSEA GRATISSIMA (AGUACATE), ÁCIDO CÍTRICO, EXTRACTO DE HOJA DE CAMELIA SINENSIS, HIDROLIZADO PROTEÍNA VEGETAL PG-PROPIL SILANOTRIOL, BENZOATO DE SODIO, ISOBUTIRATO DE ACETATO DE SACAROSA, SORBATO DE POTASIO, EDTA, EXTRACTO DE HOJA DE SPINACIA OLERACEA (ESPINACA), D&C VIOLETA Nº 2 (CI 60725).",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    }
+]
