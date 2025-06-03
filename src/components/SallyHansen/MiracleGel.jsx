@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import ProductCard from '../MacCosmetic/ProductCard';
 import ProductDetailModal from '../MacCosmetic/ProductDetailModal';
 
-const GoodKind = () => {
+const MiracleGel = () => {
     const [productos, setProductos] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
-        fetch("/Data/SallyHansen/goodkind.json")
+        fetch("/Data/SallyHansen/miracle-gel.json")
             .then((res) => {
                 if (!res.ok) throw new Error(`HTTP error ${res.status}`);
                 return res.json();
@@ -31,7 +31,7 @@ const GoodKind = () => {
     };
 
     return (
-        <section className="w-full min-h-screen bg-[#ffffff] dark:bg-textbalck px-4 transition-colors duration-300">
+        <section className="w-full min-h-screen bg-[#ffffff] dark:bg-textbalck py-10 px-4 transition-colors duration-300">
             <div className="max-w-7xl mx-auto">
                 {productos.length > 0 ? (
                     <div className="flex overflow-x-auto space-x-4 pb-4 no-scrollbar">
@@ -60,4 +60,4 @@ const GoodKind = () => {
     );
 };
 
-export default GoodKind;
+export default MiracleGel;

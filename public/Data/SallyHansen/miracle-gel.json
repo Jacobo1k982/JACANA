@@ -1,0 +1,50 @@
+[
+    {
+        "id": "prod1",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Black/black1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.2,
+        "reviews": 566,
+        "badge": "NEW",
+        "price": 11100,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Blacky O",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod2",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Terapy/terapy1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.2,
+        "reviews": 566,
+        "badge": "NEW",
+        "price": 10600,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Therapy - Well Well Well",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    }
+]
