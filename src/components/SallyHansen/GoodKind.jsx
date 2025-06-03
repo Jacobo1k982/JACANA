@@ -31,7 +31,7 @@ const SullyHansen = () => {
     };
 
     return (
-        <section className="w-full min-h-screen bg-[#ffffff] dark:bg-textbalck py-10 px-4 transition-colors duration-300">
+        <section className="w-full min-h-screen bg-[#ffffff] dark:bg-textbalck px-4 transition-colors duration-300">
             <div className="max-w-7xl mx-auto">
                 {productos.length > 0 ? (
                     <div className="flex overflow-x-auto space-x-4 pb-4 no-scrollbar">
