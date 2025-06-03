@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ProductCard from './ProductCard';
-import ProductDetailModal from './ProductDetailModal';
+import ProductCard from '../MacCosmetic/ProductCard';
+import ProductDetailModal from '../MacCosmetic/ProductDetailModal';
 
 const SullyHansen = () => {
     const [productos, setProductos] = useState([]);
@@ -32,17 +32,20 @@ const SullyHansen = () => {
 
     return (
         <section className="w-full min-h-screen bg-[#ffffff] dark:bg-textbalck py-10 px-4 transition-colors duration-300">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="max-w-7xl mx-auto">
                 {productos.length > 0 ? (
-                    productos.map((item) => (
-                        <ProductCard
-                            key={item.id}
-                            product={item}
-                            onImageClick={handleImageClick}
-                        />
-                    ))
+                    <div className="flex overflow-x-auto space-x-4 pb-4 no-scrollbar">
+                        {productos.map((item) => (
+                            <div key={item.id} className="flex-shrink-0 w-64">
+                                <ProductCard
+                                    product={item}
+                                    onImageClick={handleImageClick}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 ) : (
-                    <p className="text-center text-black dark:text-white col-span-full">
+                    <p className="text-center text-black dark:text-white">
                         Cargando productos...
                     </p>
                 )}

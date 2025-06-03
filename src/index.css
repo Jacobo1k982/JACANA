@@ -113,6 +113,19 @@
     @apply text-center;
   }
 
+  /* Oculta completamente la scrollbar, pero deja el scroll funcionando */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE y Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;

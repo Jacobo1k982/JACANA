@@ -120,5 +120,56 @@
         ],
         "features": [],
         "netWeight": ""
+    },
+    {
+        "id": "sally6",
+        "nombre": "",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Clouds/clouds1.png",
+            "/Belleza/SallyHansen/img/Clouds/clouds2.png",
+            "/Belleza/SallyHansen/img/Clouds/clouds3.png",
+            "/Belleza/SallyHansen/img/Clouds/clouds4.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.2,
+        "reviews": 326,
+        "badge": "NEW",
+        "price": 7390,
+        "originalPrice": null,
+        "description": "Insta Dri Up In Clouds 489",
+        "longDescription": "Fórmula INSTA-DRI® 3 en 1 para un 33 % de resistencia al desgaste prolongado y al astillado en comparación con la fórmula anterior. Ahora también disponible en nuevos acabados Matte Metalizados. Como el esmalte de secado rápido # 1 en América del Norte, Insta-Dri® está formulado con una base y una capa superior para un uso prolongado y un brillo total y sin rayas. Seque exprésel en 60 segundos con un solo paso para que puedas llevar ese look de uñas a cualquier momento y en cualquier lugar.",
+        "ingredients": "",
+        "howToUse": [
+            "Aplique una capa de Insta-Dri para limpiar, secar, las uñas y dejar secar durante 1 minuto",
+            "Termine con Insta-Dro Clearly Quick para obtener mejores resultados",
+            "¡Has completado tu manicura en tiempo récord!"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "sally7",
+        "nombre": "",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Black/Black1.png",
+            "/Belleza/SallyHansen/img/Black/Black2.png",
+            "/Belleza/SallyHansen/img/Black/Black3.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.2,
+        "reviews": 326,
+        "badge": "NEW",
+        "price": 7390,
+        "originalPrice": null,
+        "description": "Esmalte Insta Dri Black",
+        "longDescription": "Fórmula INSTA-DRI® 3 en 1 para un 33 % de resistencia al desgaste prolongado y al astillado en comparación con la fórmula anterior. Ahora también disponible en nuevos acabados Matte Metalizados. Como el esmalte de secado rápido # 1 en América del Norte, Insta-Dri® está formulado con una base y una capa superior para un uso prolongado y un brillo total y sin rayas. Seque exprésel en 60 segundos con un solo paso para que puedas llevar ese look de uñas a cualquier momento y en cualquier lugar.",
+        "ingredients": "",
+        "howToUse": [
+            "Aplique una capa de Insta-Dri para limpiar, secar, las uñas y dejar secar durante 1 minuto",
+            "Termine con Insta-Dro Clearly Quick para obtener mejores resultados",
+            "¡Has completado tu manicura en tiempo récord!"
+        ],
+        "features": [],
+        "netWeight": ""
     }
 ]

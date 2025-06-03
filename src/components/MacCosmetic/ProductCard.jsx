@@ -1,8 +1,5 @@
 import React from 'react';
 
-// No es necesario 'onImageClick' si el ProductCard no necesita hacer nada más
-// que llamar a la función que se le pasa. La prop se llamará onImageClick desde Trend,
-// pero aquí la recibimos y la usamos directamente.
 const ProductCard = ({ product, onImageClick }) => {
     const renderStars = (rating) => {
         let stars = '';
@@ -13,25 +10,24 @@ const ProductCard = ({ product, onImageClick }) => {
         return stars;
     };
 
-    // Si el producto tiene múltiples imágenes, usamos la primera como portada para la tarjeta.
-    // El modal se encargará de mostrar todas las imágenes del producto.
     const cardImageUrl = product.imagenes && product.imagenes.length > 0
-        ? product.imagenes[0] // Mostrar siempre la primera imagen en la tarjeta
+        ? product.imagenes[0]
         : 'https://via.placeholder.com/200x200.png?text=No+Image';
 
     return (
-        // El product.id ya está siendo usado como key en Trend.jsx en el .map()
-        <div className="bg-white text-black w-60 flex-shrink-0 snap-start flex flex-col">
-            <div className="relative">
+        <div className="bg-white text-black w-64 sm:w-60 xs:w-52 flex-shrink-0 snap-start flex flex-col shadow rounded-2xl overflow-hidden">
+            <div className="relative h-48 sm:h-44 xs:h-40 bg-white flex items-center justify-center">
                 <img
                     src={cardImageUrl}
                     alt={product.nombre}
-                    className="w-full h-48 object-cover cursor-pointer" // cursor-pointer indica que es clickeable
-                    onClick={() => onImageClick(product)} // Pasa el objeto 'product' completo
+                    className="max-h-full max-w-full object-contain cursor-pointer transition-transform hover:scale-105 duration-300"
+                    onClick={() => onImageClick(product)}
                 />
                 {product.badge && (
                     <span
-                        className={`absolute top-2 text-xs font-semibold uppercase text-white py-1 px-2 ${product.badge.toUpperCase() === 'NEW' ? 'left-2 bg-black bg-opacity-70' : 'right-2 bg-black bg-opacity-70'
+                        className={`absolute top-2 text-xs font-semibold uppercase text-white py-1 px-2 ${product.badge.toUpperCase() === 'NEW'
+                            ? 'left-2 bg-black bg-opacity-70'
+                            : 'right-2 bg-black bg-opacity-70'
                             }`}
                     >
                         {product.badge}
@@ -54,7 +50,9 @@ const ProductCard = ({ product, onImageClick }) => {
                     <div className="mb-2 h-10 flex items-center justify-center">
                         {product.originalPrice && typeof product.originalPrice === 'number' ? (
                             <div className="text-lg font-bold">
-                                <span className="text-gray-500 line-through mr-2 text-sm">${product.originalPrice.toFixed(2)}</span>
+                                <span className="text-gray-500 line-through mr-2 text-sm">
+                                    ${product.originalPrice.toFixed(2)}
+                                </span>
                                 <span className="text-red-600">${product.price.toFixed(2)}</span>
                             </div>
                         ) : (
@@ -70,10 +68,10 @@ const ProductCard = ({ product, onImageClick }) => {
                 <div className="mt-auto">
                     <p className="text-sm font-semibold mb-3 uppercase">{product.nombre}</p>
                     <button
-                        onClick={() => onImageClick(product)} // También el botón puede abrir detalles
-                        className="bg-black text-white uppercase text-sm py-2.5 px-4 w-full hover:bg-gray-800 transition-colors"
+                        onClick={() => onImageClick(product)}
+                        className="bg-black text-white uppercase text-sm py-2.5 px-4 w-full hover:bg-gray-800 transition-colors rounded"
                     >
-                        Ver Detalles {/* O "Añadir a la bolsa" si va directo a eso y detalles en otro lado */}
+                        Ver Detalles
                     </button>
                 </div>
             </div>
