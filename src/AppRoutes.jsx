@@ -350,10 +350,10 @@ export default function AppRoutes() {
                 <Route path="SallyHansen" element={
                     <>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0px' }}>
-                            <SallyHansen />
-                            <GoodKind />
-                            <MiracleGel />
-                        </div>
+    <SallyHansen style={{ marginBottom: '-5px' }} />
+    <GoodKind style={{ marginBottom: '-5px' }} />
+    <MiracleGel />
+</div>
                     </>
                 } />
             </Routes>

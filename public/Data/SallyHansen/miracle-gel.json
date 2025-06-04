@@ -9,7 +9,7 @@
         "rating": 4.2,
         "reviews": 566,
         "badge": "NEW",
-        "price": 11100,
+        "price": 11200,
         "originalPrice": null,
         "description": "Esmalte Miracle Gel - Blacky O",
         "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
@@ -33,9 +33,81 @@
         "rating": 4.2,
         "reviews": 566,
         "badge": "NEW",
-        "price": 10600,
+        "price": 11200,
         "originalPrice": null,
         "description": "Esmalte Miracle Gel - Therapy - Well Well Well",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod3",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Rhapsody/rhapsody1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.2,
+        "reviews": 516,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Nail Polish Rhapsody",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod4",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/LitePink/lite1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.2,
+        "reviews": 436,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - 245 Lite Pink",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod5",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Dig/dig1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.2,
+        "reviews": 414,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Dig Fig",
         "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
         "howToUse": [
             "Asegúrate de que las uñas estén limpias y secas.",
