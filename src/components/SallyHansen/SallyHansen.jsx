@@ -32,6 +32,21 @@ const SullyHansen = () => {
 
     return (
         <section className="w-full h-auto bg-[#ffffff] dark:bg-textblack px-4 transition-colors duration-300">
+            {/* Banner de portada */}
+            <div className="relative w-full h-64 md:h-80 lg:h-96 mb-6 rounded-2xl overflow-hidden shadow-md">
+                <img
+                    src="/Img-Inicio-pagina/Sally/Sally-Hansen-Nail-Care-Banner-new-lg.webp" // Asegúrate de tener esta imagen en tu carpeta pública
+                    alt="Sally Hansen Banner"
+                    className="object-cover w-full h-full"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <h1 className="text-white text-3xl md:text-5xl font-light text-center px-4">
+                        Sally Hansen - Belleza y Cuidado Profesional
+                    </h1>
+                </div>
+            </div>
+
+            {/* Contenedor de productos */}
             <div className="max-w-7xl mx-auto">
                 {productos.length > 0 ? (
                     <div className="flex overflow-x-auto space-x-4 pb-4 no-scrollbar">
@@ -51,6 +66,7 @@ const SullyHansen = () => {
                 )}
             </div>
 
+            {/* Modal de detalle */}
             <ProductDetailModal
                 product={selectedProduct}
                 isOpen={isModalOpen}

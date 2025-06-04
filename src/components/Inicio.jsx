@@ -7,7 +7,7 @@ const Inicio = () => {
     useEffect(() => {
         const verificarTamañoPantalla = () => {
             if (window.innerWidth <= 640) {
-                setGifSrc("/IMG-MAC/VINTAGE_MINT/banner_mobile.webp");
+                setGifSrc("/Img-Inicio-pagina/Sally/Sally-mobile.webp");
             } else {
                 setGifSrc("/IMG-MAC/VINTAGE_MINT/banner_desktop.webp");
             }
@@ -21,7 +21,7 @@ const Inicio = () => {
     return (
         <section className="w-full flex flex-col items-center bg-white dark:bg-[#000000] transition-colors duration-300">
             <div className="w-screen relative">
-                <Link to="/trend">
+                <Link to="/SallyHansen">
                     <img
                         src={gifSrc}
                         alt="Animación de bienvenida"
@@ -30,15 +30,20 @@ const Inicio = () => {
                 </Link>
 
                 <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-end text-center pb-4 px-4 animate-fade-up">
-                    <p className="text-sm sm:text-base font-Poppins font-light text-textblack drop-shadow-sm">
+                    <p className="text-sm sm:text-base font-Poppins font-light text-white drop-shadow-sm">
                         AHORA EN TENDENCIA
                     </p>
-                    <h1 className="text-3xl sm:text-5xl font-Playfair font-extrabold text-textblack drop-shadow-lg">
-                        VINTAGE MINT
+                    <h1 className="text-3xl sm:text-5xl font-Playfair font-extrabold text-white drop-shadow-lg">
+                        Capas superiores de gel™ milagroso
                     </h1>
-                    <p className="mt-4 text-sm sm:text-base font-Poppins font-light text-textblack drop-shadow-md max-w-2xl">
-                        Reimagina el maquillaje de los años 60' con tonos pastel, verdes y azules, y un toque de brillo. ¡Descubre la colección Vintage Mint!
+                    <p className="mt-4 text-sm sm:text-base font-Poppins font-light text-white drop-shadow-md max-w-2xl">
+                        Lo más parecido a una manicura en gel de salón que puedes hacer en casa La manicura de larga duración Número 1 en ventas de esmalte en gel en los EE. UU.
                     </p>
+
+                    {/* Botón Explorar */}
+                    <Link to="/explore" className="explore-button mt-6">
+                        Explore
+                    </Link>
                 </div>
             </div>
 
@@ -56,6 +61,23 @@ const Inicio = () => {
                     }
                     .animate-fade-up {
                         animation: fadeUp 0.8s ease-out forwards;
+                    }
+                    .explore-button {
+                        padding: 10px 20px;
+                        font-size: 1.1rem;
+                        font-weight: semibold;
+                        color: white;
+                        border: 2px solid white;
+                        border-radius: 25px;
+                        backdrop-filter: blur(10px);
+                        mix-blend-mode: screen;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        transition: all 0.4s ease-in-out;
+                        box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+                    }
+                    .explore-button:hover {
+                        box-shadow: 0 0 25px rgba(255, 255, 255, 1);
                     }
                 `}
             </style>

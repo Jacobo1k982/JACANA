@@ -118,5 +118,149 @@
         ],
         "features": [],
         "netWeight": ""
+    },
+    {
+        "id": "prod6",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Shiny/shiny1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.2,
+        "reviews": 414,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - 101 Shiny Top Coat",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod7",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Glazed/glazed1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.2,
+        "reviews": 314,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Nail Top Coat - Glazed",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod8",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Moonlit/moonlit1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.2,
+        "reviews": 398,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Nail Top Coat Moonlit",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod9",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Mad/mad.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.2,
+        "reviews": 268,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Mad Women",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod10",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Mauve/mauve.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.2,
+        "reviews": 268,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - 244 Mauve-Olous",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod11",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Mocha/mocha.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.2,
+        "reviews": 268,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Mocha Me Crazy 212",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
     }
 ]
