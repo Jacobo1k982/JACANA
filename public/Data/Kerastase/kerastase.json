@@ -158,5 +158,43 @@
         "howToUse": "Aplique una cantidad del tamaño de un cuarto de Bain Densité sobre el cabello mojado, masajee desde el cuero cabelludo hasta las puntas y luego enjuague.",
         "features": ["Hidratación intensa para una fibra capilar más suave* Reduce la apariencia de decoloración**74% más de brillo brillante*** Galardonado con los Premios a la Excelencia en Belleza de Marie Claire 2022"],
         "netWeight": "250 ml"
+    },
+    {
+        "id": "prod7",
+        "nombre": "BAIN Anti-Pelliculaire Specifique",
+        "imagenes": [
+            "/Belleza/Kerastase/Specifique/capa1.png"
+        ],
+        "category": "Shampoo",
+        "rating": 4.8,
+        "reviews": 465,
+        "badge": "NEW",
+        "price": 40580,
+        "originalPrice": null,
+        "description": "Shampoo Kérastase equilibrante para raíces grasas, puntas secas.",
+        "longDescription": "Una fórmula ultraligera que equilibra la grasa del cuero cabelludo. Purifica el cuero cabelludo para reducir el exceso de grasa y los olores. Aporta volumen al cabello liso +61%*. Facilita el desenredado +20%**. Nutre suavemente los largos. Deja el cabello suave y brillante. *VS. CABELLO SIN LAVAR. **VS. CHAMPÚ NO ACONDICIONADOR.",
+        "ingredients": "1165782 M - Ingredientes: Aqua / Agua / Agua • Laureth Sulfato de Sodio • Sulfato de Tea-Lauril • Cocamida Mipa • Cocoanfodiacetato Disódico • Diestearato de Glicol • Hexilenglicol • Cloruro de Sodio • Ácido Cítrico • Benzoato de Sodio • Hidróxido de Sodio • Capriloil Glicina • �� Policuaternio-11 • Ácido salicílico • Carbómero • Piridoxina Hci • Mentoxipropanodiol • Guar Cloruro de hidroxipropiltrimonio • Hexil cinamal • Linalol • Hidroxicitronelal • Citronelol • Alcohol bencílico • Ácido fumárico • Perfume / Fragancia. C230589/1. Pat.: Patents.Kerastase.Com.",
+        "howToUse": "Aplicar sobre el cabello mojado, masajear y aclarar. En caso de contacto con los ojos, enjuáguelos inmediatamente. Testado bajo control dermatológico para mayor seguridad. En caso de contacto con los ojos, enjuáguelos inmediatamente. Repite la limpieza dos veces. *Test instrumental sobre Argile Équilibrante + Bain Divalent + Masque Réhydratant.",
+        "features": ["Hidratación intensa para una fibra capilar más suave* Reduce la apariencia de decoloración**74% más de brillo brillante*** Galardonado con los Premios a la Excelencia en Belleza de Marie Claire 2022"],
+        "netWeight": "250 ml"
+    },
+    {
+        "id": "prod8",
+        "nombre": "BAIN Riche Dermo-Calm Specifique",
+        "imagenes": [
+            "/Belleza/Kerastase/Dermo/capa1.png"
+        ],
+        "category": "Shampoo",
+        "rating": 4.8,
+        "reviews": 465,
+        "badge": "NEW",
+        "price": 40580,
+        "originalPrice": null,
+        "description": "Shampoo Kérastase Bain Riche Dermo-Calm Specifique 250ml",
+        "longDescription": "Una fórmula ultraligera que equilibra la grasa del cuero cabelludo. Purifica el cuero cabelludo para reducir el exceso de grasa y los olores. Aporta volumen al cabello liso +61%*. Facilita el desenredado +20%**. Nutre suavemente los largos. Deja el cabello suave y brillante. *VS. CABELLO SIN LAVAR. **VS. CHAMPÚ NO ACONDICIONADOR.",
+        "ingredients": "1165782 M - Ingredientes: Aqua / Agua / Agua • Laureth Sulfato de Sodio • Sulfato de Tea-Lauril • Cocamida Mipa • Cocoanfodiacetato Disódico • Diestearato de Glicol • Hexilenglicol • Cloruro de Sodio • Ácido Cítrico • Benzoato de Sodio • Hidróxido de Sodio • Capriloil Glicina • �� Policuaternio-11 • Ácido salicílico • Carbómero • Piridoxina Hci • Mentoxipropanodiol • Guar Cloruro de hidroxipropiltrimonio • Hexil cinamal • Linalol • Hidroxicitronelal • Citronelol • Alcohol bencílico • Ácido fumárico • Perfume / Fragancia. C230589/1. Pat.: Patents.Kerastase.Com.",
+        "howToUse": "Aplicar sobre el cabello mojado, masajear y aclarar. En caso de contacto con los ojos, enjuáguelos inmediatamente. Testado bajo control dermatológico para mayor seguridad. En caso de contacto con los ojos, enjuáguelos inmediatamente. Repite la limpieza dos veces. *Test instrumental sobre Argile Équilibrante + Bain Divalent + Masque Réhydratant.",
+        "features": ["Hidratación intensa para una fibra capilar más suave* Reduce la apariencia de decoloración**74% más de brillo brillante*** Galardonado con los Premios a la Excelencia en Belleza de Marie Claire 2022"],
+        "netWeight": "250 ml"
     }
 ]

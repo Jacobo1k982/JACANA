@@ -9,10 +9,15 @@ const navLinks = [
             {
                 name: 'Mujer', path: '#', icon: TagIcon,
                 subLinks: [
-                    { name: 'Belleza', path: '/belleza', icon: TagIcon,
-
+                    {
+                        name: 'Belleza', path: '#', icon: TagIcon,
+                        subLinks: [
+                            { name: 'Kerastase', path: '/kerastase', icon: TagIcon },
+                            { name: 'Sally Hansen', path: '/SallyHansen', icon: TagIcon },
+                            { name: 'MAC Cosmetics', path: '/Trend', icon: TagIcon },
+                        ]
                     },
-                    {   
+                    {
                         name: 'Ropa', path: '#', icon: TagIcon,
                         subLinks: [
                             {
