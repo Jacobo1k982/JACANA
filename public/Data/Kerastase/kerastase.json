@@ -3,7 +3,12 @@
         "id": "prod1",
         "nombre": "BAIN EXTENDTIONISTE",
         "imagenes": [
-            "/Belleza/Kerastase/Extentioniste/capa.png"
+            "/Belleza/Kerastase/Extentioniste/capa.png",
+            "/Belleza/Kerastase/Extentioniste/capa1.png",
+            "/Belleza/Kerastase/Extentioniste/capa2.png",
+            "/Belleza/Kerastase/Extentioniste/capa3.png",
+            "/Belleza/Kerastase/Extentioniste/capa4.png",
+            "/Belleza/Kerastase/Extentioniste/capa5.png"
         ],
         "category": "Shampoo",
         "rating": 4.3,
@@ -19,6 +24,139 @@
             "Sexo: Unisex"
         ],
         "features": [],
-        "netWeight": "Contenido: 250 ml"
+        "netWeight": "250 ml"
+    },
+    {
+        "id": "prod2",
+        "nombre": "GÉNESIS",
+        "imagenes": [
+            "/Belleza/Kerastase/Genesis/capa1.png",
+            "/Belleza/Kerastase/Genesis/capa2.png",
+            "/Belleza/Kerastase/Genesis/capa3.png",
+            "/Belleza/Kerastase/Genesis/capa4.png",
+            "/Belleza/Kerastase/Genesis/capa5.png",
+            "/Belleza/Kerastase/Genesis/capa6.png",
+            "/Belleza/Kerastase/Genesis/capa7.png"
+        ],
+        "category": "Shampoo",
+        "rating": 4.8,
+        "reviews": 262,
+        "badge": "NEW",
+        "price": 40580,
+        "originalPrice": null,
+        "description": "Delicado champú fortificante para cabellos normales a grasos, debilitados y propensos a caerse debido a la rotura por el cepillado.",
+        "longDescription": "Reconstruye y fortalece la fibra capilar dañada. Proporciona un cabello suave. Ilumina el cabello brillante. Crea un cabello suave. Previene la rotura del cabello y las puntas abiertas.Galardonado con el premio Best Beauty Buys de mayo de 2017 de la revista InStyle al Mejor champú para cabello quebradizo",
+        "ingredients": "Células nativas de Edelweiss y la raíz de Jengibre",
+        "howToUse": [
+            "Tipo de Cabello: Cabello grueso con caída capilar",
+            "Sexo: Unisex"
+        ],
+        "features": [],
+        "netWeight": "250 ml"
+    },
+    {
+        "id": "prod3",
+        "nombre": "BAIN FORCE ARCHITECTE",
+        "imagenes": [
+            "/Belleza/Kerastase/Force/capa1.png",
+            "/Belleza/Kerastase/Force/capa2.png",
+            "/Belleza/Kerastase/Force/capa3.png",
+            "/Belleza/Kerastase/Force/capa4.png",
+            "/Belleza/Kerastase/Force/capa5.png",
+            "/Belleza/Kerastase/Force/capa6.png",
+            "/Belleza/Kerastase/Force/capa7.png",
+            "/Belleza/Kerastase/Force/capa8.png"
+        ],
+        "category": "Shampoo",
+        "rating": 4.8,
+        "reviews": 262,
+        "badge": "NEW",
+        "price": 40580,
+        "originalPrice": null,
+        "description": "Shampoo Kérastase Résistance Force Architecte reparación cabello dañado 250ml",
+        "longDescription": "Reconstruye y fortalece la fibra capilar dañada. Proporciona un cabello suave. Ilumina el cabello brillante. Crea un cabello suave. Previene la rotura del cabello y las puntas abiertas.Galardonado con el premio Best Beauty Buys de mayo de 2017 de la revista InStyle al Mejor champú para cabello quebradizo",
+        "ingredients": "Vita-Ciment, pro-queratina, ceramida y sève de résurrection",
+        "howToUse": [
+            "Tipo de Cabello: Frágil",
+            "Sexo: Unisex"
+        ],
+        "features": [],
+        "netWeight": "250 ml"
+    },
+    {
+        "id": "prod4",
+        "nombre": "BAIN DIVALENT",
+        "imagenes": [
+            "/Belleza/Kerastase/Divalent/capa1.png",
+            "/Belleza/Kerastase/Divalent/capa2.png",
+            "/Belleza/Kerastase/Divalent/capa3.png",
+            "/Belleza/Kerastase/Divalent/capa4.png",
+            "/Belleza/Kerastase/Divalent/capa5.png",
+            "/Belleza/Kerastase/Divalent/capa6.png",
+            "/Belleza/Kerastase/Divalent/capa7.png",
+            "/Belleza/Kerastase/Divalent/capa8.png"
+        ],
+        "category": "Shampoo",
+        "rating": 4.8,
+        "reviews": 456,
+        "badge": "NEW",
+        "price": 40580,
+        "originalPrice": null,
+        "description": "Shampoo Kérastase Spécifique Divalent raíz grasa 250m",
+        "longDescription": "Reconstruye y fortalece la fibra capilar dañada. Proporciona un cabello suave. Ilumina el cabello brillante. Crea un cabello suave. Previene la rotura del cabello y las puntas abiertas.Galardonado con el premio Best Beauty Buys de mayo de 2017 de la revista InStyle al Mejor champú para cabello quebradizo",
+        "ingredients": "1165782 M - Ingredientes: Aqua / Agua / Eau • Laureth Sulfato de Sodio • Sulfato de Tea-Lauril • Cocamida Mipa • Cocoanfodiacetato Disódico • Diestearato de Glicol • Hexilenglicol • Cloruro de Sodio • Ácido Cítrico • Benzoato de Sodio • Hidróxido de Sodio • Capriloil Glicina • Policuaternio-11 • Ácido salicílico • Carbómero • Piridoxina Hci • Menthoxipropanodiol • Guar Cloruro de hidroxipropiltrimonio • Hexil Canalam • Linalol • Hidroxicitronelal • Citronelol • Alcohol bencílico • Ácido fumárico • Perfume / Fragancia. C230589/1. Pat.: Patents.Kerastase.Com.",
+        "howToUse": "Aplicar sobre el cabello mojado, masajear y aclarar. En caso de contacto con los ojos, enjuáguelos inmediatamente. Testado bajo control dermatológico para mayor seguridad. En caso de contacto con los ojos, enjuáguelos inmediatamente. Repite la limpieza dos veces. *Test instrumental sobre Argile Équilibrante + Bain Divalent + Masque Réhydratant.",
+        "features": ["Una fórmula ultraligera que equilibra la grasa del cuero cabelludo. Purifica el cuero cabelludo para reducir el exceso de grasa y los olores. Aporta volumen al cabello liso +61%*. Facilita el desenredado +20%**. Nutre suavemente los largos. Deja el cabello suave y brillante. *VS. CABELLO SIN LAVAR. **VS. CHAMPÚ NO ACONDICIONADOR."],
+        "netWeight": "250 ml"
+    },
+    {
+        "id": "prod5",
+        "nombre": "BAIN CHROMA RESPECT",
+        "imagenes": [
+            "/Belleza/Kerastase/Chroma/capa1.png",
+            "/Belleza/Kerastase/Chroma/capa2.png",
+            "/Belleza/Kerastase/Chroma/capa3.png",
+            "/Belleza/Kerastase/Chroma/capa4.png",
+            "/Belleza/Kerastase/Chroma/capa5.png",
+            "/Belleza/Kerastase/Chroma/capa6.png",
+            "/Belleza/Kerastase/Chroma/capa7.png"
+        ],
+        "category": "Shampoo",
+        "rating": 4.8,
+        "reviews": 435,
+        "badge": "NEW",
+        "price": 40580,
+        "originalPrice": null,
+        "description": "Shampoo Kérastase sin sulfatos para cabellos tratados con tinte fino a medio.",
+        "longDescription": "Este champú sin sulfatos limpia suavemente, hidrata el cabello, protege el color y evita que se desvanezca. Su fórmula ligera es ideal para cabellos finos a medianos, ya que no apelmaza el cabello y proporciona un acabado de alto brillo.",
+        "ingredients": "Agua / Eau • Sultonato de olefina C14-16 de sodio • Cocamida Mea • Glicerina • Cocamidopropil betaína • Diestearato de glicol • Sarcosinato de laureil de sodio • Hexilenglicol • Ácido cítrico • Hidróxido de sodio • Cloruro de sodio • Peg-55 Propilenglicol Oleato • Propilenglicol • Coco-Betaína • Benzoato de sodio • Hidroxipropilo Guar Cloruro de hidroxipropiltrimonio • Ácido salicílico • Carbómero • Ácido benzoico • Policuaternio-7 • Linalol • Limoneno • Hialuronato de sodio • Arginina • Centella asiática Extracto • Ácido láctico • Ci 17200 / Rojo 33 • Ci 19140 / Amarillo 5 • Perfume / Fragancia. N280447/1.",
+        "howToUse": "Humedece el cabello antes de aplicar una cantidad de champú del tamaño de una moneda. Añadir agua y emulsionar. Enjuague bien. Repetir. La segunda espuma producirá una espuma más abundante que ayudará a limpiar los largos hasta las puntas. Enjuague bien. A continuación, aplica un acondicionador, una mascarilla o un brillo de alto brillo de Chroma Absolu.",
+        "features": ["Hidratación intensa para una fibra capilar más suave* Reduce la apariencia de decoloración**74% más de brillo brillante*** Galardonado con los Premios a la Excelencia en Belleza de Marie Claire 2022"],
+        "netWeight": "250 ml"
+    },
+    {
+        "id": "prod6",
+        "nombre": "BAIN DENSITÉ",
+        "imagenes": [
+            "/Belleza/Kerastase/Densite/capa1.png",
+            "/Belleza/Kerastase/Densite/capa2.png",
+            "/Belleza/Kerastase/Densite/capa3.png",
+            "/Belleza/Kerastase/Densite/capa4.png",
+            "/Belleza/Kerastase/Densite/capa5.png",
+            "/Belleza/Kerastase/Densite/capa6.png",
+            "/Belleza/Kerastase/Densite/capa7.png"
+        ],
+        "category": "Shampoo",
+        "rating": 4.8,
+        "reviews": 415,
+        "badge": "NEW",
+        "price": 40580,
+        "originalPrice": null,
+        "description": "Shampoo Kérastase espesante con Ácido Hialurónico para el adelgazamiento del cabello.",
+        "longDescription": "Limpia la acumulación de cabello. Aumenta la densidad del cabello. Fortalece el cabello. Crea un cabello brillante. Desarrolla plenitud a través de las puntas. Distribuye la resiliencia empezando por la raíz.",
+        "ingredients": "AGUA / EAU ● LAURIL SULFATO DE SODIO ● COCOSADIACETATO DISÓDICO ● ESTEARATO DE GLICOL ● HEXILENGLICOL ● LAURIL SULFATO DE SODIO ● CLORURO DE SODIO ● PERFUME / FRAGANCIA ● BENZOATO DE SODIO ● HIDRÓXIDO DE SODIO ● ÁCIDO CÍTRICO ● COCO-BETAÍNA ● CLORURO DE HIDROXIPROPILTRIMONIO ● ALCOHOL DENAT. ● POLICUATERNIO-30 ● ÁCIDO SALICÍLICO ● CARBÓMERO ● HEXIL CINAMAL ● ARGININA ● ÁCIDO GLUTÁMICO ● LINALOL ● CITRONELOL ● SERINA ● ALFA-ISOCIONIO IONONA ● HIDROXIPROPILTRIMONIO PROTEÍNA DE TRIGO HIDROLIZADA ● HIALURONATO DE SODIO ● 2-OLEAMIDO-1,3-OCTADECANEDIOL ● GLUCÓSIDO DE FLOR DE SAF ● GERANIOL ● FENOXIETANOL ● TOCOFEROL ● CITRATO DE SODIO ●",
+        "howToUse": "Aplique una cantidad del tamaño de un cuarto de Bain Densité sobre el cabello mojado, masajee desde el cuero cabelludo hasta las puntas y luego enjuague.",
+        "features": ["Hidratación intensa para una fibra capilar más suave* Reduce la apariencia de decoloración**74% más de brillo brillante*** Galardonado con los Premios a la Excelencia en Belleza de Marie Claire 2022"],
+        "netWeight": "250 ml"
     }
 ]
