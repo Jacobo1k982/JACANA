@@ -20,17 +20,7 @@ const categorias = [
         nombre: "BELLEZA",
         imagen: "/IMG-MAC/portada.png",
         ruta: "/belleza",
-    },
-    {
-        nombre: "FACE",
-        imagen: "/Belleza/img_menu/Face.avif",
-        ruta: "/face",
-    },
-    {
-        nombre: "SKIN",
-        imagen: "/Belleza/img_menu/Skin.avif",
-        ruta: "/skin",
-    },
+    }
 ];
 
 const CardMenu = () => {

@@ -5,6 +5,11 @@ const categorias = [
         nombre: "Sally Hansen",
         imagen: "/Belleza/SallyHansen/logo.png",
         ruta: "/SallyHansen",
+    },
+    {
+        nombre: "Kerastase Paris",
+        imagen: "/Belleza/Kerastase/kerastase.png",
+        ruta: "/kerastase",
     }
 ];
 

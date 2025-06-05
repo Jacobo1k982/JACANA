@@ -28,6 +28,7 @@ const BrandMenu = lazy(() => import('./components/Belleza/BrandMenu'));
 const SallyHansen = lazy(() => import('./components/SallyHansen/SallyHansen'));
 const GoodKind = lazy(() => import('./components/SallyHansen/GoodKind'));
 const MiracleGel = lazy(() => import('./components/SallyHansen/MiracleGel'));
+const Kerastase = lazy(() => import('./components/Kerastase/Kerastase'));
 
 {/* Sección: Trend */ }
 const Trend = lazy(() => import('./components/MacCosmetic/Trend'));
@@ -356,6 +357,7 @@ export default function AppRoutes() {
                         </div>
                     </>
                 } />
+                <Route path="kerastase" element={<Kerastase />} />
             </Routes>
         </>
     );

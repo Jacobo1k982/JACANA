@@ -262,5 +262,221 @@
         ],
         "features": [],
         "netWeight": ""
+    },
+    {
+        "id": "prod12",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Red-Eye/red1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.5,
+        "reviews": 458,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Red Eye",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod13",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Proper/proper1.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.5,
+        "reviews": 458,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - 256 Proper P-Rose",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod14",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Bordaux/bordaux.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.5,
+        "reviews": 398,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Polish Bordaux Glow",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod15",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Anywhere/capa.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.5,
+        "reviews": 358,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - 342 You Anywhere",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod16",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Smartease/capa.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.5,
+        "reviews": 412,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - 400 Smartease",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod17",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/PinkTank/capa.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.5,
+        "reviews": 362,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Pink Tank",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod18",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Wine/capa.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.5,
+        "reviews": 462,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Wine Stock",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod19",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Crying/capa.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.5,
+        "reviews": 561,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Crying Out Cloud",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
+    },
+    {
+        "id": "prod20",
+        "nombre": "Miracle Gel™",
+        "imagenes": [
+            "/Belleza/SallyHansen/img/Miracle-Gel/Adrenaline/capa.png"
+        ],
+        "category": "Sally Hansen",
+        "rating": 4.5,
+        "reviews": 512,
+        "badge": "NEW",
+        "price": 11200,
+        "originalPrice": null,
+        "description": "Esmalte Miracle Gel - Polish 204 Adrenaline Crush",
+        "longDescription": "¡Lo más parecido a una manicura en gel de salón que puedes hacer en casa! La manicura de larga duración número 1 en ventas de esmalte en gel en los EE. UU.",
+        "howToUse": [
+            "Asegúrate de que las uñas estén limpias y secas.",
+            "Usa quitaesmalte para limpiar cualquier residuo en la uña.",
+            "Aplicar 2 capas de Good. Amable. Puro. ™ Color.",
+            "Deja que el color se seque.",
+            "Aplicar 1 capa de Good. Amable. Puro. ™ Capa superior. Para añadir un poco más de fuerza a tus uñas, utiliza Good.Kind. Endurecedor puro"
+        ],
+        "features": [],
+        "netWeight": ""
     }
 ]
