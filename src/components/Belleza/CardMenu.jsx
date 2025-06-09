@@ -18,8 +18,8 @@ const categorias = [
     },
     {
         nombre: "DEPORTIVO",
-        imagen: "/Img-Inicio-pagina/nike.png",
-        ruta: "/deportivo",
+        imagen: "/Img-Inicio-pagina/raqueta.png",
+        ruta: "/Nike-mujer",
     },
 ];
 
