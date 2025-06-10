@@ -50,8 +50,6 @@ const Hombre = ({ caballero: { news } }) => {
                     transition={{ duration: 0.9, ease: "easeOut" }}
                     className="font-Playfair text-white tracking-tight text-center"
                 >
-                    <span className="text-5xl sm:text-3xl xs:text-3xl text-amber-400 block">Explora</span>
-                    <span className="text-3xl sm:text-xl xs:text-xl block">las categorías</span>
                 </motion.h2>
 
                 <motion.div

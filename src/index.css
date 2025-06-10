@@ -10,15 +10,15 @@
     padding: 0;
   }
 
+  /* Ocultar scrollbar en navegadores modernos */
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
 
   .scrollbar-hide {
-    -ms-overflow-style: none;
     scrollbar-width: none;
+    /* Firefox */
   }
-
 
   .nike-container {
     @apply w-screen max-w-none px-0 m-0 mb-20;
@@ -28,15 +28,6 @@
     @apply pt-16;
   }
 
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
   .scroll-hidden::-webkit-scrollbar {
     display: none;
   }
@@ -44,6 +35,7 @@
   .scroll-style::-webkit-scrollbar {
     scroll-behavior: smooth;
     scrollbar-width: thin;
+    /* Firefox */
     scrollbar-color: rgb(66, 245, 141) rgb(66, 245, 141);
     @apply w-2;
   }
@@ -119,12 +111,9 @@
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none;
-    /* IE y Edge */
     scrollbar-width: none;
     /* Firefox */
   }
-
 
   :root {
     --background: 0 0% 100%;

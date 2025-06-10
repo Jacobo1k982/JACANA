@@ -51,13 +51,13 @@ const CardMenu = () => {
             </div>
 
             {/* Banner inferior */}
-            <div className="w-full mt-2">
+            {/*<div className="w-full mt-2">
                 <img
                     src="/Img-Inicio-pagina/SingleBanner_Desktop_1.avif"
                     alt="Banner promocional"
                     className="w-full h-[120px] sm:h-[200px] md:h-[200px] object-cover"
                 />
-            </div>
+            </div>*/}
         </>
     );
 };

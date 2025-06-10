@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaTiktok, FaWhatsapp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const [year, setYear] = useState(null);
@@ -14,7 +15,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {/* Marca y redes */}
           <div>
-            <h1 className="text-2xl font-bold text-black dark:text-white tracking-wide mb-3">JACANA Styles</h1>
+            <h1 className="text-2xl font-light text-black dark:text-white tracking-wide mb-3">info@jacana.fun</h1>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
               Moda y estilo que se adapta a ti. Vive la experiencia JACANA, donde cada paso es único.
             </p>
@@ -38,10 +39,14 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-black dark:text-white mb-3">Categorías</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-amber-500 dark:hover:text-white">Zapatos</a></li>
               <li><a href="#" className="hover:text-amber-500 dark:hover:text-white">Ropa</a></li>
+              <li>
+                <Link to="/calzados" className="hover:text-amber-500 dark:hover:text-white">
+                  Calzado
+                </Link>
+              </li>
               <li><a href="#" className="hover:text-amber-500 dark:hover:text-white">Accesorios</a></li>
-              <li><a href="#" className="hover:text-amber-500 dark:hover:text-white">Ofertas</a></li>
+              <li><a href="#" className="hover:text-amber-500 dark:hover:text-white">Niños</a></li>
             </ul>
           </div>
 
