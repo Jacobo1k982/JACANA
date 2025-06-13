@@ -20,7 +20,7 @@ import CaracteristicasCartera from "./components/CaracteristicasCartera";
 import CarteraMujer from "./components/CarteraMujer";
 import Contacto from './pages/Contacto';
 
-import Categorias from './components/Calzados/Categorias';
+const Categorias = lazy(() => import('./components/Calzados/Categorias'));
 const CategoriasGenero = lazy(() => import('./components/Calzados/CategoriasGenero'));
 
 /*Belleza*/
@@ -72,8 +72,7 @@ const NewB2 = lazy(() => import('./pages/Mujer/Zapatos/NewB2'));
 const VansMujer = lazy(() => import('./pages/Mujer/Zapatos/VansMujer'));
 
 /* Sección: Componentes relacionados con Pijamas Mañanitas */
-const Mañanitas = lazy(() => import('./components/Pijamas/Mujer/Mañanitas'));
-const DetalleProductoMañanitas = lazy(() => import('./components/Pijamas/Mujer/DetalleProductoMañanitas'));
+const Mañanitas = lazy(() => import('./components/Pijamas/Mujer/Mañanitas.jsx'));
 
 /* Sección: Componentes relacionados con Carteras */
 const TiendaCarteras = lazy(() => import('./components/TiendaCarteras'));
@@ -93,6 +92,8 @@ export default function AppRoutes() {
                         {/*<Hero heroapi={heroapi} storiesRef={storiesRef} />*/}
                         <>
                             <Inicio />
+                            <div className="my-10 h-1 w-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-full" />
+                            <Mañanitas />
                             <CardMenu />
                         </>
                         {/*<Stories story={story} storiesRef={storiesRef} />*/}
@@ -106,7 +107,7 @@ export default function AppRoutes() {
                 <Route path="/juvenil" element={<Juvenil />} />
                 <Route path="/niña" element={<Niña />} />
                 <Route path="/niño" element={<Niño />} />
-                <Route path="/mujer" element={<Mujer dama={ dama } />} />
+                <Route path="/mujer" element={<Mujer dama={dama} />} />
                 <Route path="/ropa" element={<Ropa />} />
                 <Route path="/marcaszapatos" element={<Shoebrands marcaszapatosapi={marcaszapatosapi} />} />
                 <Route path="/marcaszapatos2" element={<Shoebrands2 marcaszapatos2api={marcaszapatos2api} />} />
@@ -220,10 +221,10 @@ export default function AppRoutes() {
                         </div>
                     </main>
                 } />
-                <Route path="/hombre/tommy" element={
+                <Route path="/hombre/tommy-hilfiger" element={
                     <main className='flex flex-col gap-20 relative bg-slate-900 dark:bg-slate-900 min-h-screen overflow-hidden bg-gray-900'>
                         {/*<EncabezadoCatalogo deportivoapi={deportivoapi} />*/}
-                        <div className='Tommyappman'>
+                        <div className='tommy'>
                             <div className='fila'>
                                 <div className='col'>
                                     <Tommy />
@@ -316,9 +317,6 @@ export default function AppRoutes() {
                         <BrandMenu />
                     </>
                 } />
-                <Route path="/mañanitas" element={<Mañanitas />} />
-                <Route path="/detalle/:id" element={<DetalleProductoMañanitas />} />
-
                 {/*MacCosmetics*/}
                 <Route path="trend" element={<Trend />} />
                 <Route path="SallyHansen" element={

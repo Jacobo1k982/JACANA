@@ -1,0 +1,535 @@
+[
+    {
+        "id": "1",
+        "nombre": "Conjunto mañanitas verde oscuro",
+        "description": "Camiseta manga corta y pantalón corto con logo Tommy Hilfiger.",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada5.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM1.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM2.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM3.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.3,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "2",
+        "nombre": "Conjunto mañanitas azul oscuro",
+        "description": "Camiseta con finos tirantes y pantalón corto.",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada4.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM4.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM5.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM6.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM7.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM8.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.2,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "3",
+        "nombre": "Conjunto mañanitas gris oscuro",
+        "description": "Camiseta y pantalón corto estilo casual.",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada1.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM9.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM10.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM11.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.5,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "4",
+        "nombre": "Conjunto mañanitas gris claro",
+        "description": "Camiseta y pantalón corto en tono gris claro.",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada6.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM12.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM13.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM14.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.1,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "5",
+        "nombre": "Conjunto mañanitas Rojo",
+        "description": "Mañanitas tipo camiseta y pantalón corto en tono negro claro.",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada7.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM15.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM16.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM17.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.4,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "6",
+        "nombre": "Conjunto mañanitas blanco",
+        "description": "Mañanitas de tirantes y pantalón corto claro.",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada2.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM18.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM19.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM20.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.3,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "7",
+        "nombre": "Conjunto mañanitas gris",
+        "description": "Mañanitas tipo camiseta y pantalón corto de tono azul claro.",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada6.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM21.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM22.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM23.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.2,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "8",
+        "nombre": "Conjunto mañanitas rojo",
+        "description": "Mañanitas tipo camiseta y pantalón corto de tono rojo.",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada8.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM24.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM25.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM26.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.5,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "9",
+        "nombre": "Conjunto mañanitas negro",
+        "description": "Mañanitas tipo camisa y pantalón corto de tono blanco.",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada9.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM27.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM28.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM29.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.1,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "10",
+        "nombre": "Conjunto mañanitas gris oscuro",
+        "description": "Mañanitas blusa cuello 'V' y pantalón corto de tono gris oscuro.",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada12.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM30.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM31.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM32.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM33.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM34.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.4,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "11",
+        "nombre": "Conjunto mañanitas gris claro",
+        "description": "Mañanitas tipo camiseta y pantalón corto de tono gris oscuro",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada6.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM35.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM36.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM37.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.3,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "12",
+        "nombre": "Conjunto mañanitas blanco",
+        "description": "Mañanitas de tirantes y pantalón corto de tono gris oscuro",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada3.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM38.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM39.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM40.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.2,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "13",
+        "nombre": "Conjunto mañanitas blanco",
+        "description": "Mañanitas de tirantes y pantalón corto de tono gris oscuro",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada2.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM41.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM42.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM43.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.5,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "14",
+        "nombre": "Conjunto mañanitas gris claro",
+        "description": "Mañanitas tipo camiseta sin mangas y pantalón corto de tono negro",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada6.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM44.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM45.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM46.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.1,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "15",
+        "nombre": "Conjunto mañanitas azul oscuro",
+        "description": "Mañanitas tipo camiseta sin mangas y pantalón corto de tono negro",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada10.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM51.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM52.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM46.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.4,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "16",
+        "nombre": "Conjunto mañanitas amarillo",
+        "description": "Mañanitas estilo blusa mangas cortas y pantalón corto de tono negro",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada11.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM53.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM46.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.3,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "17",
+        "nombre": "Conjunto mañanitas gris",
+        "description": "Mañanitas estilo blusa de tirantes y pantalón corto de tono negro",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada13.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM54.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM55.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM46.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.2,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "18",
+        "nombre": "Conjunto mañanitas gris",
+        "description": "Mañanitas estilo camiseta de tirantes y pantalón corto de tono gris",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada1.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM56.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM57.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM58.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.5,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "19",
+        "nombre": "Conjunto mañanitas blanco",
+        "description": "Mañanitas estilo camiseta de tirantes y pantalón corto de tono rojo",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada14.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM59.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM60.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM61.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.1,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "20",
+        "nombre": "Conjunto mañanitas blanco",
+        "description": "Mañanitas estilo camiseta de tirantes y pantalón corto de tono negro",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada6.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM62.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM63.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM64.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.4,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "21",
+        "nombre": "Conjunto mañanitas rojo",
+        "description": "Mañanitas estilo camiseta de tirantes y pantalón corto de tono negro",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada8.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM65.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM66.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM67.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM68.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.3,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "22",
+        "nombre": "Conjunto mañanitas café oscuro",
+        "description": "Mañanitas estilo camiseta de tirantes y pantalón corto de tono café oscuro",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada1.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM70.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM71.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM72.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM69.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.2,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    },
+    {
+        "id": "23",
+        "nombre": "Conjunto mañanitas blanco",
+        "description": "Mañanitas estilo camiseta de tirantes y pantalón corto de tono blanco",
+        "longDescription": "",
+        "portada": "/Ropa/Mujer/Mañanitas/portada14.png",
+        "imagenes": [
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM77.jpg",
+            "/Ropa/Mujer/Mañanitas/ConjuntoMañanitas/CM76.jpg"
+        ],
+        "tallas": [
+            {"numero": "S", "disponible": true},
+            {"numero": "M", "disponible": true},
+            {"numero": "L", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Pijama mañanitas",
+        "rating": 4.5,
+        "badge": "NEW",
+        "price": 6000,
+        "originalPrice": null
+    }
+]

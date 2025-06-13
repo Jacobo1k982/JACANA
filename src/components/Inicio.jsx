@@ -7,7 +7,7 @@ const Inicio = () => {
     useEffect(() => {
         const verificarTamañoPantalla = () => {
             if (window.innerWidth <= 640) {
-                setGifSrc("/Img-Inicio-pagina/Sally/Sally-mobile.webp");
+                setGifSrc("/Img-Inicio-pagina/Sally/Sally2.jpeg");
             } else {
                 setGifSrc("/IMG-MAC/VINTAGE_MINT/banner_desktop.webp");
             }
