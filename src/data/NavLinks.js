@@ -1,84 +1,38 @@
-import { CubeIcon, ShoppingBagIcon, TagIcon } from '@heroicons/react/24/outline';
-
-
 const navLinks = [
-    { name: 'Inicio', path: '/', icon: CubeIcon },
-    {
-        name: 'Categorías', path: '#', icon: ShoppingBagIcon,
-        subLinks: [
-            {
-                name: 'Mujer', path: '#', icon: TagIcon,
-                subLinks: [
-                    {
-                        name: 'Belleza', path: '#', icon: TagIcon,
-                        subLinks: [
-                            { name: 'Kerastase', path: '/kerastase', icon: TagIcon },
-                            { name: 'Sally Hansen', path: '/SallyHansen', icon: TagIcon },
-                            { name: 'MAC Cosmetics', path: '/Trend', icon: TagIcon },
-                        ]
-                    },
-                    {
-                        name: 'Ropa', path: '#', icon: TagIcon,
-                        subLinks: [
-                            {
-                                name: 'mañanitas', path: '#', icon: TagIcon,
-                                subLinks: [
-                                    { name: 'Catálogo', path: '/mañanitas', icon: TagIcon }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        name: 'Zapatos deportivos', path: '#', icon: ShoppingBagIcon,
-                        subLinks: [
-                            { name: 'Nike', path: '/Nike-mujer', icon: ShoppingBagIcon },
-                            { name: 'Adidas', path: '/adidas2', icon: ShoppingBagIcon },
-                            { name: 'Tommy Hilfiger', path: '/tommy2', icon: ShoppingBagIcon },
-                            { name: 'Puma', path: '/puma2', icon: ShoppingBagIcon },
-                            { name: 'New Balance', path: '/newb2', icon: ShoppingBagIcon },
-                            { name: 'Converse', path: '/converse2', icon: ShoppingBagIcon },
-                            { name: 'Crocs', path: '', icon: ShoppingBagIcon },
-                            { name: 'Vans', path: '/vans-mujer', icon: ShoppingBagIcon },
-                            { name: 'Fila', path: '/fila2', icon: ShoppingBagIcon },
-                        ]
-                    },
-                    {
-                        name: 'Carteras', path: '#', icon: ShoppingBagIcon,
-                        subLinks: [
-                            { name: 'H&Co', path: '/catalogo/HCO', icon: ShoppingBagIcon },
-                            { name: 'Calvin Klein', path: '/catalogo/calvinklein', icon: ShoppingBagIcon },
-                        ]
-                    }
-                ]
-            },
-            {
-                name: 'Hombre', path: '#', icon: TagIcon,
-                subLinks: [
-                    { name: 'Ropa', path: '#', icon: TagIcon },
-                    {
-                        name: 'Zapatos deportivos', path: '#', icon: ShoppingBagIcon,
-                        subLinks: [
-                            { name: 'Nike', path: '/deportivo', icon: ShoppingBagIcon },
-                            { name: 'Adidas', path: '/adidas', icon: ShoppingBagIcon },
-                            { name: 'Tommy Hilfiger', path: '/tommy', icon: ShoppingBagIcon },
-                            { name: 'Puma', path: '/puma', icon: ShoppingBagIcon },
-                            { name: 'New Balance', path: '/newb', icon: ShoppingBagIcon },
-                            { name: 'Converse', path: '/converse', icon: ShoppingBagIcon },
-                            { name: 'Crocs', path: '', icon: ShoppingBagIcon },
-                            { name: 'Vans', path: '/vans-hombre', icon: ShoppingBagIcon },
-                        ]
-                    },
-                    { name: 'Gorras', path: '/gorra', icon: ShoppingBagIcon },
-                    { name: 'Sandalias', path: '/sandalias', icon: ShoppingBagIcon },
-                ]
-            },
-            { name: 'Juvenil', path: '/juvenil', icon: CubeIcon },
-            { name: 'Niños', path: '/niño', icon: CubeIcon },
-            { name: 'Niñas', path: '/niña', icon: CubeIcon },
-        ]
-    },
-    { name: 'Sobre Nosotros', path: '', icon: CubeIcon },
-    { name: 'Contacto', path: '/contacto', icon: CubeIcon },
+  {
+    name: 'HOMBRE',
+    path: '/hombre',
+    image: '/PortadaNavbar/HOMBRE.webp',
+    subcategories: [
+      { name: 'CALZADOS', path: '/hombre/calzados', image: '/PortadaNavbar/calzado2_1.webp' },
+      { name: 'ROPA', path: '/hombre/ropa', image: '/PortadaNavbar/ropa2_1.webp' },
+      { name: 'ACCESORIOS', path: '/hombre/accesorios', image: '/PortadaNavbar/accesorios2_1.webp' },
+      { name: 'TECNOLOGÍA', path: '/hombre/tecnologia', image: '/PortadaNavbar/BANNER_TECNOLOGIA_1_.webp' },
+    ],
+  },
+  {
+    name: 'MUJER',
+    path: '/mujer',
+    image: '/PortadaNavbar/MUJER.webp',
+    subcategories: [
+      {
+        name: 'CALZADOS', 
+        path: '/mujer/calzados', 
+        image: '/PortadaNavbar/BANNER_CALZADO.webp', 
+        children: [
+          {
+            name: 'NIKE AIR',
+            path: '/mujer/calzados/nike',
+            image: '/PortadaNavbar/LogoMarca/LOGOS__NIKE_239x90.webp'
+          }
+        ],
+      },
+      { name: 'CUIDADO PARA ELLAS', 
+        path: '/mujer/cuidado_para_ellas', 
+        image: '/PortadaNavbar/Cuidado_para_ellas/portada.png' },
+    ],
+  },
+  // Más categorías si deseas
 ];
 
 export default navLinks;

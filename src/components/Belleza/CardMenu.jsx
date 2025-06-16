@@ -2,25 +2,15 @@ import { Link } from "react-router-dom";
 
 const categorias = [
     {
-        nombre: "MAÑANITAS",
-        imagen: "/Belleza/img_menu/mañanitas.png",
-        ruta: "/mañanitas",
+        nombre: "Trend",
+        imagen: "/IMG-MAC/VINTAGE_MINT/mac_sku_MY6RP7_1x1_0.png",
+        ruta: "/trend",
     },
     {
         nombre: "BELLEZA",
         imagen: "/IMG-MAC/portada1.png",
         ruta: "/belleza",
-    },
-    {
-        nombre: "CARTERAS",
-        imagen: "/Belleza/img_menu/cartera.png",
-        ruta: "/catalogo/HCO",
-    },
-    {
-        nombre: "DEPORTIVO",
-        imagen: "/Img-Inicio-pagina/raqueta.png",
-        ruta: "/Nike-mujer",
-    },
+    }
 ];
 
 const CardMenu = () => {
@@ -28,12 +18,12 @@ const CardMenu = () => {
         <>
             {/* Carrusel horizontal scrollable */}
             <div className="w-full overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide">
-                <div className="flex gap-4 p-4 w-max sm:w-auto">
+                <div className="flex gap-6 p-6 w-max sm:w-auto">
                     {categorias.map((categoria, index) => (
                         <Link
                             to={categoria.ruta}
                             key={index}
-                            className="min-w-[120px] sm:min-w-[150px] md:min-w-[180px] flex flex-col items-center justify-between p-2 h-40 bg-white dark:bg-transparent rounded-lg shadow-sm"
+                            className="min-w-[120px] sm:min-w-[150px] md:min-w-[180px] flex flex-col items-center justify-between p-3 h-40 bg-white dark:bg-transparent rounded-lg shadow-sm"
                         >
                             <div className="w-full h-32 flex items-center justify-center overflow-hidden">
                                 <img

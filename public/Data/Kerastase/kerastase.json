@@ -3,12 +3,12 @@
         "id": "prod1",
         "nombre": "BAIN EXTENDTIONISTE",
         "imagenes": [
-            "/Belleza/Kerastase/Extentioniste/capa.png",
-            "/Belleza/Kerastase/Extentioniste/capa1.png",
-            "/Belleza/Kerastase/Extentioniste/capa2.png",
-            "/Belleza/Kerastase/Extentioniste/capa3.png",
-            "/Belleza/Kerastase/Extentioniste/capa4.png",
-            "/Belleza/Kerastase/Extentioniste/capa5.png"
+            "/Belleza/Kerastase/Extentioniste/Capa.png",
+            "/Belleza/Kerastase/Extentioniste/Capa1.png",
+            "/Belleza/Kerastase/Extentioniste/Capa2.png",
+            "/Belleza/Kerastase/Extentioniste/Capa3.png",
+            "/Belleza/Kerastase/Extentioniste/Capa4.png",
+            "/Belleza/Kerastase/Extentioniste/Capa5.png"
         ],
         "category": "Shampoo",
         "rating": 4.3,
@@ -30,13 +30,13 @@
         "id": "prod2",
         "nombre": "GÉNESIS",
         "imagenes": [
-            "/Belleza/Kerastase/Genesis/capa1.png",
-            "/Belleza/Kerastase/Genesis/capa2.png",
-            "/Belleza/Kerastase/Genesis/capa3.png",
-            "/Belleza/Kerastase/Genesis/capa4.png",
-            "/Belleza/Kerastase/Genesis/capa5.png",
-            "/Belleza/Kerastase/Genesis/capa6.png",
-            "/Belleza/Kerastase/Genesis/capa7.png"
+            "/Belleza/Kerastase/Genesis/Capa1.png",
+            "/Belleza/Kerastase/Genesis/Capa2.png",
+            "/Belleza/Kerastase/Genesis/Capa3.png",
+            "/Belleza/Kerastase/Genesis/Capa4.png",
+            "/Belleza/Kerastase/Genesis/Capa5.png",
+            "/Belleza/Kerastase/Genesis/Capa6.png",
+            "/Belleza/Kerastase/Genesis/Capa7.png"
         ],
         "category": "Shampoo",
         "rating": 4.8,
@@ -58,14 +58,14 @@
         "id": "prod3",
         "nombre": "BAIN FORCE ARCHITECTE",
         "imagenes": [
-            "/Belleza/Kerastase/Force/capa1.png",
-            "/Belleza/Kerastase/Force/capa2.png",
-            "/Belleza/Kerastase/Force/capa3.png",
-            "/Belleza/Kerastase/Force/capa4.png",
-            "/Belleza/Kerastase/Force/capa5.png",
-            "/Belleza/Kerastase/Force/capa6.png",
-            "/Belleza/Kerastase/Force/capa7.png",
-            "/Belleza/Kerastase/Force/capa8.png"
+            "/Belleza/Kerastase/Force/Capa1.png",
+            "/Belleza/Kerastase/Force/Capa2.png",
+            "/Belleza/Kerastase/Force/Capa3.png",
+            "/Belleza/Kerastase/Force/Capa4.png",
+            "/Belleza/Kerastase/Force/Capa5.png",
+            "/Belleza/Kerastase/Force/Capa6.png",
+            "/Belleza/Kerastase/Force/Capa7.png",
+            "/Belleza/Kerastase/Force/Capa8.png"
         ],
         "category": "Shampoo",
         "rating": 4.8,
@@ -87,14 +87,14 @@
         "id": "prod4",
         "nombre": "BAIN DIVALENT",
         "imagenes": [
-            "/Belleza/Kerastase/Divalent/capa1.png",
-            "/Belleza/Kerastase/Divalent/capa2.png",
-            "/Belleza/Kerastase/Divalent/capa3.png",
-            "/Belleza/Kerastase/Divalent/capa4.png",
-            "/Belleza/Kerastase/Divalent/capa5.png",
-            "/Belleza/Kerastase/Divalent/capa6.png",
-            "/Belleza/Kerastase/Divalent/capa7.png",
-            "/Belleza/Kerastase/Divalent/capa8.png"
+            "/Belleza/Kerastase/Divalent/Capa1.png",
+            "/Belleza/Kerastase/Divalent/Capa2.png",
+            "/Belleza/Kerastase/Divalent/Capa3.png",
+            "/Belleza/Kerastase/Divalent/Capa4.png",
+            "/Belleza/Kerastase/Divalent/Capa5.png",
+            "/Belleza/Kerastase/Divalent/Capa6.png",
+            "/Belleza/Kerastase/Divalent/Capa7.png",
+            "/Belleza/Kerastase/Divalent/Capa8.png"
         ],
         "category": "Shampoo",
         "rating": 4.8,
@@ -113,13 +113,13 @@
         "id": "prod5",
         "nombre": "BAIN CHROMA RESPECT",
         "imagenes": [
-            "/Belleza/Kerastase/Chroma/capa1.png",
-            "/Belleza/Kerastase/Chroma/capa2.png",
-            "/Belleza/Kerastase/Chroma/capa3.png",
-            "/Belleza/Kerastase/Chroma/capa4.png",
-            "/Belleza/Kerastase/Chroma/capa5.png",
-            "/Belleza/Kerastase/Chroma/capa6.png",
-            "/Belleza/Kerastase/Chroma/capa7.png"
+            "/Belleza/Kerastase/Chroma/Capa1.png",
+            "/Belleza/Kerastase/Chroma/Capa2.png",
+            "/Belleza/Kerastase/Chroma/Capa3.png",
+            "/Belleza/Kerastase/Chroma/Capa4.png",
+            "/Belleza/Kerastase/Chroma/Capa5.png",
+            "/Belleza/Kerastase/Chroma/Capa6.png",
+            "/Belleza/Kerastase/Chroma/Capa7.png"
         ],
         "category": "Shampoo",
         "rating": 4.8,
@@ -138,13 +138,13 @@
         "id": "prod6",
         "nombre": "BAIN DENSITÉ",
         "imagenes": [
-            "/Belleza/Kerastase/Densite/capa1.png",
-            "/Belleza/Kerastase/Densite/capa2.png",
-            "/Belleza/Kerastase/Densite/capa3.png",
-            "/Belleza/Kerastase/Densite/capa4.png",
-            "/Belleza/Kerastase/Densite/capa5.png",
-            "/Belleza/Kerastase/Densite/capa6.png",
-            "/Belleza/Kerastase/Densite/capa7.png"
+            "/Belleza/Kerastase/Densite/Capa1.png",
+            "/Belleza/Kerastase/Densite/Capa2.png",
+            "/Belleza/Kerastase/Densite/Capa3.png",
+            "/Belleza/Kerastase/Densite/Capa4.png",
+            "/Belleza/Kerastase/Densite/Capa5.png",
+            "/Belleza/Kerastase/Densite/Capa6.png",
+            "/Belleza/Kerastase/Densite/Capa7.png"
         ],
         "category": "Shampoo",
         "rating": 4.8,
@@ -163,7 +163,7 @@
         "id": "prod7",
         "nombre": "BAIN Anti-Pelliculaire Specifique",
         "imagenes": [
-            "/Belleza/Kerastase/Specifique/capa1.png"
+            "/Belleza/Kerastase/Specifique/Capa1.png"
         ],
         "category": "Shampoo",
         "rating": 4.8,
@@ -182,7 +182,7 @@
         "id": "prod8",
         "nombre": "BAIN Riche Dermo-Calm Specifique",
         "imagenes": [
-            "/Belleza/Kerastase/Dermo/capa1.png"
+            "/Belleza/Kerastase/Dermo/Capa1.png"
         ],
         "category": "Shampoo",
         "rating": 4.8,

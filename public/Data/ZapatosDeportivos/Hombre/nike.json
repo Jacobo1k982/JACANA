@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1",
+        "nombre": "Nike Air Max Dn",
+        "description": "Este producto está fabricado con al menos un 20% de contenido reciclado en peso",
+        "longDescription": "Da la bienvenida a la próxima generación de tecnología Air. El Air Max Dn cuenta con nuestro sistema de unidad Dynamic Air de tubos de doble presión, creando una sensación reactiva con cada paso. Esto da como resultado un diseño futurista que es lo suficientemente cómodo como para usarlo de día a noche. Adelante, siente lo irreal.",
+        "portada": "/ZapatosDeportivos/Hombre/Nike/nike1.png",
+        "imagenes": [
+            "/ZapatosDeportivos/Hombre/Nike/nike2.png",
+            "/ZapatosDeportivos/Hombre/Nike/nike3.png",
+            "/ZapatosDeportivos/Hombre/Nike/nike4.png",
+            "/ZapatosDeportivos/Hombre/Nike/nike5.png",
+            "/ZapatosDeportivos/Hombre/Nike/nike6.png",
+            "/ZapatosDeportivos/Hombre/Nike/nike7.png",
+            "/ZapatosDeportivos/Hombre/Nike/nike8.png"
+        ],
+        "tallas": [
+            {"numero": "41", "disponible": true},
+            {"numero": "42", "disponible": true},
+            {"numero": "43", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Nike Air",
+        "rating": 4.3,
+        "badge": "NEW",
+        "price": 29900,
+        "originalPrice": null
+    }
+]

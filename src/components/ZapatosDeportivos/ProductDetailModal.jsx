@@ -136,10 +136,10 @@ const ProductDetailModal = ({ product, isOpen, onClose }) => {
                                             {typeof product?.price === 'number' && (
                                                 <div className="text-lg font-semibold mt-2">
                                                     {product.originalPrice && (
-                                                        <span className="line-through text-gray-400 mr-2 text-base">₡{product.originalPrice.toFixed(2)}</span>
+                                                        <span className="line-through text-gray-400 mr-2 text-base">${product.originalPrice.toFixed(2)}</span>
                                                     )}
                                                     <span className="text-black dark:text-white text-xl">
-                                                        ${product.price.toFixed(2)}
+                                                        ₡{product.price.toFixed(2)}
                                                     </span>
                                                 </div>
                                             )}

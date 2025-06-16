@@ -4,7 +4,7 @@ import PageLoader from './pages/PageLoader';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
-import AppRoutes from './AppRoutes';
+import AppRoutes from './routes/AppRoutes';
 
 function App() {
   const location = useLocation();

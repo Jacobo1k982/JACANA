@@ -13,7 +13,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -38,7 +40,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -61,7 +65,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -84,7 +90,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -107,7 +115,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -130,7 +140,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -153,7 +165,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -176,7 +190,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -199,7 +215,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -224,7 +242,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -247,7 +267,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -270,7 +292,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -293,7 +317,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -316,7 +342,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -339,7 +367,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -361,7 +391,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -384,7 +416,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -407,7 +441,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -430,7 +466,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -453,7 +491,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -477,7 +517,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -501,7 +543,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",
@@ -523,7 +567,9 @@
         "tallas": [
             {"numero": "S", "disponible": true},
             {"numero": "M", "disponible": true},
-            {"numero": "L", "disponible": true}
+            {"numero": "L", "disponible": true},
+            {"numero": "XL", "disponible": true},
+            {"numero": "XXL", "disponible": true}
         ],
         "moneda": "CRC",
         "category": "Pijama mañanitas",

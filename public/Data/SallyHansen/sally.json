@@ -74,10 +74,10 @@
         "id": "sally4",
         "nombre": "Insta Dri",
         "imagenes": [
-            "/Belleza/SallyHansen/img/INSTA-DRI/Clouds/clouds1.png",
-            "/Belleza/SallyHansen/img/INSTA-DRI/Clouds/clouds2.png",
-            "/Belleza/SallyHansen/img/INSTA-DRI/Clouds/clouds3.png",
-            "/Belleza/SallyHansen/img/INSTA-DRI/Clouds/clouds4.png"
+            "/Belleza/SallyHansen/img/INSTA-DRI/Clouds/Clouds1.png",
+            "/Belleza/SallyHansen/img/INSTA-DRI/Clouds/Clouds2.png",
+            "/Belleza/SallyHansen/img/INSTA-DRI/Clouds/Clouds3.png",
+            "/Belleza/SallyHansen/img/INSTA-DRI/Clouds/Clouds4.png"
         ],
         "category": "Sally Hansen",
         "rating": 4.2,
@@ -100,9 +100,9 @@
         "id": "sally5",
         "nombre": "Insta Dri",
         "imagenes": [
-            "/Belleza/SallyHansen/img/INSTA-DRI/Black/Black1.png",
-            "/Belleza/SallyHansen/img/INSTA-DRI/Black/Black2.png",
-            "/Belleza/SallyHansen/img/INSTA-DRI/Black/Black3.png"
+            "/Belleza/SallyHansen/img/INSTA-DRI/Black/black1.png",
+            "/Belleza/SallyHansen/img/INSTA-DRI/Black/black2.png",
+            "/Belleza/SallyHansen/img/INSTA-DRI/Black/black3.png"
         ],
         "category": "Sally Hansen",
         "rating": 4.2,
@@ -263,7 +263,7 @@
         "id": "sally12",
         "nombre": "Insta Dri",
         "imagenes": [
-            "/Belleza/SallyHansen/img/INSTA-DRI/Slick/Slick1.png"
+            "/Belleza/SallyHansen/img/INSTA-DRI/Slick/slick1.png"
         ],
         "category": "Sally Hansen",
         "rating": 4.5,

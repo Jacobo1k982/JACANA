@@ -16,11 +16,6 @@ const categorias = [
 const BrandMenu = () => {
     return (
         <>
-            <div>
-                <h1 className="text-3xl sm:text-5xl text-center font-light mb-8 text-black dark:text-white font-Playfair font-extrabold text-black dark:text-white">
-                    Explora las marcas
-                </h1>
-            </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 p-6 bg-white dark:bg-black transition-colors duration-500">
                 {categorias.map((categoria, index) => (
                     <Link

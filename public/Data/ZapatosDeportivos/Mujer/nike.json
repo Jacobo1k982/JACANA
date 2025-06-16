@@ -1,0 +1,91 @@
+[
+    {
+        "id": "1",
+        "nombre": "Women's Road Running Shoes",
+        "description": "Este producto está fabricado con al menos un 50% de contenido reciclado en peso",
+        "longDescription": "Las Nike Quest 6 son para corredores de todos los niveles. Pero no se equivoque, es cualquier cosa menos de nivel de entrada. Una banda de ajuste supercómoda y de apoyo en la parte media del pie te ayuda a mantenerte estable durante tus kilómetros. Además, una espuma supersuave en la entresuela ayuda a amortiguar cada paso.",
+        "portada": "/ZapatosDeportivos/Mujer/Nike/Quest/nike1.webp",
+        "imagenes": [
+            "/ZapatosDeportivos/Mujer/Nike/Quest/nike2.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Quest/nike3.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Quest/nike4.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Quest/nike5.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Quest/nike6.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Quest/nike7.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Quest/nike8.webp"
+        ],
+        "tallas": [
+            {"numero": "6", "disponible": true},
+            {"numero": "6.5", "disponible": true},
+            {"numero": "7", "disponible": true},
+            {"numero": "7.5", "disponible": true},
+            {"numero": "8", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Nike Quest 6",
+        "rating": 4.3,
+        "badge": "New Markdown",
+        "price": 48185,
+        "originalPrice": null
+    },
+    {
+        "id": "2",
+        "nombre": "Women's Road Running Shoes",
+        "description": "Este producto está fabricado con al menos un 50% de contenido reciclado en peso",
+        "longDescription": "La amortiguación reactiva proporciona una pisada equilibrada para las carreras diarias. Experimenta el retorno de energía con una combinación de espuma Cushlon 3.0 y una unidad Nike Air de longitud completa en la entresuela. Además, una banda elástica en la parte media del pie y un antepié espacioso proporcionan un ajuste cómodo y cómodo",
+        "portada": "/ZapatosDeportivos/Mujer/Nike/Winflo/nike1.webp",
+        "imagenes": [
+            "/ZapatosDeportivos/Mujer/Nike/Winflo/nike2.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Winflo/nike3.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Winflo/nike4.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Winflo/nike5.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Winflo/nike6.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Winflo/nike7.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Winflo/nike8.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Winflo/nike9.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Winflo/nike10.webp"
+        ],
+        "tallas": [
+            {"numero": "6", "disponible": false},
+            {"numero": "6.5", "disponible": false},
+            {"numero": "7", "disponible": false},
+            {"numero": "7.5", "disponible": true},
+            {"numero": "8", "disponible": false}
+        ],
+        "moneda": "CRC",
+        "category": "Nike Winflo 10",
+        "rating": 4.6,
+        "badge": "Highly Rated",
+        "price": 48185,
+        "originalPrice": null
+    },
+    {
+        "id": "3",
+        "nombre": "Women's Road Workout Shoes",
+        "description": "Este producto está fabricado con al menos un 20% de contenido reciclado en peso",
+        "longDescription": "Repite esa última serie y mantente firme a través de los altibajos y las presas en el MC Trainer 3. Una base robusta y plana aporta un nivel fiable de estabilidad a los movimientos que más te gustan. Su parte superior flexible te ayuda a mantenerte contenido durante los movimientos laterales. Y la sensación cómoda bajo los pies es ideal para usar todo el día, dentro y fuera del gimnasio.",
+        "portada": "/ZapatosDeportivos/Mujer/Nike/Trainer/nike1.webp",
+        "imagenes": [
+            "/ZapatosDeportivos/Mujer/Nike/Trainer/nike2.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Trainer/nike3.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Trainer/nike4.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Trainer/nike5.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Trainer/nike6.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Trainer/nike7.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Trainer/nike8.webp"
+        ],
+        "tallas": [
+            {"numero": "6", "disponible": false},
+            {"numero": "6.5", "disponible": false},
+            {"numero": "7", "disponible": true},
+            {"numero": "7.5", "disponible": true},
+            {"numero": "8", "disponible": false}
+        ],
+        "moneda": "CRC",
+        "category": "Nike MC Trainer 3",
+        "rating": 4.6,
+        "badge": "Highly Rated",
+        "price": 68945,
+        "originalPrice": null
+    }
+]
