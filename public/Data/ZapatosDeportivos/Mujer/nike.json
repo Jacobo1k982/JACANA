@@ -87,5 +87,35 @@
         "badge": "Highly Rated",
         "price": 68945,
         "originalPrice": null
+    },
+    {
+        "id": "4",
+        "nombre": "Women's Walking Shoes ",
+        "description": "Este producto está fabricado con al menos un 50% de contenido reciclado en peso",
+        "longDescription": "Las Nike Promina hacen que cada paseo sea suave. Su pila de espuma alta combinada con un rocker acanalado en la suela exterior proporciona una alta amortiguación para la comodidad durante todo el día.",
+        "portada": "/ZapatosDeportivos/Mujer/Nike/Promina/nike1.webp",
+        "imagenes": [
+            "/ZapatosDeportivos/Mujer/Nike/Promina/nike2.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Promina/nike3.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Promina/nike4.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Promina/nike5.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Promina/nike6.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Promina/nike7.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Promina/nike8.webp",
+            "/ZapatosDeportivos/Mujer/Nike/Promina/nike9.webp"
+        ],
+        "tallas": [
+            {"numero": "6", "disponible": true},
+            {"numero": "6.5", "disponible": false},
+            {"numero": "7", "disponible": false},
+            {"numero": "7.5", "disponible": true},
+            {"numero": "8", "disponible": true}
+        ],
+        "moneda": "CRC",
+        "category": "Nike Promina",
+        "rating": 4.6,
+        "badge": "Highly Rated",
+        "price": 64350,
+        "originalPrice": null
     }
 ]

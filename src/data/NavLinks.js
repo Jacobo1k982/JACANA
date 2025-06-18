@@ -16,9 +16,9 @@ const navLinks = [
     image: '/PortadaNavbar/MUJER.webp',
     subcategories: [
       {
-        name: 'CALZADOS', 
-        path: '/mujer/calzados', 
-        image: '/PortadaNavbar/BANNER_CALZADO.webp', 
+        name: 'CALZADOS',
+        path: '/mujer/calzados',
+        image: '/PortadaNavbar/BANNER_CALZADO.webp',
         children: [
           {
             name: 'NIKE AIR',
@@ -27,9 +27,25 @@ const navLinks = [
           }
         ],
       },
-      { name: 'CUIDADO PARA ELLAS', 
-        path: '/mujer/cuidado_para_ellas', 
-        image: '/PortadaNavbar/Cuidado_para_ellas/portada.png' },
+      {
+        name: 'CUIDADO PARA ELLAS',
+        path: '/mujer/cuidado_para_ellas',
+        image: '/PortadaNavbar/Cuidado_para_ellas/portada.png',
+        children: [
+          {
+            name: 'CUIDADO DE LA PIEL',
+            path: '/mujer/cuidado_de_la_piel',
+            image: '/PortadaNavbar/D0964509-LNCM-3.webp',
+            children: [
+              {
+                name: 'LANCOME',
+                path: '/lancome',
+                image: '/PortadaNavbar/Cuidado_para_ellas/lancome/lancome.png',
+              }
+            ]
+          }
+        ]
+      }
     ],
   },
   // Más categorías si deseas

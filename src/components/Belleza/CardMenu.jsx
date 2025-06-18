@@ -16,38 +16,29 @@ const categorias = [
 const CardMenu = () => {
     return (
         <>
-            {/* Carrusel horizontal scrollable */}
-            <div className="w-full overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide">
-                <div className="flex gap-6 p-6 w-max sm:w-auto">
+            {/* Responsive Card Grid o Scrollable dependiendo del tamaño */}
+            <div className="w-full px-4">
+                <div className="flex flex-wrap sm:flex-nowrap gap-6 justify-center sm:justify-start overflow-x-auto sm:overflow-x-visible scroll-smooth snap-x snap-mandatory scrollbar-hide">
                     {categorias.map((categoria, index) => (
                         <Link
                             to={categoria.ruta}
                             key={index}
-                            className="min-w-[120px] sm:min-w-[150px] md:min-w-[180px] flex flex-col items-center justify-between p-3 h-40 bg-white dark:bg-transparent rounded-lg shadow-sm"
+                            className="min-w-[140px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[220px] xl:min-w-[240px] flex flex-col items-center justify-between p-4 h-48 sm:h-52 md:h-56 bg-white dark:bg-transparent rounded-xl shadow-md transition-transform duration-200 hover:scale-105"
                         >
-                            <div className="w-full h-32 flex items-center justify-center overflow-hidden">
+                            <div className="w-full h-36 sm:h-40 flex items-center justify-center overflow-hidden">
                                 <img
                                     src={categoria.imagen}
                                     alt={categoria.nombre}
-                                    className="w-full h-[6rem] object-contain"
+                                    className="w-full h-[7rem] sm:h-[8rem] object-contain"
                                 />
                             </div>
-                            <p className="mt-1 font-light text-center text-black dark:text-white text-xs">
+                            <p className="mt-2 font-light text-center text-black dark:text-white text-sm sm:text-base">
                                 {categoria.nombre}
                             </p>
                         </Link>
                     ))}
                 </div>
             </div>
-
-            {/* Banner inferior */}
-            {/*<div className="w-full mt-2">
-                <img
-                    src="/Img-Inicio-pagina/SingleBanner_Desktop_1.avif"
-                    alt="Banner promocional"
-                    className="w-full h-[120px] sm:h-[200px] md:h-[200px] object-cover"
-                />
-            </div>*/}
         </>
     );
 };

@@ -14,6 +14,7 @@ const NikeCaballero = lazy(() => import('../components/ZapatosDeportivos/Hombre/
 const Mañanitas = lazy(() => import('../components/Pijamas/Mujer/Mañanitas'));
 const CardMenu = lazy(() => import('../components/Belleza/CardMenu'));
 const NikeDama = lazy(() => import('../components/ZapatosDeportivos/Mujer/Nike'));
+const Lancome = lazy(() => import('../components/Lancome/Lancome'));
 
 
 export default function AppRoutes() {
@@ -43,6 +44,7 @@ export default function AppRoutes() {
             <Route path="/gracias" element={<ThankYou />} />
             <Route path="/guia-de-tallas" element={<GuiaDeTallas />} />
             <Route path="/contacto" element={<Contacto />} />
+            <Route path="/lancome" element={<Lancome />} />
 
             {/* Rutas modulares */}
             {beautyRoutes}

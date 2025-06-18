@@ -1,0 +1,76 @@
+[
+    {
+        "id": "lan1",
+        "nombre": "Rénergie Yeux Contorno de Ojos Efecto Lifting",
+        "imagenes": [
+            "/Belleza/Lancome/Renergie/lan1.jpg",
+            "/Belleza/Lancome/Renergie/lan2.jpg",
+            "/Belleza/Lancome/Renergie/lan3.jpg",
+            "/Belleza/Lancome/Renergie/lan4.jpg"
+        ],
+        "category": "Crema",
+        "rating": 4.6,
+        "reviews": 425,
+        "badge": "NEW",
+        "price": 74635,
+        "originalPrice": null,
+        "description": "Probado bajo control dermatológico y oftalmológico. Todo tipo de pieles, incluso aquellas más sensibles.",
+        "longDescription": "Descubre la crema anti-edad de alta eficacia de Rénergie, creada para la delicada piel del contorno de los ojos. Una concentración única de Ácido Hialurónico de última generación, seleccionado debido a su menor volumen molecular, junto con los Péptidos contenidos en nuestro extracto de Lino francés. El contorno de los ojos se refresca al instante y, con el uso regular, se corrigen las arrugas, se logra efecto lifting en los párpados y se reducen las ojeras a largo plazo",
+        "ingredients": "AQUA / WATER / EAU • THEOBROMA CACAO SEED BUTTER / COCOA SEED BUTTER • DIMETHICONE • GLYCERIN • ISOHEXADECANE • PROPANEDIOL • ALCOHOL DENAT. • GLYCERYL STEARATE • PEG-20 STEARATE • PEG/PPG/POLYBUTYLENE GLYCOL-8/5/3 GLYCERIN • STEARIC ACID • PEG-100 STEARATE • PALMITIC ACID • OCTYLDODECANOL • CI 77891 / TITANIUM DIOXIDE • CI 17200 / RED 33 • GUANOSINE • MICA • SECALE CEREALE SEED EXTRACT / RYE SEED EXTRACT • SODIUM ACETYLATED HYALURONATE • HYDROLYZED SOY PROTEIN • HYDROLYZED LINSEED EXTRACT • SODIUM HYDROXIDE • SODIUM BENZOATE • PHENOXYETHANOL • ADENOSINE • ACETYL TETRAPEPTIDE-9 • CAFFEINE • TRISODIUM ETHYLENEDIAMINE DISUCCINATE • POLYACRYLAMIDE • DIMETHICONOL • LIMONENE • PENTYLENE GLYCOL • PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE • TIN OXIDE • BENZYL ALCOHOL • CAPRYLYL GLYCOL • CAPRYLOYL SALICYLIC ACID • MYRISTIC ACID • GERANIOL • LAURETH-7 • C13-14 ISOALKANE • PARFUM / FRAGRANCE",
+        "howToUse": "En caso de contacto con los ojos, lávense inmediata y abundantemente con agua.",
+        "features": [
+            "Tras 1 aplicación: + 55% de hidratación instantánea*. Tras 2 semanas: Las mujeres coinciden en que el contorno de ojos mejora y tiene un aspecto más saludable.Tras 8 semanas: Resultados clínicos probados en la reducción de arrugas."
+        ],
+        "netWeight": ""
+    },
+    {
+        "id": "lan2",
+        "nombre": "Galatée Confort",
+        "imagenes": [
+            "/Belleza/Lancome/Galatee/capa1.jpg",
+            "/Belleza/Lancome/Galatee/capa2.jpg"
+        ],
+        "category": "Crema",
+        "rating": 4.7,
+        "reviews": 515,
+        "badge": "NEW",
+        "price": 57385,
+        "originalPrice": null,
+        "description": "Lancôme me ayuda eliminar el maquillaje fácilmente y con delicadeza.",
+        "longDescription": "Mime su piel con la suave y delicada leche desmaquillante de rostro para pieles secas Galatée Confort de Lancôme.Especialmente formulada para las pieles secas, esta leche limpiadora facial está enriquecida con miel, extracto de almendra, cereales, levadura y proteínas de leche. Galatée Confort colma la piel de hidratación inmediata y de una sensación de suavidad aterciopelada. La leche limpiadora facial Galatée Confort, rica y untuosa, deja la piel hidratada, flexible y alisada sin dejar residuos.",
+        "ingredients": "AQUA / WATER • BUTYROSPERMUM PARKII BUTTER / SHEA BUTTER • GLYCERIN • DIMETHICONE • POLYETHYLENE • PARAFFIN • PARAFFINUM LIQUIDUM / MINERAL OIL • GLYCERYL STEARATE • PEG-1 STEARATE • SODIUM LAURETH SULFATE • ACRYLATES COPOLYMER • CI 172 / RED 33 • TOCOPHEROL • CYCLODEXTRIN • SODIUM HYDROXIDE • HYDROXYETHYLCELLULOSE • PHENOXYETHANOL • STEARIC ACID• FAEX EXTRACT / YEAST EXTRACT • POLYSORBATE 6 • PALMITIC ACID • MEL / HONEY • MANNITOL • ISOBUTANE • ALPHA-ISOMETHYL IONONE • CARBOMER • DISODIUM SUCCINATE • CETYL ALCOHOL • METHYLPARABEN • PRUNUS AMYGDALUS DULCIS PROTEIN / SWEET ALMOND PROTEIN • HEXYL CINNAMAL • GLYCINE SOJA OIL / SOYBEAN OIL • PARFUM / FRAGRANCE",
+        "howToUse": "En caso de contacto con los ojos, lávense inmediata y abundantemente con agua.",
+        "features": [
+            "Utilizar a diario, por la mañana y por la noche. Aplicar el desmaquillante con suaves toques desde el centro del rostro hacia el exterior (frente, mejillas y mentón). Terminar en la zona T y bajo el mentón."
+        ],
+        "netWeight": "400ml"
+    },
+    {
+        "id": "lan3",
+        "nombre": "BI-FACIL CLEAN & CARE EYE MAKEUP REMOVER",
+        "imagenes": [
+            "/Belleza/Lancome/Bi-Facil/bi1.webp",
+            "/Belleza/Lancome/Bi-Facil/bi2.webp",
+            "/Belleza/Lancome/Bi-Facil/bi3.jpg",
+            "/Belleza/Lancome/Bi-Facil/bi4.jpg",
+            "/Belleza/Lancome/Bi-Facil/bi5.webp",
+            "/Belleza/Lancome/Bi-Facil/bi6.webp"
+        ],
+        "category": "DESMAQUILLANTE",
+        "rating": 4.7,
+        "reviews": 515,
+        "badge": "NEW",
+        "price": 29325,
+        "originalPrice": null,
+        "description": "Una fórmula suave de doble acción con un 95 % de ingredientes de origen natural*.",
+        "longDescription": "Elaborada con aceites de jojoba y almendras, agua de rosa francesa y aminoácidos, la fórmula elimina al instante el maquillaje de ojos resistente al agua. La fórmula te deja con una sensación de frescura, sin restos de maquillaje de la noche anterior. Calma el área de los ojos para que la piel se sienta nutrida y las pestañas se vean fortalecidas y revitalizadas",
+        "ingredients": "AQUA / AGUA / AGUA, PALMITATO DE ISOPROPILO, ALCANO C15-19, ACEITE DE PRUNUS AMYGDALUS DULCIS / ACEITE DE ALMENDRAS DULCES, PROPANODIOL, ACEITE DE SEMILLA DE SIMMONDSIA CHINENSIS / ACEITE DE SEMILLA DE JOJOBA, AGUA DE FLOR DE ROSA DAMASCENA, MADECASSOSIDE, ARGININA, ÁCIDO SALICÍLICO, LINALOOL, GERANIOL, ÁCIDO CÍTRICO, CITRONELOL, PERFUME / FRAGANCIA",
+        "howToUse": [
+            "Utilizar a diario, por la mañana y por la noche. Aplicar el desmaquillante con suaves toques desde el centro del rostro hacia el exterior (frente, mejillas y mentón). Terminar en la zona T y bajo el mentón."
+        ],
+        "features": [
+            ""
+        ],
+        "netWeight": "125ml"
+    }
+]

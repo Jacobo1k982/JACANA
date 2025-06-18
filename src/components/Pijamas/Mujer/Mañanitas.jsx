@@ -40,8 +40,8 @@ const Mañanitas = () => {
                     className="object-cover w-full h-full"
                 />*/}
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <h1 className="text-white text-2xl md:text-5xl font-light text-center px-4">
-                        Conjuntos mañanitas - comodidad y estilo 
+                    <h1 className="text-white text-2xl md:text-5xl font-light text-center px-4 font-Playfair">
+                        CONJUNTO MAÑANITAS
                     </h1>
                 </div>
             </div>

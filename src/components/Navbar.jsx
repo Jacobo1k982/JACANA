@@ -1,3 +1,4 @@
+// Navbar.jsx
 import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -25,6 +26,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState(null);
+  const [selectedChildSubcategory, setSelectedChildSubcategory] = useState(null);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -81,7 +83,12 @@ const Navbar = () => {
                           className="flex flex-col space-y-2 items-start p-2 h-full"
                         >
                           <span className="text-gray-700 text-sm font-semibold uppercase">{sub.name}</span>
-                          <img src={sub.image} alt={sub.name} className="w-full h-24 object-cover rounded-lg" />
+                          <img
+                            src={sub.image}
+                            alt={sub.name}
+                            className="w-full aspect-video object-cover rounded-lg"
+                          />
+
                         </Link>
                       </div>
                     ))}
@@ -135,7 +142,36 @@ const Navbar = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -100, opacity: 0 }} transition={{ duration: 0.4, ease: 'easeInOut' }} className="fixed top-0 left-0 w-full h-full bg-[#000000]/95 backdrop-blur-lg shadow-2xl z-50 flex flex-col px-6 pt-10 overflow-y-auto">
-            {selectedSubcategory ? (
+            {selectedChildSubcategory ? (
+              <>
+                <div className="flex items-center justify-between mb-6">
+                  <button onClick={() => setSelectedChildSubcategory(null)} className="text-white hover:text-blue-400 transition">
+                    <ArrowLeftIcon className="w-6 h-6" />
+                  </button>
+                  <h2 className="text-white text-3xl font-extrabold">{selectedChildSubcategory.name}</h2>
+                  <button onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-red-400 transition">
+                    <XMarkIcon className="w-6 h-6" />
+                  </button>
+                </div>
+                <div className="space-y-4">
+                  {selectedChildSubcategory.children.map((child) => (
+                    <Link
+                      to={child.path}
+                      key={child.name}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="flex justify-between items-center bg-white/90 rounded-lg overflow-hidden hover:bg-white transition"
+                    >
+                      <div className="px-4 py-3 text-sm font-semibold text-gray-900">{child.name}</div>
+                      <img
+                        src={child.image}
+                        alt={child.name}
+                        className="w-24 h-auto aspect-[3/2] object-cover rounded"
+                      />
+                    </Link>
+                  ))}
+                </div>
+              </>
+            ) : selectedSubcategory ? (
               <>
                 <div className="flex items-center justify-between mb-6">
                   <button onClick={() => setSelectedSubcategory(null)} className="text-white hover:text-blue-400 transition">
@@ -148,15 +184,21 @@ const Navbar = () => {
                 </div>
                 <div className="space-y-4">
                   {selectedSubcategory.children.map((child) => (
-                    <Link
-                      to={child.path}
+                    <div
                       key={child.name}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="flex justify-between items-center bg-white/90 rounded-lg overflow-hidden hover:bg-white transition"
+                      onClick={() => {
+                        if (child.children) {
+                          setSelectedChildSubcategory(child);
+                        } else {
+                          navigate(child.path);
+                          setMobileMenuOpen(false);
+                        }
+                      }}
+                      className="flex justify-between items-center bg-white/90 rounded-lg overflow-hidden hover:bg-white transition cursor-pointer"
                     >
                       <div className="px-4 py-3 text-sm font-semibold text-gray-900">{child.name}</div>
                       <img src={child.image} alt={child.name} className="w-24 h-16 object-cover" />
-                    </Link>
+                    </div>
                   ))}
                 </div>
               </>

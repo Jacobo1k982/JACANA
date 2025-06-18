@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import ProductCard from '../MacCosmetic/ProductCard';
 import ProductDetailModal from '../MacCosmetic/ProductDetailModal';
 
-const SullyHansen = () => {
+const Lancome = () => {
     const [productos, setProductos] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
-        fetch("/Data/SallyHansen/sally.json")
+        fetch("/Data/Lancome/lancome.json")
             .then((res) => {
                 if (!res.ok) throw new Error(`HTTP error ${res.status}`);
                 return res.json();
@@ -35,15 +35,15 @@ const SullyHansen = () => {
             {/* Banner de portada */}
             <div className="relative w-full h-64 md:h-80 lg:h-96 mb-6 rounded-2xl overflow-hidden shadow-md">
                 <img
-                    src="/Img-Inicio-pagina/Sally/Sally-Hansen-Artificial-category-banner_xl.jpeg" // Asegúrate de tener esta imagen en tu carpeta pública
-                    alt="Sally Hansen Banner"
+                    src="/Belleza/Lancome/banner_principal.jpg" // Asegúrate de tener esta imagen en tu carpeta pública
+                    alt="Kerastase Paris Banner"
                     className="object-cover w-full h-full"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <h1 className="text-white text-3xl md:text-5xl font-light text-center px-4">
-                        Sally Hansen - Belleza y Cuidado Profesional
+                {/*<div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-end p-4 md:p-8 flex-col">
+                    <h1 className="text-white text-1xl md:text-5xl font-light text-center px-4">
+                        Kerastase Paris - Belleza y Cuidado Profesional
                     </h1>
-                </div>
+                </div>*/}
             </div>
 
             {/* Contenedor de productos */}
@@ -76,4 +76,4 @@ const SullyHansen = () => {
     );
 };
 
-export default SullyHansen;
+export default Lancome;
