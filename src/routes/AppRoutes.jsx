@@ -10,7 +10,6 @@ import mainRoutes from '../routes/mainRoutes';
 
 // Componentes principales
 const Inicio = lazy(() => import('../components/Inicio'));
-const NikeCaballero = lazy(() => import('../components/ZapatosDeportivos/Hombre/Nike'));
 const Mañanitas = lazy(() => import('../components/Pijamas/Mujer/Mañanitas'));
 const CardMenu = lazy(() => import('../components/Belleza/CardMenu'));
 const NikeDama = lazy(() => import('../components/ZapatosDeportivos/Mujer/Nike'));
