@@ -13,7 +13,7 @@ const Inicio = () => {
     // Detectar tamaño de pantalla
     useEffect(() => {
         const handleResize = () => {
-            setGifSrc(window.innerWidth <= 640 ? '/Img-Inicio-pagina/Sally/Sally1.webp' : '/IMG-MAC/VINTAGE_MINT/banner_desktop.webp');
+            setGifSrc(window.innerWidth <= 640 ? '/Belleza/SallyHansen/Sally_Hansen_Miracle_Gel_Top_Coat_Banner_desktop.webp' : '/IMG-MAC/VINTAGE_MINT/banner_desktop.webp');
         };
 
         handleResize();

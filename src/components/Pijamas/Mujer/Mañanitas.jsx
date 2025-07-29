@@ -89,7 +89,7 @@ const Mañanitas = () => {
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000"
                     style={{
-                        backgroundImage: `url('/Belleza/Kerastase/portada.webp')`,
+                        backgroundImage: `url('#')`,
                         backgroundColor: '#f5f5f5',
                         transform: 'scale(1.05)',
                         filter: 'brightness(0.85) contrast(1.05)',
