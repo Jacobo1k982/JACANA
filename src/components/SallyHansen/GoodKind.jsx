@@ -103,16 +103,12 @@ const GoodKind = () => {
             />
 
             {/* Banner Hero con tema "Good. Kind. Pure." */}
-            <div className="relative w-full h-52 md:h-96 overflow-hidden rounded-2xl shadow-2xl mb-12 group">
+            <div className="relative w-full h-40 md:h-96 overflow-hidden rounded-2xl shadow-2xl mb-12 group">
                 {/* Fondo con gradiente orgánico mejorado */}
                 <div
                     className="absolute inset-0 transition-all duration-1000"
                     style={{
-                        background: `linear-gradient(135deg, 
-              #e6f7e8 0%, 
-              #f0f9ff 30%, 
-              #fff8e6 70%, 
-              #fff3f3 100%
+                        background: `linear-gradient(135deg, #1f2937
             ), url('/Belleza/Sally/goodkind-bg.webp')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',

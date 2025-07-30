@@ -93,16 +93,12 @@ const MiracleGel = () => {
             />
 
             {/* Banner Hero con tema Miracle Gel */}
-            <div className="relative w-full h-64 md:h-96 lg:h-[500px] overflow-hidden rounded-2xl shadow-2xl mb-12 group">
+            <div className="relative w-full h-40 md:h-96 lg:h-[500px] overflow-hidden rounded-2xl shadow-2xl mb-12 group">
                 {/* Fondo con gradiente y textura */}
                 <div
                     className="absolute inset-0 transition-all duration-1000"
                     style={{
-                        background: `linear-gradient(135deg, 
-              #f0f8ff 0%, 
-              #fff5f7 30%, 
-              #fff8e6 70%, 
-              #f0f9ff 100%
+                        background: `linear-gradient(135deg, #1f2937
             ), url('/Belleza/Sally/miracle-gel-banner.webp')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',

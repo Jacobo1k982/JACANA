@@ -103,16 +103,12 @@ const SallyHansen = () => {
             />
 
             {/* Banner Hero con tema Sally Hansen */}
-            <div className="relative w-full h-64 md:h-96 lg:h-[500px] overflow-hidden rounded-2xl shadow-2xl mb-12 group">
+            <div className="relative w-full h-40 md:h-96 lg:h-[500px] overflow-hidden rounded-2xl shadow-2xl mb-12 group">
                 {/* Fondo con gradiente y textura */}
                 <div
                     className="absolute inset-0 transition-all duration-1000"
                     style={{
-                        background: `linear-gradient(135deg, 
-              #f8f0f3 0%, 
-              #fff5f7 30%, 
-              #fff8f0 70%, 
-              #f5f9ff 100%
+                        background: `linear-gradient(135deg, #1f2937
             ), url('/Belleza/Sally/banner.webp')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
