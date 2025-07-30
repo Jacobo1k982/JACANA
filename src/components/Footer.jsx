@@ -1,104 +1,173 @@
+// Footer.jsx - Versión Premium ✨
 import React, { useEffect, useState } from 'react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Footer = () => {
   const [year, setYear] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     setYear(new Date().getFullYear());
   }, []);
 
+  // Variantes de animación
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: 'easeOut' },
+    },
+  };
+
   return (
     <>
-      <footer className="bg-white dark:bg-[#000000] text-black dark:text-zinc-300 py-10 transition-colors duration-500">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-10">
-          {/* Marca y redes */}
-          <div>
-            <h1 className="text-2xl font-light text-black dark:text-white tracking-wide mb-3">info@jacana.fun</h1>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              Moda y estilo que se adapta a ti. Vive la experiencia JACANA, donde cada paso es único.
-            </p>
-            <div className="flex space-x-4 mt-4 text-black dark:text-zinc-300">
-              <a href="#" className="hover:text-blue-600 dark:hover:text-white transition-colors"><FaFacebookF /></a>
-              <a href="#" className="hover:text-pink-500 dark:hover:text-white transition-colors"><FaInstagram /></a>
-              <a href="#" className="hover:text-sky-400 dark:hover:text-white transition-colors"><FaTwitter /></a>
-              <a href="#" className="hover:text-gray-500 dark:hover:text-white transition-colors"><FaTiktok /></a>
-              <a
-                href="https://wa.me/50664541700"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-green-500 dark:hover:text-white transition-colors"
-              >
-                <FaWhatsapp />
-              </a>
-            </div>
-          </div>
+      {/* Footer principal */}
+      <footer className="w-full bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-300 py-16 transition-colors duration-700 relative overflow-hidden">
+        {/* Fondo con textura sutil */}
+        <div
+          className="absolute inset-0 pointer-events-none z-0 opacity-5 dark:opacity-10 mix-blend-overlay"
+          style={{
+            backgroundImage: `url("image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
 
-          {/* Categorías */}
-          <div>
-            <h3 className="text-lg font-semibold text-black dark:text-white mb-3">Categorías</h3>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-amber-500 dark:hover:text-white">Ropa</a></li>
-              <li>
-                <Link to="/calzados" className="hover:text-amber-500 dark:hover:text-white">
-                  Calzado
-                </Link>
-              </li>
-              <li><a href="#" className="hover:text-amber-500 dark:hover:text-white">Accesorios</a></li>
-              <li><a href="#" className="hover:text-amber-500 dark:hover:text-white">Niños</a></li>
-            </ul>
-          </div>
+        {/* Gradiente decorativo */}
+        <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-gradient-to-bl from-blue-50 to-transparent dark:from-blue-900/20 rounded-full filter blur-3xl opacity-20"></div>
+        <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-pink-50 to-transparent dark:from-pink-900/20 rounded-full filter blur-3xl opacity-20"></div>
 
-          {/* Ayuda */}
-          <div>
-            <h3 className="text-lg font-semibold text-black dark:text-white mb-3">Ayuda</h3>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-amber-500 dark:hover:text-white">Preguntas frecuentes</a></li>
-              <li><a href="#" className="hover:text-amber-500 dark:hover:text-white">Envíos</a></li>
-              <li><a href="#" className="hover:text-amber-500 dark:hover:text-white">Devoluciones</a></li>
-              <li><a href="#" className="hover:text-amber-500 dark:hover:text-white">Contacto</a></li>
-            </ul>
-          </div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {/* Marca y redes */}
+            <motion.div variants={itemVariants}>
+              <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white tracking-wide mb-4">
+                info@jacana.fun
+              </h1>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                Moda y estilo que se adapta a ti. Vive la experiencia JACANA, donde cada paso es único.
+              </p>
+              <div className="flex space-x-4">
+                {[
+                  { icon: FaFacebookF, color: 'hover:text-blue-600', bg: 'bg-blue-100 dark:bg-blue-900/30' },
+                  { icon: FaInstagram, color: 'hover:text-pink-500', bg: 'bg-pink-100 dark:bg-pink-900/30' },
+                  { icon: FaTwitter, color: 'hover:text-sky-400', bg: 'bg-sky-100 dark:bg-sky-900/30' },
+                  { icon: FaTiktok, color: 'hover:text-gray-500', bg: 'bg-gray-100 dark:bg-gray-800/30' },
+                  { icon: FaWhatsapp, color: 'hover:text-green-500', bg: 'bg-green-100 dark:bg-green-900/30' },
+                ].map((social, i) => (
+                  <motion.a
+                    key={i}
+                    href={social.icon === FaWhatsapp ? "https://wa.me/50664541700" : "#"}
+                    target={social.icon === FaWhatsapp ? "_blank" : undefined}
+                    rel={social.icon === FaWhatsapp ? "noopener noreferrer" : undefined}
+                    whileHover={{ y: -3, scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`w-10 h-10 ${social.bg} rounded-full flex items-center justify-center text-gray-800 dark:text-gray-200 transition-all duration-300 ${social.color}`}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </motion.a>
+                ))}
+              </div>
+            </motion.div>
 
-          {/* Suscripción */}
-          <div>
-            <h3 className="text-lg font-semibold text-black dark:text-white mb-3">Suscríbete</h3>
-            <p className="text-sm mb-3 text-zinc-600 dark:text-zinc-400">
-              Recibe noticias y ofertas exclusivas.
-            </p>
-            <form className="flex flex-col space-y-3">
-              <input
-                type="email"
-                placeholder="Tu correo"
-                className="bg-zinc-200 dark:bg-zinc-800 px-3 py-2 rounded-md text-sm text-black dark:text-white outline-none focus:ring-2 focus:ring-amber-400 transition"
-              />
-              <button
-                type="submit"
-                className="bg-black dark:bg-white text-white dark:text-black text-sm font-semibold py-2 rounded-md hover:bg-zinc-800 dark:hover:bg-zinc-300 transition"
-              >
-                Suscribirme
-              </button>
-            </form>
-          </div>
-        </div>
+            {/* Categorías */}
+            <motion.div variants={itemVariants}>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Categorías</h3>
+              <ul className="space-y-2 text-sm">
+                {['Ropa', 'Calzado', 'Accesorios', 'Niños'].map((cat, i) => (
+                  <li key={i}>
+                    <Link
+                      to={cat === 'Calzado' ? '/calzados' : '#'}
+                      className="block hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-300 hover:translate-x-1 transform"
+                    >
+                      {cat}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
 
-        {/* Pie final */}
-        <div className="border-t border-zinc-300 dark:border-zinc-800 mt-10 pt-5 text-center text-sm text-zinc-600 dark:text-zinc-500">
-          &copy; {year} JACANA Styles Costa Rica. Todos los derechos reservados.
+            {/* Ayuda */}
+            <motion.div variants={itemVariants}>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Ayuda</h3>
+              <ul className="space-y-2 text-sm">
+                {['Preguntas frecuentes', 'Envíos', 'Devoluciones', 'Contacto'].map((item, i) => (
+                  <li key={i}>
+                    <a
+                      href="#"
+                      className="block hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-300 hover:translate-x-1 transform"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Suscripción */}
+            <motion.div variants={itemVariants}>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Suscríbete</h3>
+              <p className="text-sm mb-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+                Recibe noticias y ofertas exclusivas directamente en tu bandeja de entrada.
+              </p>
+              <form className="space-y-3">
+                <motion.input
+                  whileFocus={{ scale: 1.02 }}
+                  type="email"
+                  placeholder="Tu correo electrónico"
+                  className="w-full bg-gray-100 dark:bg-gray-800 px-4 py-3 rounded-xl text-sm text-gray-800 dark:text-white outline-none focus:ring-2 focus:ring-amber-400 transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                />
+                <motion.button
+                  whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(251, 191, 36, 0.5)' }}
+                  whileTap={{ scale: 0.95 }}
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-black font-semibold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm"
+                >
+                  Suscribirme
+                </motion.button>
+              </form>
+            </motion.div>
+          </motion.div>
+
+          {/* Pie final */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+            className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-6 text-center text-sm text-gray-500 dark:text-gray-400"
+          >
+            &copy; {year} JACANA Styles Costa Rica. Todos los derechos reservados.
+          </motion.div>
         </div>
       </footer>
 
       {/* Botón flotante de WhatsApp */}
-      <a
+      <motion.a
         href="https://wa.me/50664541700"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg animate-pulse hover:scale-110 transition-transform"
-        aria-label="WhatsApp flotante"
+        whileHover={{ scale: 1.15, y: -5 }}
+        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-full shadow-2xl hover:shadow-green-500/50 transition-all duration-300 flex items-center justify-center"
+        aria-label="Contacto por WhatsApp"
       >
         <FaWhatsapp size={24} />
-      </a>
+        <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
+      </motion.a>
     </>
   );
 };

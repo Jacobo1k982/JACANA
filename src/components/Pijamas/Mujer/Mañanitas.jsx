@@ -84,47 +84,9 @@ const Mañanitas = () => {
 
     return (
         <section className="w-full h-auto bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-100 transition-colors duration-700">
-            {/* Banner con efecto parallax */}
-            <div className="relative w-full h-40 md:h-96 overflow-hidden rounded-2xl shadow-2xl mb-12 group">
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000"
-                    style={{
-                        backgroundImage: `url('#')`,
-                        backgroundColor: '#f5f5f5',
-                        transform: 'scale(1.05)',
-                        filter: 'brightness(0.85) contrast(1.05)',
-                    }}
-                />
-                {/* Overlay degradado */}
-                <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-transparent to-black/40" />
+            
 
-                {/* Contenido del banner */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: 'easeOut' }}
-                        className="text-white text-3xl sm:text-4xl md:text-6xl font-light text-center px-6 font-Playfair drop-shadow-2xl"
-                    >
-                        CONJUNTO MAÑANITAS
-                    </motion.h1>
-                </div>
-
-                {/* Efecto de brillo al mover el mouse */}
-                <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-10 pointer-events-none transition-opacity duration-500"
-                    style={{
-                        background: `radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(255,255,255,0.2), transparent 40%)`,
-                    }}
-                    onMouseMove={(e) => {
-                        const rect = e.currentTarget.getBoundingClientRect();
-                        const x = e.clientX - rect.left;
-                        const y = e.clientY - rect.top;
-                        e.currentTarget.style.setProperty('--x', `${x}px`);
-                        e.currentTarget.style.setProperty('--y', `${y}px`);
-                    }}
-                />
-            </div>
+              
 
             {/* Contenedor de productos */}
             <div className="max-w-7xl mx-auto px-4 pb-16">
