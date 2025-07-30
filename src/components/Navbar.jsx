@@ -1,18 +1,19 @@
-// Navbar.jsx - Versión Premium 🚀
-import React, { useEffect, useState, lazy, Suspense } from 'react';
+// Navbar.jsx - Versión Premium con MegaMenu y Búsqueda en Vivo 🚀
+import React, { useEffect, useState, lazy, Suspense, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  HeartIcon,
   MagnifyingGlassIcon,
   ShoppingBagIcon,
   Bars3Icon,
   XMarkIcon,
-  ArrowLeftIcon,
 } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
 import { selectCartItems, selectTotalQTY } from '../app/CartSlice';
 import { Link, useNavigate } from 'react-router-dom';
 import navLinks from '../data/NavLinks';
+import MegaMenu from './MegaMenu'; // Asegúrate de tener este componente
+import products from '../data/products'; // Lista de productos para búsqueda
+import LiveSearchResults from './LiveSearchResults'; // Componente de resultados
 
 const CartDrawer = lazy(() => import('./CartDrawer'));
 const SearchBar = lazy(() => import('./SearchBar'));
@@ -23,20 +24,17 @@ const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [selectedSubcategory, setSelectedSubcategory] = useState(null);
-  const [selectedChildSubcategory, setSelectedChildSubcategory] = useState(null);
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const totalQTY = useSelector(selectTotalQTY);
   const cartItems = useSelector(selectCartItems);
 
+  // Toggle funciones
   const toggleDrawer = () => setDrawerOpen(!drawerOpen);
   const onNavScroll = () => setNavState(window.scrollY > 30);
   const toggleSearch = () => setShowSearch(!showSearch);
   const handleSearchChange = (e) => setSearchQuery(e.target.value);
+
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -46,18 +44,24 @@ const Navbar = () => {
     }
   };
 
+  // Búsqueda en vivo
+  const liveResults = useMemo(() => {
+    if (searchQuery.length < 2) return [];
+    const query = searchQuery.toLowerCase();
+    return products.filter(
+      (p) =>
+        p.title.toLowerCase().includes(query) ||
+        p.model?.toLowerCase().includes(query) ||
+        p.category.toLowerCase().includes(query)
+    );
+  }, [searchQuery]);
+
   useEffect(() => {
     window.addEventListener('scroll', onNavScroll);
     return () => window.removeEventListener('scroll', onNavScroll);
   }, []);
 
   // Animaciones
-  const menuVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: 'easeOut' } },
-    exit: { opacity: 0, y: -20, transition: { duration: 0.2 } },
-  };
-
   const backdropVariants = {
     visible: { opacity: 1 },
     exit: { opacity: 0 },
@@ -90,84 +94,53 @@ const Navbar = () => {
             />
           </Link>
 
-          {/* Menú Desktop con hover elegante */}
-          <ul className="hidden lg:flex items-center space-x-10">
-            {navLinks.map((link) => (
-              <li
-                key={link.name}
-                className="relative group"
-                onMouseEnter={() => setDropdownOpen(link.name)}
-                onMouseLeave={() => setDropdownOpen(null)}
-              >
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  className="text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 font-semibold uppercase text-sm tracking-wide transition-colors duration-200 relative"
-                >
-                  {link.name}
-                  <motion.span
-                    className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 dark:bg-blue-400"
-                    layoutId="underline"
-                    initial={{ width: 0 }}
-                    animate={{ width: '100%' }}
-                    transition={{ duration: 0.3 }}
-                    style={{ display: dropdownOpen === link.name ? 'none' : 'block' }}
-                  />
-                </motion.button>
-
-                {/* Dropdown con grid animado */}
-                <AnimatePresence>
-                  {dropdownOpen === link.name && link.subcategories && (
-                    <motion.div
-                      variants={menuVariants}
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      className="absolute top-12 left-0 w-[680px] grid grid-cols-2 gap-3 bg-white dark:bg-gray-800 shadow-2xl rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden z-50 p-5"
-                    >
-                      {link.subcategories.map((sub, idx) => (
-                        <motion.div
-                          key={sub.name}
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: idx * 0.05 }}
-                          className="group rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 cursor-pointer"
-                          onClick={() => {
-                            navigate(sub.path);
-                            setDropdownOpen(null);
-                          }}
-                        >
-                          <div className="relative">
-                            <img
-                              src={sub.image}
-                              alt={sub.name}
-                              className="w-full h-36 object-cover group-hover:scale-110 transition-transform duration-500"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                          </div>
-                          <span className="block text-sm font-bold text-gray-800 dark:text-white mt-2 uppercase tracking-wide">
-                            {sub.name}
-                          </span>
-                        </motion.div>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </li>
-            ))}
-          </ul>
+          {/* MegaMenu - Solo en desktop */}
+          <div className="hidden lg:block">
+            <MegaMenu />
+          </div>
 
           {/* Íconos de acción */}
           <ul className="flex items-center space-x-2 sm:space-x-4">
-            <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+            {/* Ícono de búsqueda con live results */}
+            <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="relative">
               <button
                 onClick={toggleSearch}
-                className="w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition flex items-center justify-center group"
+                className="w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition flex items-center justify-center group relative"
                 aria-label="Buscar"
               >
                 <MagnifyingGlassIcon className="w-5 h-5 text-gray-700 dark:text-gray-200 group-hover:rotate-90 transition-transform duration-300" />
               </button>
+
+              {/* Dropdown de búsqueda en vivo */}
+              {showSearch && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  className="absolute top-full mt-2 right-0 w-80 bg-white dark:bg-gray-800 shadow-2xl rounded-xl border border-gray-200 dark:border-gray-700 z-50 overflow-hidden"
+                >
+                  <form onSubmit={handleSearchSubmit} className="p-3 border-b border-gray-200 dark:border-gray-700">
+                    <input
+                      type="text"
+                      value={searchQuery}
+                      onChange={handleSearchChange}
+                      placeholder="Buscar productos..."
+                      className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      autoFocus
+                    />
+                  </form>
+
+                  {/* Resultados en vivo */}
+                  <LiveSearchResults
+                    results={liveResults}
+                    isVisible={searchQuery.length > 0}
+                    onResultClick={() => setShowSearch(false)}
+                  />
+                </motion.div>
+              )}
             </motion.li>
 
+            {/* Carrito */}
             <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
               <button
                 onClick={toggleDrawer}
@@ -187,7 +160,7 @@ const Navbar = () => {
               </button>
             </motion.li>
 
-            {/* Botón menú móvil */}
+            {/* Menú móvil */}
             <motion.li whileHover={{ scale: 1.1 }} className="lg:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -205,9 +178,9 @@ const Navbar = () => {
         </nav>
       </header>
 
-      {/* Fullscreen Search */}
+      {/* Fullscreen Search (para móviles) */}
       <AnimatePresence>
-        {showSearch && (
+        {showSearch && !window.matchMedia('(min-width: 1024px)').matches && (
           <motion.div
             variants={backdropVariants}
             initial="hidden"
@@ -245,7 +218,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
 
-      {/* Menú Móvil con efecto parallax y fondo desenfocado */}
+      {/* Menú Móvil */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -255,157 +228,41 @@ const Navbar = () => {
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed inset-0 z-50 bg-gradient-to-br from-blue-900/95 via-gray-900/95 to-purple-900/90 backdrop-blur-2xl text-white flex flex-col overflow-hidden"
           >
-            {/* Cabecera del menú móvil */}
             <div className="flex items-center justify-between p-6 border-b border-white/20">
               <motion.h2
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 className="text-2xl font-extrabold"
               >
-                {selectedChildSubcategory
-                  ? selectedChildSubcategory.name
-                  : selectedSubcategory
-                    ? selectedSubcategory.name
-                    : selectedCategory
-                      ? selectedCategory.name
-                      : 'Menú'}
+                Menú
               </motion.h2>
-              <div className="flex space-x-4">
-                {!(selectedChildSubcategory || selectedSubcategory || selectedCategory) && (
-                  <button
-                    onClick={toggleDrawer}
-                    className="hover:text-blue-300 transition"
-                    aria-label="Carrito"
-                  >
-                    <ShoppingBagIcon className="w-6 h-6" />
-                    {totalQTY > 0 && (
-                      <span className="absolute -top-1 -right-1 text-xs w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
-                        {totalQTY}
-                      </span>
-                    )}
-                  </button>
-                )}
-                <button
-                  onClick={() => {
-                    if (selectedChildSubcategory) {
-                      setSelectedChildSubcategory(null);
-                    } else if (selectedSubcategory) {
-                      setSelectedSubcategory(null);
-                    } else if (selectedCategory) {
-                      setSelectedCategory(null);
-                    } else {
-                      setMobileMenuOpen(false);
-                    }
-                  }}
-                  className="hover:text-red-300 transition"
-                >
-                  <XMarkIcon className="w-7 h-7" />
-                </button>
-              </div>
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="hover:text-red-300 transition"
+              >
+                <XMarkIcon className="w-7 h-7" />
+              </button>
             </div>
-
-            {/* Contenido del menú */}
-            <div className="flex-1 p-6 overflow-y-auto">
-              {selectedChildSubcategory ? (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="space-y-4"
+            <div className="flex-1 p-6 overflow-y-auto space-y-4">
+              {navLinks.map((link) => (
+                <div
+                  key={link.name}
+                  onClick={() => {
+                    navigate(link.path);
+                    setMobileMenuOpen(false);
+                  }}
+                  className="flex justify-between items-center bg-white/15 backdrop-blur-md rounded-xl p-4 hover:bg-white/25 transition-all cursor-pointer"
                 >
-                  {selectedChildSubcategory.children.map((child) => (
-                    <Link
-                      to={child.path}
-                      key={child.name}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="flex justify-between items-center bg-white/20 backdrop-blur-md rounded-xl p-4 hover:bg-white/30 transition-all"
-                    >
-                      <span className="text-lg font-semibold">{child.name}</span>
-                      <img
-                        src={child.image}
-                        alt={child.name}
-                        className="w-16 h-12 object-cover rounded-lg shadow-md"
-                      />
-                    </Link>
-                  ))}
-                </motion.div>
-              ) : selectedSubcategory ? (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="space-y-4"
-                >
-                  {selectedSubcategory.children.map((child) => (
-                    <div
-                      key={child.name}
-                      onClick={() =>
-                        child.children
-                          ? setSelectedChildSubcategory(child)
-                          : (navigate(child.path), setMobileMenuOpen(false))
-                      }
-                      className="flex justify-between items-center bg-white/20 backdrop-blur-md rounded-xl p-4 hover:bg-white/30 transition-all cursor-pointer"
-                    >
-                      <span className="text-lg font-semibold">{child.name}</span>
-                      <img
-                        src={child.image}
-                        alt={child.name}
-                        className="w-16 h-12 object-cover rounded-lg shadow-md"
-                      />
-                    </div>
-                  ))}
-                </motion.div>
-              ) : selectedCategory ? (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="space-y-4"
-                >
-                  {selectedCategory.subcategories.map((sub) => (
-                    <div
-                      key={sub.name}
-                      onClick={() =>
-                        sub.children
-                          ? setSelectedSubcategory(sub)
-                          : (navigate(sub.path), setMobileMenuOpen(false))
-                      }
-                      className="flex justify-between items-center bg-white/20 backdrop-blur-md rounded-xl p-4 hover:bg-white/30 transition-all cursor-pointer"
-                    >
-                      <span className="text-lg font-semibold">{sub.name}</span>
-                      <img
-                        src={sub.image}
-                        alt={sub.name}
-                        className="w-16 h-12 object-cover rounded-lg shadow-md"
-                      />
-                    </div>
-                  ))}
-                </motion.div>
-              ) : (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="space-y-4"
-                >
-                  {navLinks.map((link) => (
-                    <div
-                      key={link.name}
-                      onClick={() =>
-                        link.subcategories
-                          ? setSelectedCategory(link)
-                          : (navigate(link.path), setMobileMenuOpen(false))
-                      }
-                      className="flex justify-between items-center bg-white/15 backdrop-blur-md rounded-xl p-4 hover:bg-white/25 transition-all cursor-pointer"
-                    >
-                      <span className="text-lg font-semibold">{link.name}</span>
-                      {link.image && (
-                        <img
-                          src={link.image}
-                          alt={link.name}
-                          className="w-16 h-12 object-cover rounded-lg shadow-md"
-                        />
-                      )}
-                    </div>
-                  ))}
-                </motion.div>
-              )}
+                  <span className="text-lg font-semibold">{link.name}</span>
+                  {link.image && (
+                    <img
+                      src={link.image}
+                      alt={link.name}
+                      className="w-16 h-12 object-cover rounded-lg shadow-md"
+                    />
+                  )}
+                </div>
+              ))}
             </div>
           </motion.div>
         )}
