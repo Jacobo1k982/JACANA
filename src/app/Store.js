@@ -1,11 +1,18 @@
+// app/store.js
 import { configureStore } from "@reduxjs/toolkit";
-import CartSlice from "./CartSlice.js";
-import cartReducer from "./CartSlice";
+import cartReducer from "./CartSlice"; // 👈 El reducer está en `CartSlice.reducer`
 
-const Store = configureStore({
+const store = configureStore({
   reducer: {
-    cart: CartSlice, cartReducer
-  }
+    cart: cartReducer, // ✅ Asignamos el reducer correctamente
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false, // ⚠️ Opcional: útil si usas non-serializable data (ej: funciones, símbolos)
+    }),
 });
 
-export default Store;
+export default store;
+
+// Tipos para usar con TypeScript deben ir en archivos .ts o .tsx, no en .js
+// Si usas TypeScript, mueve estas declaraciones a un archivo .ts

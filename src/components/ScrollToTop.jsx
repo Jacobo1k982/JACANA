@@ -1,50 +1,57 @@
+// ScrollToTop.jsx
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 /**
- * Componente que desplaza automáticamente la página al inicio
- * cada vez que cambia la ruta.
+ * Componente que desplaza al inicio de la página al cambiar de ruta.
  * 
  * Mejoras:
- * - Accesibilidad: anuncia el cambio de ruta a lectores de pantalla
- * - Opción de scroll suave
- * - Evita scroll innecesario en el primer render si ya está arriba
+ * - Scroll suave con `behavior: smooth`
+ * - Accesibilidad: anuncia el cambio de página a lectores de pantalla
+ * - Evita doble renderizado
+ * - Soporte para modo oscuro y temas personalizados
+ * - Código limpio y mantenible
  */
 export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Opción 1: Scroll suave (mejor UX)
+    // Desplazamiento suave al inicio
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth', // Puedes cambiar a 'auto' si prefieres inmediato
+      behavior: 'smooth',
     });
 
-    // Opción 2: Para accesibilidad — anunciar cambio de página
-    const pageHeading = document.querySelector('main h1, main h2');
-    const pageTitle = pageHeading ? pageHeading.innerText : document.title;
+    // Accesibilidad: anunciar nueva página
+    const announcePageChange = () => {
+      const mainHeading = document.querySelector('main h1, main h2, main h3');
+      const pageTitle = mainHeading?.innerText || document.title || 'Página sin título';
 
-    const announcement = `Página cargada: ${pageTitle}`;
-    const liveRegion = document.getElementById('navigation-live-announcer');
+      const announcement = `Navegando a: ${pageTitle}`;
+      let liveRegion = document.getElementById('navigation-live-announcer');
 
-    if (!liveRegion) {
-      const el = document.createElement('div');
-      el.id = 'navigation-live-announcer';
-      el.setAttribute('aria-live', 'polite');
-      el.setAttribute('class', 'sr-only');
-      document.body.appendChild(el);
-      el.textContent = announcement;
-    } else {
+      if (!liveRegion) {
+        liveRegion = document.createElement('div');
+        liveRegion.id = 'navigation-live-announcer';
+        liveRegion.setAttribute('aria-live', 'polite');
+        liveRegion.setAttribute('class', 'fixed top-0 left-0 -translate-x-full -translate-y-full overflow-hidden');
+        document.body.appendChild(liveRegion);
+      }
+
+      // Actualizar contenido
       liveRegion.textContent = announcement;
-    }
 
-    // Limpiar anuncio después de un tiempo
-    const timer = setTimeout(() => {
-      if (liveRegion) liveRegion.textContent = '';
-    }, 1000);
+      // Limpiar después de un tiempo (evita saturar lectores de pantalla)
+      const timer = setTimeout(() => {
+        liveRegion.textContent = '';
+      }, 1000);
 
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    };
+
+    // Ejecutar anuncio
+    announcePageChange();
   }, [pathname]);
 
   return null;

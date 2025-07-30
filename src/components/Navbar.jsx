@@ -1,4 +1,4 @@
-// Navbar.jsx - Versión Premium con MegaMenu y Búsqueda en Vivo 🚀
+// Navbar.jsx - Versión Elegante & Premium
 import React, { useEffect, useState, lazy, Suspense, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -6,14 +6,15 @@ import {
   ShoppingBagIcon,
   Bars3Icon,
   XMarkIcon,
+  PhoneIcon,
 } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
 import { selectCartItems, selectTotalQTY } from '../app/CartSlice';
 import { Link, useNavigate } from 'react-router-dom';
 import navLinks from '../data/NavLinks';
-import MegaMenu from './MegaMenu'; // Asegúrate de tener este componente
-import products from '../data/products'; // Lista de productos para búsqueda
-import LiveSearchResults from './LiveSearchResults'; // Componente de resultados
+import MegaMenu from './MegaMenu';
+import products from '../data/products';
+import LiveSearchResults from './LiveSearchResults';
 
 const CartDrawer = lazy(() => import('./CartDrawer'));
 const SearchBar = lazy(() => import('./SearchBar'));
@@ -72,7 +73,7 @@ const Navbar = () => {
       {/* Header principal */}
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 font-poppins font-medium ${navState
-            ? 'bg-white/90 dark:bg-gray-900/95 backdrop-blur-xl shadow-lg py-3'
+            ? 'bg-white/95 dark:bg-gray-950/95 backdrop-blur-xl shadow-lg py-3'
             : 'bg-transparent py-5'
           }`}
       >
@@ -101,7 +102,7 @@ const Navbar = () => {
 
           {/* Íconos de acción */}
           <ul className="flex items-center space-x-2 sm:space-x-4">
-            {/* Ícono de búsqueda con live results */}
+            {/* Búsqueda */}
             <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="relative">
               <button
                 onClick={toggleSearch}
@@ -129,8 +130,6 @@ const Navbar = () => {
                       autoFocus
                     />
                   </form>
-
-                  {/* Resultados en vivo */}
                   <LiveSearchResults
                     results={liveResults}
                     isVisible={searchQuery.length > 0}
@@ -152,12 +151,28 @@ const Navbar = () => {
                   <motion.span
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    className="absolute -top-1 -right-1 text-[0.65rem] w-5 h-5 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full flex items-center justify-center font-bold shadow-lg"
+                    className="absolute -top-1 -right-1 text-[0.65rem] w-5 h-5 bg-gradient-to-r from-indigo-500 to-pink-500 text-white rounded-full flex items-center justify-center font-bold shadow-lg"
                   >
                     {totalQTY}
                   </motion.span>
                 )}
               </button>
+            </motion.li>
+
+            {/* WhatsApp (solo en desktop) */}
+            <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="hidden lg:block">
+              <a
+                href="https://wa.me/50664541700"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full hover:bg-green-100 dark:hover:bg-green-900/30 transition flex items-center justify-center group"
+                aria-label="Contacto por WhatsApp"
+              >
+                <span className="relative">
+                  <PhoneIcon className="w-5 h-5 text-green-600 dark:text-green-400" />
+                  <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-red-500 rounded-full animate-pulse"></span>
+                </span>
+              </a>
             </motion.li>
 
             {/* Menú móvil */}
@@ -178,7 +193,7 @@ const Navbar = () => {
         </nav>
       </header>
 
-      {/* Fullscreen Search (para móviles) */}
+      {/* Fullscreen Search (móvil) */}
       <AnimatePresence>
         {showSearch && !window.matchMedia('(min-width: 1024px)').matches && (
           <motion.div
@@ -226,7 +241,7 @@ const Navbar = () => {
             animate={{ y: 0 }}
             exit={{ y: '-100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-50 bg-gradient-to-br from-blue-900/95 via-gray-900/95 to-purple-900/90 backdrop-blur-2xl text-white flex flex-col overflow-hidden"
+            className="fixed inset-0 z-50 bg-gradient-to-br from-blue-900/95 via-gray-900/95 to-purple-900/95 backdrop-blur-2xl text-white flex flex-col overflow-hidden"
           >
             <div className="flex items-center justify-between p-6 border-b border-white/20">
               <motion.h2
